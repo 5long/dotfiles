@@ -1,0 +1,11 @@
+.VimballRecord
+.netrwhist
+
+*.sw[op]
+*~
+*.o
+*.so
+*.log
+Makefile
+
+doc
