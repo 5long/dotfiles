@@ -35,7 +35,7 @@ set cursorline
 set ignorecase
 set incsearch
 set hlsearch
-set magic
+noremap / /\v
 set mat=5
 set backspace=eol,start,indent
 
