@@ -69,7 +69,7 @@ autocmd! bufwritepost .vimrc source ~/.vimrc
 
 nnoremap <leader>au :au  <buffer><left><left><left><left><left><left><left><left><left>
 nnoremap <leader>w :up<CR>
-nnoremap <leader>d :bd<CR>
+nnoremap <leader>dd :bd<CR>
 nnoremap <leader>s :e ~/.vim/snippets/
 nnoremap <leader>cd :cd %:p:h<CR>
 nnoremap <leader>g :vimgrep // **/*.<left><left><left><left><left><left><left>
@@ -104,6 +104,9 @@ cnoremap <C-P> <Up>
 
 " Diff options
 set diffopt=filler,vertical
+noremap <leader>du :diffupdate<enter>
+nnoremap <leader>di :diffsplit<space>
+
 " Editing
 inoremap $@ ()<left>
 inoremap $2 []<left>
