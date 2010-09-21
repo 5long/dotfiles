@@ -31,6 +31,8 @@ set cmdheight=2
 set number
 set scrolloff=6
 
+set cursorcolumn
+set cursorline
 set ignorecase
 set incsearch
 set hlsearch
@@ -49,6 +51,8 @@ endfunction
 
 if has("gui_running")
   set guioptions-=T
+else
+  set t_Co=256
 endif
 
 " Keep silent
@@ -60,8 +64,11 @@ set t_vb=
 " automatically reload .vimrc file
 set wildmenu
 set autoread
+set nobackup
+set hidden
 autocmd! bufwritepost .vimrc source ~/.vimrc
 
+nnoremap <leader>au :au  <buffer><left><left><left><left><left><left><left><left><left>
 nnoremap <leader>w :up<CR>
 nnoremap <leader>d :bd<CR>
 nnoremap <leader>s :e ~/.vim/snippets/
@@ -96,6 +103,8 @@ cnoremap <C-E> <End>
 cnoremap <C-N> <Down>
 cnoremap <C-P> <Up>
 
+" Diff options
+set diffopt=filler,vertical
 " Editing
 inoremap $@ ()<left>
 inoremap $2 []<left>
@@ -111,6 +120,7 @@ inoremap $R <backspace><delete>
 inoremap <c-j> <down>
 inoremap <c-k> <up>
 inoremap <c-l> <right>
+inoremap <c-c> <esc>
 inoremap <s-enter> <end>;<enter>
 inoremap <c-enter> <end><enter>
 
@@ -125,6 +135,7 @@ nnoremap <backspace> :noh<enter>
 " nnoremap <leader>nt :NERDTreeToggle<enter>
 nnoremap <leader>ht :set filetype=html<enter>
 nnoremap <leader>js :set filetype=javascript<enter>
+nnoremap <leader>== gg=G``
 
 " Since 7.3:
 "
@@ -141,3 +152,5 @@ let g:miniBufExplMapWindowNavArrows = 1
 let g:miniBufExplMapCTabSwitchBufs = 1 
 let g:miniBufExplModSelTarget = 1 
 
+" Misc
+autocmd BufEnter *.markdown set filetype=mkd
