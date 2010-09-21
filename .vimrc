@@ -7,7 +7,6 @@ colorscheme lucius
 
 if has('gui_gtk2')
   set guifont=DejaVu\ Sans\ Mono\ 13
-  " set guifont=Inconsolata\ 13
   set guifontwide=WenQuanYi\ Zen\ Hei\ Mono\ 13
 else
   set guifont=Consolas:h12
@@ -143,6 +142,7 @@ nnoremap <leader>== gg=G``
 set undodir="~/.tmp"
 set undolevels=1000
 
+set relativenumber
 " for css?
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 
