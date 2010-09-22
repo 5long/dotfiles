@@ -143,6 +143,7 @@ nnoremap <leader>== gg=G``
 "
 " Persistent undo
 if version >= 703
+  set undofile
   set undodir="~/.tmp"
   set undolevels=1000
 
