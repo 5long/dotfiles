@@ -20,7 +20,7 @@ map <C-h> <C-W>h
 map <C-l> <C-W>l
 
 set switchbuf=usetab
-set stal=2
+set showtabline=2
 
 set nocompatible
 set history=300
@@ -67,9 +67,9 @@ set nobackup
 set hidden
 autocmd! bufwritepost .vimrc source ~/.vimrc
 
-nnoremap <leader>au :au  <buffer><left><left><left><left><left><left><left><left><left>
-nnoremap <leader>w :up<CR>
-nnoremap <leader>dd :bd<CR>
+nnoremap <leader>au :autocmd  <buffer><left><left><left><left><left><left><left><left><left>
+nnoremap <leader>w :update<CR>
+nnoremap <leader>dd :bdelete<CR>
 nnoremap <leader>s :e ~/.vim/snippets/
 nnoremap <leader>cd :cd %:p:h<CR>
 nnoremap <leader>g :vimgrep // **/*.<left><left><left><left><left><left><left>
@@ -81,7 +81,7 @@ nnoremap <leader>p :cp<CR>
 set fileformat=unix
 set fileformats=unix,dos,mac
 set encoding=utf-8
-set fenc=utf-8
+set fileencoding=utf-8
 set fileencodings=ucs-bom,utf-8,gb-18030,gbk,gb2312,latin1
 set nobomb
 
