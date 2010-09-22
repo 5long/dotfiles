@@ -142,10 +142,12 @@ nnoremap <leader>== gg=G``
 " Since 7.3:
 "
 " Persistent undo
-set undodir="~/.tmp"
-set undolevels=1000
+if version >= 703
+  set undodir="~/.tmp"
+  set undolevels=1000
 
-set relativenumber
+  set relativenumber
+endif
 " for css?
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 
