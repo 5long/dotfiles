@@ -1,6 +1,5 @@
 " Hotkeys first
 let mapleader=","
-let g:mapleader=","
 
 " Interface
 colorscheme lucius
