@@ -116,6 +116,8 @@ inoremap $e ''<left>
 inoremap $E ""<left>
 inoremap $R <backspace><delete>
 
+inoreabbrev rt return
+
 " Move around while in editing mode
 " But c-h cannot be reboud.
 inoremap <c-j> <down>
