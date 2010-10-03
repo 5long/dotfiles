@@ -27,10 +27,6 @@ snippet cl
 # New Function
 snippet def
 	def ${1:fname}(${2:`indent('.') ? 'self' : ''`}):
-		"""${3:docstring for $1}"""
-		${4:pass}
-snippet deff
-	def ${1:fname}(${2:`indent('.') ? 'self' : ''`}):
 		${3}
 # New Method
 snippet defs
@@ -45,10 +41,10 @@ snippet property
 		def fset(self, value):
 			${4:self._$1 = value}
 # Lambda
-snippet ld
-	${1:var} = lambda ${2:vars} : ${3:action}
+snippet f
+	lambda ${2:vars} : ${3:action}
 snippet .
-	self.
+	self.${1}
 snippet try Try/Except
 	try:
 		${1:pass}
@@ -84,3 +80,7 @@ snippet ifmain
 # __magic__
 snippet _
 	__${1:init}__${2}
+snippet ok
+	self.assertTrue(${1})
+snippet eq
+	self.assertEqual(${1}, ${2})
