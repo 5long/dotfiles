@@ -66,7 +66,7 @@ set nobackup
 set hidden
 autocmd! bufwritepost .vimrc source ~/.vimrc
 
-nnoremap <leader>au :autocmd  <buffer><left><left><left><left><left><left><left><left><left>
+nnoremap <leader>au :autocmd  <buffer><space><left><left><left><left><left><left><left><left><left>
 nnoremap <leader>w :update<CR>
 nnoremap <leader>dd :bdelete<CR>
 nnoremap <leader>s :e ~/.vim/snippets/
