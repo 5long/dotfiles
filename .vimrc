@@ -26,7 +26,6 @@ set history=300
 set showcmd
 set ruler
 set cmdheight=2
-set number
 set scrolloff=6
 
 set cursorcolumn
@@ -149,6 +148,8 @@ if version >= 703
   set undolevels=1000
 
   set relativenumber
+else
+  set number
 endif
 " for css?
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
