@@ -66,12 +66,12 @@ set hidden
 autocmd! bufwritepost .vimrc source ~/.vimrc
 autocmd! FocusLost * update
 
-nnoremap <leader>au :autocmd  <buffer><space><left><left><left><left><left><left><left><left><left>
+nnoremap <leader>au :autocmd  <buffer><space><s-left><left>
 nnoremap <leader>w :update<CR>
 nnoremap <leader>dd :bdelete<CR>
 nnoremap <leader>s :e ~/.vim/snippets/
 nnoremap <leader>cd :cd %:p:h<CR>
-nnoremap <leader>g :vimgrep // **/*.<left><left><left><left><left><left><left>
+nnoremap <leader>g :vimgrep // **/*.<s-left><s-left><right>
 nnoremap <leader>n :cn<CR>
 nnoremap <leader>p :cp<CR>
 
