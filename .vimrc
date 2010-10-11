@@ -64,6 +64,7 @@ set autoread
 set nobackup
 set hidden
 autocmd! bufwritepost .vimrc source ~/.vimrc
+autocmd! FocusLost * update
 
 nnoremap <leader>au :autocmd  <buffer><space><left><left><left><left><left><left><left><left><left>
 nnoremap <leader>w :update<CR>
