@@ -1,4 +1,3 @@
-" Hotkeys first
 let mapleader=","
 
 " Interface
@@ -12,11 +11,6 @@ else
 endif
 
 " Windows
-" move among windows
-map <C-j> <C-W>j
-map <C-k> <C-W>k
-map <C-h> <C-W>h
-map <C-l> <C-W>l
 
 set switchbuf=usetab
 set showtabline=2
@@ -28,13 +22,11 @@ set ruler
 set cmdheight=2
 set scrolloff=6
 
-set cursorcolumn
-set cursorline
+set cursorcolumn cursorline
 set ignorecase
 set incsearch
 set hlsearch
 noremap / /\v
-set mat=5
 set backspace=eol,start,indent
 
 " Status Line
@@ -52,18 +44,13 @@ else
   set t_Co=256
 endif
 
-" Keep silent
-set noerrorbells
-set novisualbell
-set t_vb=
-
 " Filehandle
-" automatically reload .vimrc file
+
 set wildmenu
 set autoread
 set nobackup
 set hidden
-autocmd! bufwritepost .vimrc source ~/.vimrc
+autocmd! BufWritePost .vimrc source ~/.vimrc
 autocmd! FocusLost * wall
 
 nnoremap <leader>au :autocmd  <buffer><space><s-left><left>
@@ -90,14 +77,13 @@ syntax enable
 set autoindent smartindent
 set showmatch
 set expandtab smarttab tabstop=2 shiftwidth=2 softtabstop=2
-set wrap linebreak
+set linebreak
 
 filetype plugin on
 filetype indent on
 
 " Command line
 cnoremap <C-A> <Home>
-cnoremap <C-E> <End>
 cnoremap <C-N> <Down>
 cnoremap <C-P> <Up>
 
@@ -135,14 +121,11 @@ nnoremap <enter> A<enter><esc>
 nnoremap <s-enter> A;<esc>
 nnoremap <c-enter> i<enter><esc>
 nnoremap <backspace> :noh<enter>
-" nnoremap <leader>nt :NERDTreeToggle<enter>
 nnoremap <leader>ht :set filetype=html<enter>
 nnoremap <leader>js :set filetype=javascript<enter>
 nnoremap <leader>== gg=G``
 
 " Since 7.3:
-"
-" Persistent undo
 if version >= 703
   set undofile
   set undodir="~/.tmp"
@@ -152,14 +135,8 @@ if version >= 703
 else
   set number
 endif
-" for css?
-autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 
 " for MiniBufferExplorer
 let g:miniBufExplMapWindowNavVim = 1 
-let g:miniBufExplMapWindowNavArrows = 1 
 let g:miniBufExplMapCTabSwitchBufs = 1 
 let g:miniBufExplModSelTarget = 1 
-
-" Misc
-autocmd BufEnter *.markdown set filetype=mkd
