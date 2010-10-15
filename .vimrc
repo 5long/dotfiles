@@ -39,7 +39,7 @@ function! CurDir()
 endfunction
 
 if has("gui_running")
-  set guioptions-=T
+  set guioptions=aeicMRL
 else
   set t_Co=256
 endif
