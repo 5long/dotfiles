@@ -50,6 +50,8 @@ set wildmenu
 set autoread
 set nobackup
 set hidden
+set directory-=.
+set directory+=~/.tmp
 autocmd! BufWritePost .vimrc source ~/.vimrc
 autocmd! FocusLost * wall
 
@@ -128,7 +130,7 @@ nnoremap <leader>== gg=G``
 " Since 7.3:
 if version >= 703
   set undofile
-  set undodir="~/.tmp"
+  set undodir=~/.tmp
   set undolevels=1000
 
   set relativenumber
