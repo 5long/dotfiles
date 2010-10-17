@@ -1,6 +1,6 @@
 # Prototype
 snippet pro
-	${1:ClassName}.prototype.${2:methodName} = function $2(${3}) {
+	${1:ClassName}.prototype.${2:methodName} = function(${3}) {
 		${4:// body...}
 	}
 # Function
@@ -15,30 +15,14 @@ snippet f
 	}
 # if
 snippet if
-	if (${1:true}) {${2}}
+	if (${1:true}) ${2}
 # if ... else
 snippet ife
-	if (${1:true}) {${2}}
-	else{${3}}
+	if (${1:true}) ${2}
+	else ${3}
 # tertiary conditional
 snippet t
 	${1:/* condition */} ? ${2:a} : ${3:b}
-# switch
-snippet switch
-	switch(${1:expression}) {
-		case '${3:case}':
-			${4:// code}
-			break;
-		${5}
-		default:
-			${2:// code}
-	}
-# case
-snippet case
-	case '${1:case}':
-		${2:// code}
-		break;
-	${3}
 # for (...) {...}
 snippet for
 	for (var ${2:i} = 0; $2 < ${1:Things}.length; $2${3:++}) {
@@ -46,9 +30,9 @@ snippet for
 	}
 # Object Method
 snippet :f
-	${1:method_name}: function(${2:attribute}) {
-		${4}
-	}${3:,}
+	, ${1:method_name}: function(${2:attribute}) {
+			${4}
+		}
 # setTimeout function
 snippet tout
 	setTimeout(function(${2}) {
@@ -59,9 +43,9 @@ snippet clo
 		${3://body}
 	})(${2})
 snippet ok
-	assert.ok(${1}, '${2}')
+	ok(${1}, "${2}")
 snippet eq
-	assert.equal(${1}, ${2}, '${3}')
+	equal(${1}, ${2}, "${3}")
 snippet .
 	this.${1}
 snippet forin
@@ -75,18 +59,12 @@ snippet try
 		${3}
 	}
 snippet qt
-	test('${1}', function() {
+	test("${1}", function() {
 		${2}
-	})
-snippet qat
-	asyncTest('${1}', function() {
-		expect()
-		${2}
-		stop()
 	})
 snippet insp
 	console.log(sys.inspect(${1}))
 snippet rq
-	${1} = require('${2}')${3}
+	${1} = require("${2}")${3}
 snippet log
 	console.log("${1:boooooooooo}")
