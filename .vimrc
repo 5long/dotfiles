@@ -1,6 +1,9 @@
 let g:mapleader=","
 
-" Interface
+"" Interface
+if !has("gui_running")
+  set t_Co=256
+endif
 colorscheme lucius
 
 if has('gui_gtk2')
@@ -10,28 +13,38 @@ else
   set guifont=Consolas:h12
 endif
 
-" Windows
-
+" Tab and decorations.
 set switchbuf=usetab
 set showtabline=2
+set relativenumber
+if has("gui_running")
+  set guioptions=aeicMRL
+endif
 
-set nocompatible
-set history=300
-set showcmd
-set ruler
-set cmdheight=2
+" Textarea
 set scrolloff=6
-
 set cursorcolumn cursorline
+set showmatch
 set list
 set listchars=tab:▸\ ,trail:·
-set ignorecase
-set incsearch
-set hlsearch
-noremap / /\v
-set backspace=eol,start,indent
+set linebreak
 
-" Status Line
+syntax enable
+set autoindent smartindent
+set expandtab smarttab tabstop=2 shiftwidth=2 softtabstop=2
+filetype plugin on
+filetype indent on
+
+" Command line and status line.
+cnoremap <C-A> <Home>
+cnoremap <C-N> <Down>
+cnoremap <C-P> <Up>
+
+set history=300
+set cmdheight=2
+set showcmd
+set ruler
+set wildmenu
 set laststatus=2
 set statusline=\ %F%m%r%h\ %w\ \ CWD:\ %r%{CurDir()}%h\ \ \ Line:\ %l/%L:%c:
 
@@ -40,56 +53,46 @@ function! CurDir()
   return curdir
 endfunction
 
-if has("gui_running")
-  set guioptions=aeicMRL
-else
-  set t_Co=256
-endif
+" Searching
+set ignorecase
+set incsearch
+set hlsearch
+nnoremap <backspace> :noh<enter>
+noremap / /\v
+
+" Internal
 
 " Filehandle
 
-set wildmenu
 set autoread
 set nobackup
 set hidden
 set directory-=.
 set directory+=~/.tmp
+set undofile
+set undodir=~/.tmp
+set undolevels=1000
 autocmd! BufWritePost .vimrc source ~/.vimrc
 autocmd! FocusLost * wall
 
-nnoremap <leader>au :autocmd  <buffer><space><s-left><left>
 nnoremap <leader>w :update<CR>
 nnoremap <leader>dd :bdelete<CR>
-nnoremap <leader>s :e ~/.vim/snippets/
+
+" Utilities
+nnoremap <leader>au :autocmd  <buffer><space><s-left><left>
 nnoremap <leader>cd :cd %:p:h<CR>
 nnoremap <leader>g :vimgrep // **/*.<s-left><s-left><right>
 nnoremap <leader>n :cn<CR>
 nnoremap <leader>p :cp<CR>
+nnoremap <leader>== gg=G``
 
 " Encoding
-
 set fileformat=unix
 set fileformats=unix,dos,mac
 set encoding=utf-8
 set fileencoding=utf-8
 set fileencodings=ucs-bom,utf-8,gb-18030,gbk,gb2312,latin1
 set nobomb
-
-" Text formatting
-
-syntax enable
-set autoindent smartindent
-set showmatch
-set expandtab smarttab tabstop=2 shiftwidth=2 softtabstop=2
-set linebreak
-
-filetype plugin on
-filetype indent on
-
-" Command line
-cnoremap <C-A> <Home>
-cnoremap <C-N> <Down>
-cnoremap <C-P> <Up>
 
 " Diff options
 set diffopt=filler,vertical
@@ -98,6 +101,10 @@ nnoremap <leader>di :diffthis<enter>
 nnoremap <leader>do :diffoff!<enter>
 
 " Editing
+set backspace=eol,start,indent
+
+inoremap <c-c> <esc>
+
 inoremap $@ ()<left>
 inoremap $2 []<left>
 inoremap $# {}<left>
@@ -110,36 +117,12 @@ inoremap $R <backspace><delete>
 inoreabbrev rt return
 
 " Move around while in editing mode
-" But c-h cannot be reboud.
+" Leave <c-h> for backspace
 inoremap <c-j> <down>
 inoremap <c-k> <up>
 inoremap <c-l> <right>
-inoremap <c-c> <esc>
-inoremap <s-enter> <end>;<enter>
-inoremap <c-enter> <end><enter>
-
 noremap <space> ^
-noremap 0 ^
 noremap <s-space> $
-
-nnoremap <enter> A<enter><esc>
-nnoremap <s-enter> A;<esc>
-nnoremap <c-enter> i<enter><esc>
-nnoremap <backspace> :noh<enter>
-nnoremap <leader>ht :set filetype=html<enter>
-nnoremap <leader>js :set filetype=javascript<enter>
-nnoremap <leader>== gg=G``
-
-" Since 7.3:
-if v:version >= 703
-  set undofile
-  set undodir=~/.tmp
-  set undolevels=1000
-
-  set relativenumber
-else
-  set number
-endif
 
 " for MiniBufferExplorer
 let g:miniBufExplMapWindowNavVim = 1
