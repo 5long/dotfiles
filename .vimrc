@@ -23,6 +23,8 @@ set cmdheight=2
 set scrolloff=6
 
 set cursorcolumn cursorline
+set list
+set listchars=tab:▸\ ,trail:·
 set ignorecase
 set incsearch
 set hlsearch
