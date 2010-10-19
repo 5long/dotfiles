@@ -92,7 +92,7 @@ cnoremap <C-P> <Up>
 " Diff options
 set diffopt=filler,vertical
 noremap <leader>du :diffupdate<enter>
-nnoremap <leader>di :diffsplit<space>
+nnoremap <leader>di :diffthis<enter>
 
 " Editing
 inoremap $@ ()<left>
