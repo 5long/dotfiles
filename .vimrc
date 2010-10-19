@@ -1,4 +1,4 @@
-let mapleader=","
+let g:mapleader=","
 
 " Interface
 colorscheme lucius
@@ -128,7 +128,7 @@ nnoremap <leader>js :set filetype=javascript<enter>
 nnoremap <leader>== gg=G``
 
 " Since 7.3:
-if version >= 703
+if v:version >= 703
   set undofile
   set undodir=~/.tmp
   set undolevels=1000
