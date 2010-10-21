@@ -6,6 +6,6 @@
 *.o
 *.so
 *.log
-Makefile
+/ruby/command-t/Makefile
 
 doc
