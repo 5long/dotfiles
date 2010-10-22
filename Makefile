@@ -19,4 +19,7 @@ link:
 	test -e $(VIMRC) || ln -s $(PWD)/.vimrc ~/.vimrc
 	test -e $(RUNTIME_DIR) || ln -s $(PWD) $(RUNTIME_DIR)
 
-.PHONY: command-t tmp_dir all verify-version link
+unlink:
+	rm -f $(VIMRC) $(RUNTIME_DIR)
+
+.PHONY: command-t tmp_dir all verify-version link unlink
