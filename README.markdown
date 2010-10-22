@@ -13,7 +13,7 @@ My vim runtime files.
 
 Ruby headers for Command-T
 
-    $ vim --version | perl -e 'while(<>) {print $1 if (m/ruby-?([\d.]+)/)}'
+    $ vim --version | perl -ne 'print "$1\n" if m/ruby-?([\d.]+)/'
     1.9.1
     $ aptitude install ruby1.9.1-dev
 
