@@ -103,8 +103,6 @@ nnoremap <leader>do :diffoff!<enter>
 " Editing
 set backspace=eol,start,indent
 
-inoremap <c-c> <esc>
-
 inoremap $@ ()<left>
 inoremap $2 []<left>
 inoremap $# {}<left>
