@@ -45,6 +45,7 @@ set cmdheight=2
 set showcmd
 set ruler
 set wildmenu
+set wildmode=longest,full
 set laststatus=2
 set statusline=\ %F%m%r%h\ %w\ \ CWD:\ %r%{CurDir()}%h\ \ \ Line:\ %l/%L:%c:
 
