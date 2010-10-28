@@ -55,7 +55,7 @@ function! CurDir()
 endfunction
 
 " Searching
-set ignorecase
+set ignorecase smartcase
 set incsearch
 set hlsearch
 nnoremap <backspace> :noh<enter>
