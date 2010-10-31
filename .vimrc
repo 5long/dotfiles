@@ -18,7 +18,7 @@ set switchbuf=usetab
 set showtabline=2
 set relativenumber
 if has("gui_running")
-  set guioptions=aeicMRL
+  set guioptions=aeicM
 endif
 
 " Textarea
