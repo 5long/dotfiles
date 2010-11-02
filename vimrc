@@ -15,10 +15,17 @@ endif
 
 " Tab and decorations.
 set switchbuf=usetab
-set showtabline=2
 set relativenumber
 if has("gui_running")
+  set showtabline=2
   set guioptions=aeicM
+
+  nnoremap <leader><tab>n :tabnew<enter>
+  nnoremap <leader><tab>c :tabclose<enter>
+  nnoremap <c-tab> :tabnext<enter>
+  nnoremap <c-s-tab> :tabprevious<enter>
+else
+  set showtabline=1
 endif
 
 " Textarea
@@ -125,5 +132,4 @@ noremap <s-space> $
 
 " for MiniBufferExplorer
 let g:miniBufExplMapWindowNavVim = 1
-let g:miniBufExplMapCTabSwitchBufs = 1
 let g:miniBufExplModSelTarget = 1
