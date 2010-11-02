@@ -69,7 +69,7 @@ endfunction
 set ignorecase smartcase
 set incsearch
 set hlsearch
-nnoremap <backspace> :noh<enter>
+nnoremap <backspace> :nohlsearch<enter>
 noremap / /\v
 
 " Internal
@@ -94,8 +94,8 @@ nnoremap <leader>dd :bdelete<CR>
 nnoremap <leader>au :autocmd  <buffer><space><s-left><left>
 nnoremap <leader>cd :cd %:p:h<CR>
 nnoremap <leader>g :vimgrep // **/*.<s-left><s-left><right>
-nnoremap <leader>n :cn<CR>
-nnoremap <leader>p :cp<CR>
+nnoremap <leader>n :cnext<CR>
+nnoremap <leader>p :cprevious<CR>
 nnoremap <leader>== gg=G``
 
 " Encoding
