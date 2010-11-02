@@ -28,6 +28,10 @@ else
   set showtabline=1
 endif
 
+" Buffer
+nnoremap <c-n> :bnext<enter>
+nnoremap <c-p> :bprevious<enter>
+
 " Textarea
 set scrolloff=6
 set cursorcolumn cursorline
