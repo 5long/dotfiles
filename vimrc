@@ -85,6 +85,7 @@ set undofile
 set undodir=~/.tmp
 set undolevels=1000
 autocmd! BufWritePost .vimrc source ~/.vimrc
+autocmd BufReadPost * normal `"
 autocmd! FocusLost * wall
 
 nnoremap <leader>w :update<CR>
