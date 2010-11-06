@@ -39,6 +39,7 @@ set showmatch
 set list
 set listchars=tab:▸\ ,trail:·
 set linebreak
+set textwidth=75
 
 syntax enable
 set autoindent smartindent
