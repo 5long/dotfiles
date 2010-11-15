@@ -16,7 +16,6 @@ endif
 " Tab and decorations.
 set switchbuf=usetab
 set relativenumber
-set showtabline=1
 if has("gui_running")
   set guioptions=aeicM
 
