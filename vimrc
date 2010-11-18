@@ -136,3 +136,5 @@ noremap <s-space> $
 " for MiniBufferExplorer
 let g:miniBufExplMapWindowNavVim = 1
 let g:miniBufExplModSelTarget = 1
+
+:nmap <F1> <nop>
