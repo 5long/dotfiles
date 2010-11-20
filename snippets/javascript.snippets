@@ -43,9 +43,9 @@ snippet clo
 		${3://body}
 	})(${2})
 snippet ok
-	ok(${1}, "${2}")
+	ok(${1})
 snippet eq
-	equal(${1}, ${2}, "${3}")
+	equal(${1}, ${2})
 snippet .
 	this.${1}
 snippet forin
@@ -58,13 +58,17 @@ snippet try
 	} catch (${1:e}) {
 		${3}
 	}
-snippet qt
-	test("${1}", function() {
+snippet rt
+	.test("${1}", function(t, f) {
 		${2}
 	})
 snippet insp
 	console.log(sys.inspect(${1}))
 snippet rq
-	${1} = require("${2}")${3}
+	${3:$1} = require("${1:fs}")${2}
+	${4}
+snippet req
+	${3:$2} = require("${1:events}").${2:EventEmitter}
+	${4}
 snippet log
-	console.log("${1:boooooooooo}")
+	console.log(${1:"boooooooooo"})
