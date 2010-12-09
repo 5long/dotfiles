@@ -16,7 +16,7 @@ command-t:
 	$(MAKE) -C $(CMDT_PATH)
 
 link:
-	test -e $(VIMRC) || ln -s $(PWD)/vimrc ~/.vimrc
+	test -e $(VIMRC) || ln -s $(PWD)/vimrc $(VIMRC)
 	test -e $(RUNTIME_DIR) || ln -s $(PWD) $(RUNTIME_DIR)
 
 unlink:
