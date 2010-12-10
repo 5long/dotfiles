@@ -65,10 +65,8 @@ snippet rt
 snippet insp
 	console.log(sys.inspect(${1}))
 snippet rq
-	${3:$1} = require("${1:fs}")${2}
-	${4}
+	$1 = require("${1:fs}")${2}
 snippet req
-	${3:$2} = require("${1:events}").${2:EventEmitter}
-	${4}
+	$2 = require("${1:events}").${2:EventEmitter}
 snippet log
 	console.log(${1:"boooooooooo"})
