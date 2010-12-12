@@ -207,10 +207,10 @@ hi Cursor           ctermfg=bg              ctermbg=153
 hi CursorIM         guifg=bg                guibg=#96cdcd
 hi CursorIM         ctermfg=bg              ctermbg=116
 " cursor column
-hi CursorColumn     guifg=NONE              guibg=#202438           gui=none
+hi CursorColumn     guifg=NONE              guibg=#404448           gui=none
 hi CursorColumn     ctermfg=NONE            ctermbg=236             cterm=none
 " cursor line/row
-hi CursorLine       gui=NONE                guibg=#202438           gui=none
+hi CursorLine       gui=NONE                guibg=#404448           gui=none
 hi CursorLine       cterm=NONE              ctermbg=236             cterm=none
 
 
@@ -229,7 +229,7 @@ hi VertSplit        ctermfg=242             ctermbg=237             cterm=none
 hi SignColumn       guifg=#9fafaf           guibg=#181818           gui=none
 hi SignColumn       ctermfg=145             ctermbg=233             cterm=none
 " line numbers
-hi LineNr           guifg=#818698           guibg=NONE
+hi LineNr           guifg=#818698           guibg=#363946
 hi LineNr           ctermfg=245             ctermbg=237
 " match parenthesis, brackets
 hi MatchParen       guifg=#00ff00           guibg=NONE              gui=bold
@@ -259,6 +259,9 @@ hi WarningMsg       ctermfg=173                                     cterm=none
 " current match in the wildmenu completion
 hi WildMenu         guifg=#cae682           guibg=#363946           gui=bold,underline
 hi WildMenu         ctermfg=16              ctermbg=186             cterm=bold
+" color column highlighting
+hi ColorColumn      guifg=NONE              guibg=#403630           gui=none
+hi ColorColumn      ctermfg=NONE            ctermbg=94              cterm=none
 
 
 " Diff
@@ -274,16 +277,19 @@ hi DiffDelete       guifg=#6c6661           guibg=#3c3631           gui=none
 hi DiffDelete       ctermfg=fg              ctermbg=58              cterm=none
 " changed text within line
 hi DiffText         guifg=#f05060           guibg=#4a343a           gui=bold
-hi DiffText         ctermfg=203             ctermbg=52             cterm=bold
+hi DiffText         ctermfg=203             ctermbg=52              cterm=bold
 
 
 " Folds
 " -----
 " line used for closed folds
-hi Folded           guifg=#91d6f8           guibg=#363946           gui=none
-hi Folded           ctermfg=117             ctermbg=238             cterm=none
+"hi Folded           guifg=#91d6f8           guibg=#363946           gui=none
+"hi Folded           ctermfg=117             ctermbg=238             cterm=none
+hi Folded           guifg=#d0e0f0           guibg=#202020           gui=none
+hi Folded           ctermfg=117             ctermbg=235             cterm=none
 " column on side used to indicated open and closed folds
 hi FoldColumn       guifg=#91d6f8           guibg=#363946           gui=none
+hi FoldColumn       guifg=#c0c0d0           guibg=#363946           gui=none
 hi FoldColumn       ctermfg=117             ctermbg=238             cterm=none
 
 
@@ -344,3 +350,4 @@ hi Visual           ctermfg=NONE            ctermbg=24
 " visual mode selection when vim is not owning the selection (x11 only)
 hi VisualNOS        guifg=fg                                        gui=underline
 hi VisualNOS        ctermfg=fg                                      cterm=underline
+
