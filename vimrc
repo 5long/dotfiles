@@ -88,6 +88,7 @@ autocmd! FocusLost * wall
 
 nnoremap <leader>w :update<CR>
 nnoremap <leader>dd :bdelete<CR>
+nnoremap <leader>da :1,300bdelete<CR>
 
 " Utilities
 nnoremap <leader>au :autocmd  <buffer><space><s-left><left>
