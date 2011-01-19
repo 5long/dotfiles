@@ -135,7 +135,10 @@ inoremap <c-j> <down>
 inoremap <c-k> <up>
 inoremap <c-l> <right>
 inoremap <c-e> <c-o>E
+
+" Movement in normal mode
 noremap <space> ^
+noremap <c-i> %
 noremap <s-space> $
 
 " for MiniBufferExplorer
