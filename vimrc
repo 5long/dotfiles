@@ -85,6 +85,7 @@ set undolevels=1000
 autocmd! BufWritePost .vimrc source ~/.vimrc
 autocmd BufReadPost * normal `"
 autocmd! FocusLost * wall
+set autowrite
 
 nnoremap <leader>w :update<CR>
 nnoremap <leader>dd :bdelete<CR>
