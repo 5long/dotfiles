@@ -147,4 +147,7 @@ noremap <s-space> $
 let g:miniBufExplMapWindowNavVim = 1
 let g:miniBufExplModSelTarget = 1
 
+" for Command-T
+nnoremap <leader>ft :CommandTFlush<enter>
+
 :nmap <F1> <nop>
