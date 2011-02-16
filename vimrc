@@ -150,4 +150,4 @@ let g:miniBufExplModSelTarget = 1
 " for Command-T
 nnoremap <leader>ft :CommandTFlush<enter>
 
-:nmap <F1> <nop>
+nmap <F1> <nop>
