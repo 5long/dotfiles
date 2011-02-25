@@ -124,6 +124,7 @@ inoremap $2 []<left>
 inoremap $# {}<left>
 inoremap $3 <><left>
 inoremap $4 {}<left><enter><esc>O
+inoremap $$ $
 inoremap $e ''<left>
 inoremap $E ""<left>
 inoremap $R <backspace><delete>
