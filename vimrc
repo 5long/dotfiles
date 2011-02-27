@@ -77,8 +77,6 @@ noremap / /\v
 set autoread
 set nobackup
 set hidden
-set directory-=.
-set directory+=~/.tmp
 set undofile
 set undodir=~/.tmp
 set undolevels=1000
