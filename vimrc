@@ -136,11 +136,13 @@ inoremap <c-k> <up>
 inoremap <c-l> <right>
 inoremap <c-e> <c-o>E
 
-" Movement in normal mode
+" Movement
 noremap <space> ^
-noremap <tab> %
-noremap <s-tab> %
 noremap <s-space> $
+map <tab> %
+
+" Enable matchit
+runtime macros/matchit.vim
 
 " for MiniBufferExplorer
 let g:miniBufExplMapWindowNavVim = 1
