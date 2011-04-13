@@ -7,7 +7,7 @@ endif
 colorscheme lucius
 
 if has('gui_gtk2')
-  set guifont=DejaVu\ Sans\ Mono\ 13
+  set guifont=Inconsolata\ 13
   set guifontwide=WenQuanYi\ Zen\ Hei\ Mono\ 13
 else
   set guifont=Consolas:h12
