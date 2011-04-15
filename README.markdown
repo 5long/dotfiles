@@ -34,6 +34,5 @@ If you are on a Windows box, may God watch over you.
 
 * AutoComplPop
 * Command-T
-* minibufexpl.vim
 * snipMate
 * surround.vim
