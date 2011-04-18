@@ -141,6 +141,12 @@ noremap <space> ^
 noremap <s-space> $
 map <tab> %
 
+" Since minibufexpl is removed
+map <c-h> <c-w>h
+map <c-j> <c-w>j
+map <c-k> <c-w>k
+map <c-l> <c-w>l
+
 " Enable matchit
 runtime macros/matchit.vim
 
