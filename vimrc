@@ -152,5 +152,7 @@ runtime macros/matchit.vim
 
 " for Command-T
 nnoremap <leader>ft :CommandTFlush<enter>
+set wildignore+=*.jpg,*.gif,*.png
+set suffixes+=.log
 
 nmap <F1> <nop>
