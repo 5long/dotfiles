@@ -75,6 +75,7 @@ noremap / /\v
 " Filehandle
 
 set autoread
+set noswapfile
 set nobackup
 set hidden
 set undofile
