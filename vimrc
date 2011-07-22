@@ -94,7 +94,7 @@ nnoremap <leader>da :1,300bdelete<CR>
 nnoremap <leader>au :autocmd  <buffer><space><s-left><left>
 nnoremap <leader>cd :cd %:p:h<CR>
 nnoremap <leader>lc :lcd %:p:h<CR>
-nnoremap <leader>g :vimgrep // **/*.<s-left><s-left><right>
+nnoremap <leader>g :Ack  --<s-left><left>
 nnoremap <leader>n :cnext<CR>
 nnoremap <leader>p :cprevious<CR>
 nnoremap <leader>== gg=G``
