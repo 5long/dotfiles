@@ -36,3 +36,4 @@ If you are on a Windows box, may God watch over you.
 * Command-T
 * snipMate
 * surround.vim
+* ack.vim
