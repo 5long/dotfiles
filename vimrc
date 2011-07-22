@@ -44,6 +44,9 @@ set expandtab smarttab tabstop=2 shiftwidth=2 softtabstop=2
 filetype plugin on
 filetype indent on
 
+" Fix filetype
+autocmd BufRead,BufNewFile *.md set filetype=markdown
+
 " Command line and status line.
 cnoremap <C-A> <Home>
 cnoremap <C-N> <Down>
