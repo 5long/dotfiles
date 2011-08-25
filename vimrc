@@ -156,7 +156,7 @@ runtime macros/matchit.vim
 
 " for Command-T
 nnoremap <leader>ft :CommandTFlush<enter>
-set wildignore+=*.jpg,*.gif,*.png
+set wildignore+=*.jpg,*.gif,*.png,*.pyc,*.pyo
 set wildignore+=node_modules
 set suffixes+=.log
 
