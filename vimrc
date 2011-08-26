@@ -103,7 +103,6 @@ nnoremap <leader>p :cprevious<CR>
 nnoremap <leader>== gg=G``
 
 " Encoding
-set fileformat=unix
 set fileformats=unix,dos,mac
 set encoding=utf-8
 set fileencoding=utf-8
