@@ -120,6 +120,7 @@ set backspace=eol,start,indent
 
 nnoremap <enter> A;<enter>
 
+inoremap $<space> <space><space><left>
 inoremap $@ ()<left>
 inoremap $2 []<left>
 inoremap $# {}<left>
