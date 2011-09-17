@@ -60,7 +60,7 @@ set ruler
 set wildmenu
 set wildmode=longest:full,full
 set laststatus=2
-set statusline=\ %F%m%r%h\ %w\ \ CWD:\ %{CurDir()}\ \ \ Line:\ %l/%L:%c
+set statusline=\ %f%m%r%h\ %w\ \ CWD:\ %{CurDir()}\ \ \ Line:\ %l/%L:%c
 
 function! CurDir()
   let curdir = substitute(getcwd(),'/home/whyme/',"~/","g")
