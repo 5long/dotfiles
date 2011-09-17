@@ -37,7 +37,6 @@ set list
 set listchars=tab:▸\ ,trail:·
 set linebreak
 set textwidth=75
-set virtualedit=block,onemore
 
 syntax enable
 set autoindent smartindent
