@@ -72,10 +72,10 @@ set incsearch
 set hlsearch
 nnoremap <backspace> :nohlsearch<enter>
 noremap / /\v
-nnoremap # #zt
-nnoremap * *zt
-noremap n nzt
-noremap N Nzt
+nnoremap # #zz
+nnoremap * *zz
+noremap n nzz
+noremap N Nzz
 
 " Internal
 
