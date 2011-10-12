@@ -55,7 +55,6 @@ cnoremap <C-P> <Up>
 set history=300
 set cmdheight=2
 set showcmd
-set ruler
 set wildmenu
 set wildmode=longest:full,full
 set laststatus=2
