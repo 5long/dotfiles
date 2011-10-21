@@ -146,6 +146,7 @@ noremap <space> ^
 noremap <s-space> $
 map <tab> %
 
+nnoremap <leader>db <c-w>o<c-w>v
 " Since minibufexpl is removed
 map <c-h> <c-w>h
 map <c-j> <c-w>j
