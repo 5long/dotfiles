@@ -70,7 +70,7 @@ endfunction
 set ignorecase smartcase
 set incsearch
 set hlsearch
-nnoremap <esc> :nohlsearch<enter>
+nnoremap <backspace> :nohlsearch<enter>
 noremap / /\v
 nnoremap # #zz
 nnoremap * *zz
