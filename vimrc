@@ -142,6 +142,9 @@ inoremap <c-k> <up>
 inoremap <c-l> <right>
 inoremap <c-e> <c-o>E
 
+" It's an operator
+set tildeop
+
 " Movement
 noremap <space> ^
 noremap <s-space> $
