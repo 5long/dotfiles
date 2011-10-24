@@ -7,17 +7,10 @@ endif
 colorscheme lucius
 LuciusBlue
 
-" Tab and decorations.
-set switchbuf=usetab
 set relativenumber
-if has("gui_running")
-  nnoremap <leader><tab>n :tabnew<enter>
-  nnoremap <leader><tab>c :tabclose<enter>
-  nnoremap <c-tab> :tabnext<enter>
-  nnoremap <c-s-tab> :tabprevious<enter>
-endif
 
 " Buffer
+set switchbuf=usetab
 nnoremap <c-n> :bnext<enter>
 nnoremap <c-p> :bprevious<enter>
 
