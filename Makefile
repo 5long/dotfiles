@@ -1,5 +1,6 @@
 CMDT_PATH=ruby/command-t/
 VIMRC=~/.vimrc
+GVIMRC=~/.gvimrc
 RUNTIME_DIR=~/.vim
 
 all: verify-version command-t tmp_dir link
@@ -17,6 +18,7 @@ command-t:
 
 link:
 	test -e $(VIMRC) || ln -s $(PWD)/vimrc $(VIMRC)
+	test -e $(GVIMRC) || ln -s $(PWD)/gvimrc $(GVIMRC)
 	test -e $(RUNTIME_DIR) || ln -s $(PWD) $(RUNTIME_DIR)
 
 unlink:

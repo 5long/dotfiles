@@ -7,19 +7,10 @@ endif
 colorscheme lucius
 LuciusBlue
 
-if has('gui_gtk2')
-  set guifont=Terminus\ 12
-  set guifontwide=WenQuanYi\ Zen\ Hei\ Mono
-else
-  set guifont=Consolas:h12
-endif
-
 " Tab and decorations.
 set switchbuf=usetab
 set relativenumber
 if has("gui_running")
-  set guioptions=aeicM
-
   nnoremap <leader><tab>n :tabnew<enter>
   nnoremap <leader><tab>c :tabclose<enter>
   nnoremap <c-tab> :tabnext<enter>
