@@ -139,7 +139,7 @@ inoreabbrev rt return
 inoremap <c-j> <down>
 inoremap <c-k> <up>
 inoremap <c-l> <right>
-inoremap <c-e> <c-o>E
+inoremap <c-e> <c-o>A
 
 " Movement
 noremap <space> ^
