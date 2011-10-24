@@ -62,7 +62,7 @@ set laststatus=2
 set statusline=\ %f%m%r%h\ %w\ \ CWD:\ %{CurDir()}\ \ \ Line:\ %l/%L:%c
 
 function! CurDir()
-  let curdir = substitute(getcwd(),'/home/whyme/',"~/","g")
+  let curdir = substitute(getcwd(),$HOME,"~","g")
   return curdir
 endfunction
 
