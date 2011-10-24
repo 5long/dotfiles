@@ -166,3 +166,6 @@ set wildignore+=node_modules
 set suffixes+=.log
 
 nmap <F1> <nop>
+
+" Since I'm a plugin author now
+nnoremap <leader>so :source %<CR>
