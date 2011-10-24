@@ -88,7 +88,7 @@ set hidden
 set undofile
 set undodir=~/.tmp
 set undolevels=1000
-autocmd BufReadPost * normal `"
+autocmd BufReadPost * normal g`"
 autocmd! FocusLost * wall
 set autowrite
 
