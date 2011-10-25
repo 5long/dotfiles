@@ -17,16 +17,12 @@ Ruby headers for Command-T
     1.9.1
     $ aptitude install ruby1.9.1-dev
 
-Backup
-
-    $ cd ~
-    $ mv .vimrc .vimrc_backup
-    $ mv .vim .vim_backup
-
 Install
 
     $ cd /path/for/this/repo
     $ make all
+
+Be sure to backup `~/.vim`, `~/.vimrc` and `~/.gvimrc`.
 
 If you are on a Windows box, may God watch over you.
 
