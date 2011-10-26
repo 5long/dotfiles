@@ -28,7 +28,6 @@ If you are on a Windows box, may God watch over you.
 
 ## Plugins Included
 
-* AutoComplPop
 * Command-T
 * snipMate
 * surround.vim
