@@ -68,6 +68,7 @@ noremap N Nzz
 set autoread
 set noswapfile
 set nobackup
+set nowritebackup
 set hidden
 set undofile
 set undodir=~/.tmp
