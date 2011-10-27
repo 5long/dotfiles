@@ -45,6 +45,7 @@ set wildmenu
 set wildmode=longest:full,full
 set laststatus=2
 set statusline=\ %f%m%r%h\ %w\ \ CWD:\ %{CurDir()}\ \ \ Line:\ %l/%L:%c
+set shortmess+=aI
 
 function! CurDir()
   let curdir = substitute(getcwd(),$HOME,"~","g")
