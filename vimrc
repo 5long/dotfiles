@@ -132,8 +132,8 @@ inoremap <c-e> <c-o>A
 nnoremap Y y$
 
 " Movement
-noremap <space> ^
-noremap <s-space> $
+noremap H ^
+noremap L $
 map <tab> %
 
 nnoremap <leader>db <c-w>o<c-w>v
