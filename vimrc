@@ -65,7 +65,7 @@ noremap N Nzz
 
 " Internal
 
-" Filehandle
+" File handling
 
 set autoread
 set noswapfile
