@@ -149,6 +149,9 @@ map <c-l> <c-w>l
 runtime macros/matchit.vim
 
 " for Command-T
+let g:CommandTMaxHeight = 10
+let g:CommandTBackspaceMap = ['<BS>', '<C-h>']
+let g:CommandTCursorLeftMap = '<Left>'
 nnoremap <leader>ft :CommandTFlush<enter>
 set wildignore+=*.jpg,*.gif,*.png,*.pyc,*.pyo
 set wildignore+=node_modules
