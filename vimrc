@@ -8,6 +8,8 @@ colorscheme lucius
 LuciusBlue
 
 set relativenumber
+set lazyredraw
+set ttyfast
 
 " Buffer
 set switchbuf=usetab
