@@ -10,6 +10,7 @@ LuciusBlue
 set relativenumber
 set lazyredraw
 set ttyfast
+set mouse=n
 
 " Buffer
 set switchbuf=usetab
