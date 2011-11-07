@@ -153,7 +153,7 @@ let g:CommandTMaxHeight = 10
 let g:CommandTBackspaceMap = ['<BS>', '<C-h>']
 let g:CommandTCursorLeftMap = '<Left>'
 nnoremap <leader>ft :CommandTFlush<enter>
-set wildignore+=*.jpg,*.gif,*.png,*.pyc,*.pyo
+set wildignore+=*.jpg,*.gif,*.png,*.pyc,*.pyo,*.ptlc
 set wildignore+=node_modules
 set suffixes+=.log
 
