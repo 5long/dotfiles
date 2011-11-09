@@ -163,3 +163,7 @@ nmap <F1> <nop>
 
 " Since I'm a plugin author now
 nnoremap <leader>so :source %<CR>
+
+if filereadable(expand('~/.vimrc.local'))
+  source ~/.vimrc.local
+endif
