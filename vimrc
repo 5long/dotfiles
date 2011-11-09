@@ -29,6 +29,7 @@ set formatoptions+=B1
 
 syntax enable
 set autoindent smartindent
+set shiftround
 set expandtab smarttab tabstop=2 shiftwidth=2 softtabstop=2
 filetype plugin on
 filetype indent on
