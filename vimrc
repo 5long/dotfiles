@@ -33,6 +33,7 @@ set expandtab smarttab tabstop=2 shiftwidth=2 softtabstop=2
 filetype plugin on
 filetype indent on
 
+autocmd FileType * set foldmethod=manual
 " Fix filetype
 autocmd BufRead,BufNewFile *.md set filetype=markdown
 
