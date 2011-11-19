@@ -67,6 +67,7 @@ set hlsearch
 set nowrapscan
 nnoremap <backspace> :nohlsearch<enter>
 noremap / /\v
+noremap ? ?\v
 nnoremap # #zz
 nnoremap * *zz
 noremap n nzz
