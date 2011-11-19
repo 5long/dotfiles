@@ -7,6 +7,8 @@ endif
 colorscheme lucius
 LuciusBlue
 
+set nomodeline
+
 set relativenumber
 set lazyredraw
 set ttyfast
