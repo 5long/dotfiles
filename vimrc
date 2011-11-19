@@ -32,7 +32,7 @@ set autoindent
 set shiftround
 set expandtab smarttab
 for s:key in ['tabstop', 'shiftwidth', 'softtabstop']
-  exec 'let &' . s:key . ' = 2'
+  exec 'let &g:' . s:key . ' = 2'
 endfor
 unlet s:key
 filetype plugin on
