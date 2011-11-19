@@ -2,8 +2,8 @@ let g:mapleader=","
 
 "" Interface
 let &t_Co = empty($COLORTERM) ? 2 : 256
+let g:lucius_style = 'blue'
 colorscheme lucius
-LuciusBlue
 
 set nomodeline
 
