@@ -31,9 +31,10 @@ syntax enable
 set autoindent
 set shiftround
 set expandtab smarttab
-for key in ['tabstop', 'shiftwidth', 'softtabstop']
-  exec 'let &' . key . ' = 2'
+for s:key in ['tabstop', 'shiftwidth', 'softtabstop']
+  exec 'let &' . s:key . ' = 2'
 endfor
+unlet s:key
 filetype plugin on
 filetype indent on
 
