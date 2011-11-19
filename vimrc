@@ -28,7 +28,7 @@ set textwidth=75
 set formatoptions+=B1
 
 syntax enable
-set autoindent smartindent
+set autoindent
 set shiftround
 set expandtab smarttab
 for key in ['tabstop', 'shiftwidth', 'softtabstop']
