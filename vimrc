@@ -1,9 +1,7 @@
 let g:mapleader=","
 
 "" Interface
-if !has("gui_running")
-  set t_Co=256
-endif
+let &t_Co = empty($COLORTERM) ? 2 : 256
 colorscheme lucius
 LuciusBlue
 
