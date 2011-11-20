@@ -1,3 +1,9 @@
+" Be Vundlized
+filetype off
+set runtimepath+=~/.vim/bundle/vundle
+call vundle#rc()
+Bundle 'gmarik/vundle'
+
 let g:mapleader=","
 let g:maplocalleader="\\"
 
