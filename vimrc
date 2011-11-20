@@ -11,6 +11,7 @@ Bundle 'mileszs/ack.vim'
 Bundle 'mako.vim'
 Bundle 'mako.vim--Torborg'
 Bundle 'juvenn/mustache.vim'
+Bundle 'pangloss/vim-javascript'
 
 let g:mapleader=","
 let g:maplocalleader="\\"
