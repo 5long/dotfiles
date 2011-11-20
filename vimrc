@@ -5,6 +5,7 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 Bundle 'tpope/vim-surround'
+Bundle '5long/ryve'
 
 let g:mapleader=","
 let g:maplocalleader="\\"
