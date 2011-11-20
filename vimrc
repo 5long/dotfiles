@@ -8,6 +8,8 @@ Bundle 'tpope/vim-surround'
 Bundle '5long/ryve'
 Bundle 'wincent/Command-T'
 Bundle 'mileszs/ack.vim'
+Bundle 'mako.vim'
+Bundle 'mako.vim--Torborg'
 
 let g:mapleader=","
 let g:maplocalleader="\\"
