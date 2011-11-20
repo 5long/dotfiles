@@ -35,8 +35,7 @@ for s:key in ['tabstop', 'shiftwidth', 'softtabstop']
   exec 'set ' . s:key . '=2'
 endfor
 unlet s:key
-filetype plugin on
-filetype indent on
+filetype plugin indent on
 
 autocmd FileType * set foldmethod=manual
 " Fix filetype
