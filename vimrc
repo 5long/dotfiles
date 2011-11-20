@@ -140,6 +140,8 @@ inoremap <c-k> <up>
 inoremap <c-l> <right>
 inoremap <c-e> <c-o>A
 
+inoremap <c-space> <nop>
+
 nnoremap Y y$
 
 " Movement
