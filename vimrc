@@ -4,6 +4,8 @@ set runtimepath+=~/.vim/bundle/vundle
 call vundle#rc()
 Bundle 'gmarik/vundle'
 
+Bundle 'tpope/vim-surround'
+
 let g:mapleader=","
 let g:maplocalleader="\\"
 
