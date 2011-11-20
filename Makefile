@@ -1,4 +1,4 @@
-CMDT_PATH=ruby/command-t/
+CMDT_PATH=bundle/Command-T/ruby/command-t/
 VIMRC=~/.vimrc
 GVIMRC=~/.gvimrc
 RUNTIME_DIR=~/.vim
