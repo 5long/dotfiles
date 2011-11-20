@@ -7,6 +7,7 @@ Bundle 'gmarik/vundle'
 Bundle 'tpope/vim-surround'
 Bundle '5long/ryve'
 Bundle 'wincent/Command-T'
+Bundle 'mileszs/ack.vim'
 
 let g:mapleader=","
 let g:maplocalleader="\\"
