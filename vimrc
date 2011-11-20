@@ -10,6 +10,7 @@ Bundle 'wincent/Command-T'
 Bundle 'mileszs/ack.vim'
 Bundle 'mako.vim'
 Bundle 'mako.vim--Torborg'
+Bundle 'juvenn/mustache.vim'
 
 let g:mapleader=","
 let g:maplocalleader="\\"
