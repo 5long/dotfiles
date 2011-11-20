@@ -41,6 +41,7 @@ filetype indent on
 autocmd FileType * set foldmethod=manual
 " Fix filetype
 autocmd BufRead,BufNewFile *.md set filetype=markdown
+autocmd FileType mako setl ts=2 sw=2 sts=2
 
 " Command line and status line.
 cnoremap <C-A> <Home>
