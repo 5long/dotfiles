@@ -1,4 +1,5 @@
 let g:mapleader=","
+let g:maplocalleader="\\"
 
 "" Interface
 let &t_Co = empty($COLORTERM) ? 2 : 256
@@ -41,6 +42,11 @@ autocmd FileType * set foldmethod=manual
 " Fix filetype
 autocmd BufRead,BufNewFile *.md set filetype=markdown
 autocmd FileType mako setl ts=2 sw=2 sts=2
+
+" Set the damn file type
+nnoremap <LocalLeader><LocalLeader> :setfiletype<space>
+nnoremap <LocalLeader>mk :setfiletype<space>mako<cr>
+nnoremap <LocalLeader>js :setfiletype<space>javascript<cr>
 
 " Command line and status line.
 cnoremap <C-A> <Home>
