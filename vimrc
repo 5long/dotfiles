@@ -133,6 +133,9 @@ inoremap $R <backspace><delete>
 
 inoreabbrev rt return
 
+" Let's give it a shot
+nnoremap <space> a<space><esc>r
+
 " Move around while in editing mode
 " Leave <c-h> for backspace
 inoremap <c-j> <down>
