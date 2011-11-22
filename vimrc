@@ -135,6 +135,7 @@ inoreabbrev rt return
 
 " Let's give it a shot
 nnoremap <space> a<space><esc>r
+nnoremap <cr> a<space><esc>r<cr>
 
 " Move around while in editing mode
 " Leave <c-h> for backspace
