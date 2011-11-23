@@ -71,7 +71,6 @@ endfunction
 set ignorecase smartcase
 set incsearch
 set hlsearch
-set nowrapscan
 nnoremap <backspace> :nohlsearch<enter>
 noremap / /\v
 noremap ? ?\v
