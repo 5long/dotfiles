@@ -2,8 +2,9 @@ CMDT_PATH=bundle/Command-T/ruby/command-t/
 VIMRC=~/.vimrc
 GVIMRC=~/.gvimrc
 RUNTIME_DIR=~/.vim
+VUNDLE_ROOT=bundle/vundle
 
-all: verify-version command-t tmp_dir link
+all: verify-version bundle-install command-t tmp_dir link
 	@true
 
 verify-version:
@@ -12,7 +13,7 @@ verify-version:
 tmp_dir:
 	mkdir -p ~/.tmp/
 
-command-t:
+command-t: bundle-install
 	cd $(CMDT_PATH) && ruby extconf.rb
 	$(MAKE) -C $(CMDT_PATH)
 
@@ -24,4 +25,11 @@ link:
 unlink:
 	rm -f $(VIMRC) $(RUNTIME_DIR)
 
-.PHONY: command-t tmp_dir all verify-version link unlink
+vundle:
+	mkdir -p bundle
+	test -e $(VUNDLE_DIR) || git clone 'http://github.com/gmarik/vundle' $(VUNDLE_ROOT)
+
+bundle-install: vundle link
+	vim +BundleInstall +quitall
+
+.PHONY: command-t tmp_dir all verify-version link unlink vundle
