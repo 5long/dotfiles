@@ -11,6 +11,7 @@ Bundle 'mako.vim'
 Bundle 'mako.vim--Torborg'
 Bundle 'juvenn/mustache.vim'
 Bundle 'pangloss/vim-javascript'
+runtime macros/matchit.vim
 
 let g:mapleader=","
 let g:maplocalleader="\\"
@@ -148,6 +149,7 @@ inoremap <c-k> <up>
 inoremap <c-l> <right>
 inoremap <c-e> <c-o>A
 
+nmap <F1> <nop>
 inoremap <c-space> <nop>
 nnoremap Y y$
 noremap H ^
@@ -160,8 +162,6 @@ map <c-j> <c-w>j
 map <c-k> <c-w>k
 map <c-l> <c-w>l
 
-runtime macros/matchit.vim
-
 let g:CommandTMaxHeight = 10
 let g:CommandTBackspaceMap = ['<BS>', '<C-h>']
 let g:CommandTCursorLeftMap = '<Left>'
@@ -169,8 +169,6 @@ nnoremap <leader>ft :CommandTFlush<enter>
 set wildignore+=*.jpg,*.gif,*.png,*.pyc,*.pyo,*.ptlc
 set wildignore+=node_modules
 set suffixes+=.log
-
-nmap <F1> <nop>
 
 " Since I'm a plugin author now
 nnoremap <leader>so :source %<CR>
