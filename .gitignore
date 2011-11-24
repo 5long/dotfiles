@@ -3,10 +3,5 @@
 
 *.sw[op]
 *~
-*.o
-*.so
-*.log
-/ruby/command-t/Makefile
 
-doc
 /bundle
