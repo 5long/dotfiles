@@ -56,7 +56,7 @@ autocmd FileType mako setl ts=2 sw=2 sts=2
 
 " Set the damn file type
 nnoremap <LocalLeader><LocalLeader> :setfiletype<space>
-nnoremap <LocalLeader>mk :setfiletype<space>mako<cr>
+nnoremap <LocalLeader>mk :setfiletype<space>html.mako<cr>
 nnoremap <LocalLeader>js :setfiletype<space>javascript<cr>
 let g:javascript_ignore_javaScriptdoc = 1
 
