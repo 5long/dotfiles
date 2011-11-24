@@ -1,4 +1,3 @@
-" Be Vundlized
 filetype off
 set runtimepath+=~/.vim/bundle/vundle
 call vundle#rc()
@@ -16,7 +15,6 @@ Bundle 'pangloss/vim-javascript'
 let g:mapleader=","
 let g:maplocalleader="\\"
 
-"" Interface
 let &t_Co = empty($COLORTERM) ? 2 : 256
 let g:lucius_style = 'blue'
 colorscheme lucius
@@ -28,12 +26,10 @@ set lazyredraw
 set ttyfast
 set mouse=n
 
-" Buffer
 set switchbuf=usetab
 nnoremap <c-n> :bnext<enter>
 nnoremap <c-p> :bprevious<enter>
 
-" Textarea
 set scrolloff=6
 set cursorcolumn cursorline
 set showmatch
@@ -54,7 +50,6 @@ unlet s:key
 filetype plugin indent on
 
 autocmd FileType * set foldmethod=manual
-" Fix filetype
 autocmd BufRead,BufNewFile *.md set filetype=markdown
 autocmd FileType mako setl ts=2 sw=2 sts=2
 
@@ -63,7 +58,6 @@ nnoremap <LocalLeader><LocalLeader> :setfiletype<space>
 nnoremap <LocalLeader>mk :setfiletype<space>mako<cr>
 nnoremap <LocalLeader>js :setfiletype<space>javascript<cr>
 
-" Command line and status line.
 cnoremap <C-A> <Home>
 cnoremap <C-N> <Down>
 cnoremap <C-P> <Up>
@@ -82,7 +76,6 @@ function! CurDir()
   return curdir
 endfunction
 
-" Searching
 set ignorecase smartcase
 set incsearch
 set hlsearch
@@ -93,10 +86,6 @@ nnoremap # #zz
 nnoremap * *zz
 noremap n nzz
 noremap N Nzz
-
-" Internal
-
-" File handling
 
 set autoread
 set noswapfile
@@ -114,7 +103,6 @@ nnoremap <leader>w :update<CR>
 nnoremap <leader>dd :bdelete<CR>
 nnoremap <leader>da :1,300bdelete<CR>
 
-" Utilities
 nnoremap <leader>au :autocmd  <buffer><space><s-left><left>
 nnoremap <leader>cd :cd %:p:h<CR>
 nnoremap <leader>lc :lcd %:p:h<CR>
@@ -123,20 +111,17 @@ nnoremap <leader>n :cnext<CR>
 nnoremap <leader>p :cprevious<CR>
 nnoremap <leader>== gg=G``
 
-" Encoding
 set fileformats=unix,dos,mac
 set encoding=utf-8
 set fileencoding=utf-8
 set fileencodings=ucs-bom,utf-8,gb-18030,gbk,gb2312,latin1
 set nobomb
 
-" Diff options
 set diffopt=filler,vertical
 noremap <leader>du :diffupdate<enter>
 nnoremap <leader>di :diffthis<enter>
 nnoremap <leader>do :diffoff!<enter>
 
-" Editing
 set backspace=eol,start,indent
 set noesckeys
 
@@ -157,7 +142,6 @@ inoreabbrev rt return
 nnoremap <space> a<space><esc>r
 nnoremap <cr> a<space><esc>r<cr>
 
-" Move around while in editing mode
 " Leave <c-h> for backspace
 inoremap <c-j> <down>
 inoremap <c-k> <up>
@@ -165,25 +149,19 @@ inoremap <c-l> <right>
 inoremap <c-e> <c-o>A
 
 inoremap <c-space> <nop>
-
 nnoremap Y y$
-
-" Movement
 noremap H ^
 noremap L $
 map <tab> %
 
 nnoremap <leader>db <c-w>o<c-w>v
-" Since minibufexpl is removed
 map <c-h> <c-w>h
 map <c-j> <c-w>j
 map <c-k> <c-w>k
 map <c-l> <c-w>l
 
-" Enable matchit
 runtime macros/matchit.vim
 
-" for Command-T
 let g:CommandTMaxHeight = 10
 let g:CommandTBackspaceMap = ['<BS>', '<C-h>']
 let g:CommandTCursorLeftMap = '<Left>'
