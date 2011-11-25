@@ -27,7 +27,7 @@ unlink:
 
 vundle:
 	mkdir -p bundle
-	test -e $(VUNDLE_DIR) || git clone 'http://github.com/gmarik/vundle' $(VUNDLE_ROOT)
+	test -e $(VUNDLE_ROOT) || git clone 'http://github.com/gmarik/vundle' $(VUNDLE_ROOT)
 
 bundle-install: vundle link
 	vim +BundleInstall +quitall
