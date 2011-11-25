@@ -105,7 +105,6 @@ nnoremap <leader>w :update<CR>
 nnoremap <leader>dd :bdelete<CR>
 nnoremap <leader>da :1,300bdelete<CR>
 
-nnoremap <leader>au :autocmd  <buffer><space><s-left><left>
 nnoremap <leader>cd :cd %:p:h<CR>
 nnoremap <leader>lc :lcd %:p:h<CR>
 nnoremap <leader>q :Ack -Qw  --<s-left><left>
