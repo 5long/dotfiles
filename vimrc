@@ -84,10 +84,11 @@ set hlsearch
 nnoremap <backspace> :nohlsearch<enter>
 noremap / /\v
 noremap ? ?\v
-nnoremap # #zz
-nnoremap * *zz
-noremap n nzz
-noremap N Nzz
+
+for s:key in ['#', '*', 'n', 'N']
+  exec printf('nnoremap %s %szz', s:key, s:key)
+endfor
+unlet s:key
 
 set autoread
 set noswapfile
