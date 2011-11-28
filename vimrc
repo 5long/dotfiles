@@ -127,6 +127,8 @@ nnoremap <leader>do :diffoff!<enter>
 set backspace=eol,start,indent
 set noesckeys
 
+xmap s <Plug>VSurround
+imap <c-s> <Plug>ISurround
 inoremap $<space> <space><space><left>
 inoremap $@ ()<left>
 inoremap $2 []<left>
