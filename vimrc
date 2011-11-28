@@ -151,6 +151,7 @@ inoremap <c-j> <down>
 inoremap <c-k> <up>
 inoremap <c-l> <right>
 inoremap <c-e> <c-o>A
+inoremap <c-a> <c-o>I
 
 nmap <F1> <nop>
 inoremap <c-space> <nop>
