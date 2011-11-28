@@ -50,8 +50,8 @@ endfor
 unlet s:key
 filetype plugin indent on
 
-autocmd FileType * set foldmethod=manual
-autocmd BufRead,BufNewFile *.md set filetype=markdown
+autocmd FileType * setl foldmethod=manual
+autocmd BufRead,BufNewFile *.md setfiletype=markdown
 autocmd FileType mako setl ts=2 sw=2 sts=2
 
 " Set the damn file type
