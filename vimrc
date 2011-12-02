@@ -11,6 +11,7 @@ Bundle 'mako.vim'
 Bundle 'mako.vim--Torborg'
 Bundle 'juvenn/mustache.vim'
 Bundle 'pangloss/vim-javascript'
+Bundle 'Syntastic'
 runtime macros/matchit.vim
 
 let g:mapleader=","
@@ -173,6 +174,8 @@ nnoremap <leader>ft :CommandTFlush<enter>
 set wildignore+=*.jpg,*.gif,*.png,*.pyc,*.pyo,*.ptlc
 set wildignore+=node_modules
 set suffixes+=.log
+
+let g:syntastic_auto_loc_list=1
 
 " Since I'm a plugin author now
 nnoremap <leader>so :source %<CR>
