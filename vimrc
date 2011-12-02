@@ -108,7 +108,7 @@ nnoremap <leader>da :1,300bdelete<CR>
 
 nnoremap <leader>cd :cd %:p:h<CR>
 nnoremap <leader>lc :lcd %:p:h<CR>
-nnoremap <leader>g :Ack -Qw  --all<s-left><left>
+nnoremap <leader>g :Ack -Qw '' --all<s-left><left><left>
 nnoremap <leader>n :cnext<CR>
 nnoremap <leader>p :cprevious<CR>
 nnoremap <leader>== gg=G``
