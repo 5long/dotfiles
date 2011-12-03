@@ -17,7 +17,6 @@ runtime macros/matchit.vim
 let g:mapleader=","
 let g:maplocalleader="\\"
 
-let &t_Co = empty($COLORTERM) ? 2 : 256
 let g:lucius_style = 'blue'
 colorscheme lucius
 
@@ -112,7 +111,6 @@ nnoremap <leader>lc :lcd %:p:h<CR>
 nnoremap <leader>g :Ack -Qw '' --all<s-left><left><left>
 nnoremap <leader>n :cnext<CR>
 nnoremap <leader>p :cprevious<CR>
-nnoremap <leader>== gg=G``
 
 set fileformats=unix,dos,mac
 set encoding=utf-8
