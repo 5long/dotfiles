@@ -174,6 +174,7 @@ set wildignore+=node_modules
 set suffixes+=.log
 
 let g:syntastic_auto_loc_list=1
+let g:syntastic_quiet_warnings=1
 
 " Since I'm a plugin author now
 nnoremap <leader>so :source %<CR>
