@@ -153,6 +153,7 @@ inoremap <c-e> <c-o>A
 inoremap <c-a> <c-o>I
 
 nmap <F1> <nop>
+nmap K <nop>
 inoremap <c-space> <nop>
 nnoremap Y y$
 noremap H ^
