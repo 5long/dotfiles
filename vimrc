@@ -53,6 +53,7 @@ filetype plugin indent on
 autocmd FileType * setl foldmethod=manual
 autocmd BufRead,BufNewFile *.md setfiletype=markdown
 autocmd FileType mako setl ts=2 sw=2 sts=2
+autocmd FileType mako setl isk+=-
 
 " Set the damn file type
 nnoremap <LocalLeader><LocalLeader> :setfiletype<space>
