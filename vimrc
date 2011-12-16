@@ -131,6 +131,7 @@ nnoremap <leader>do :diffoff!<enter>
 set backspace=eol,start,indent
 set noesckeys
 
+nmap <c-s> <Plug>Ysurround
 xmap s <Plug>VSurround
 imap <c-s> <Plug>ISurround
 inoremap $<space> <space><space><left>
