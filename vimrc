@@ -12,6 +12,7 @@ Bundle 'mako.vim--Torborg'
 Bundle 'juvenn/mustache.vim'
 Bundle 'pangloss/vim-javascript'
 Bundle 'Syntastic'
+Bundle 'mattn/zencoding-vim'
 runtime macros/matchit.vim
 
 let g:mapleader=","
