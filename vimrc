@@ -74,8 +74,8 @@ set cmdheight=2
 set showcmd
 set wildmenu
 set wildmode=longest:full,full
-set laststatus=0
-set rulerformat=%100(%f%m%R%H%W\ \ in\ %{CurDir()}%)
+set laststatus=2
+set statusline=%f%m%R%H%W\ in\ %{CurDir()}
 set shortmess+=aI
 
 function! CurDir()
