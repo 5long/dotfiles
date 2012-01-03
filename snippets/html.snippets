@@ -1,17 +1,13 @@
-# Non-Breaking Space
 snippet nbs
 	&nbsp;
-# HTML
 snippet html
-	<!DOCTYPE HTML>
+	<!doctype html>
 	<html>
 	<head>
 		<meta charset="utf-8" />
 		<title>${1:`substitute(Filename('', 'Page Title'), '^.', '\u&', '')`}</title>
-		${2}
 	</head>
 	<body>
-		${3}
 	</body>
 	</html>
 snippet s
@@ -25,48 +21,17 @@ snippet style
 	<style type="text/css" media="${1:screen}">
 		${2}
 	</style>${3}
-snippet r
-	<br />
-snippet div
-	<div${1}>
-		${2}
-	</div>
-snippet fieldset
-	<fieldset id="$1">
-		<legend>${1:name}</legend>
-		${3}
-	</fieldset>
 snippet form
 	<form action="${1:`Filename('$1_submit')`}" method="${2:POST}">
 		${3}
-	<button type="submit" name="submit">${4:OK}</button>
+		<button type="submit" name="submit">${4:OK}</button>
 	</form>
 snippet input
-	<input type="${1:text/submit/hidden/button}" name="${2:some_name}" value="${3}" />${4}
-snippet label
-	<label for="${2:name}">${1}</label>
-	<input type="${3:text/submit/hidden/button}" name="${4:$2}" value="${5}" />${7}
+	<input type="${1:hidden}" name="${2:some_name}" value="${3}" />${4}
 snippet link
-	<link rel="${1:stylesheet}" href="${2:/css/master.css}" type="text/css" media="${3:screen}" />${4}
+	<link rel="${1:stylesheet}" href="${2:/css/master.css}" type="text/css" />${4}
 snippet mailto
 	<a href="mailto:${1:joe@example.com}?subject=${2:feedback}">${3:email me}</a>
-snippet meta
-	<meta name="${1:name}" content="${2:content}" />${3}
-snippet opt
-	<option value="${1:option}">${2:$1}</option>${3}
-snippet optt
-	<option>${1:option}</option>${2}
-snippet select
-	<select name="${1:some_name}" id="${2:$1}">
-		<option value="${3:option}">${4:$3}</option>
-	</select>${5}
-snippet table
-	<table border="${1:0}">
-		<tr><th>${2:Header}</th></tr>
-		<tr><th>${3:Data}</th></tr>
-	</table>${4}
-snippet textarea
-	<textarea name="${1:Name}" rows="${2:8}" cols="${3:40}">${4}</textarea>${5}
 snippet cmt
 	<!-- ${1} -->
 snippet =
