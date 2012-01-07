@@ -75,7 +75,7 @@ set showcmd
 set wildmenu
 set wildmode=longest:full,full
 set laststatus=2
-set statusline=%f%m%R%H%W\ in\ %{CurDir()}
+set statusline=\ %f%m%R%H%W\ in\ %{CurDir()}\ \ Cur:%l/%L:%c
 set shortmess+=aI
 
 function! CurDir()
