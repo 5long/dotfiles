@@ -11,6 +11,7 @@ Bundle 'mako.vim'
 Bundle 'mako.vim--Torborg'
 Bundle 'juvenn/mustache.vim'
 Bundle 'pangloss/vim-javascript'
+Bundle 'vim-coffee-script'
 Bundle 'Syntastic'
 Bundle 'mru.vim'
 runtime macros/matchit.vim
