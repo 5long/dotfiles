@@ -14,6 +14,7 @@ Bundle 'pangloss/vim-javascript'
 Bundle 'vim-coffee-script'
 Bundle 'Syntastic'
 Bundle 'mru.vim'
+Bundle 'orftz/sbd.vim'
 runtime macros/matchit.vim
 
 let g:mapleader=","
@@ -109,7 +110,7 @@ autocmd! FocusLost * silent! wall
 set autowrite
 
 nnoremap <leader>w :update<CR>
-nnoremap <leader>dd :bdelete<CR>
+nnoremap <leader>dd :Sbd<CR>
 nnoremap <leader>da :1,300bdelete<CR>
 
 nnoremap <leader>cd :cd %:p:h<CR>
