@@ -64,6 +64,7 @@ autocmd FileType css setl isk+=-
 " Set the damn file type
 nnoremap <LocalLeader><LocalLeader> :setfiletype<space>
 nnoremap <LocalLeader>mk :setfiletype<space>html.mako<cr>
+nnoremap <LocalLeader>er :setfiletype<space>html.eruby<cr>
 nnoremap <LocalLeader>js :setfiletype<space>javascript<cr>
 let g:javascript_ignore_javaScriptdoc = 1
 
