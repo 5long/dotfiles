@@ -150,6 +150,9 @@ inoremap $R <backspace><delete>
 
 inoreabbrev rt return
 
+nnoremap cn' /'<cr>ci'
+nnoremap cn" /"<cr>ci"
+
 " Let's give it a shot
 nnoremap <space> a<space><esc>r
 nnoremap <cr> a<space><esc>r<cr>
