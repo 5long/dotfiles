@@ -112,7 +112,7 @@ set autowrite
 
 nnoremap <leader>w :update<CR>
 nnoremap <leader>dd :Sbd<CR>
-nnoremap <leader>da :1,300bdelete<CR>
+nnoremap <leader>da :bufdo Sbd<CR>
 
 nnoremap <leader>cd :cd %:p:h<CR>
 nnoremap <leader>lc :lcd %:p:h<CR>
