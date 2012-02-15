@@ -1,6 +1,5 @@
 CMDT_PATH=bundle/Command-T/ruby/command-t/
 VIMRC=~/.vimrc
-GVIMRC=~/.gvimrc
 RUNTIME_DIR=~/.vim
 VUNDLE_ROOT=bundle/vundle
 
@@ -19,7 +18,6 @@ command-t: bundle-install
 
 link:
 	test -e $(VIMRC) || ln -s $(PWD)/vimrc $(VIMRC)
-	test -e $(GVIMRC) || ln -s $(PWD)/gvimrc $(GVIMRC)
 	test -e $(RUNTIME_DIR) || ln -s $(PWD) $(RUNTIME_DIR)
 
 unlink:

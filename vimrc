@@ -192,6 +192,13 @@ let g:syntastic_quiet_warnings=1
 " Since I'm a plugin author now
 nnoremap <leader>so :source %<CR>
 
+if has('gui_gtk2')
+  set guifont=Terminus\ 12
+  set guifontwide=WenQuanYi\ Zen\ Hei\ Mono
+endif
+
+set guioptions=aeicM
+
 if filereadable(expand('~/.vimrc.local'))
   source ~/.vimrc.local
 endif

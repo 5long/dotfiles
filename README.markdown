@@ -25,7 +25,7 @@ Here comes the install if you're not scared by the messy Makefile.
     $ cd /path/for/this/repo
     $ make all
 
-Be sure to backup `~/.vim`, `~/.vimrc` and `~/.gvimrc`.
+Be sure to backup `~/.vim` and `~/.vimrc`.
 
 If you are on a Windows box, may God watch over you.
 
