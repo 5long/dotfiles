@@ -45,6 +45,7 @@ set listchars=tab:▸\ ,trail:·
 set linebreak
 set textwidth=75
 set formatoptions+=B1
+nnoremap ,ss :setlocal spell!<cr>
 
 syntax enable
 set autoindent
