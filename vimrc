@@ -15,6 +15,7 @@ Bundle 'vim-coffee-script'
 Bundle 'Syntastic'
 Bundle 'mru.vim'
 Bundle 'orftz/sbd.vim'
+Bundle 'ZenCoding.vim'
 runtime macros/matchit.vim
 
 let g:mapleader=","
@@ -189,6 +190,9 @@ set suffixes+=.log
 
 let g:syntastic_auto_loc_list=1
 let g:syntastic_quiet_warnings=1
+
+let g:user_zen_leader_key='<nop>'
+let g:user_zen_expandabbr_key='<c-u>'
 
 " Since I'm a plugin author now
 nnoremap <leader>so :source %<CR>
