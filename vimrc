@@ -185,6 +185,7 @@ let g:CommandTBackspaceMap = ['<BS>', '<C-h>']
 let g:CommandTCursorLeftMap = '<Left>'
 nnoremap <leader>ft :CommandTFlush<enter>
 set wildignore+=*.jpg,*.gif,*.png,*.pyc,*.pyo,*.ptlc
+set wildignore+=*.class,*.dex,*.apk,*.jar
 set wildignore+=node_modules
 set suffixes+=.log
 
