@@ -68,6 +68,7 @@ nnoremap <LocalLeader><LocalLeader> :setfiletype<space>
 nnoremap <LocalLeader>mk :setfiletype<space>html.mako<cr>
 nnoremap <LocalLeader>er :setfiletype<space>html.eruby<cr>
 nnoremap <LocalLeader>js :setfiletype<space>javascript<cr>
+nnoremap <LocalLeader>lq :setfiletype<space>html.liquid<cr>
 let g:javascript_ignore_javaScriptdoc = 1
 
 cnoremap <C-A> <Home>
