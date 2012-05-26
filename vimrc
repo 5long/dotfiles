@@ -71,6 +71,11 @@ nnoremap <LocalLeader>js :setfiletype<space>javascript<cr>
 nnoremap <LocalLeader>lq :setfiletype<space>html.liquid<cr>
 let g:javascript_ignore_javaScriptdoc = 1
 
+" Indentation
+nnoremap <LocalLeader>i2 :setl ts=2 sw=2 sts=2<CR>
+nnoremap <LocalLeader>i4 :setl ts=4 sw=4 sts=4<CR>
+nnoremap <LocalLeader>et :setl et!<CR>
+
 cnoremap <C-A> <Home>
 cnoremap <C-N> <Down>
 cnoremap <C-P> <Up>
