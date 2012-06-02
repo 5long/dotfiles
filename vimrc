@@ -16,6 +16,7 @@ Bundle 'Syntastic'
 Bundle 'mru.vim'
 Bundle 'orftz/sbd.vim'
 Bundle 'ZenCoding.vim'
+Bundle 'scratch.vim'
 runtime macros/matchit.vim
 
 let g:mapleader=","
