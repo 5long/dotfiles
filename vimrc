@@ -205,6 +205,8 @@ let g:user_zen_expandabbr_key='<c-u>'
 " Shut zencoding up
 nnoremap <c-u> <c-u>
 
+autocmd VimEnter * if empty(expand('%')) | exec 'Scratch' | endif
+
 " Since I'm a plugin author now
 nnoremap <leader>so :source %<CR>
 
