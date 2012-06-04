@@ -199,6 +199,11 @@ set suffixes+=.log
 
 let g:syntastic_auto_loc_list=1
 let g:syntastic_quiet_warnings=1
+let g:syntastic_enable_signs = 0
+let g:syntastic_enable_highlighting = 0
+let g:syntastic_mode_map = { 'mode': 'active',
+      \ 'active_filetypes': [],
+      \ 'passive_filetypes': ['puppet'],}
 
 let g:user_zen_leader_key='<Plug><Plug>'
 let g:user_zen_expandabbr_key='<c-u>'
