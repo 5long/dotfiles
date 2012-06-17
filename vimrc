@@ -128,6 +128,7 @@ nnoremap <leader>lc :lcd %:p:h<CR>
 nnoremap <leader>g :Ack -Qw '' --all<s-left><left><left>
 nnoremap <leader>n :cnext<CR>
 nnoremap <leader>p :cprevious<CR>
+nnoremap <leader>me :nnoremap <leader>e :! <c-r>=expand('%')<cr><c-v><cr><s-left><left>
 
 set fileformats=unix,dos,mac
 set encoding=utf-8
