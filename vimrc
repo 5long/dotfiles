@@ -95,6 +95,7 @@ nnoremap <LocalLeader>et :setl et!<CR>
 cnoremap <C-A> <Home>
 cnoremap <C-N> <Down>
 cnoremap <C-P> <Up>
+cnoremap %% <c-r>=expand('%:h').'/'<cr>
 
 set history=300
 set cmdheight=2
