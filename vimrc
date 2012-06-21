@@ -52,6 +52,7 @@ set mouse=n
 set switchbuf=usetab
 nnoremap <c-n> :bnext<enter>
 nnoremap <c-p> :bprevious<enter>
+nnoremap <leader><leader> <c-^>
 
 set scrolloff=6
 set cursorcolumn cursorline
