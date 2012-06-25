@@ -17,6 +17,7 @@ Bundle 'mru.vim'
 Bundle 'orftz/sbd.vim'
 Bundle 'ZenCoding.vim'
 Bundle 'scratch.vim'
+Bundle 'tComment'
 runtime macros/matchit.vim
 
 let g:mapleader=","
@@ -226,6 +227,9 @@ let g:user_zen_leader_key='<Plug><Plug>'
 let g:user_zen_expandabbr_key='<c-u>'
 " Shut zencoding up
 nnoremap <c-u> <c-u>
+
+let g:tcommentMapLeader1 = ''
+let g:tcommentMapLeader2 = ''
 
 autocmd VimEnter * if empty(expand('%')) | exec 'Scratch' | endif
 
