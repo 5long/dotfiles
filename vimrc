@@ -18,6 +18,7 @@ Bundle 'orftz/sbd.vim'
 Bundle 'ZenCoding.vim'
 Bundle 'scratch.vim'
 Bundle 'tComment'
+Bundle 'tpope/vim-eunuch'
 runtime macros/matchit.vim
 
 let g:mapleader=","
