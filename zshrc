@@ -20,7 +20,7 @@ bindkey -v "^Y" vi-put-after
 bindkey -v "^A" beginning-of-line
 bindkey -v "^E" end-of-line
 
-export PAGER="less"
+export PAGER=less
 export N_PREFIX="$HOME/.local"
 typeset -U path
 path=(
@@ -29,28 +29,28 @@ path=(
   $path
   $N_PREFIX/n/current/bin
 )
-export EDITOR="vim"
-export VISUAL="vim"
-export RLWRAP_EDITOR="vi +%L"
-export CDPATH=.:$HOME:$HOME/code
+export EDITOR=vim
+export VISUAL=vim
+export RLWRAP_EDITOR='vi +%L'
+export CDPATH=".:$HOME:$HOME/code"
 export BCAT_BROWSER=google-chrome
 
-alias l='ls'
+alias l=ls
 alias ls='ls -F'
 alias ll='ls -oh'
 alias la='ls -A'
 
 alias grep='grep --color=auto'
-alias psg='ps aux|grep'
+alias psg='ps aux | grep'
 alias -g L='| less'
 alias -g G='| grep'
 
-alias be="bundle exec"
-alias g='git'
+alias be='bundle exec'
+alias g=git
 alias ht="htop -u $USER"
-alias p='pacman'
-alias pa='packer'
-alias pr="padrino rake"
+alias p=pacman
+alias pa=packer
+alias pr='padrino rake'
 alias s='sudo -E '
 alias svim='sudo vim'
 
