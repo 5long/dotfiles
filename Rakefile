@@ -34,4 +34,5 @@ task :command_t => :vim_plugins do
   end
 end
 
+desc "Install w/o overwriting"
 task :default => :command_t
