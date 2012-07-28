@@ -4,4 +4,4 @@
 *.sw[op]
 *~
 
-/bundle
+/vim/bundle
