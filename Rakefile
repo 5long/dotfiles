@@ -35,4 +35,4 @@ task :command_t => :vim_plugins do
 end
 
 desc "Install w/o overwriting"
-task :default => [:command_t, :zshrc]
+task :default => (DOTFILES.clone << :command_t)
