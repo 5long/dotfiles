@@ -1,0 +1,32 @@
+[user]
+  name = Whyme Lyu
+  email = callme5long@gmail.com
+[alias]
+  ci = commit
+  ca = commit --all --verbose
+  amend = commit --amend -C HEAD
+  di = diff
+  st = status -bs
+  co = checkout
+  dc = diff --cached
+  br = branch
+  rv = checkout HEAD --force --
+  ff = merge --ff-only
+  sh = stash
+  graf = log --oneline --graph --decorate
+  tip = log --stat -1
+  nb = checkout --track HEAD -b
+  po = push origin
+  poh = push origin HEAD
+  ph = push
+  pl = pull
+  pr = pull --rebase
+  cw = log --format='%an : %p-%h %s'
+  rb = rebase
+  fa = fetch --all
+  aa = add --all
+[color]
+  diff = auto
+  status = auto
+[core]
+  pager = less -+FSRX -FRX
