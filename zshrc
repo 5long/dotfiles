@@ -1,3 +1,4 @@
+stty -ixon
 autoload -U compinit promptinit
 compinit
 promptinit
@@ -20,6 +21,7 @@ bindkey -v "^Y" vi-put-after
 bindkey -v "^A" beginning-of-line
 bindkey -v "^E" end-of-line
 
+export PS1='%B%(?..[%?] )>%b '
 export PAGER=less
 export N_PREFIX="$HOME/.local"
 typeset -U path

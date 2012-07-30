@@ -11,6 +11,9 @@ css=.css,.sass,.scss,.styl
 --type-add
 html=.html,.haml,.erb
 
+--type-set
+puppet=.pp
+
 --type=nobinary
 
 --ignore-dir=log
