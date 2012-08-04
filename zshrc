@@ -43,6 +43,7 @@ export VISUAL=vim
 export RLWRAP_EDITOR='vi +%L'
 export CDPATH=".:$HOME:$HOME/code"
 export BCAT_BROWSER=google-chrome
+export PYTHONDONTWRITEBYTECODE=1
 
 alias l=ls
 alias ls='ls -F'
