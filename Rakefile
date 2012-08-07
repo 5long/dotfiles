@@ -28,7 +28,7 @@ task :vim_plugins => [:vim, :vimrc, :vundle] do
 end
 
 task :command_t => :vim_plugins do
-  RakeFileUtils.cd 'vim/bundle/Command-T/ruby/command-t' do
+  cd 'vim/bundle/Command-T/ruby/command-t' do
     ruby 'extconf.rb'
     sh 'make clean all'
   end
