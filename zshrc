@@ -63,6 +63,7 @@ alias pa=packer
 alias pr='padrino rake'
 alias s='sudo -E '
 alias svim='sudo vim'
+alias zathura='zathura --fork'
 
 cdgem() {
   cd $(dirname $(gem which $1))
