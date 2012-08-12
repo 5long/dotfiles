@@ -2,7 +2,7 @@ HOME = ENV['HOME']
 CWD = File.dirname __FILE__
 
 BLACKLIST = %w[README.markdown Rakefile]
-DOTFILES = Dir['*'] - BLACKLIST
+DOTFILES = FileList['*'] - BLACKLIST
 
 DOTFILES.each do |f|
   task f do |t|
