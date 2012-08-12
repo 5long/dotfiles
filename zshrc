@@ -61,7 +61,7 @@ alias ht="htop -u $USER"
 alias p=pacman
 alias pa=packer
 alias pr='padrino rake'
-alias s='sudo -E '
+alias s='sudo '
 alias svim='sudo vim'
 alias zathura='zathura --fork &>/dev/null'
 
