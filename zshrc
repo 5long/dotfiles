@@ -56,6 +56,7 @@ alias -g L='| less'
 alias -g G='| grep'
 
 alias be='bundle exec'
+alias rake='noglob rake'
 alias g=git
 alias ht="htop -u $USER"
 alias p=pacman
