@@ -52,6 +52,7 @@ alias la='ls -A'
 
 alias grep='grep --color=auto'
 alias psg='ps aux | grep'
+alias j='jobs -l'
 alias -g L='| less'
 alias -g G='| grep'
 
