@@ -15,7 +15,7 @@ Bundle 'kchmck/vim-coffee-script'
 Bundle 'scrooloose/syntastic'
 Bundle 'orftz/sbd.vim'
 Bundle 'mattn/zencoding-vim'
-Bundle 'scratch.vim'
+Bundle 'kana/vim-scratch'
 Bundle 'tomtom/tcomment_vim'
 Bundle 'tpope/vim-eunuch'
 Bundle 'tpope/vim-endwise'
@@ -233,7 +233,7 @@ nnoremap <c-u> <c-u>
 let g:tcommentMapLeader1 = ''
 let g:tcommentMapLeader2 = ''
 
-autocmd VimEnter * if empty(expand('%')) | exec 'Scratch' | endif
+autocmd VimEnter * if empty(expand('%')) | exec 'ScratchOpen' | endif
 
 " Since I'm a plugin author now
 nnoremap <leader>so :source %<CR>
