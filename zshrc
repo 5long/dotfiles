@@ -71,4 +71,6 @@ cdgem() {
   cd $(dirname $(gem which $1))
 }
 
-[[ -s ~/.zshrc.local ]] && source ~/.zshrc.local
+if [[ -s ~/.zshrc.local ]] then
+  source ~/.zshrc.local
+fi
