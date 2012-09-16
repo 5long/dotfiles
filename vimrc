@@ -25,7 +25,6 @@ Bundle 'tpope/vim-endwise'
 runtime macros/matchit.vim
 
 set exrc
-set modeline
 set secure
 
 let g:mapleader=","
