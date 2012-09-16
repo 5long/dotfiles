@@ -24,6 +24,9 @@ Bundle 'tpope/vim-eunuch'
 Bundle 'tpope/vim-endwise'
 runtime macros/matchit.vim
 
+set exrc
+set secure
+
 let g:mapleader=","
 let g:maplocalleader="\\"
 
