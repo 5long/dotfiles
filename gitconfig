@@ -7,6 +7,7 @@
   br = branch
   ca = commit --all --verbose
   ci = commit
+  ic = commit -vp
   co = checkout
   dc = diff --cached
   di = diff
