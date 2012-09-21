@@ -31,3 +31,5 @@
   status = false
 [core]
   pager = less -+FSRX -FRX
+[push]
+  default = current
