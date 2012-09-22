@@ -143,6 +143,7 @@ set undodir=~/.tmp
 set undolevels=1000
 autocmd BufReadPost * silent! normal g`"
 autocmd! FocusLost * silent! wall
+set autoread
 set autowrite
 
 nnoremap <leader>w :update<CR>
