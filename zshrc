@@ -66,6 +66,7 @@ alias pr='padrino rake'
 alias s='sudo '
 alias svim='sudo vim'
 alias zathura='zathura --fork &>/dev/null'
+alias irc='weechat-curses'
 
 cdgem() {
   cd $(dirname $(gem which $1))
