@@ -1,1 +1,6 @@
-\timing
+\set HISTCONTROL ignoredups
+
+\timing on
+
+\pset tuples_only off
+\pset border 0
