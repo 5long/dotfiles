@@ -1,2 +1,5 @@
 *.sw[a-z]
 .vimrc
+
+debian/.ex
+debian/*.EX
