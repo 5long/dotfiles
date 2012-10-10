@@ -68,6 +68,7 @@ alias svim='sudo vim'
 alias zathura='zathura --fork &>/dev/null'
 alias irc='weechat-curses'
 alias turn='turn --natural'
+alias sctl='systemctl'
 
 cdgem() {
   cd $(dirname $(gem which $1))
