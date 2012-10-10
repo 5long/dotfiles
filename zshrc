@@ -79,14 +79,10 @@ GL_AUTHOR="%C(bold)<%an>%Creset"
 GL_REFS="%C(bold green)%d%Creset"
 GL_SUBJECT="%s"
 
-FORMAT="$GL_HASH}$GL_RELATIVE_TIME}$GL_AUTHOR}$GL_REFS $GL_SUBJECT"
+FORMAT="$GL_HASH $GL_RELATIVE_TIME $GL_AUTHOR $GL_REFS $GL_SUBJECT"
 
 gl() {
-    git log --graph --pretty="tformat:${FORMAT}" $* |
-        # Line columns up based on } delimiter
-        column -s '}' -t |
-        # Page only if we need to
-        less -FXRS
+  git log --graph --pretty="tformat:${FORMAT}" $* | less -FXRS
 }
 
 if [[ -s ~/.zshrc.local ]] then
