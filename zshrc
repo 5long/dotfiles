@@ -73,6 +73,22 @@ cdgem() {
   cd $(dirname $(gem which $1))
 }
 
+GL_HASH="%C(yellow)%h%Creset"
+GL_RELATIVE_TIME="%Cgreen(%ar)%Creset"
+GL_AUTHOR="%C(bold)<%an>%Creset"
+GL_REFS="%C(bold green)%d%Creset"
+GL_SUBJECT="%s"
+
+FORMAT="$GL_HASH}$GL_RELATIVE_TIME}$GL_AUTHOR}$GL_REFS $GL_SUBJECT"
+
+gl() {
+    git log --graph --pretty="tformat:${FORMAT}" $* |
+        # Line columns up based on } delimiter
+        column -s '}' -t |
+        # Page only if we need to
+        less -FXRS
+}
+
 if [[ -s ~/.zshrc.local ]] then
   source ~/.zshrc.local
 fi
