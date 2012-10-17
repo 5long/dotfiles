@@ -152,7 +152,7 @@ nnoremap <leader>da :bufdo Sbd<CR>
 
 nnoremap <leader>cd :cd %:p:h<CR>
 nnoremap <leader>lc :lcd %:p:h<CR>
-nnoremap <leader>g :Ack -Qw '' --all<s-left><left><left>
+nnoremap <leader>g :Ack -Qw ''<left>
 nnoremap <leader>n :cnext<CR>
 nnoremap <leader>p :cprevious<CR>
 nnoremap <leader>me :nnoremap <leader>e :! <c-r>=expand('%')<cr><c-v><cr><s-left><left>
@@ -215,6 +215,8 @@ map <c-h> <c-w>h
 map <c-j> <c-w>j
 map <c-k> <c-w>k
 map <c-l> <c-w>l
+
+let g:ackprg="ag -S --nocolor --nogroup --column"
 
 let g:CommandTMaxHeight = 10
 let g:CommandTBackspaceMap = ['<BS>', '<C-h>']
