@@ -30,6 +30,7 @@ bindkey -M viins " " magic-space
 
 export PS1='%B%(?..[%?] )>%b '
 export PAGER=less
+export LESS=-FXRS
 export N_PREFIX="$HOME/.local"
 typeset -U path
 path=(
