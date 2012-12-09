@@ -88,6 +88,7 @@ autocmd BufRead,BufNewFile *.md setfiletype markdown
 autocmd BufRead,BufNewFile *.thor setfiletype ruby
 autocmd FileType mako setl ts=2 sw=2 sts=2
 autocmd FileType css setl isk+=-
+autocmd FileType python cnorea <buffer> nx nosetests -x
 
 " Set the damn file type
 nnoremap <LocalLeader><LocalLeader> :setfiletype<space>
