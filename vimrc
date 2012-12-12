@@ -193,7 +193,16 @@ nnoremap cn" /"<cr>ci"
 
 " Let's give it a shot
 nnoremap <space> a<space><esc>r
-nnoremap <cr> a<space><esc>r<cr>
+
+function! EnterHit()
+  if stridx(&buftype, 'quickfix') != -1
+    normal! 
+  else
+    normal! a r
+  endif
+endfunction
+
+nnoremap <cr> :call EnterHit()<cr>
 
 " Leave <c-h> for backspace
 inoremap <c-j> <down>
