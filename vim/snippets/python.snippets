@@ -7,12 +7,6 @@ snippet #!
 snippet imp
 	import ${1:module}
 # Module Docstring
-snippet docs
-	'''
-	File: ${1:`Filename('$1.py', 'foo.py')`}
-	Author: ${2:`g:snips_author`}
-	Description: ${3}
-	'''
 snippet wh
 	while ${1:condition}:
 		${2:# code...}
@@ -22,11 +16,11 @@ snippet for
 # New Class
 snippet cl
 	class ${1:ClassName}(${2:object}):
-		"""${3:docstring for $1}"""
 		def __init__(self, ${4:arg}):
-			${5:super($1, self).__init__()}
 			self.$4 = $4
 			${6}
+snippet super
+	super(${1}, self).${2:__init__}(${3})
 # New Function
 snippet def
 	def ${1:fname}(${2:`indent('.') ? 'self' : ''`}):
@@ -51,26 +45,26 @@ snippet .
 snippet try Try/Except
 	try:
 		${1:pass}
-	except ${2:Exception}, ${3:e}:
+	except ${2:Exception} as ${3:e}:
 		${4:raise $3}
 snippet try Try/Except/Else
 	try:
 		${1:pass}
-	except ${2:Exception}, ${3:e}:
+	except ${2:Exception} as ${3:e}:
 		${4:raise $3}
 	else:
 		${5:pass}
 snippet try Try/Except/Finally
 	try:
 		${1:pass}
-	except ${2:Exception}, ${3:e}:
+	except ${2:Exception} as ${3:e}:
 		${4:raise $3}
 	finally:
 		${5:pass}
 snippet try Try/Except/Else/Finally
 	try:
 		${1:pass}
-	except ${2:Exception}, ${3:e}:
+	except ${2:Exception} as ${3:e}:
 		${4:raise $3}
 	else:
 		${5:pass}
