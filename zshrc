@@ -82,11 +82,8 @@ GL_AUTHOR="%C(bold)<%an>%Creset"
 GL_REFS="%C(bold green)%d%Creset"
 GL_SUBJECT="%s"
 
-FORMAT="$GL_HASH $GL_RELATIVE_TIME $GL_AUTHOR $GL_REFS $GL_SUBJECT"
-
-gl() {
-  git log --graph --pretty="tformat:${FORMAT}" $* | less -FXRS
-}
+GL_FORMAT="$GL_HASH $GL_RELATIVE_TIME $GL_AUTHOR $GL_REFS $GL_SUBJECT"
+alias gl='LESS=FXRS git log --graph --pretty="tformat:${GL_FORMAT}"'
 
 if [[ -s ~/.zshrc.local ]] then
   source ~/.zshrc.local
