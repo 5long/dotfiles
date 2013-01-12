@@ -134,7 +134,6 @@ for s:key in ['#', '*', 'n', 'N']
 endfor
 unlet s:key
 
-set autoread
 set noswapfile
 set nobackup
 set nowritebackup
