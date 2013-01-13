@@ -206,6 +206,18 @@ endfunction
 
 nnoremap <cr> :call EnterHit()<cr>
 
+" From https://github.com/garybernhardt/dotfiles/
+function! InsertTabWrapper()
+    let col = col('.') - 1
+    if !col || getline('.')[col - 1] !~ '\k'
+        return "\<tab>"
+    else
+        return "\<c-n>"
+    endif
+endfunction
+inoremap <tab> <c-r>=InsertTabWrapper()<cr>
+inoremap <s-tab> <c-p>
+
 " Leave <c-h> for backspace
 inoremap <c-j> <down>
 inoremap <c-k> <up>
