@@ -141,7 +141,10 @@ set hidden
 set undofile
 set undodir=~/.tmp
 set undolevels=1000
-autocmd BufReadPost * silent! normal g`"
+autocmd BufReadPost *
+  \ if line("'\"") > 1 && line("'\"") <= line("$") |
+  \ exe "normal! g`\"" |
+  \ endif
 autocmd! FocusLost * silent! wall
 set autoread
 set autowrite
