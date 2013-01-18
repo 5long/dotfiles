@@ -2,6 +2,7 @@
   name = Whyme Lyu
   email = callme5long@gmail.com
 [alias]
+  h = help
   aa = add --all
   amend = commit --amend -C HEAD
   br = branch
