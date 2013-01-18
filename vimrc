@@ -16,7 +16,7 @@ Bundle 'juvenn/mustache.vim'
 Bundle 'pangloss/vim-javascript'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'scrooloose/syntastic'
-Bundle 'orftz/sbd.vim'
+Bundle 'bufkill.vim'
 Bundle 'mattn/zencoding-vim'
 Bundle 'kana/vim-scratch'
 Bundle 'tomtom/tcomment_vim'
@@ -150,8 +150,8 @@ set autoread
 set autowrite
 
 nnoremap <leader>w :update<CR>
-nnoremap <leader>dd :Sbd<CR>
-nnoremap <leader>da :bufdo Sbd<CR>
+nnoremap <leader>dd :BD<CR>
+nnoremap <leader>da :silent bufdo BD<CR>
 
 nnoremap <leader>cd :cd %:p:h<CR>
 nnoremap <leader>lc :lcd %:p:h<CR>
