@@ -22,7 +22,7 @@ Bundle 'kana/vim-scratch'
 Bundle 'tomtom/tcomment_vim'
 Bundle 'tpope/vim-eunuch'
 Bundle 'tpope/vim-endwise'
-Bundle 'bbommarito/vim-slim'
+Bundle 'slim-template/vim-slim'
 runtime macros/matchit.vim
 
 set exrc
