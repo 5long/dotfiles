@@ -150,6 +150,7 @@ set autoread
 set autowrite
 
 nnoremap <leader>w :update<CR>
+nnoremap <leader>md :silent! call mkdir(expand('%:p:h'), 'p')
 nnoremap <leader>dd :BD<CR>
 nnoremap <leader>da :silent bufdo BD<CR>
 
