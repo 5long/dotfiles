@@ -225,13 +225,11 @@ inoremap <c-a> <c-o>I
 
 nmap <F1> <nop>
 nmap K <nop>
-nmap Q <nop>
 inoremap <c-space> <nop>
 nnoremap Y y$
 noremap H ^
 noremap L $
-map <tab> %
-noremap <c-p> <c-i>
+map Q %
 
 nnoremap <leader>ov <c-w>o<c-w>v
 map <c-h> <c-w>h
