@@ -22,6 +22,7 @@ Bundle 'kana/vim-scratch'
 Bundle 'tomtom/tcomment_vim'
 Bundle 'tpope/vim-eunuch'
 Bundle 'tpope/vim-endwise'
+Bundle 'tpope/vim-unimpaired'
 Bundle 'slim-template/vim-slim'
 runtime macros/matchit.vim
 
@@ -59,8 +60,6 @@ set ttyfast
 set mouse=n
 
 set switchbuf=usetab
-nnoremap <c-n> :bnext<enter>
-nnoremap <c-p> :bprevious<enter>
 nnoremap <leader><leader> <c-^>
 
 set scrolloff=6
@@ -157,8 +156,6 @@ nnoremap <leader>da :silent bufdo BD<CR>
 nnoremap <leader>cd :cd %:p:h<CR>
 nnoremap <leader>lc :lcd %:p:h<CR>
 nnoremap <leader>g :Ack -Qw ''<left>
-nnoremap <leader>n :cnext<CR>
-nnoremap <leader>p :cprevious<CR>
 nnoremap <leader>me :nnoremap <leader>e :! <c-r>=expand('%')<cr><c-v><cr><s-left><left>
 
 set fileformats=unix,dos,mac
