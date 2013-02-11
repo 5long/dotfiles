@@ -276,7 +276,7 @@ if has('gui_gtk2')
   set guifontwide=WenQuanYi\ Zen\ Hei\ Mono
 endif
 
-set guioptions=aeicM
+set guioptions=aicM
 
 if filereadable(expand('~/.vimrc.local'))
   source ~/.vimrc.local
