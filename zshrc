@@ -72,7 +72,7 @@ alias zathura='zathura --fork &>/dev/null'
 alias irc='weechat-curses'
 alias turn='turn --natural'
 alias sctl='systemctl'
-alias ag='ag -S'
+alias ag='ag -S --group'
 
 cdgem() {
   cd $(dirname $(gem which $1))
