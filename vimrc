@@ -231,6 +231,7 @@ nnoremap Y y$
 noremap H ^
 noremap L $
 map <tab> %
+noremap <c-p> <c-i>
 
 nnoremap <leader>ov <c-w>o<c-w>v
 map <c-h> <c-w>h
