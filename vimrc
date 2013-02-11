@@ -232,7 +232,7 @@ noremap H ^
 noremap L $
 map <tab> %
 
-nnoremap <leader>db <c-w>o<c-w>v
+nnoremap <leader>ov <c-w>o<c-w>v
 map <c-h> <c-w>h
 map <c-j> <c-w>j
 map <c-k> <c-w>k
