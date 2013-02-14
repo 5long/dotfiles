@@ -226,7 +226,7 @@ inoremap <c-l> <right>
 inoremap <c-e> <c-o>A
 inoremap <c-a> <c-o>I
 
-nnoremap <c-n> :tabe<cr>:lcd ~/
+nnoremap <c-n> :tabe \| lcd ~/
 
 nmap <F1> <nop>
 nmap K <nop>
