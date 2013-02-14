@@ -223,6 +223,8 @@ inoremap <c-l> <right>
 inoremap <c-e> <c-o>A
 inoremap <c-a> <c-o>I
 
+nnoremap <c-n> :tabe<cr>:lcd ~/
+
 nmap <F1> <nop>
 nmap K <nop>
 nmap Q <nop>
