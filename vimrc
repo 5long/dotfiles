@@ -38,7 +38,7 @@ if !has("gui_running")
 endif
 colorscheme lucius
 
-nnoremap <leader>hc :call ToggleCommentHighlight()<cr>
+nnoremap <leader>hc :call ToggleCommentHighlight()<CR>
 let s:comment_highlighting = 0
 function! ToggleCommentHighlight()
   if s:comment_highlighting
@@ -70,7 +70,7 @@ set listchars=tab:▸\ ,trail:·
 set linebreak
 set textwidth=75
 set formatoptions+=B1
-nnoremap ,ss :setlocal spell!<cr>
+nnoremap ,ss :setlocal spell!<CR>
 
 syntax enable
 set autoindent
@@ -91,10 +91,10 @@ autocmd FileType python cnorea <buffer> nx nosetests -x
 
 " Set the damn file type
 nnoremap <LocalLeader><LocalLeader> :setfiletype<space>
-nnoremap <LocalLeader>mk :setfiletype<space>html.mako<cr>
-nnoremap <LocalLeader>er :setfiletype<space>html.eruby<cr>
-nnoremap <LocalLeader>js :setfiletype<space>javascript<cr>
-nnoremap <LocalLeader>lq :setfiletype<space>html.liquid<cr>
+nnoremap <LocalLeader>mk :setfiletype<space>html.mako<CR>
+nnoremap <LocalLeader>er :setfiletype<space>html.eruby<CR>
+nnoremap <LocalLeader>js :setfiletype<space>javascript<CR>
+nnoremap <LocalLeader>lq :setfiletype<space>html.liquid<CR>
 let g:javascript_ignore_javaScriptdoc = 1
 
 " Indentation
@@ -105,7 +105,7 @@ nnoremap <LocalLeader>et :setl et!<CR>
 cnoremap <C-A> <Home>
 cnoremap <C-N> <Down>
 cnoremap <C-P> <Up>
-cnoremap %% <c-r>=expand('%:h').'/'<cr>
+cnoremap %% <c-r>=expand('%:h').'/'<CR>
 
 set history=300
 set cmdheight=2
@@ -124,7 +124,7 @@ endfunction
 set ignorecase smartcase
 set incsearch
 set hlsearch
-nnoremap <backspace> :nohlsearch<enter>
+nnoremap <backspace> :nohlsearch<CR>
 noremap / /\v
 noremap ? ?\v
 
@@ -159,7 +159,7 @@ nnoremap <leader>da :silent bufdo BD<CR>
 nnoremap <leader>cd :cd %:p:h<CR>
 nnoremap <leader>lc :lcd %:p:h<CR>
 nnoremap <leader>g :Ack -Qw ''<left>
-nnoremap <leader>me :nnoremap <leader>e :! <c-r>=expand('%')<cr><c-v><cr><s-left><left>
+nnoremap <leader>me :nnoremap <leader>e :! <c-r>=expand('%')<CR><c-v><CR><s-left><left>
 
 set fileformats=unix,dos,mac
 set encoding=utf-8
@@ -168,9 +168,9 @@ set fileencodings=ucs-bom,utf-8,gb-18030,gbk,gb2312,latin1
 set nobomb
 
 set diffopt=filler,vertical
-noremap <leader>du :diffupdate<enter>
-nnoremap <leader>di :diffthis<enter>
-nnoremap <leader>do :diffoff!<enter>
+noremap <leader>du :diffupdate<CR>
+nnoremap <leader>di :diffthis<CR>
+nnoremap <leader>do :diffoff!<CR>
 
 set backspace=eol,start,indent
 set noesckeys
@@ -183,7 +183,7 @@ inoremap $@ ()<left>
 inoremap $2 []<left>
 inoremap $# {}<left>
 inoremap $3 <><left>
-inoremap $4 {}<left><enter><esc>O
+inoremap $4 {}<left><CR><esc>O
 inoremap $$ $
 inoremap $e ''<left>
 inoremap $E ""<left>
@@ -191,8 +191,8 @@ inoremap $R <backspace><delete>
 
 inoreabbrev rt return
 
-nnoremap cn' /'<cr>ci'
-nnoremap cn" /"<cr>ci"
+nnoremap cn' /'<CR>ci'
+nnoremap cn" /"<CR>ci"
 
 " Let's give it a shot
 nnoremap <space> a<space><esc>r
@@ -205,7 +205,7 @@ function! EnterHit()
   endif
 endfunction
 
-nnoremap <cr> :call EnterHit()<cr>
+nnoremap <CR> :call EnterHit()<CR>
 
 " From https://github.com/garybernhardt/dotfiles/
 function! InsertTabWrapper()
@@ -216,7 +216,7 @@ function! InsertTabWrapper()
         return "\<c-n>"
     endif
 endfunction
-inoremap <tab> <c-r>=InsertTabWrapper()<cr>
+inoremap <tab> <c-r>=InsertTabWrapper()<CR>
 inoremap <s-tab> <c-p>
 
 " Leave <c-h> for backspace
@@ -249,8 +249,8 @@ let g:ackprg="ag -S --nocolor --nogroup --column"
 let g:CommandTMaxHeight = 10
 let g:CommandTBackspaceMap = ['<BS>', '<C-h>']
 let g:CommandTCursorLeftMap = '<Left>'
-nnoremap <leader>ft :CommandTFlush<enter>
-nnoremap <leader>bt :CommandTBuffer<enter>
+nnoremap <leader>ft :CommandTFlush<CR>
+nnoremap <leader>bt :CommandTBuffer<CR>
 set wildignore+=*.jpg,*.gif,*.png,*.pyc,*.pyo,*.ptlc
 set wildignore+=*.class,*.dex,*.apk,*.jar
 set wildignore+=node_modules
