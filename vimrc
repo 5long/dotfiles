@@ -191,8 +191,15 @@ inoremap $R <backspace><delete>
 
 inoreabbrev rt return
 
-nnoremap cn' /'<CR>ci'
-nnoremap cn" /"<CR>ci"
+noremap n' :<C-U>call TextObjNext("'")<CR>
+nunmap n'
+noremap n" :<C-U>call TextObjNext('"')<CR>
+nunmap n"
+
+function! TextObjNext(type)
+  let l:cmd = printf("normal! /%svi%s", a:type, a:type)
+  exec cmd
+endfunction
 
 " Let's give it a shot
 nnoremap <space> a<space><esc>r
