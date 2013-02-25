@@ -24,6 +24,7 @@ Bundle 'tpope/vim-eunuch'
 Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-unimpaired'
 Bundle 'slim-template/vim-slim'
+Bundle 'derekwyatt/vim-scala'
 runtime macros/matchit.vim
 
 set exrc
