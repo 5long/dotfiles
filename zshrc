@@ -31,13 +31,11 @@ bindkey -M viins " " magic-space
 export PS1='%B%(?..[%?] )>%b '
 export PAGER=less
 export LESS=-FXRS
-export N_PREFIX="$HOME/.local"
 typeset -U path
 path=(
   $HOME/bin
   $HOME/.local/bin
   $path
-  $N_PREFIX/n/current/bin
 )
 export EDITOR=vim
 export VISUAL=vim
