@@ -8,7 +8,7 @@ Bundle '5long/ryve'
 Bundle 'wincent/Command-T'
 Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"
-Bundle '5long/vim-snipmate'
+Bundle "SirVer/ultisnips"
 Bundle 'mileszs/ack.vim'
 Bundle 'mako.vim'
 Bundle 'mako.vim--Torborg'
@@ -283,6 +283,9 @@ let g:tcommentMapLeader1 = ''
 let g:tcommentMapLeader2 = ''
 
 autocmd VimEnter * if empty(expand('%')) | exec 'ScratchOpen' | endif
+
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
 " Since I'm a plugin author now
 nnoremap <leader>so :source %<CR>

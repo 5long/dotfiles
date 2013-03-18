@@ -1,0 +1,40 @@
+snippet . "this."
+this.$0
+endsnippet
+
+snippet f "Anon function"
+function(${1:args}) {
+  ${0}
+}
+endsnippet
+
+snippet log "console.log()"
+console.log(${1:"boooooooooo"})
+endsnippet
+
+snippet rq "CommonJS require"
+$1 = require("${1:fs}")${0}
+endsnippet
+
+snippet req "CommonJS require w/ attr"
+$2 = require("${1:events}").${2:EventEmitter}
+endsnippet
+
+snippet tout
+setTimeout(function(${2:}) {
+  ${0}
+}, ${1:10})
+endsnippet
+
+
+snippet clo
+;(function(${1}) {
+  ${0}
+})(${2});
+endsnippet
+
+snippet :f
+, ${1}: function(${2}) {
+    ${4}
+  }
+endsnippet
