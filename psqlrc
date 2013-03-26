@@ -4,3 +4,5 @@
 
 \pset tuples_only off
 \pset border 0
+
+\x auto
