@@ -267,7 +267,6 @@ set wildignore+=_site
 set suffixes+=.log
 
 let g:syntastic_auto_loc_list=1
-let g:syntastic_quiet_warnings=1
 let g:syntastic_enable_signs = 0
 let g:syntastic_enable_highlighting = 0
 let g:syntastic_mode_map = { 'mode': 'active',
