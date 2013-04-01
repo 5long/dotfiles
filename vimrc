@@ -25,6 +25,7 @@ Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-unimpaired'
 Bundle 'slim-template/vim-slim'
 Bundle 'derekwyatt/vim-scala'
+Bundle 'plasticboy/vim-markdown'
 runtime macros/matchit.vim
 
 set exrc
@@ -84,7 +85,6 @@ unlet s:key
 filetype plugin indent on
 
 autocmd FileType * setl foldmethod=manual
-autocmd BufRead,BufNewFile *.md setfiletype markdown
 autocmd BufRead,BufNewFile *.thor setfiletype ruby
 autocmd FileType mako setl ts=2 sw=2 sts=2
 autocmd FileType css setl isk+=-
@@ -97,6 +97,7 @@ nnoremap <LocalLeader>er :setfiletype<space>html.eruby<CR>
 nnoremap <LocalLeader>js :setfiletype<space>javascript<CR>
 nnoremap <LocalLeader>lq :setfiletype<space>html.liquid<CR>
 let g:javascript_ignore_javaScriptdoc = 1
+let g:vim_markdown_folding_disabled = 1
 
 " Indentation
 nnoremap <LocalLeader>i2 :setl ts=2 sw=2 sts=2<CR>
