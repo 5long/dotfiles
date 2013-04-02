@@ -14,6 +14,7 @@ Bundle 'kana/vim-scratch'
 Bundle 'tomtom/tcomment_vim'
 Bundle 'tpope/vim-eunuch'
 Bundle 'tpope/vim-unimpaired'
+Bundle 'reinh/vim-makegreen'
 
 Bundle 'tpope/vim-endwise'
 Bundle 'mattn/zencoding-vim'
@@ -251,6 +252,8 @@ map <c-k> <c-w>k
 map <c-l> <c-w>l
 
 let g:ackprg="ag -S --nocolor --nogroup --column"
+
+nnoremap <leader>r :MakeGreen %<CR>
 
 let g:CommandTMaxHeight = 10
 let g:CommandTBackspaceMap = ['<BS>', '<C-h>']
