@@ -26,6 +26,7 @@ Bundle 'tpope/vim-unimpaired'
 Bundle 'slim-template/vim-slim'
 Bundle 'derekwyatt/vim-scala'
 Bundle 'plasticboy/vim-markdown'
+Bundle 'lambdalisue/nose.vim'
 runtime macros/matchit.vim
 
 set exrc
