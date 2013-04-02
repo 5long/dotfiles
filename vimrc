@@ -3,28 +3,29 @@ set runtimepath+=~/.vim/bundle/vundle
 call vundle#rc()
 Bundle 'gmarik/vundle'
 
-Bundle 'tpope/vim-surround'
 Bundle '5long/ryve'
+Bundle 'tpope/vim-surround'
 Bundle 'wincent/Command-T'
 Bundle "SirVer/ultisnips"
 Bundle 'mileszs/ack.vim'
-Bundle 'mako.vim'
-Bundle 'mako.vim--Torborg'
-Bundle 'juvenn/mustache.vim'
-Bundle 'pangloss/vim-javascript'
-Bundle 'kchmck/vim-coffee-script'
 Bundle 'scrooloose/syntastic'
 Bundle 'bufkill.vim'
-Bundle 'mattn/zencoding-vim'
 Bundle 'kana/vim-scratch'
 Bundle 'tomtom/tcomment_vim'
 Bundle 'tpope/vim-eunuch'
-Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-unimpaired'
+
+Bundle 'tpope/vim-endwise'
+Bundle 'mattn/zencoding-vim'
+Bundle 'lambdalisue/nose.vim'
+Bundle 'pangloss/vim-javascript'
+Bundle 'kchmck/vim-coffee-script'
 Bundle 'slim-template/vim-slim'
 Bundle 'derekwyatt/vim-scala'
 Bundle 'plasticboy/vim-markdown'
-Bundle 'lambdalisue/nose.vim'
+Bundle 'mako.vim'
+Bundle 'mako.vim--Torborg'
+Bundle 'juvenn/mustache.vim'
 runtime macros/matchit.vim
 
 set exrc
