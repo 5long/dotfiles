@@ -6,8 +6,6 @@ Bundle 'gmarik/vundle'
 Bundle 'tpope/vim-surround'
 Bundle '5long/ryve'
 Bundle 'wincent/Command-T'
-Bundle "MarcWeber/vim-addon-mw-utils"
-Bundle "tomtom/tlib_vim"
 Bundle "SirVer/ultisnips"
 Bundle 'mileszs/ack.vim'
 Bundle 'mako.vim'
