@@ -286,6 +286,7 @@ autocmd VimEnter * if empty(expand('%')) | exec 'ScratchOpen' | endif
 
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+let g:UltiSnipsDontReverseSearchPath="1"
 
 " Since I'm a plugin author now
 nnoremap <leader>so :source %<CR>

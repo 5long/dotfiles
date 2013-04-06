@@ -8,6 +8,26 @@ function(${1:}) {
 }
 endsnippet
 
+snippet fun "Named function" !
+function ${1}(${2}) {
+  ${0}
+}
+endsnippet
+
+
+snippet pro
+${1}.prototype.${2} = function(${3}) {
+  ${0}
+}
+endsnippet
+
+snippet t
+${1} ? ${2} : ${3}
+endsnippet
+
+snippet insp
+console.log(sys.inspect(${1}))
+endsnippet
 snippet log "console.log()"
 console.log(${1:"boooooooooo"})
 endsnippet

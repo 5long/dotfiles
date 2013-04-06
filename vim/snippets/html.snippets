@@ -1,21 +1,11 @@
 snippet nbs
 	&nbsp;
-snippet html
-	<!doctype html>
-	<html>
-	<head>
-		<meta charset="utf-8" />
-		<title>${1:`substitute(Filename('', 'Page Title'), '^.', '\u&', '')`}</title>
-	</head>
-	<body>
-	</body>
-	</html>
 snippet s
-	<script type="text/javascript">
+	<script>
 		${1}
 	</script>${2}
 snippet ss
-	<script src="${1}.js" type="text/javascript"></script>
+	<script src="${1}.js"></script>
 	${2}
 snippet style
 	<style type="text/css" media="${1:screen}">
@@ -26,13 +16,7 @@ snippet form
 		${3}
 		<button type="submit" name="submit">${4:OK}</button>
 	</form>
-snippet input
-	<input type="${1:hidden}" name="${2:some_name}" value="${3}" />${4}
-snippet link
-	<link rel="${1:stylesheet}" href="${2:/css/master.css}" type="text/css" />${4}
 snippet mailto
 	<a href="mailto:${1:joe@example.com}?subject=${2:feedback}">${3:email me}</a>
 snippet cmt
 	<!-- ${1} -->
-snippet =
-	${1:class}="${2}"
