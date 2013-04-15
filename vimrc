@@ -27,6 +27,7 @@ Bundle 'plasticboy/vim-markdown'
 Bundle 'mako.vim'
 Bundle 'mako.vim--Torborg'
 Bundle 'juvenn/mustache.vim'
+Bundle 'vim-ruby/vim-ruby'
 runtime macros/matchit.vim
 
 set exrc
@@ -86,7 +87,6 @@ unlet s:key
 filetype plugin indent on
 
 autocmd FileType * setl foldmethod=manual
-autocmd BufRead,BufNewFile *.thor setfiletype ruby
 
 " Set the damn file type
 nnoremap <LocalLeader><LocalLeader> :setfiletype<space>
