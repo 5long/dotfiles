@@ -18,6 +18,10 @@ SAVEHIST=2000
 HISTFILE=~/.zsh_history
 set -o histsavenodups
 
+autoload -z edit-command-line
+zle -N edit-command-line
+bindkey -M vicmd v edit-command-line
+
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
 bindkey -v "^R" history-incremental-search-backward
