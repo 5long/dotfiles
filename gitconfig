@@ -10,28 +10,38 @@
   ci = commit
   ic = commit -vp
   co = checkout
+  nb = checkout HEAD -b
+  cb = checkout upstream/master -b
+  l = log --graph --pretty=grb
   dc = diff --cached
   di = diff
   fa = fetch --all
   ff = merge --ff-only
-  graf = log --oneline --graph --decorate --color=auto
-  nb = checkout --track HEAD -b
   ph = push
   pl = pull
-  poh = push origin HEAD
   po = push origin
-  pr = pull --rebase
   rb = rebase
   rv = checkout HEAD --force --
   sh = stash
   st = status -bs
   tip = log --stat -1
+[branch]
+  autosetupmerge = always
 [color]
-  ui = auto
-  diff = false
-  status = false
+  ui = false
+[pretty]
+  grb = %C(yellow)%h%Creset %Cgreen(%ar)%Creset %C(bold)<%an>%Creset %C(bold green)%d%Creset %s
 [core]
   pager = less -+FSRX -FRX
   excludesfile = ~/.gitignore
 [push]
   default = current
+[pull]
+  rebase = true
+[merge]
+  defaultToUpstream = true
+[diff]
+  algorithm = histogram
+  mnemonicprefix = true
+[log]
+  decorate = true

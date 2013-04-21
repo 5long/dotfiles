@@ -79,14 +79,7 @@ cdgem() {
   cd $(dirname $(gem which $1))
 }
 
-GL_HASH="%C(yellow)%h%Creset"
-GL_RELATIVE_TIME="%Cgreen(%ar)%Creset"
-GL_AUTHOR="%C(bold)<%an>%Creset"
-GL_REFS="%C(bold green)%d%Creset"
-GL_SUBJECT="%s"
-
-GL_FORMAT="$GL_HASH $GL_RELATIVE_TIME $GL_AUTHOR $GL_REFS $GL_SUBJECT"
-alias gl='LESS=FXRS git log --graph --pretty="tformat:${GL_FORMAT}"'
+alias gl='git l'
 
 if [[ -s ~/.zshrc.local ]] then
   source ~/.zshrc.local
