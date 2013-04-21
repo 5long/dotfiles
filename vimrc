@@ -18,7 +18,7 @@ Bundle 'reinh/vim-makegreen'
 
 Bundle 'tpope/vim-endwise'
 Bundle 'mattn/zencoding-vim'
-Bundle 'lambdalisue/nose.vim'
+Bundle '5long/pytest-vim-compiler'
 Bundle 'pangloss/vim-javascript'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'slim-template/vim-slim'
