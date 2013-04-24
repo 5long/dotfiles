@@ -226,6 +226,8 @@ endfunction
 inoremap <tab> <c-r>=InsertTabWrapper()<CR>
 inoremap <s-tab> <c-p>
 
+set pastetoggle=<f5>
+
 " Leave <c-h> for backspace
 inoremap <c-j> <down>
 inoremap <c-k> <up>
