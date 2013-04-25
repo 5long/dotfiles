@@ -74,7 +74,6 @@ set listchars=tab:▸\ ,trail:·
 set linebreak
 set textwidth=75
 set formatoptions+=B1
-nnoremap ,ss :setlocal spell!<CR>
 
 syntax enable
 set autoindent
@@ -169,8 +168,6 @@ set nobomb
 
 set diffopt=filler,vertical
 noremap <leader>du :diffupdate<CR>
-nnoremap <leader>di :diffthis<CR>
-nnoremap <leader>do :diffoff!<CR>
 
 set backspace=eol,start,indent
 set noesckeys
