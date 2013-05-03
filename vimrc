@@ -268,6 +268,7 @@ set wildignore+=*.class,*.dex,*.apk,*.jar
 set wildignore+=node_modules
 set wildignore+=_site
 set wildignore+=*.o,*.so
+set wildignore+=pkg,*.gem
 set suffixes+=.log
 
 let g:syntastic_auto_loc_list=1
