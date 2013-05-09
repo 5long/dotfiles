@@ -22,6 +22,8 @@ autoload -z edit-command-line
 zle -N edit-command-line
 bindkey -M vicmd v edit-command-line
 
+KEYTIMEOUT=1
+
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
 bindkey -v "^R" history-incremental-search-backward
