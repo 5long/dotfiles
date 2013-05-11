@@ -1,0 +1,38 @@
+set -o vi
+set +o notify
+
+HISTSIZE=2000
+export PAGER=less
+export LESS=-FXRS
+
+export EDITOR=vim
+export VISUAL=vim
+export RLWRAP_EDITOR='vi +%L'
+
+CDPATH=".:$HOME:$HOME/code"
+export PYTHONDONTWRITEBYTECODE=1
+
+alias l=ls
+alias ls='ls -F'
+alias ll='ls -oh'
+alias la='ls -A'
+
+alias grep='grep --color=auto'
+alias psg='ps aux | grep'
+alias j='jobs -l'
+alias lstcp='lsof -nPi tcp'
+
+alias be='bundle exec'
+alias g=git
+alias gl='git l'
+alias p=pacman
+alias pa=packer
+alias ht="htop -u $USER"
+alias pr='padrino rake'
+alias s='sudo '
+alias sctl='systemctl'
+alias ag='ag -S --group'
+
+cdgem() {
+  cd $(dirname $(gem which $1))
+}
