@@ -1,3 +1,11 @@
 set completion-ignore-case on
+set completion-map-case on
 set completion-prefix-display-length 2
 set editing-mode vi
+set show-all-if-unmodified on
+
+$if mode=vi
+  Control-l: clear-screen
+  Control-a: beginning-of-line
+  Control-e: end-of-line
+$endif
