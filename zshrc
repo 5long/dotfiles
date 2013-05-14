@@ -20,6 +20,8 @@ set -o histsavenodups
 autoload -z edit-command-line
 zle -N edit-command-line
 bindkey -M vicmd v edit-command-line
+bindkey -M vicmd H vi-first-non-blank
+bindkey -M vicmd L vi-end-of-line
 
 KEYTIMEOUT=1
 

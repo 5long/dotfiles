@@ -5,7 +5,12 @@ set editing-mode vi
 set show-all-if-unmodified on
 
 $if mode=vi
+  set keymap vi-insert
   Control-l: clear-screen
   Control-a: beginning-of-line
   Control-e: end-of-line
+
+  set keymap vi-command
+  H: beginning-of-line
+  L: end-of-line
 $endif
