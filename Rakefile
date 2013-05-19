@@ -13,6 +13,9 @@ DOTFILES.each do |f|
   end
 end
 
+task :bashrc => :commonshrc
+task :zshrc => :commonshrc
+
 TMP_DIR = "#{HOME}/.tmp"
 directory TMP_DIR
 task :vimrc => TMP_DIR
