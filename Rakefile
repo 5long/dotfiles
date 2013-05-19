@@ -5,6 +5,7 @@ BLACKLIST = %w[README.markdown Rakefile]
 DOTFILES = FileList['*'] - BLACKLIST
 
 DOTFILES.each do |f|
+  desc "Install ~/.#{f} by symlinking"
   task f do |t|
     target = "#{HOME}/.#{t.name}"
     source = "#{CWD}/#{t.name}"
@@ -23,10 +24,12 @@ task :vundle => ['vim/bundle'] do |t|
   sh "git clone #{VUNDLE_REPO} #{vundle_root}" unless File.exists? vundle_root
 end
 
+desc "Install vim plugins via Vundle"
 task :vim_plugins => [:vim, :vimrc, :vundle] do
   sh 'vim +BundleInstall +quitall'
 end
 
+desc "Compiler Command-T (requires Ruby support in Vim)"
 task :command_t => :vim_plugins do
   cd 'vim/bundle/Command-T/ruby/command-t' do
     ruby 'extconf.rb'
@@ -47,5 +50,5 @@ task :take, :dotless_name do |t, args|
   mv full_path, dotless
 end
 
-desc "Install w/o overwriting"
+desc "Install everything"
 task :default => (DOTFILES.clone << :command_t)
