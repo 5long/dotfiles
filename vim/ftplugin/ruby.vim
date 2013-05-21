@@ -9,3 +9,5 @@ let b:surround_109 = "module\n\t\r\nend" " m
 let b:surround_99 = "class\n\t\r\nend" " c
 
 compiler minitest
+
+cnoreabbrev <buffer> RR ruby -Ilib:test -w
