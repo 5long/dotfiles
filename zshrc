@@ -44,6 +44,7 @@ path=(
 )
 
 export BCAT_BROWSER=google-chrome
+export XAPIAN_CJK_NGRAM=1
 
 alias -g L='| less'
 alias -g G='| grep'
