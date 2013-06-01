@@ -6,7 +6,7 @@
   aa = add --all .
   amend = commit --amend -C HEAD
   br = branch
-  bv = branch -vv
+  b = branch -vv
   ca = commit --all --verbose
   ci = commit
   ic = commit -vp
