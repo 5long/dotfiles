@@ -57,3 +57,8 @@ alias turn='turn --natural'
 if [[ -s ~/.zshrc.local ]] then
   source ~/.zshrc.local
 fi
+
+gc() {
+  git add --all .
+  git commit -m "$*"
+}
