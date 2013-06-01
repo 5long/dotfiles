@@ -54,11 +54,11 @@ alias zathura='zathura --fork &>/dev/null'
 alias irc='weechat-curses'
 alias turn='turn --natural'
 
-if [[ -s ~/.zshrc.local ]] then
-  source ~/.zshrc.local
-fi
-
 gc() {
   git add --all .
   git commit -m "$*"
 }
+
+if [[ -s ~/.zshrc.local ]] then
+  source ~/.zshrc.local
+fi
