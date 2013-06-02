@@ -14,6 +14,7 @@
   nb = checkout HEAD -b
   cb = checkout upstream/master -b
   l = log --graph --pretty=grb
+  ll = log --graph --pretty=grb --stat
   dc = diff --cached
   di = diff
   fa = fetch --all
