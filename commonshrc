@@ -25,6 +25,7 @@ alias lstcp='lsof -nPi tcp'
 alias be='bundle exec'
 alias g=git
 alias gl='git l'
+alias gll='git ll'
 alias p=pacman
 alias pa=packer
 alias ht="htop -u $USER"
