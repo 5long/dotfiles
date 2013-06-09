@@ -1,2 +1,2 @@
 compiler pytest
-let b:runagain_cmd = "!py.test " . expand("%")
+let b:ragain_cmd = "!py.test " . expand("%")

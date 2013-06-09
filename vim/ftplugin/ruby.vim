@@ -11,4 +11,4 @@ let b:surround_99 = "class\n\t\r\nend" " c
 compiler minitest
 
 cnoreabbrev <buffer> RR ruby -Ilib:test -w
-let b:runagain_cmd = "!ruby -Ilib:test " . expand("%")
+let b:ragain_cmd = "!ruby -Ilib:test " . expand("%")
