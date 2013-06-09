@@ -7,7 +7,7 @@ Bundle '5long/ryve'
 Bundle '5long/ragain'
 Bundle 'tpope/vim-surround'
 Bundle 'wincent/Command-T'
-Bundle "SirVer/ultisnips"
+Bundle 'SirVer/ultisnips'
 Bundle 'mileszs/ack.vim'
 Bundle 'scrooloose/syntastic'
 Bundle 'bufkill.vim'
@@ -34,11 +34,11 @@ runtime macros/matchit.vim
 set exrc
 set secure
 
-let g:mapleader=","
-let g:maplocalleader="\\"
+let g:mapleader=','
+let g:maplocalleader='\\'
 
 let g:lucius_style = 'blue'
-if !has("gui_running")
+if !has('gui_running')
   set t_Co=256
 endif
 colorscheme lucius
@@ -117,7 +117,7 @@ set statusline=\ %f%m%R%H%W\ in\ %{CurDir()}\ \ Cur:%l/%L:%c
 set shortmess+=aI
 
 function! CurDir()
-  let curdir = substitute(getcwd(),$HOME,"~","g")
+  let curdir = substitute(getcwd(),$HOME,'~','g')
   return curdir
 endfunction
 
@@ -142,7 +142,7 @@ set undodir=~/.tmp
 set undolevels=1000
 
 func! GoToLastPosition()
-  if line("'\"") > 1 && line("'\"") <= line("$") && &filetype != 'gitcommit'
+  if line("'\"") > 1 && line("'\"") <= line('$') && &filetype != 'gitcommit'
     normal! g`"
   endif
 endfunc
@@ -166,7 +166,7 @@ nnoremap <leader>lc :lcd %:p:h<CR>
 nnoremap <leader>g :Ack -Qw ''<left>
 nmap <leader>e <Plug>RagainRun
 nmap <leader>E <Plug>RagainResetAndRun
-nmap <leader>me :RagainSetAndRun  <c-r>=expand("%")<CR><s-left><left>
+nmap <leader>me :RagainSetAndRun  <c-r>=expand('%')<CR><s-left><left>
 
 set fileformats=unix,dos,mac
 set encoding=utf-8
@@ -202,7 +202,7 @@ noremap n" :<C-U>call <SID>TextObjNext('"')<CR>
 nunmap n"
 
 function! s:TextObjNext(type)
-  let l:cmd = printf("normal! /%svi%s", a:type, a:type)
+  let l:cmd = printf('normal! /%svi%s', a:type, a:type)
   exec cmd
 endfunction
 
@@ -223,9 +223,9 @@ nnoremap <CR> :call EnterHit()<CR>
 function! InsertTabWrapper()
   let col = col('.') - 1
   if !col || getline('.')[col - 1] !~ '\k'
-    return "\<tab>"
+    return '\<tab>'
   else
-    return "\<c-n>"
+    return '\<c-n>'
   endif
 endfunction
 inoremap <tab> <c-r>=InsertTabWrapper()<CR>
@@ -258,7 +258,7 @@ map <c-j> <c-w>j
 map <c-k> <c-w>k
 map <c-l> <c-w>l
 
-let g:ackprg="ag -S --nocolor --nogroup --column"
+let g:ackprg='ag -S --nocolor --nogroup --column'
 
 nnoremap <leader>r :MakeGreen %<CR>
 
@@ -293,9 +293,9 @@ let g:tcommentMapLeader2 = ''
 
 autocmd VimEnter * if empty(expand('%')) | exec 'ScratchOpen' | endif
 
-let g:UltiSnipsJumpForwardTrigger="<tab>"
-let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
-let g:UltiSnipsDontReverseSearchPath="1"
+let g:UltiSnipsJumpForwardTrigger='<tab>'
+let g:UltiSnipsJumpBackwardTrigger='<s-tab>'
+let g:UltiSnipsDontReverseSearchPath='1'
 
 " Since I'm a plugin author now
 nnoremap <leader>so :source %<CR>
