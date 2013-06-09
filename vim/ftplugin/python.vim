@@ -1,2 +1,2 @@
 compiler pytest
-cnorea <buffer> nx nosetests -x
+let b:runagain_cmd = "!py.test " . expand("%")

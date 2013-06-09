@@ -4,6 +4,7 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 Bundle '5long/ryve'
+Bundle '5long/ragain'
 Bundle 'tpope/vim-surround'
 Bundle 'wincent/Command-T'
 Bundle "SirVer/ultisnips"
@@ -163,7 +164,9 @@ nnoremap <leader>da :silent bufdo BD<CR>
 nnoremap <leader>cd :cd %:p:h<CR>
 nnoremap <leader>lc :lcd %:p:h<CR>
 nnoremap <leader>g :Ack -Qw ''<left>
-nnoremap <leader>me :nnoremap <leader>e :! <c-r>=expand('%')<CR><c-v><CR><s-left><left>
+nmap <leader>e <Plug>RagainRun
+nmap <leader>E <Plug>RagainResetAndRun
+nmap <leader>me :RagainSetAndRun  <c-r>=expand("%")<CR><s-left><left>
 
 set fileformats=unix,dos,mac
 set encoding=utf-8
