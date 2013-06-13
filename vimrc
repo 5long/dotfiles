@@ -141,14 +141,6 @@ set undofile
 set undodir=~/.tmp
 set undolevels=1000
 
-func! GoToLastPosition()
-  if line("'\"") > 1 && line("'\"") <= line('$') && &filetype != 'gitcommit'
-    normal! g`"
-  endif
-endfunc
-
-autocmd BufReadPost * call GoToLastPosition()
-
 autocmd! FocusLost * silent! wall
 set autoread
 set autowrite
