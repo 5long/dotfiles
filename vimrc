@@ -11,7 +11,6 @@ Bundle 'SirVer/ultisnips'
 Bundle 'mileszs/ack.vim'
 Bundle 'scrooloose/syntastic'
 Bundle 'bufkill.vim'
-Bundle 'kana/vim-scratch'
 Bundle 'tomtom/tcomment_vim'
 Bundle 'tpope/vim-eunuch'
 Bundle 'tpope/vim-unimpaired'
@@ -284,7 +283,7 @@ nnoremap <c-u> <c-u>
 let g:tcommentMapLeader1 = ''
 let g:tcommentMapLeader2 = ''
 
-autocmd VimEnter * if empty(expand('%')) | exec 'ScratchOpen' | endif
+autocmd VimEnter * if empty(expand('%')) | setl buftype=nofile
 
 let g:UltiSnipsJumpForwardTrigger='<tab>'
 let g:UltiSnipsJumpBackwardTrigger='<s-tab>'
