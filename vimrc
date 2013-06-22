@@ -258,8 +258,9 @@ let g:CommandTMaxHeight = 10
 let g:CommandTBackspaceMap = ['<BS>', '<C-h>']
 let g:CommandTCursorLeftMap = '<Left>'
 let g:CommandTCancelMap = ['<ESC>', '<C-c>']
-nnoremap <leader>ft :CommandTFlush<CR>
-nnoremap <leader>bt :CommandTBuffer<CR>
+nnoremap <leader>f :CommandT<CR>
+nnoremap <leader>pf :CommandTFlush<CR>
+nnoremap <leader>bf :CommandTBuffer<CR>
 set wildignore+=*.jpg,*.gif,*.png,*.pyc,*.pyo,*.ptlc
 set wildignore+=*.class,*.dex,*.apk,*.jar
 set wildignore+=node_modules
