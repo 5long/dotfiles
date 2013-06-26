@@ -43,6 +43,7 @@
 [merge]
   defaultToUpstream = true
 [diff]
+  tool = vimdiff
   algorithm = histogram
   mnemonicprefix = true
 [log]
