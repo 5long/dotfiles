@@ -34,7 +34,7 @@ alias s='sudo '
 alias sctl='systemctl'
 alias ag='ag -S --group'
 
-cdgem() {
+cdrb() {
   cd $(dirname $(gem which $1))
 }
 
