@@ -263,6 +263,7 @@ nnoremap <leader>pf :CommandTFlush<CR>
 nnoremap <leader>bf :CommandTBuffer<CR>
 set wildignore+=*.jpg,*.gif,*.png,*.pyc,*.pyo,*.ptlc
 set wildignore+=*.class,*.dex,*.apk,*.jar
+set wildignore+=*.tgz,*.tar.gz,*.tar.xz,*.tar.bz2,*.zip
 set wildignore+=node_modules
 set wildignore+=_site
 set wildignore+=*.o,*.so
