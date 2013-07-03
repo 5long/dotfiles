@@ -46,4 +46,5 @@ task :take, :dotless_name do |t, args|
 end
 
 desc "Install everything"
-task :default => DOTFILES
+task :everything => DOTFILES
+task :default => :everything
