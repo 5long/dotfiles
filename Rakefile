@@ -20,16 +20,16 @@ TMP_DIR = "#{HOME}/.tmp"
 directory TMP_DIR
 task :vimrc => TMP_DIR
 
-VUNDLE_REPO = 'http://github.com/gmarik/vundle'
+VUNDLE_REPO = 'http://github.com/Shougo/neobundle.vim'
 directory 'vim/bundle'
-task :vundle => ['vim/bundle'] do |t|
+task :'neobundle.vim' => ['vim/bundle'] do |t|
   vundle_root = "vim/bundle/#{t.name}"
   sh "git clone #{VUNDLE_REPO} #{vundle_root}" unless File.exists? vundle_root
 end
 
 desc "Install vim plugins via Vundle"
-task :vim_plugins => [:vim, :vimrc, :vundle] do
-  sh 'vim +BundleInstall +quitall'
+task :vim_plugins => [:vim, :vimrc, :'neobundle.vim'] do
+  sh 'vim +NeoBundleInstall +quitall'
 end
 
 desc "Compiler Command-T (requires Ruby support in Vim)"
