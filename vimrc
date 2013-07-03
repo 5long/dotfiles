@@ -8,7 +8,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle '5long/ryve'
 NeoBundle '5long/ragain'
 NeoBundle 'tpope/vim-surround'
-NeoBundle 'wincent/Command-T'
+NeoBundle 'wincent/Command-T', {'build': {'unix': 'rake make'}}
 NeoBundle 'SirVer/ultisnips'
 NeoBundle 'mileszs/ack.vim'
 NeoBundle 'scrooloose/syntastic'

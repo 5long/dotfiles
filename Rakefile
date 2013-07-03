@@ -29,15 +29,7 @@ end
 
 desc "Install vim plugins via Vundle"
 task :vim_plugins => [:vim, :vimrc, :'neobundle.vim'] do
-  sh 'vim +NeoBundleInstall +quitall'
-end
-
-desc "Compiler Command-T (requires Ruby support in Vim)"
-task :command_t => :vim_plugins do
-  cd 'vim/bundle/Command-T/ruby/command-t' do
-    ruby 'extconf.rb'
-    sh 'make clean all'
-  end
+  sh 'vim +NeoBundleCheck +quitall'
 end
 
 desc "Take a dotfile from $HOME"
@@ -54,4 +46,4 @@ task :take, :dotless_name do |t, args|
 end
 
 desc "Install everything"
-task :default => (DOTFILES.clone << :command_t)
+task :default => DOTFILES
