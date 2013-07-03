@@ -155,7 +155,8 @@ nnoremap <leader>da :silent bufdo BD<CR>
 
 nnoremap <leader>cd :cd %:p:h<CR>
 nnoremap <leader>lc :lcd %:p:h<CR>
-nnoremap <leader>g :Ack -Qw ''<left>
+nnoremap <leader>gg :Ack -Qw ''<left>
+nmap <leader>gw ,gg<c-r><c-w>
 nmap <leader>e <Plug>RagainRun
 nmap <leader>E <Plug>RagainResetAndRun
 nmap <leader>me :RagainSetAndRun  <c-r>=expand('%')<CR><s-left><left>
