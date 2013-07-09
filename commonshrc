@@ -10,7 +10,6 @@ export VISUAL=vim
 export RLWRAP_EDITOR='vi +%L'
 
 CDPATH=".:$HOME:$HOME/code"
-export PYTHONDONTWRITEBYTECODE=1
 
 alias l=ls
 alias ls='ls -F'
