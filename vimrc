@@ -213,18 +213,6 @@ endfunction
 
 nnoremap <CR> :call EnterHit()<CR>
 
-" From https://github.com/garybernhardt/dotfiles/
-function! InsertTabWrapper()
-  let col = col('.') - 1
-  if !col || getline('.')[col - 1] !~ '\k'
-    return '\<tab>'
-  else
-    return '\<c-n>'
-  endif
-endfunction
-inoremap <tab> <c-r>=InsertTabWrapper()<CR>
-inoremap <s-tab> <c-p>
-
 set pastetoggle=<f5>
 
 " Leave <c-h> for backspace
