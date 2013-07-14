@@ -10,5 +10,7 @@ let b:surround_99 = "class\n\t\r\nend" " c
 
 compiler minitest
 
-cnoreabbrev <buffer> RR ruby -Ilib:test -w
-let b:ragain_cmd = "!ruby -Ilib:test " . expand("%")
+func! s:run()
+  return "!ruby -Ilib:test " . expand("%")
+endfunc
+let b:ragain_cmd = function("s:run")
