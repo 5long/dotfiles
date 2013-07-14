@@ -159,9 +159,9 @@ nnoremap <leader>cd :cd %:p:h<CR>
 nnoremap <leader>lc :lcd %:p:h<CR>
 nnoremap <leader>gg :Ack -Q ''<left>
 nnoremap <leader>gw :Ack -Qw ''<left><c-r><c-w>
-nmap <leader>e <Plug>RagainRun
-nmap <leader>E <Plug>RagainResetAndRun
-nmap <leader>me :RagainSetAndRun  <c-r>=expand('%')<CR><s-left><left>
+nmap <leader>r <Plug>RagainRun
+nmap <leader>R <Plug>RagainResetAndRun
+nmap <leader>mr :RagainSetAndRun  <c-r>=expand('%')<CR><s-left><left>
 
 set fileformats=unix,dos,mac
 set encoding=utf-8
@@ -242,8 +242,6 @@ map <c-k> <c-w>k
 map <c-l> <c-w>l
 
 let g:ackprg='ag -S --nocolor --nogroup --column'
-
-nnoremap <leader>r :MakeGreen %<CR>
 
 let g:CommandTMaxHeight = 10
 let g:CommandTBackspaceMap = ['<BS>', '<C-h>']
