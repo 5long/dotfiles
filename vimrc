@@ -107,6 +107,7 @@ cnoremap %% <c-r>=expand('%:h').'/'<CR>
 
 set history=300
 set cmdheight=2
+set cpoptions+=$
 set showcmd
 set wildmenu
 set wildmode=longest:full,full
