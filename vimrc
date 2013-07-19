@@ -169,7 +169,7 @@ set fileencoding=utf-8
 set fileencodings=ucs-bom,utf-8,gb-18030,gbk,gb2312,latin1
 set nobomb
 
-set diffopt=filler,vertical
+set diffopt=filler,vertical,iwhite
 noremap <leader>du :diffupdate<CR>
 
 set backspace=eol,start,indent
