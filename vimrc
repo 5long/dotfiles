@@ -27,6 +27,7 @@ NeoBundle 'mako.vim'
 NeoBundle 'mako.vim--Torborg'
 NeoBundle 'juvenn/mustache.vim'
 NeoBundle 'vim-ruby/vim-ruby'
+NeoBundle 'derekwyatt/vim-scala'
 runtime macros/matchit.vim
 
 set exrc
