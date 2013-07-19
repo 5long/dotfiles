@@ -114,6 +114,7 @@ set wildmode=longest:full,full
 set completeopt=menu,preview,longest
 set laststatus=2
 set statusline=\ %f%m%R%H%W\ in\ %{CurDir()}\ \ Cur:%l/%L:%c
+set fillchars=""
 set shortmess+=aI
 
 function! CurDir()
