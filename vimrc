@@ -215,7 +215,7 @@ function! EnterHit()
 endfunction
 
 nnoremap <CR> :call EnterHit()<CR>
-autocmd QuickFixCmdPost make cwindow
+autocmd QuickFixCmdPost make below cwindow
 
 set pastetoggle=<f5>
 
