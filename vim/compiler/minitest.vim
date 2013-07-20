@@ -5,7 +5,7 @@ if exists("current_compiler")
 endif
 let current_compiler = "minitest"
 
-CompilerSet makeprg=RUBYLIB='lib:test'\ ruby\ -rminitest/autorun
+CompilerSet makeprg=RUBYLIB=lib:test\ ruby\ -rminitest/autorun
 
 CompilerSet errorformat=
       \%W\ %\\+%\\d%\\+)\ Failure:,
