@@ -16,6 +16,7 @@ NeoBundle 'tomtom/tcomment_vim'
 NeoBundle 'tpope/vim-eunuch'
 NeoBundle 'tpope/vim-unimpaired'
 NeoBundle 'reinh/vim-makegreen'
+NeoBundle 'benmills/vimux'
 
 NeoBundle 'tpope/vim-endwise'
 NeoBundle 'mattn/zencoding-vim'
