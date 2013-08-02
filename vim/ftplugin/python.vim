@@ -4,5 +4,5 @@ fun! s:run()
 endfun
 let b:ragain_cmd = function("s:run")
 
-nnoremap <buffer> <leader>vi :call VimuxOpenInterpreter("ipython")
-nnoremap <buffer> <leader>vl :call VimuxSendExpr("%loadpy " . expand("%"))
+nnoremap <buffer> <leader>vi :call VimuxOpenInterpreter("ipython")<cr>
+nnoremap <buffer> <leader>vl :call VimuxSendExpr("%loadpy " . expand("%"))<cr>
