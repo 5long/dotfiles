@@ -164,7 +164,7 @@ nnoremap <leader>gw :Ack -Qw ''<left><c-r><c-w>
 nmap <leader>r <Plug>RagainRun
 nmap <leader>R <Plug>RagainResetAndRun
 nmap <leader>mr :RagainSetAndRun  <c-r>=expand('%')<CR><s-left><left>
-nnoremap <leader>T :RagainSetAndRun MakeGreen =expand("%")<CR><CR>
+nnoremap <leader>T :RagainSetAndRun MakeGreen <c-r>=expand("%")<CR><CR>
 
 set fileformats=unix,dos,mac
 set encoding=utf-8
