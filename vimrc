@@ -279,7 +279,7 @@ nnoremap <c-u> <c-u>
 let g:tcommentMapLeader1 = ''
 let g:tcommentMapLeader2 = ''
 
-nnoremap <buffer> <leader>vp yip:call VimuxSendExpr(@@)
+nnoremap <buffer> <leader>vp yip:call VimuxSendExpr(@@)<cr>
 
 autocmd VimEnter * if empty(expand('%')) | setl buftype=nofile
 
