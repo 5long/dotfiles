@@ -8,10 +8,11 @@ let current_compiler = "minitest"
 CompilerSet makeprg=RUBYLIB=lib:test\ ruby\ -rminitest/autorun
 
 CompilerSet errorformat=
+      \\ \ \ \ %f:%l:%m,
       \%W\ %\\+%\\d%\\+)\ Failure:,
       \%C%m\ [%f:%l]:,
       \%E\ %\\+%\\d%\\+)\ Error:,
       \%C%m:,
-      \%+Z%.%#,
-      \\ \ \ \ %f:%l:%m,
+      \%Z\\s%#,
+      \%+C%.%#,
       \%-G%.%#
