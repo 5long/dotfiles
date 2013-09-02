@@ -268,7 +268,7 @@ let g:syntastic_enable_signs = 0
 let g:syntastic_enable_highlighting = 0
 let g:syntastic_mode_map = { 'mode': 'active',
       \ 'active_filetypes': [],
-      \ 'passive_filetypes': ['puppet', 'scala', 'html'],}
+      \ 'passive_filetypes': ['puppet', 'scala', 'html', 'java'],}
 let g:syntastic_python_checkers=['pyflakes']
 
 let g:user_zen_leader_key='<Plug><Plug>'
