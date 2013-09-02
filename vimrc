@@ -35,7 +35,7 @@ set exrc
 set secure
 
 let g:mapleader=','
-let g:maplocalleader='\\'
+let g:maplocalleader='\'
 
 let g:lucius_style = 'blue'
 if !has('gui_running')
