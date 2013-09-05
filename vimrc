@@ -165,6 +165,7 @@ nmap <leader>r <Plug>RagainRun
 nmap <leader>R <Plug>RagainResetAndRun
 nmap <leader>mr :RagainSetAndRun  <c-r>=expand('%')<CR><s-left><left>
 nnoremap <leader>T :RagainSetAndRun MakeGreen <c-r>=expand("%")<CR><CR>
+nnoremap <space> :sh<CR>
 
 set fileformats=unix,dos,mac
 set encoding=utf-8
@@ -203,9 +204,6 @@ function! s:TextObjNext(type)
   let l:cmd = printf('normal! /%svi%s', a:type, a:type)
   exec cmd
 endfunction
-
-" Let's give it a shot
-nnoremap <space> a<space><esc>r
 
 function! EnterHit()
   if stridx(&buftype, 'quickfix') != -1
