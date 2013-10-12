@@ -50,3 +50,7 @@ nocolor() {
   # Some stupid program prints totally illegible color, like purple.
   sed -r "s/\x1B\[([0-9]{1,2}(;[0-9]{1,2})?)?[m|K]//g"
 }
+
+mp() {
+  mpg123 -Z "$@"
+}
