@@ -52,5 +52,5 @@ nocolor() {
 }
 
 mp() {
-  mpg123 -Z "$@"
+  mpg123 -C --loop -1 "$@"
 }
