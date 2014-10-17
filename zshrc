@@ -58,6 +58,10 @@ gc() {
   git commit -m "$*"
 }
 
+dus() {
+  du -sh * .* . | sort -h
+}
+
 if [[ -s ~/.zshrc.local ]] then
   source ~/.zshrc.local
 fi
