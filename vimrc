@@ -264,7 +264,7 @@ let g:syntastic_enable_signs = 0
 let g:syntastic_enable_highlighting = 0
 let g:syntastic_mode_map = { 'mode': 'active',
       \ 'active_filetypes': [],
-      \ 'passive_filetypes': ['puppet', 'scala', 'html', 'java'],}
+      \ 'passive_filetypes': ['puppet', 'scala', 'html', 'java', 'asciidoc'],}
 let g:syntastic_python_checkers=['pyflakes']
 
 let g:user_zen_leader_key='<Plug><Plug>'
@@ -286,9 +286,22 @@ let g:UltiSnipsJumpBackwardTrigger='<s-tab>'
 nnoremap <leader>so :source %<CR>
 
 if has('gui_gtk2')
-  set guifont=Terminus\ 12
-  set guifontwide=WenQuanYi\ Zen\ Hei\ Mono
+  set guifont=Terminus\ 16
+  set guifontwide=Noto\ Sans\ 16
+  set imactivatekey=1-grave
+
+  inoremap <ESC> <ESC>:call DisableFcitx()<CR>
+  function! DisableFcitx()
+    if &imi == 2
+      silent !fcitx-remote -c
+    endif
+  endfunction
+
+  set iminsert=0
+  nnoremap coz :bufdo let &imi=2-&imi<CR>:set imi<CR>
 endif
+
+command CN silent bufdo set imi=2
 
 set guioptions=aicM
 
