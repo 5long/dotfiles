@@ -21,6 +21,7 @@ alias grep='grep --color=auto'
 alias psg='ps aux | grep'
 alias j='jobs -l'
 alias lstcp='lsof -nPi tcp'
+alias mkdir='mkdir -p'
 
 alias be='bundle exec'
 alias g=git
