@@ -46,7 +46,7 @@ path=(
 export BCAT_BROWSER=google-chrome
 
 alias -g L='| less'
-alias -g G='| grep'
+alias -g G='| grep -E'
 
 alias rake='noglob rake'
 alias zathura='zathura --fork &>/dev/null'
