@@ -19,7 +19,7 @@ NeoBundle 'reinh/vim-makegreen'
 NeoBundle 'benmills/vimux'
 
 NeoBundle 'tpope/vim-endwise'
-NeoBundle 'mattn/zencoding-vim'
+NeoBundle 'mattn/emmet-vim'
 NeoBundle '5long/pytest-vim-compiler'
 NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'slim-template/vim-slim'
