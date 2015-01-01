@@ -270,11 +270,6 @@ let g:syntastic_mode_map = { 'mode': 'active',
       \ 'passive_filetypes': ['puppet', 'scala', 'html', 'java', 'asciidoc'],}
 let g:syntastic_python_checkers=['pyflakes']
 
-let g:user_zen_leader_key='<Plug><Plug>'
-let g:user_zen_expandabbr_key='<c-u>'
-" Shut zencoding up
-nnoremap <c-u> <c-u>
-
 let g:tcommentMapLeader1 = ''
 let g:tcommentMapLeader2 = ''
 
