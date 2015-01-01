@@ -290,8 +290,8 @@ let g:UltiSnipsJumpBackwardTrigger='<s-tab>'
 nnoremap <leader>so :source %<CR>
 
 if has('gui_gtk2')
-  set guifont=Terminus\ 16
-  set guifontwide=Noto\ Sans\ 16
+  set guifont=Terminus\ 18
+  set guifontwide=Noto\ Sans\ 18
   set imactivatekey=1-grave
 
   inoremap <ESC> <ESC>:call DisableFcitx()<CR>
