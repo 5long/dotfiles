@@ -1,7 +1,7 @@
 if has('vim_starting')
   set runtimepath+=~/.vim/bundle/neobundle.vim
 endif
-call neobundle#rc(expand("~/.vim/bundle/"))
+call neobundle#begin(expand("~/.vim/bundle/"))
 NeoBundleFetch 'Shougo/neobundle.vim'
 
 NeoBundle '5long/ryve'
@@ -28,6 +28,9 @@ NeoBundle 'mako.vim--Torborg'
 NeoBundle 'juvenn/mustache.vim'
 NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'derekwyatt/vim-scala'
+
+call neobundle#end()
+
 runtime macros/matchit.vim
 
 set exrc
