@@ -17,6 +17,7 @@ NeoBundle 'tpope/vim-eunuch'
 NeoBundle 'tpope/vim-unimpaired'
 NeoBundle 'reinh/vim-makegreen'
 NeoBundle 'benmills/vimux'
+NeoBundle 'tpope/vim-vinegar'
 
 NeoBundle 'tpope/vim-endwise'
 NeoBundle 'mattn/emmet-vim'
