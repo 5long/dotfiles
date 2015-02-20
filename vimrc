@@ -270,6 +270,13 @@ let g:syntastic_mode_map = { 'mode': 'active',
       \ 'passive_filetypes': ['puppet', 'scala', 'html', 'java', 'asciidoc'],}
 let g:syntastic_python_checkers=['pyflakes']
 
+autocmd FileType css imap <c-u> <plug>(emmet-expand-abbr)
+let g:user_emmet_settings = {
+      \ 'html': {
+      \ 'indentation': '  '
+      \ }
+      \ }
+
 let g:tcommentMapLeader1 = ''
 let g:tcommentMapLeader2 = ''
 
