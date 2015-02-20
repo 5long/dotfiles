@@ -307,6 +307,7 @@ if has('gui_gtk2')
   nnoremap coz :bufdo let &imi=2-&imi<CR>:set imi<CR>
 endif
 
+set imsearch=0
 command! CN silent bufdo set imi=2
 
 set guioptions=aicM
