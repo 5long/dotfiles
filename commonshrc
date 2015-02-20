@@ -3,7 +3,7 @@ set +o notify
 
 HISTSIZE=2000
 export PAGER=less
-export LESS=-FXRS
+export LESS=-FXRi
 export GREP_COLOR='1;32'
 
 export EDITOR=vim
