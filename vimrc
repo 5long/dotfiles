@@ -7,7 +7,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle '5long/ryve'
 NeoBundle '5long/ragain'
 NeoBundle 'tpope/vim-surround'
-NeoBundle 'wincent/Command-T', {'build': {'unix': 'rake make'}}
+NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'SirVer/ultisnips'
 NeoBundle 'honza/vim-snippets'
 NeoBundle 'mileszs/ack.vim'
@@ -254,13 +254,9 @@ nnoremap <m-l> <c-w>l
 
 let g:ackprg='ag -S --nocolor --nogroup --column'
 
-let g:CommandTMaxHeight = 10
-let g:CommandTBackspaceMap = ['<BS>', '<C-h>']
-let g:CommandTCursorLeftMap = '<Left>'
-let g:CommandTCancelMap = ['<ESC>', '<C-c>']
-nnoremap <leader>f :CommandT<CR>
-nnoremap <leader>pf :CommandTFlush<CR>
-nnoremap <leader>bf :CommandTBuffer<CR>
+let g:ctrlp_map = '<leader>f'
+let g:ctrlp_cmd = 'CtrlPMixed'
+nnoremap <leader>pf :CtrlPClearCache<CR>
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*
 set wildignore+=*.jpg,*.gif,*.png,*.pyc,*.pyo,*.ptlc
 set wildignore+=*.class,*.dex,*.apk,*.jar,*.idx,*.bin,*/build/*
