@@ -261,8 +261,9 @@ let g:CommandTCancelMap = ['<ESC>', '<C-c>']
 nnoremap <leader>f :CommandT<CR>
 nnoremap <leader>pf :CommandTFlush<CR>
 nnoremap <leader>bf :CommandTBuffer<CR>
+set wildignore+=*/.git/*,*/.hg/*,*/.svn/*
 set wildignore+=*.jpg,*.gif,*.png,*.pyc,*.pyo,*.ptlc
-set wildignore+=*.class,*.dex,*.apk,*.jar
+set wildignore+=*.class,*.dex,*.apk,*.jar,*.idx,*.bin,*/build/*
 set wildignore+=*.tgz,*.tar.gz,*.tar.xz,*.tar.bz2,*.zip
 set wildignore+=node_modules
 set wildignore+=_site
