@@ -9,6 +9,7 @@ NeoBundle '5long/ragain'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'wincent/Command-T', {'build': {'unix': 'rake make'}}
 NeoBundle 'SirVer/ultisnips'
+NeoBundle 'honza/vim-snippets'
 NeoBundle 'mileszs/ack.vim'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'bufkill.vim'
