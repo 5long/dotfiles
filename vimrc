@@ -246,6 +246,12 @@ map <c-j> <c-w>j
 map <c-k> <c-w>k
 map <c-l> <c-w>l
 
+" neovim supports m-* mappings now
+nnoremap <m-h> <c-w>h
+nnoremap <m-j> <c-w>j
+nnoremap <m-k> <c-w>k
+nnoremap <m-l> <c-w>l
+
 let g:ackprg='ag -S --nocolor --nogroup --column'
 
 let g:CommandTMaxHeight = 10
