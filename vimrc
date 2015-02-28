@@ -108,9 +108,14 @@ nnoremap <LocalLeader>i2 :setl ts=2 sw=2 sts=2<CR>
 nnoremap <LocalLeader>i4 :setl ts=4 sw=4 sts=4<CR>
 nnoremap <LocalLeader>et :setl et!<CR>
 
+function! CmdlineKillTillEnd()
+  return strpart(getcmdline(), 0, getcmdpos())
+endfunction
+
 cnoremap <C-A> <Home>
 cnoremap <C-N> <Down>
 cnoremap <C-P> <Up>
+cnoremap <c-k> <c-\>eCmdlineKillTillEnd()<cr>
 cnoremap %% <c-r>=expand('%:h').'/'<CR>
 
 set history=300
