@@ -262,6 +262,7 @@ let g:ackprg='ag -S --nocolor --nogroup --column'
 
 let g:ctrlp_map = '<leader>f'
 let g:ctrlp_cmd = 'CtrlPMixed'
+let g:ctrlp_reuse_window = 'netrw\|help\|nofile'
 nnoremap <leader>pf :CtrlPClearCache<CR>
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*
 set wildignore+=*.jpg,*.gif,*.png,*.pyc,*.pyo,*.ptlc
