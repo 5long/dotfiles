@@ -34,6 +34,8 @@ alias pr='padrino rake'
 alias s='sudo '
 alias sctl='systemctl'
 alias ag='ag -S --group'
+alias bss="browser-sync start --server --directory --files '*.css' '*.html'"
+alias bsc="browser-sync start --config bs-config.js"
 
 cdrb() {
   cd $(dirname $(gem which $1))
