@@ -117,6 +117,7 @@ cnoremap <C-N> <Down>
 cnoremap <C-P> <Up>
 cnoremap <c-k> <c-\>eCmdlineKillTillEnd()<cr>
 cnoremap %% <c-r>=expand('%:h').'/'<CR>
+cnoremap <c-v>b <c-r>=expand('%:r')<CR>
 
 set history=300
 set cmdheight=2
