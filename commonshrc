@@ -34,7 +34,7 @@ alias pr='padrino rake'
 alias s='sudo '
 alias sctl='systemctl'
 alias ag='ag -S --group'
-alias bss="browser-sync start --server --directory --files '*.css' '*.html'"
+alias bss="browser-sync start --server --directory --files '*.css' '*.html' '*.js'"
 alias bsc="browser-sync start --config bs-config.js"
 
 cdrb() {
