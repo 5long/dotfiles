@@ -53,19 +53,19 @@ snippet def "function w/o docstrings" b!
 def ${1:function}(`!p
 if snip.indent:
    snip.rv = 'self'`${2}):
-    ${0:pass}
+	${0:pass}
 endsnippet
 
 snippet defc "class method" b!
 @classmethod
 def ${1:function}(cls${2}):
-    ${0:pass}
+	${0:pass}
 endsnippet
 
 snippet main "Main boilerplate for script" b
 def main():
-    pass
+	pass
 
 if __name__ == '__main__':
-    main()
+	main()
 endsnippet
