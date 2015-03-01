@@ -280,7 +280,7 @@ let g:syntastic_enable_signs = 0
 let g:syntastic_enable_highlighting = 0
 let g:syntastic_mode_map = { 'mode': 'active',
       \ 'active_filetypes': [],
-      \ 'passive_filetypes': ['puppet', 'scala', 'html', 'java', 'asciidoc'],}
+      \ 'passive_filetypes': ['puppet', 'scala', 'html', 'asciidoc'],}
 let g:syntastic_python_checkers=['pyflakes']
 
 autocmd FileType css imap <c-u> <plug>(emmet-expand-abbr)
