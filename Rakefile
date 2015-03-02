@@ -20,16 +20,18 @@ TMP_DIR = "#{HOME}/.tmp"
 directory TMP_DIR
 task :vimrc => TMP_DIR
 
-NEOBUNDLE_REPO = 'http://github.com/Shougo/neobundle.vim'
-directory 'vim/bundle'
-task 'neobundle.vim' => ['vim/bundle'] do |t|
-  neobundle_root = "vim/bundle/#{t.name}"
-  sh "git clone #{NEOBUNDLE_REPO} #{neobundle_root}" unless File.exists? neobundle_root
+VIM_PLUG_FILENAME = 'vim/autoload/plug.vim'
+directory 'vim/autoload'
+task 'vim-plug' => ['vim/autoload'] do
+  if not File.exist? VIM_PLUG_FILENAME
+    sh "curl -fkLo #{VIM_PLUG_FILENAME} --create-dirs \
+          https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim"
+  end
 end
 
-desc "Install vim plugins via NeoBundle"
-task :vim_plugins => [:vim, :vimrc, 'neobundle.vim'] do
-  sh 'vim +NeoBundleCheck +quitall'
+desc "Install vim plugins via vim-plug"
+task :vim_plugins => [:vim, :vimrc, 'vim-plug'] do
+  sh 'vim +PlugInstall +quitall'
 end
 
 desc "Take a dotfile from $HOME"

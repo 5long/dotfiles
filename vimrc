@@ -1,38 +1,36 @@
-if has('vim_starting')
-  set runtimepath+=~/.vim/bundle/neobundle.vim
-endif
-call neobundle#begin(expand("~/.vim/bundle/"))
-NeoBundleFetch 'Shougo/neobundle.vim'
+call plug#begin('~/.vim/bundle/')
 
-NeoBundle '5long/ryve'
-NeoBundle '5long/ragain'
-NeoBundle 'tpope/vim-surround'
-NeoBundle 'tpope/vim-abolish'
-NeoBundle 'kien/ctrlp.vim'
-NeoBundle 'SirVer/ultisnips'
-NeoBundle 'honza/vim-snippets'
-NeoBundle 'mileszs/ack.vim'
-NeoBundle 'scrooloose/syntastic'
-NeoBundle 'bufkill.vim'
-NeoBundle 'tomtom/tcomment_vim'
-NeoBundle 'tpope/vim-eunuch'
-NeoBundle 'tpope/vim-unimpaired'
-NeoBundle 'reinh/vim-makegreen'
-NeoBundle 'benmills/vimux'
-NeoBundle 'tpope/vim-vinegar'
+Plug '5long/ryve'
+Plug '5long/ragain'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-abolish'
+Plug 'kien/ctrlp.vim'
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+Plug 'mileszs/ack.vim'
+Plug 'scrooloose/syntastic'
+Plug 'bufkill.vim'
+Plug 'tomtom/tcomment_vim'
+Plug 'tpope/vim-eunuch'
+Plug 'tpope/vim-unimpaired'
+Plug 'reinh/vim-makegreen'
+Plug 'benmills/vimux'
+Plug 'tpope/vim-vinegar'
 
-NeoBundle 'tpope/vim-endwise'
-NeoBundle 'mattn/emmet-vim'
-NeoBundle '5long/pytest-vim-compiler'
-NeoBundle 'pangloss/vim-javascript'
-NeoBundle 'slim-template/vim-slim'
-NeoBundle 'mako.vim'
-NeoBundle 'mako.vim--Torborg'
-NeoBundle 'juvenn/mustache.vim'
-NeoBundle 'vim-ruby/vim-ruby'
-NeoBundle 'derekwyatt/vim-scala'
+Plug 'tpope/vim-endwise'
+Plug 'mattn/emmet-vim'
+Plug '5long/pytest-vim-compiler'
+Plug 'pangloss/vim-javascript'
+Plug 'slim-template/vim-slim'
+Plug 'mako.vim'
+Plug 'mako.vim--Torborg'
+Plug 'juvenn/mustache.vim'
+Plug 'vim-ruby/vim-ruby'
+Plug 'derekwyatt/vim-scala'
 
-call neobundle#end()
+call plug#end()
+
+let g:plug_threads = 5
 
 runtime macros/matchit.vim
 
