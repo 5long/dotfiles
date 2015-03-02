@@ -80,7 +80,6 @@ set textwidth=75
 set formatoptions+=B1
 set cpoptions+=J
 
-syntax enable
 set autoindent
 set shiftround
 set expandtab smarttab
@@ -88,7 +87,6 @@ for s:key in ['tabstop', 'shiftwidth', 'softtabstop']
   exec 'set ' . s:key . '=2'
 endfor
 unlet s:key
-filetype plugin indent on
 
 autocmd FileType * setl foldmethod=manual
 
