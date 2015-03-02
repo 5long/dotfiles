@@ -89,7 +89,9 @@ for s:key in ['tabstop', 'shiftwidth', 'softtabstop']
 endfor
 unlet s:key
 
-autocmd FileType * setl foldmethod=manual
+augroup vimrc
+  autocmd!
+augroup end
 
 " Set the damn file type
 nnoremap <LocalLeader><LocalLeader> :setfiletype<space>
@@ -152,7 +154,7 @@ set undofile
 set undodir=~/.tmp
 set undolevels=1000
 
-autocmd! FocusLost * silent! wall
+autocmd vimrc FocusLost * silent! wall
 set autoread
 set autowrite
 
@@ -221,7 +223,7 @@ function! EnterHit()
 endfunction
 
 nnoremap <CR> :call EnterHit()<CR>
-autocmd QuickFixCmdPost make below cwindow
+autocmd vimrc QuickFixCmdPost make below cwindow
 
 set pastetoggle=<f5>
 
@@ -280,7 +282,7 @@ let g:syntastic_mode_map = { 'mode': 'active',
       \ 'passive_filetypes': ['puppet', 'scala', 'html', 'asciidoc'],}
 let g:syntastic_python_checkers=['pyflakes']
 
-autocmd FileType css imap <c-u> <plug>(emmet-expand-abbr)
+autocmd vimrc FileType css imap <c-u> <plug>(emmet-expand-abbr)
 let g:user_emmet_settings = {
       \ 'html': {
       \ 'indentation': '  '
@@ -293,7 +295,7 @@ let g:tcommentMapLeader2 = ''
 nnoremap <buffer> <leader>vp yip:call VimuxSendExpr(@@)<cr>
 inoremap <buffer> <c-v><cr> <esc>yip:call VimuxSendExpr(@@)<cr>2o<esc>i
 
-autocmd VimEnter * if empty(expand('%')) | setl buftype=nofile
+autocmd vimrc VimEnter * if empty(expand('%')) | setl buftype=nofile
 
 let g:UltiSnipsJumpForwardTrigger='<tab>'
 let g:UltiSnipsJumpBackwardTrigger='<s-tab>'
