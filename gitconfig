@@ -25,7 +25,7 @@
   rb = rebase
   rv = checkout HEAD --force --
   sh = stash
-  st = status -bs
+  s = status -bs
   tip = log --stat -1
 [branch]
   autosetupmerge = always
