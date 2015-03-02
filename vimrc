@@ -16,6 +16,7 @@ Plug 'tpope/vim-unimpaired'
 Plug 'reinh/vim-makegreen'
 Plug 'benmills/vimux'
 Plug 'tpope/vim-vinegar'
+Plug 'justinmk/vim-sneak'
 
 Plug 'tpope/vim-endwise'
 Plug 'mattn/emmet-vim'
