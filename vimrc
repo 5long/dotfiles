@@ -258,7 +258,7 @@ nnoremap <m-j> <c-w>j
 nnoremap <m-k> <c-w>k
 nnoremap <m-l> <c-w>l
 
-let g:ackprg='ag -S --nocolor --nogroup --column'
+let g:ackprg='pt -S --nocolor --nogroup'
 
 let g:ctrlp_map = '<leader>f'
 let g:ctrlp_cmd = 'CtrlPMixed'
