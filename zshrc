@@ -1,5 +1,7 @@
 source ~/.commonshrc
 
+fpath=(~/.zsh/completion $fpath)
+
 autoload -U compinit promptinit
 compinit
 promptinit
