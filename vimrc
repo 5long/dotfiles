@@ -17,6 +17,7 @@ Plug 'reinh/vim-makegreen'
 Plug 'benmills/vimux'
 Plug 'tpope/vim-vinegar'
 Plug 'justinmk/vim-sneak'
+Plug 'haya14busa/incsearch.vim'
 
 Plug 'tpope/vim-endwise'
 Plug 'mattn/emmet-vim'
@@ -138,8 +139,19 @@ set ignorecase smartcase
 set incsearch
 set hlsearch
 nnoremap <backspace> :nohlsearch<CR>
-noremap / /\v
-noremap ? ?\v
+
+let g:incsearch#auto_nohlsearch = 1
+let g:incsearch#magic = '\v'
+let g:incsearch#do_not_save_error_message_history = 1
+
+nmap / <Plug>(incsearch-forward)
+nmap ? <Plug>(incsearch-backward)
+map n  <Plug>(incsearch-nohl-n)
+map N  <Plug>(incsearch-nohl-N)
+map *  <Plug>(incsearch-nohl-*)
+map #  <Plug>(incsearch-nohl-#)
+map g* <Plug>(incsearch-nohl-g*)
+map g# <Plug>(incsearch-nohl-g#)
 
 for s:key in ['#', '*', 'n', 'N']
   exec printf('nnoremap %s %szz', s:key, s:key)
