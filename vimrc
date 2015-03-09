@@ -2,6 +2,7 @@ call plug#begin('~/.vim/bundle/')
 
 Plug '5long/ryve'
 Plug '5long/ragain'
+Plug '5long/vim-imtoggle'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-abolish'
 Plug 'kien/ctrlp.vim'
@@ -322,20 +323,9 @@ if has('gui_gtk2')
   set guifont=Terminus\ 18
   set guifontwide=Noto\ Sans\ 18
   set imactivatekey=1-grave
-
-  inoremap <ESC> <ESC>:call DisableFcitx()<CR>
-  function! DisableFcitx()
-    if &imi == 2
-      silent !fcitx-remote -c
-    endif
-  endfunction
-
-  set iminsert=0
-  nnoremap coz :bufdo let &imi=2-&imi<CR>:set imi<CR>
 endif
 
-set imsearch=0
-command! CN silent bufdo set imi=2
+command! CN IMEnable
 
 set guioptions=aicM
 
