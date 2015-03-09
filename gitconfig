@@ -26,6 +26,7 @@
   rv = checkout HEAD --force --
   sh = stash
   s = status -bs
+  st = status -bs
   tip = log --stat -1
 [branch]
   autosetupmerge = always
