@@ -275,6 +275,9 @@ let g:ackprg='pt -S --nocolor --nogroup'
 let g:ctrlp_map = '<leader>f'
 let g:ctrlp_cmd = 'CtrlPMixed'
 let g:ctrlp_reuse_window = 'netrw\|help\|nofile'
+if executable('pt')
+  let g:ctrlp_user_command = 'pt -l --nocolor "" %s'
+endif
 nnoremap <leader>pf :CtrlPClearCache<CR>
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*
 set wildignore+=*.jpg,*.gif,*.png,*.pyc,*.pyo,*.ptlc
