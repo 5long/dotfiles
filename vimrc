@@ -182,8 +182,7 @@ nnoremap <leader>da :silent bufdo BD<CR>
 
 nnoremap <leader>cd :cd %:p:h<CR>
 nnoremap <leader>lc :lcd %:p:h<CR>
-nnoremap <leader>gg :Ack -Q ''<left>
-nnoremap <leader>gw :Ack -Qw ''<left><c-r><c-w>
+nnoremap <leader>gg :Ack 
 nmap <leader>r <Plug>RagainRun
 nmap <leader>R <Plug>RagainResetAndRun
 nmap <leader>mr :RagainSetAndRun  <c-r>=expand('%')<CR><s-left><left>
@@ -271,13 +270,13 @@ nnoremap <m-j> <c-w>j
 nnoremap <m-k> <c-w>k
 nnoremap <m-l> <c-w>l
 
-let g:ackprg='pt -S --nocolor --nogroup'
 
 let g:ctrlp_map = '<leader>f'
 let g:ctrlp_cmd = 'CtrlPMixed'
 let g:ctrlp_reuse_window = 'netrw\|help\|nofile'
-if executable('pt')
-  let g:ctrlp_user_command = 'pt -l --nocolor "" %s'
+if executable('ag')
+  let g:ackprg = 'ag --nocolor --nogroup --column --follow -S'
+  let g:ctrlp_user_command = 'ag --nocolor -g "" %s'
 endif
 nnoremap <leader>pf :CtrlPClearCache<CR>
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*

@@ -33,7 +33,7 @@ alias ht="htop -u $USER"
 alias pr='padrino rake'
 alias s='sudo '
 alias sctl='systemctl'
-alias pt='pt -S'
+alias ag='ag -S --follow'
 alias bss="browser-sync start --server --directory --files='*.css, *.html, *.js'"
 alias bsc="browser-sync start --config bs-config.js"
 
