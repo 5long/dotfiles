@@ -183,7 +183,8 @@ nnoremap <leader>da :silent bufdo BD<CR>
 
 nnoremap <leader>cd :cd %:p:h<CR>
 nnoremap <leader>lc :lcd %:p:h<CR>
-nnoremap <leader>gg :Ack 
+nnoremap <leader>gg :Ack! 
+nnoremap <leader>gf :AckFile 
 nmap <leader>r <Plug>RagainRun
 nmap <leader>R <Plug>RagainResetAndRun
 nmap <leader>mr :RagainSetAndRun  <c-r>=expand('%')<CR><s-left><left>
