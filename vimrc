@@ -277,7 +277,7 @@ let g:ctrlp_map = '<leader>f'
 let g:ctrlp_cmd = 'CtrlPMixed'
 let g:ctrlp_reuse_window = 'netrw\|help\|nofile'
 if executable('ag')
-  let g:ackprg = 'ag --nocolor --nogroup --column --follow -S'
+  let g:ackprg = 'ag --vimgrep --follow -S'
   let g:ctrlp_user_command = 'ag --nocolor -g "" %s'
 endif
 nnoremap <leader>pf :CtrlPClearCache<CR>
