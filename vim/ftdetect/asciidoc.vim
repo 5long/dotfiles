@@ -1,1 +1,1 @@
-autocmd BufReadPost,BufNewFile *.asc setfiletype asciidoc
+autocmd BufReadPost,BufNewFile *.asc,*.adoc setfiletype asciidoc
