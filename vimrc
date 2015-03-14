@@ -137,7 +137,7 @@ function! CurDir()
   return curdir
 endfunction
 
-set ignorecase smartcase
+set ignorecase smartcase infercase
 set incsearch
 set hlsearch
 nnoremap <backspace> :nohlsearch<CR>
