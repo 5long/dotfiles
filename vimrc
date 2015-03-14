@@ -125,6 +125,7 @@ set cmdheight=2
 set showcmd
 set wildmenu
 set wildmode=longest:full,full
+set wildignorecase
 set completeopt=menu,preview,longest
 set laststatus=2
 set statusline=\ %f%m%R%H%W\ in\ %{CurDir()}\ \ Cur:%l/%L:%c
