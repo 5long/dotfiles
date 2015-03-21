@@ -27,3 +27,7 @@ And...
 thanks to Ruby's expressivness.
 
 Well, you can't `rake README.markdown` anyway.
+
+## License
+
+Public domain. See UNLICENSE
