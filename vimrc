@@ -17,6 +17,7 @@ Plug 'tpope/vim-unimpaired'
 Plug 'reinh/vim-makegreen'
 Plug 'benmills/vimux'
 Plug 'tpope/vim-vinegar'
+Plug 'tpope/vim-projectionist'
 Plug 'justinmk/vim-sneak'
 Plug 'haya14busa/incsearch.vim'
 
@@ -189,6 +190,7 @@ nmap <leader>r <Plug>RagainRun
 nmap <leader>R <Plug>RagainResetAndRun
 nmap <leader>mr :RagainSetAndRun  <c-r>=expand('%')<CR><s-left><left>
 nnoremap <leader>T :RagainSetAndRun MakeGreen <c-r>=expand("%")<CR><CR>
+nnoremap <leader>mm :RagainSetAndRun make
 
 set fileformats=unix,dos,mac
 set encoding=utf-8
