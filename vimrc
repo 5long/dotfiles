@@ -325,9 +325,8 @@ let g:paredit_mode = 0
 nnoremap <leader>so :source %<CR>
 
 if has('gui_gtk2')
-  set guifont=Terminus\ 18
-  set guifontwide=Source\ Han\ Sans\ Regular\ 18
-  set imactivatekey=1-grave
+  set guifont=Terminus\ 24
+  set guifontwide=Source\ Han\ Sans\ Regular\ 20
 endif
 
 command! CN IMEnable
