@@ -250,7 +250,6 @@ inoremap <c-a> <c-o>I
 nnoremap <c-n> :tabe \| lcd ~/
 
 nmap <F1> <nop>
-nmap K <nop>
 nmap Q <nop>
 inoremap <c-space> <nop>
 inoremap <c-c> <esc>
