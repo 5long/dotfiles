@@ -31,6 +31,7 @@ Plug 'mako.vim--Torborg'
 Plug 'juvenn/mustache.vim'
 Plug 'vim-ruby/vim-ruby'
 Plug 'derekwyatt/vim-scala'
+Plug 'kovisoft/slimv'
 
 call plug#end()
 
@@ -42,7 +43,7 @@ set exrc
 set secure
 
 let g:mapleader=','
-let g:maplocalleader='\'
+let g:maplocalleader=' '
 
 let g:lucius_style = 'blue'
 if !has('gui_running')
@@ -98,10 +99,6 @@ augroup end
 
 " Set the damn file type
 nnoremap <LocalLeader><LocalLeader> :setfiletype<space>
-nnoremap <LocalLeader>mk :setfiletype<space>html.mako<CR>
-nnoremap <LocalLeader>er :setfiletype<space>html.eruby<CR>
-nnoremap <LocalLeader>js :setfiletype<space>javascript<CR>
-nnoremap <LocalLeader>lq :setfiletype<space>html.liquid<CR>
 let g:javascript_ignore_javaScriptdoc = 1
 let g:vim_markdown_folding_disabled = 1
 
@@ -313,12 +310,16 @@ let g:tcommentMapLeader1 = ''
 let g:tcommentMapLeader2 = ''
 
 nnoremap <buffer> <leader>vp yip:call VimuxSendExpr(@@)<cr>
-inoremap <buffer> <c-v><cr> <esc>yip:call VimuxSendExpr(@@)<cr>2o<esc>i
+inoremap <buffer> <c-v><cr> <esc>yip:call VimuxSendExpr(@@)<cr>'}2o<esc>i
 
 autocmd vimrc VimEnter * if empty(expand('%')) | setl buftype=nofile
 
 let g:UltiSnipsJumpForwardTrigger='<tab>'
 let g:UltiSnipsJumpBackwardTrigger='<s-tab>'
+
+let g:slimv_repl_split = 4
+let g:slimv_leader = '<space>'
+let g:paredit_mode = 0
 
 " Since I'm a plugin author now
 nnoremap <leader>so :source %<CR>
