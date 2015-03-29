@@ -69,7 +69,6 @@ set nomodeline
 
 set relativenumber
 set lazyredraw
-set ttyfast
 set mouse=n
 
 set switchbuf=usetab
