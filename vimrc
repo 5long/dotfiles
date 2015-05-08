@@ -32,6 +32,7 @@ Plug 'juvenn/mustache.vim'
 Plug 'vim-ruby/vim-ruby'
 Plug 'derekwyatt/vim-scala'
 Plug 'kovisoft/slimv'
+Plug 'kurayama/systemd-vim-syntax'
 
 call plug#end()
 

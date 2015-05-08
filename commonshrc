@@ -27,12 +27,14 @@ alias be='bundle exec'
 alias g=git
 alias gl='git l'
 alias gll='git ll'
+alias o=xdg-open
 alias p=pacman
 alias pa=packer
 alias ht="htop -u $USER"
 alias pr='padrino rake'
 alias s='sudo '
 alias sctl='systemctl'
+alias scu='systemctl --user'
 alias ag='ag -S --follow'
 alias bss="browser-sync start --server --directory --files='*.css, *.html, *.js'"
 alias bsc="browser-sync start --config bs-config.js"
