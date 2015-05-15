@@ -25,13 +25,7 @@ Plug 'tpope/vim-endwise'
 Plug 'mattn/emmet-vim'
 Plug '5long/pytest-vim-compiler'
 Plug 'pangloss/vim-javascript'
-Plug 'slim-template/vim-slim'
-Plug 'mako.vim'
-Plug 'mako.vim--Torborg'
-Plug 'juvenn/mustache.vim'
 Plug 'vim-ruby/vim-ruby'
-Plug 'derekwyatt/vim-scala'
-Plug 'kovisoft/slimv'
 Plug 'kurayama/systemd-vim-syntax'
 
 call plug#end()
