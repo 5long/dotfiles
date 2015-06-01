@@ -2,7 +2,7 @@ snippet . "this."
 this.$0
 endsnippet
 
-snippet f "Anon function"
+snippet f "Anon function" w
 function(${1:}) {
 	${0}
 }
@@ -37,7 +37,7 @@ $1 = require("${1:fs}")${0}
 endsnippet
 
 snippet req "CommonJS require w/ attr"
-$2 = require("${1:events}").${2:EventEmitter}
+$2 = require("${1:util}").${2:inherits}
 endsnippet
 
 snippet tout
@@ -57,4 +57,10 @@ snippet :f
 , ${1}: function(${2}) {
 		${4}
 	}
+endsnippet
+
+snippet ifmain
+if (require.main === module) {
+	${1:main()}
+}
 endsnippet
