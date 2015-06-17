@@ -28,8 +28,7 @@ alias g=git
 alias gl='git l'
 alias gll='git ll'
 alias o=xdg-open
-alias p=pacman
-alias pa=packer
+alias p=apacman
 alias ht="htop -u $USER"
 alias pr='padrino rake'
 alias s='sudo '
@@ -38,6 +37,7 @@ alias scu='systemctl --user'
 alias ag='ag -S --follow'
 alias bss="browser-sync start --server --directory --files='*.css, *.html, *.js'"
 alias bsc="browser-sync start --config bs-config.js"
+alias nr="npm run"
 
 cdrb() {
   cd $(dirname $(gem which $1))

@@ -319,7 +319,7 @@ nnoremap <leader>so :source %<CR>
 
 if has('gui_gtk2')
   set guifont=Terminus\ 24
-  set guifontwide=Source\ Han\ Sans\ Regular\ 20
+  set guifontwide=Source\ Han\ Sans\ SC\ Regular\ 16
 endif
 
 command! CN IMEnable

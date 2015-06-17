@@ -53,11 +53,18 @@ snippet clo
 }(${2}));
 endsnippet
 
-snippet :f
+snippet ,f
 , ${1}: function(${2}) {
 		${4}
 	}
 endsnippet
+
+snippet :f
+${1}: function(${2}) {
+	${0}
+},
+endsnippet
+
 
 snippet ifmain
 if (require.main === module) {
