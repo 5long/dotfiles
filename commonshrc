@@ -23,14 +23,12 @@ alias j='jobs -l'
 alias lstcp='lsof -nPi tcp'
 alias mkdir='mkdir -p'
 
-alias be='bundle exec'
 alias g=git
 alias gl='git l'
 alias gll='git ll'
 alias o=xdg-open
 alias p=apacman
 alias ht="htop -u $USER"
-alias pr='padrino rake'
 alias s='sudo '
 alias sctl='systemctl'
 alias scu='systemctl --user'
@@ -55,4 +53,8 @@ nocolor() {
 
 mp() {
   mpg123 -vC --loop -1 "$@"
+}
+
+edbin() {
+  $EDITOR "$(which $1)"
 }
