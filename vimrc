@@ -317,14 +317,7 @@ let g:paredit_mode = 0
 " Since I'm a plugin author now
 nnoremap <leader>so :source %<CR>
 
-if has('gui_gtk2')
-  set guifont=Terminus\ 24
-  set guifontwide=Source\ Han\ Sans\ SC\ Regular\ 16
-endif
-
 command! CN IMEnable
-
-set guioptions=aicM
 
 if filereadable(expand('~/.vimrc.local'))
   source ~/.vimrc.local

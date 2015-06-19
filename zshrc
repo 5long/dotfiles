@@ -1,7 +1,5 @@
 source ~/.commonshrc
 
-fpath=(~/.zsh/completion $fpath)
-
 autoload -U compinit promptinit
 compinit
 promptinit
@@ -45,15 +43,12 @@ path=(
   $path
 )
 
-export BCAT_BROWSER=google-chrome
-
 alias -g L='| less'
 alias -g G='| grep -E'
 
 alias rake='noglob rake'
 alias zathura='zathura --fork &>/dev/null'
 alias irc='weechat-curses'
-alias turn='turn --natural'
 
 gc() {
   git add --all .
