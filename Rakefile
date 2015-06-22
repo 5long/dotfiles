@@ -18,20 +18,18 @@ task :zshrc => :commonshrc
 
 TMP_DIR = "#{HOME}/.tmp"
 directory TMP_DIR
-task :vimrc => TMP_DIR
 
-VIM_PLUG_FILENAME = 'vim/autoload/plug.vim'
-directory 'vim/autoload'
-task 'vim-plug' => ['vim/autoload'] do
+VIM_PLUG_FILENAME = 'nvim/autoload/plug.vim'
+task 'vim-plug' do
   if not File.exist? VIM_PLUG_FILENAME
-    sh "curl -fkLo #{VIM_PLUG_FILENAME} --create-dirs \
+    sh "curl -fkLo #{VIM_PLUG_FILENAME} \
           https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim"
   end
 end
 
 desc "Install vim plugins via vim-plug"
-task :vim_plugins => [:vim, :vimrc, 'vim-plug'] do
-  sh 'vim +PlugInstall +quitall'
+task :vim_plugins => [:nvim, 'vim-plug'] do
+  sh 'nvim +PlugInstall'
 end
 
 desc "Take a dotfile from $HOME"
