@@ -4,6 +4,7 @@
 *.sw[op]
 *~
 
-/vim/bundle
-/vim/autoload/plug.vim
-/vim/autoload/plug.vim.old
+/nvim/bundle
+/nvim/nvimrc.local
+/nvim/autoload/plug.vim
+/nvim/autoload/plug.vim.old
