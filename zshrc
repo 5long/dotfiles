@@ -61,5 +61,5 @@ dus() {
 }
 
 if [[ -s ~/.zshrc.local ]] then
-  source ~/.zshrc.local
+  . ~/.zshrc.local
 fi

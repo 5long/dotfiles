@@ -1,7 +1,7 @@
 # Check for an interactive session
 [ -z "$PS1" ] && return
 
-source ~/.commonshrc
+. ~/.commonshrc
 
 PS1='[\u@\h \W]\$ '
 
@@ -11,5 +11,5 @@ HISTFILE=~/.bash_history
 
 if [[ -s ~/.bashrc.local ]]
 then
-  source ~/.bashrc.local
+  . ~/.bashrc.local
 fi
