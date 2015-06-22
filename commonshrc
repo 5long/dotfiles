@@ -38,6 +38,15 @@ alias bsc="browser-sync start --config bs-config.js"
 alias nr="npm run"
 alias cm=mocp
 
+wmirr() {
+  if [[ "$1" != */ ]]; then
+    echo "URL must end with slash"
+    return 1
+  fi
+
+  wget -nH -c -np --mirror -R 'index.html' --restrict-file-names=nocontrol "$1"
+}
+
 cdrb() {
   cd $(dirname $(gem which $1))
 }
