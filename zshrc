@@ -36,6 +36,7 @@ bindkey -M vicmd "u" undo
 bindkey -M viins " " magic-space
 
 PROMPT='%B%(?..[%?] )>%b '
+REPORTTIME=15
 typeset -U path
 path=(
   $HOME/bin
