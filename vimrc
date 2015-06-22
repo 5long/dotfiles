@@ -73,7 +73,7 @@ set scrolloff=6
 set cursorcolumn cursorline
 set showmatch
 set list
-set listchars=tab:▸\ ,trail:·
+set listchars=tab:›\ ,trail:·
 set linebreak
 set textwidth=75
 set formatoptions+=B1
@@ -319,6 +319,7 @@ nnoremap <leader>so :source %<CR>
 
 command! CN IMEnable
 
-if filereadable(expand('~/.vimrc.local'))
-  source ~/.vimrc.local
+let s:localrc = expand('<sfile>') . '.local'
+if filereadable(s:localrc)
+  exec "source " . fnameescape(s:localrc)
 endif
