@@ -115,7 +115,6 @@ cnoremap <c-v>b <c-r>=expand('%:r')<CR>
 set history=300
 set cmdheight=2
 set showcmd
-set wildmenu
 set wildmode=longest:full,full
 set wildignorecase
 set completeopt=menu,preview,longest
@@ -184,7 +183,6 @@ nnoremap <leader>T :RagainSetAndRun MakeGreen <c-r>=expand("%")<CR><CR>
 nnoremap <leader>mm :RagainSetAndRun make
 
 set fileformats=unix,dos,mac
-set encoding=utf-8
 set fileencoding=utf-8
 set fileencodings=ucs-bom,utf-8,gb-18030,gbk,gb2312,latin1
 set nobomb
@@ -192,7 +190,6 @@ set nobomb
 set diffopt=filler,vertical,iwhite
 noremap <leader>du :diffupdate<CR>
 
-set backspace=eol,start,indent
 set noesckeys
 
 nmap <c-s> <Plug>Ysurround
