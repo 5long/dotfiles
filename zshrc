@@ -39,7 +39,6 @@ PROMPT='%B%(?..[%?] )>%b '
 REPORTTIME=15
 typeset -U path
 path=(
-  $HOME/bin
   $HOME/.local/bin
   $path
 )
