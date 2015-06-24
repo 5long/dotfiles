@@ -63,7 +63,6 @@ set nomodeline
 
 set relativenumber
 set lazyredraw
-set mouse=n
 
 set switchbuf=usetab
 nnoremap <leader><leader> <c-^>
@@ -78,9 +77,8 @@ set textwidth=75
 set formatoptions+=B1
 set cpoptions+=J
 
-set autoindent
 set shiftround
-set expandtab smarttab
+set expandtab
 for s:key in ['tabstop', 'shiftwidth', 'softtabstop']
   exec 'set ' . s:key . '=2'
 endfor
@@ -128,8 +126,6 @@ function! CurDir()
 endfunction
 
 set ignorecase smartcase infercase
-set incsearch
-set hlsearch
 nnoremap <backspace> :nohlsearch<CR>
 noremap / /\v
 noremap ? ?\v
@@ -148,7 +144,6 @@ set undodir=~/.tmp
 set undolevels=1000
 
 autocmd vimrc FocusLost * silent! wall
-set autoread
 set autowrite
 
 nnoremap <leader>w :update<CR>
