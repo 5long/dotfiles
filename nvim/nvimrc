@@ -247,7 +247,6 @@ nnoremap <m-l> <c-w>l
 
 
 let g:ctrlp_map = '<leader>f'
-let g:ctrlp_cmd = 'CtrlPMixed'
 let g:ctrlp_reuse_window = 'netrw\|help\|nofile'
 if executable('ag')
   let g:ackprg = 'ag --vimgrep --follow -S'
