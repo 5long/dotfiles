@@ -4,11 +4,20 @@ CWD = File.dirname __FILE__
 BLACKLIST = %w[README.markdown Rakefile UNLICENSE]
 DOTFILES = FileList['*'] - BLACKLIST
 
+PRESET_TARGET = {
+  "nvim": "#{HOME}/.config/nvim"
+}
+def target_for(name)
+  PRESET_TARGET.fetch source do |name|
+    "#{HOME}/.#{name}"
+  end
+end
+
 DOTFILES.each do |f|
   desc "Install ~/.#{f} by symlinking"
   task f do |t|
-    target = "#{HOME}/.#{t.name}"
     source = "#{CWD}/#{t.name}"
+    target = target_for(t.name)
     File.symlink source, target unless File.exists? target
   end
 end
