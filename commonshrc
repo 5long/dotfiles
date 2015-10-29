@@ -10,7 +10,7 @@ export EDITOR=vim
 export VISUAL=vim
 export RLWRAP_EDITOR='vi +%L'
 
-CDPATH=".:$HOME:$HOME/code"
+CDPATH=".:$HOME:$HOME/src"
 
 alias l=ls
 alias ls='ls -F'
@@ -36,6 +36,7 @@ alias ag='ag -S --follow'
 alias bss="browser-sync start --server --directory --files='*.css, *.html, *.js'"
 alias bsc="browser-sync start --config bs-config.js"
 alias nr="npm run"
+alias rg="rake -g"
 alias cm=mocp
 
 wmirr() {
