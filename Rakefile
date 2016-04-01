@@ -7,7 +7,7 @@ DOTFILES = FileList['*'] - BLACKLIST
 PRESET_TARGET = {
   "nvim": "#{HOME}/.config/nvim"
 }
-def target_for(name)
+def target_for(source)
   PRESET_TARGET.fetch source do |name|
     "#{HOME}/.#{name}"
   end
