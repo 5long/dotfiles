@@ -9,7 +9,7 @@ Plug 'kien/ctrlp.vim'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'mileszs/ack.vim'
-Plug 'scrooloose/syntastic'
+Plug 'benekastah/neomake'
 Plug 'bufkill.vim'
 Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-eunuch'
@@ -263,13 +263,10 @@ set wildignore+=*.o,*.so
 set wildignore+=pkg,*.gem
 set suffixes+=.log
 
-let g:syntastic_auto_loc_list=1
-let g:syntastic_enable_signs = 0
-let g:syntastic_enable_highlighting = 0
-let g:syntastic_mode_map = { 'mode': 'active',
-      \ 'active_filetypes': [],
-      \ 'passive_filetypes': ['puppet', 'scala', 'html', 'asciidoc'],}
-let g:syntastic_python_checkers=['pyflakes']
+let g:neomake_place_signs = 0
+let g:neomake_open_list = 2
+let g:neomake_list_height = 7
+let g:neomake_python_enabled_makers = ['pyflakes']
 
 autocmd vimrc FileType css imap <c-u> <plug>(emmet-expand-abbr)
 let g:user_emmet_settings = {
