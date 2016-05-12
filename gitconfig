@@ -20,11 +20,11 @@
   fa = fetch --all
   ff = merge --ff-only
   ph = push
-  pl = pull
+  pl = !git stash -u && git pull
   po = push origin
   rb = rebase
   rv = checkout HEAD --force --
-  sh = stash
+  sh = stash -u
   s = status -bs
   st = status -bs
   tip = log --stat -1
