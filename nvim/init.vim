@@ -44,9 +44,6 @@ let g:mapleader=','
 let g:maplocalleader=' '
 
 let g:lucius_style = 'blue'
-if !has('gui_running')
-  set t_Co=256
-endif
 colorscheme lucius
 
 nnoremap <leader>hc :call ToggleCommentHighlight()<CR>
