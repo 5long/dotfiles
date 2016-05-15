@@ -10,6 +10,8 @@ export EDITOR=vim
 export VISUAL=vim
 export RLWRAP_EDITOR='vi +%L'
 
+export FZF_DEFAULT_COMMAND='ag -g ""'
+
 CDPATH=".:$HOME:$HOME/src"
 
 alias l=ls

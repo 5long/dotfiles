@@ -5,7 +5,10 @@ Plug '5long/ragain'
 Plug '5long/vim-imtoggle'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-abolish'
-Plug 'kien/ctrlp.vim'
+if isdirectory($HOME . '/.fzf')
+  Plug '~/.fzf'
+  Plug 'junegunn/fzf.vim'
+endif
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'mileszs/ack.vim'
@@ -21,7 +24,6 @@ Plug 'tpope/vim-projectionist'
 Plug 'justinmk/vim-sneak'
 
 Plug 'tpope/vim-endwise'
-Plug 'mattn/emmet-vim'
 Plug '5long/pytest-vim-compiler'
 Plug 'pangloss/vim-javascript'
 Plug 'vim-ruby/vim-ruby'
@@ -175,6 +177,8 @@ noremap <leader>du :diffupdate<CR>
 
 set noesckeys
 
+nnoremap <leader>f :Files<CR>
+
 nmap <c-s> <Plug>Ysurround
 xmap s <Plug>VSurround
 imap <c-s> <Plug>ISurround
@@ -246,13 +250,10 @@ nnoremap <m-k> <c-w>k
 nnoremap <m-l> <c-w>l
 
 
-let g:ctrlp_map = '<leader>f'
-let g:ctrlp_reuse_window = 'netrw\|help\|nofile'
 if executable('ag')
   let g:ackprg = 'ag --vimgrep --follow -S'
-  let g:ctrlp_user_command = 'ag --nocolor -g "" %s'
 endif
-nnoremap <leader>pf :CtrlPClearCache<CR>
+
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*
 set wildignore+=*.jpg,*.gif,*.png,*.pyc,*.pyo,*.ptlc
 set wildignore+=*.class,*.dex,*.apk,*.jar,*.idx,*.bin,*/build/*
@@ -267,13 +268,6 @@ let g:neomake_place_signs = 0
 let g:neomake_open_list = 2
 let g:neomake_list_height = 7
 let g:neomake_python_enabled_makers = ['pyflakes']
-
-autocmd vimrc FileType css imap <c-u> <plug>(emmet-expand-abbr)
-let g:user_emmet_settings = {
-      \ 'html': {
-      \ 'indentation': '  '
-      \ }
-      \ }
 
 let g:tcommentMapLeader1 = ''
 let g:tcommentMapLeader2 = ''
