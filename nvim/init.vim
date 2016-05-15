@@ -12,7 +12,9 @@ endif
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'mileszs/ack.vim'
-Plug 'benekastah/neomake'
+if has('nvim')
+  Plug 'benekastah/neomake'
+endif
 Plug 'bufkill.vim'
 Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-eunuch'
