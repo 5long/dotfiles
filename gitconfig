@@ -24,7 +24,8 @@
   po = push origin
   rb = rebase
   rv = checkout HEAD --force --
-  sh = stash -u
+  sh = stash
+  shs = stash save -u
   s = status -bs
   st = status -bs
   tip = log --stat -1
