@@ -279,10 +279,6 @@ autocmd vimrc VimEnter * if empty(expand('%')) | setl buftype=nofile
 let g:UltiSnipsJumpForwardTrigger='<tab>'
 let g:UltiSnipsJumpBackwardTrigger='<s-tab>'
 
-let g:slimv_repl_split = 4
-let g:slimv_leader = '<space>'
-let g:paredit_mode = 0
-
 " Since I'm a plugin author now
 nnoremap <leader>so :source %<CR>
 
