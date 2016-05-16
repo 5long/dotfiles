@@ -50,6 +50,9 @@ alias rake='noglob rake'
 alias zathura='zathura --fork &>/dev/null'
 alias irc='weechat-curses'
 
+FZF_BINDING=/usr/share/fzf/key-bindings.zsh
+test -f "$FZF_BINDING" && . "$FZF_BINDING"
+
 gc() {
   git add --all .
   git commit -m "$*"
