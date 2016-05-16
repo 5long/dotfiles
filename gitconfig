@@ -20,7 +20,7 @@
   fa = fetch --all
   ff = merge --ff-only
   ph = push
-  pl = !git stash -u && git pull
+  pl = !git stash -u && git pull && git stash pop
   po = push origin
   rb = rebase
   rv = checkout HEAD --force --
