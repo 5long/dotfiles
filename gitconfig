@@ -17,7 +17,8 @@
   ll = log --graph --pretty=grb --stat
   dc = diff --cached
   di = diff
-  df = diff @{u} --stat
+  df = diff @{u}
+  dfs = diff @{u} --stat
   fa = fetch --all
   ff = merge --ff-only
   ph = push
