@@ -26,12 +26,12 @@ endsnippet
 
 snippet utf8
 # encoding: utf-8
-from __future__ import unicode_literals
+
 ${0}
 endsnippet
 
 
-snippet _ "Magics" i
+snippet _ "Double underscore" w
 __${1:init}__${0}
 endsnippet
 
@@ -68,4 +68,14 @@ def main():
 
 if __name__ == '__main__':
 	main()
+endsnippet
+
+snippet super "super() boilerplate" b
+super(${1:ClassName}, self).${2:method}(${0:*a, **kw})
+endsnippet
+
+snippet prop "Property" b
+@property
+def ${1:name}(self):
+	return ${0}
 endsnippet
