@@ -126,7 +126,7 @@ function! CurDir()
   return curdir
 endfunction
 
-set ignorecase smartcase infercase
+set ignorecase smartcase
 nnoremap <backspace> :nohlsearch<CR>
 noremap / /\v
 noremap ? ?\v
