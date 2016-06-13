@@ -182,6 +182,9 @@ nmap <c-s> <Plug>Ysurround
 xmap s <Plug>VSurround
 imap <c-s> <Plug>ISurround
 
+nnoremap <expr> j v:count ? 'j' : 'gj'
+nnoremap <expr> k v:count ? 'k' : 'gk'
+
 inoreabbrev rt return
 
 noremap n' :<C-U>call <SID>TextObjNext("'")<CR>
