@@ -181,16 +181,6 @@ nnoremap <leader>f :Files<CR>
 nmap <c-s> <Plug>Ysurround
 xmap s <Plug>VSurround
 imap <c-s> <Plug>ISurround
-inoremap $<space> <space><space><left>
-inoremap $@ ()<left>
-inoremap $2 []<left>
-inoremap $# {}<left>
-inoremap $3 <><left>
-inoremap $4 {}<left><CR><esc>O
-inoremap $$ $
-inoremap $e ''<left>
-inoremap $E ""<left>
-inoremap $R <backspace><delete>
 
 inoreabbrev rt return
 
