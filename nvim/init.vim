@@ -25,7 +25,7 @@ Plug 'tpope/vim-vinegar'
 Plug 'tpope/vim-projectionist'
 Plug 'justinmk/vim-sneak'
 
-Plug 'tpope/vim-endwise'
+Plug 'cohama/lexima.vim'
 Plug '5long/pytest-vim-compiler'
 Plug 'pangloss/vim-javascript'
 Plug 'vim-ruby/vim-ruby'
@@ -218,11 +218,11 @@ autocmd vimrc QuickFixCmdPost make below cwindow
 set pastetoggle=<f5>
 
 " Leave <c-h> for backspace
-inoremap <c-j> <down>
-inoremap <c-k> <up>
-inoremap <c-l> <right>
-inoremap <c-e> <c-o>A
-inoremap <c-a> <c-o>I
+inoremap <c-j> <c-g>U<down>
+inoremap <c-k> <c-g>U<up>
+inoremap <c-l> <c-g>U<right>
+inoremap <c-e> <c-g>U<c-o>A
+inoremap <c-a> <c-g>U<c-o>I
 
 nnoremap <c-n> :tabe \| lcd ~/
 
