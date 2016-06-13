@@ -1,4 +1,4 @@
-call plug#begin('~/.nvim/bundle/')
+call plug#begin()
 
 Plug '5long/ryve'
 Plug '5long/ragain'
