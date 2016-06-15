@@ -165,7 +165,6 @@ nnoremap <leader>T :RagainSetAndRun MakeGreen <c-r>=expand("%")<CR><CR>
 nnoremap <leader>mm :RagainSetAndRun make
 
 set fileformats=unix,dos,mac
-set fileencoding=utf-8
 set fileencodings=ucs-bom,utf-8,gb-18030,gbk,gb2312,latin1
 set nobomb
 
