@@ -185,16 +185,6 @@ nnoremap <expr> k v:count ? 'k' : 'gk'
 
 inoreabbrev rt return
 
-noremap n' :<C-U>call <SID>TextObjNext("'")<CR>
-nunmap n'
-noremap n" :<C-U>call <SID>TextObjNext('"')<CR>
-nunmap n"
-
-function! s:TextObjNext(type)
-  let l:cmd = printf('normal! /%svi%s', a:type, a:type)
-  exec cmd
-endfunction
-
 function! EnterHit()
   if stridx(&buftype, 'quickfix') != -1
     normal! 
