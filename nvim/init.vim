@@ -110,13 +110,11 @@ cnoremap <c-k> <c-\>eCmdlineKillTillEnd()<cr>
 cnoremap %% <c-r>=expand('%:h').'/'<CR>
 cnoremap <c-v>b <c-r>=expand('%:r')<CR>
 
-set history=300
 set cmdheight=2
 set showcmd
 set wildmode=longest:full,full
 set wildignorecase
 set completeopt=menu,preview,longest
-set laststatus=2
 set statusline=\ %f%m%R%H%W\ in\ %{CurDir()}\ \ Cur:%l/%L:%c
 set fillchars=""
 set shortmess+=aI
