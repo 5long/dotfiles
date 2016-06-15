@@ -31,6 +31,8 @@ Plug 'pangloss/vim-javascript'
 Plug 'vim-ruby/vim-ruby'
 Plug 'kurayama/systemd-vim-syntax'
 
+Plug 'NLKNguyen/papercolor-theme'
+
 call plug#end()
 
 let g:plug_threads = 5
@@ -43,8 +45,7 @@ set secure
 let g:mapleader=','
 let g:maplocalleader=' '
 
-let g:lucius_style = 'blue'
-colorscheme lucius
+colorscheme PaperColor
 
 nnoremap <leader>hc :call ToggleCommentHighlight()<CR>
 let s:comment_highlighting = 0
