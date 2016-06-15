@@ -13,7 +13,7 @@ Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'mileszs/ack.vim'
 if has('nvim')
-  Plug 'benekastah/neomake'
+  Plug 'neomake/neomake'
 endif
 Plug 'bufkill.vim'
 Plug 'tomtom/tcomment_vim'
