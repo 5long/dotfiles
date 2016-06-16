@@ -47,20 +47,6 @@ let g:maplocalleader=' '
 
 colorscheme PaperColor
 
-nnoremap <leader>hc :call ToggleCommentHighlight()<CR>
-let s:comment_highlighting = 0
-function! ToggleCommentHighlight()
-  if s:comment_highlighting
-    let s:comment_highlighting = 0
-    colorscheme lucius
-    return
-  endif
-
-  let s:comment_highlighting = 1
-  hi Comment guifg=#bcbcbc gui=none
-  hi Comment ctermfg=250 cterm=none
-endfunction
-
 set nomodeline
 
 set relativenumber
