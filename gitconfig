@@ -50,6 +50,7 @@
   tool = vimdiff
   algorithm = histogram
   mnemonicprefix = true
+  compactionHeuristic = true
 [log]
   decorate = true
 [credential]
