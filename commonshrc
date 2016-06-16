@@ -11,6 +11,7 @@ export VISUAL=vim
 export RLWRAP_EDITOR='vi +%L'
 
 export FZF_DEFAULT_COMMAND='ag -g ""'
+export FZF_DEFAULT_OPTS='--color=light'
 
 CDPATH=".:$HOME:$HOME/src"
 
