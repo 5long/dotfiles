@@ -19,7 +19,6 @@ Plug 'bufkill.vim'
 Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-unimpaired'
-Plug 'reinh/vim-makegreen'
 Plug 'benmills/vimux'
 Plug 'tpope/vim-vinegar'
 Plug 'tpope/vim-projectionist'
@@ -148,7 +147,6 @@ nnoremap <leader>gf :AckFile
 nmap <leader>r <Plug>RagainRun
 nmap <leader>R <Plug>RagainResetAndRun
 nmap <leader>mr :RagainSetAndRun  <c-r>=expand('%')<CR><s-left><left>
-nnoremap <leader>T :RagainSetAndRun MakeGreen <c-r>=expand("%")<CR><CR>
 nnoremap <leader>mm :RagainSetAndRun make
 
 set fileformats=unix,dos,mac
