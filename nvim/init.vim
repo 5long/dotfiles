@@ -171,15 +171,6 @@ nnoremap <expr> k v:count ? 'k' : 'gk'
 
 inoreabbrev rt return
 
-function! EnterHit()
-  if stridx(&buftype, 'quickfix') != -1
-    normal! 
-  else
-    normal! a r
-  endif
-endfunction
-
-nnoremap <CR> :call EnterHit()<CR>
 autocmd vimrc QuickFixCmdPost make below cwindow
 
 set pastetoggle=<f5>
