@@ -15,7 +15,7 @@ Plug 'mileszs/ack.vim'
 if has('nvim')
   Plug 'neomake/neomake'
 endif
-Plug 'bufkill.vim'
+Plug 'mhinz/vim-sayonara'
 Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-unimpaired'
@@ -137,8 +137,8 @@ nnoremap <leader>md :silent! call mkdir(expand('%:p:h'), 'p')<CR>
 
 let g:BufKillActionWhenBufferDisplayedInAnotherWindow = 'kill'
 let g:BufKillVerbose = 0
-nnoremap <leader>dd :BD<CR>
-nnoremap <leader>da :silent bufdo BD<CR>
+nnoremap <leader>dd :Sayonara!<CR>
+nnoremap <leader>da :silent windo Sayonara!<CR>
 
 nnoremap <leader>cd :cd %:p:h<CR>
 nnoremap <leader>lc :lcd %:p:h<CR>
