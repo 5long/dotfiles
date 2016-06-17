@@ -39,7 +39,7 @@ alias ag='ag -S --follow'
 alias bss="browser-sync start --server --directory --files='*.css, *.html, *.js'"
 alias bsc="browser-sync start --config bs-config.js"
 alias nr="npm run"
-alias tap="tap -Rmin"
+alias tap="tap -Rmin -b"
 alias rg="rake -g"
 alias cm=mocp
 
