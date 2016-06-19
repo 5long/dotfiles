@@ -223,6 +223,8 @@ let g:neomake_place_signs = 0
 let g:neomake_open_list = 2
 let g:neomake_list_height = 7
 let g:neomake_python_enabled_makers = ['pyflakes']
+let g:neomake_javascript_enabled_makers = ['eslint']
+autocmd vimrc BufWritePost * Neomake
 
 let g:tcommentMapLeader1 = ''
 let g:tcommentMapLeader2 = ''
