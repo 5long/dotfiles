@@ -55,7 +55,7 @@ let g:lightline = {
   \ 'inactive': {
   \   'right': [ [],
   \              [ 'lineinfo' ],
-  \              [ 'filetype' ] ],
+  \              [] ],
   \ },
   \ 'component_expand': {
   \   'neomake': 'LightLineNeomake',
