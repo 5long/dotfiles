@@ -244,5 +244,5 @@ command! CN IMEnable
 
 let s:localrc = expand('<sfile>') . '.local'
 if filereadable(s:localrc)
-  exec "source " . fnameescape(s:localrc)
+  exec 'source ' . fnameescape(s:localrc)
 endif
