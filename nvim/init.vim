@@ -23,6 +23,7 @@ Plug 'benmills/vimux'
 Plug 'tpope/vim-vinegar'
 Plug 'tpope/vim-projectionist'
 Plug 'justinmk/vim-sneak'
+Plug 'itchyny/lightline.vim'
 
 Plug 'cohama/lexima.vim'
 Plug '5long/pytest-vim-compiler'
@@ -44,6 +45,25 @@ set secure
 let g:mapleader=','
 let g:maplocalleader=' '
 
+let g:lightline = {
+  \ 'colorscheme': 'PaperColor',
+  \ 'active': {
+  \   'right': [ [ 'neomake' ],
+  \              [ 'lineinfo' ],
+  \              [ 'filetype' ] ],
+  \ },
+  \ 'inactive': {
+  \   'right': [ [],
+  \              [ 'lineinfo' ],
+  \              [ 'filetype' ] ],
+  \ },
+  \ 'component_expand': {
+  \   'neomake': 'LightLineNeomake',
+  \ },
+  \ 'component_type': {
+  \   'neomake': 'error',
+  \ },
+  \ }
 colorscheme PaperColor
 
 set nomodeline
@@ -101,9 +121,8 @@ set showcmd
 set wildmode=longest:full,full
 set wildignorecase
 set completeopt=menu,preview,longest
-set statusline=\ %f%m%R%H%W\ in\ %{CurDir()}\ \ Cur:%l/%L:%c
-set fillchars=""
 set shortmess+=aI
+set noshowmode
 
 function! CurDir()
   let curdir = substitute(getcwd(),$HOME,'~','g')
@@ -220,11 +239,13 @@ set wildignore+=pkg,*.gem
 set suffixes+=.log
 
 let g:neomake_place_signs = 0
-let g:neomake_open_list = 2
-let g:neomake_list_height = 7
 let g:neomake_python_enabled_makers = ['pyflakes']
 let g:neomake_javascript_enabled_makers = ['eslint']
 autocmd vimrc BufWritePost * Neomake
+
+fun! LightLineNeomake()
+  return neomake#statusline#LoclistStatus()
+endf
 
 let g:tcommentMapLeader1 = ''
 let g:tcommentMapLeader2 = ''
