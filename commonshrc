@@ -71,7 +71,13 @@ mp() {
 }
 
 edbin() {
-  $EDITOR "$(which $1)"
+  bin="$(/usr/bin/which $1)"
+  if [ -n "$bin" ]
+  then
+    "$EDITOR" "$bin"
+  else
+    return 1
+  fi
 }
 
 vman() {
