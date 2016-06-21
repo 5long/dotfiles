@@ -46,7 +46,7 @@ let g:maplocalleader=' '
 let g:lightline = {
   \ 'colorscheme': 'PaperColor',
   \ 'active': {
-  \   'left': [ [ 'mode', 'paste' ], [ 'readonly', 'cwd', 'filename', 'modified' ] ],
+  \   'left': [ [ 'mode', 'paste' ], [], [ 'readonly', 'cwd', 'filename', 'modified' ] ],
   \   'right': [ [ 'neomake' ],
   \              [ 'lineinfo' ],
   \              [ 'filetype' ] ],
