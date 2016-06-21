@@ -46,6 +46,7 @@ let g:maplocalleader=' '
 let g:lightline = {
   \ 'colorscheme': 'PaperColor',
   \ 'active': {
+  \   'left': [ [ 'mode', 'paste' ], [ 'readonly', 'cwd', 'filename', 'modified' ] ],
   \   'right': [ [ 'neomake' ],
   \              [ 'lineinfo' ],
   \              [ 'filetype' ] ],
@@ -55,6 +56,9 @@ let g:lightline = {
   \              [ 'lineinfo' ],
   \              [] ],
   \ },
+  \ 'component_function': {
+  \   'cwd': 'CurDir',
+  \ },
   \ 'component_expand': {
   \   'neomake': 'LightLineNeomake',
   \ },
@@ -62,6 +66,10 @@ let g:lightline = {
   \   'neomake': 'error',
   \ },
   \ }
+
+hi link SneakPluginTarget Search
+hi link SneakStreakTarget Search
+
 colorscheme PaperColor
 
 set nomodeline
@@ -122,9 +130,9 @@ set completeopt=menu,preview,longest
 set shortmess+=aI
 set noshowmode
 
+let s:home = resolve($HOME)
 function! CurDir()
-  let curdir = substitute(getcwd(),$HOME,'~','g')
-  return curdir
+  return substitute(getcwd(), '^' . s:home, '~', '')
 endfunction
 
 set ignorecase smartcase
