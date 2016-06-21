@@ -73,3 +73,7 @@ mp() {
 edbin() {
   $EDITOR "$(which $1)"
 }
+
+vman() {
+  vim "+Man ${1}"
+}
