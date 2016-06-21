@@ -166,13 +166,16 @@ nnoremap <leader>dd :Sayonara!<CR>
 nnoremap <leader>da :silent windo Sayonara!<CR>
 
 nnoremap <leader>cd :cd %:p:h<CR>
-nnoremap <leader>lc :lcd %:p:h<CR>
 nnoremap <leader>gg :Ack! 
 nnoremap <leader>gf :AckFile 
 nmap <leader>r <Plug>RagainRun
 nmap <leader>R <Plug>RagainResetAndRun
 nmap <leader>mr :RagainSetAndRun  <c-r>=expand('%')<CR><s-left><left>
 nnoremap <leader>mm :RagainSetAndRun make
+
+nnoremap <leader>tn :<c-u>tabe<CR>
+nnoremap <leader>tc :<c-u>tcd %:p:h<CR>
+nnoremap <leader>tq :<c-u>tabclose<CR>
 
 set fileformats=unix,dos,mac
 set fileencodings=ucs-bom,utf-8,gb-18030,gbk,gb2312,latin1
@@ -204,8 +207,6 @@ inoremap <c-k> <c-g>U<up>
 inoremap <c-l> <c-g>U<right>
 inoremap <c-e> <c-g>U<c-o>A
 inoremap <c-a> <c-g>U<c-o>I
-
-nnoremap <c-n> :tabe \| lcd ~/
 
 nmap <F1> <nop>
 nmap Q <nop>
