@@ -42,7 +42,7 @@ alias nr="npm run"
 alias tap="tap -Rmin -b"
 alias rg="rake -g"
 alias cm=mocp
-alias alert="echo '\a'"
+alias alert="echo -n '\a'"
 
 wmirr() {
   if [[ "$1" != */ ]]; then
