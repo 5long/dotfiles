@@ -85,8 +85,12 @@ vman() {
   vim "+Man ${1}"
 }
 
-mkqr() {
-  fn="$(mktemp --suffix=.png)"
-  qrencode "$1" -s 10 -o "$fn"
-  pqiv "$fn"
+gc() {
+  git add --all .
+  git commit -m "$*"
 }
+
+dus() {
+  du -sh * .* . | sort -h
+}
+

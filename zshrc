@@ -53,14 +53,10 @@ alias irc='weechat-curses'
 FZF_BINDING=/usr/share/fzf/key-bindings.zsh
 test -f "$FZF_BINDING" && . "$FZF_BINDING"
 
-gc() {
-  git add --all .
-  git commit -m "$*"
+mkqr_() {
+  pqiv =(qrencode "$1" -s 10 -o -)
 }
-
-dus() {
-  du -sh * .* . | sort -h
-}
+alias mkqr='noglob mkqr_'
 
 if [[ -s ~/.zshrc.local ]] then
   . ~/.zshrc.local
