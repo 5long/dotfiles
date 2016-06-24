@@ -27,6 +27,7 @@
   rb = rebase
   rv = checkout HEAD --force --
   sh = stash
+  sp = stash show -p
   shs = stash save -u
   s = status -bs
   st = status -bs
