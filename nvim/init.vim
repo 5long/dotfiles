@@ -1,35 +1,46 @@
 call plug#begin()
 
+" Colorz!
+Plug 'NLKNguyen/papercolor-theme'
+
+" Editing / Operator / Everyday command
 Plug '5long/ryve'
-Plug '5long/ragain'
-Plug '5long/vim-imtoggle'
+Plug 'justinmk/vim-sneak'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-abolish'
+Plug 'tomtom/tcomment_vim'
+Plug 'cohama/lexima.vim'
+
 if isdirectory($HOME . '/.fzf')
   Plug '~/.fzf'
   Plug 'junegunn/fzf.vim'
 endif
+
+" Make Vim Better
+Plug '5long/vim-imtoggle'
+Plug 'itchyny/lightline.vim'
+Plug 'mhinz/vim-sayonara'
+Plug 'tpope/vim-eunuch'
+Plug 'tpope/vim-unimpaired'
+Plug 'tpope/vim-vinegar'
+Plug 'neomake/neomake'
+
+" Make-vim-more-like-IDE
+
+Plug '5long/ragain'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'mileszs/ack.vim'
-Plug 'neomake/neomake'
-Plug 'mhinz/vim-sayonara'
-Plug 'tomtom/tcomment_vim'
-Plug 'tpope/vim-eunuch'
-Plug 'tpope/vim-unimpaired'
-Plug 'benmills/vimux'
-Plug 'tpope/vim-vinegar'
-Plug 'tpope/vim-projectionist'
-Plug 'justinmk/vim-sneak'
-Plug 'itchyny/lightline.vim'
 
-Plug 'cohama/lexima.vim'
+" Filetype-wise
 Plug '5long/pytest-vim-compiler'
 Plug 'pangloss/vim-javascript'
 Plug 'vim-ruby/vim-ruby'
 Plug 'kurayama/systemd-vim-syntax'
 
-Plug 'NLKNguyen/papercolor-theme'
+" Not used that much, might be deleted / re-learnt
+Plug 'benmills/vimux'
+Plug 'tpope/vim-projectionist'
 
 call plug#end()
 
