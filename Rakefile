@@ -5,7 +5,8 @@ BLACKLIST = %w[README.markdown Rakefile UNLICENSE]
 DOTFILES = FileList['*'] - BLACKLIST
 
 PRESET_TARGET = {
-  "nvim" => "#{HOME}/.config/nvim"
+  "nvim" => "#{HOME}/.config/nvim",
+  "gitconfig" => "#{HOME}/.config/git/config",
 }
 def target_for(source)
   PRESET_TARGET.fetch source do |name|
