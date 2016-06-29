@@ -27,7 +27,7 @@
   rb = rebase
   rv = checkout HEAD --force --
   sh = stash
-  sp = stash show -p
+  sp = stash show
   shs = stash save -u
   s = status -bs
   st = status -bs
@@ -51,6 +51,8 @@
   algorithm = histogram
   mnemonicprefix = true
   compactionHeuristic = true
+[stash]
+  showPatch = true
 [log]
   decorate = true
 [credential]
