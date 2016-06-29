@@ -82,6 +82,7 @@ edbin() {
 }
 
 vman() {
+  [ -z "$1" ] && return 1
   vim "+Man ${1}"
 }
 
