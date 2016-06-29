@@ -38,11 +38,12 @@
   grb = %C(yellow)%h%Creset %Cgreen(%ai)%Creset %C(bold)<%an>%Creset %C(bold green)%d%Creset %s
 [core]
   pager = less -+FSRX -FRX
-  excludesfile = ~/.gitignore
 [push]
   default = current
 [pull]
   rebase = true
+[rebase]
+  autostash = true
 [merge]
   defaultToUpstream = true
 [diff]
