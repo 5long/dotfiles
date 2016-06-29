@@ -43,7 +43,8 @@
 [pull]
   rebase = true
 [rebase]
-  autostash = true
+  autoStash = true
+  autoSquash = true
 [merge]
   defaultToUpstream = true
 [diff]
