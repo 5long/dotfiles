@@ -37,6 +37,8 @@ Plug '5long/pytest-vim-compiler'
 Plug 'pangloss/vim-javascript'
 Plug 'vim-ruby/vim-ruby'
 Plug 'kurayama/systemd-vim-syntax'
+Plug 'guns/vim-clojure-static'
+Plug 'tpope/vim-fireplace'
 
 " Not used that much, might be deleted / re-learnt
 Plug 'benmills/vimux'
