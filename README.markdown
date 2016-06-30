@@ -4,9 +4,9 @@ My dotfiles.
 
 ## Points to Take
 
-* For VIM 7.3 only
+* I use [Neovim]
 * Unix-y system
-* Relying on defaults to keep it short (e.g. no `set nocp`)
+* Relying on defaults to keep the config short
 
 ## Installation
 
@@ -14,7 +14,6 @@ Prerequesistes:
 
 * Git
 * Rake
-* Ruby headers (for Command-T)
 
 And...
 
@@ -31,3 +30,5 @@ Well, you can't `rake README.markdown` anyway.
 ## License
 
 Public domain. See UNLICENSE
+
+[Neovim]: http://neovim.io/
