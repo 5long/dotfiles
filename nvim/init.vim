@@ -41,7 +41,6 @@ Plug 'guns/vim-clojure-static'
 Plug 'tpope/vim-fireplace'
 
 " Not used that much, might be deleted / re-learnt
-Plug 'benmills/vimux'
 Plug 'tpope/vim-projectionist'
 
 call plug#end()
@@ -270,9 +269,6 @@ endf
 
 let g:tcommentMapLeader1 = ''
 let g:tcommentMapLeader2 = ''
-
-nnoremap <buffer> <leader>vp yip:call VimuxSendExpr(@@)<cr>
-inoremap <buffer> <c-v><cr> <esc>yip:call VimuxSendExpr(@@)<cr>'}2o<esc>i
 
 autocmd vimrc VimEnter * if empty(expand('%')) | setl buftype=nofile
 
