@@ -95,3 +95,11 @@ dus() {
   du -sh * .* . | sort -h
 }
 
+rn() {
+  [ -z "$1" ] && return 1
+  fn="$1"
+  cache="$(mktemp)"
+  echo "$fn" > "$cache"
+  "$EDITOR" "$cache"
+  mv "$fn" "$(cat $cache)"
+}
