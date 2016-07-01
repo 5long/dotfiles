@@ -148,9 +148,9 @@ function! CurDir()
 endfunction
 
 set ignorecase smartcase
-nnoremap <backspace> :nohlsearch<CR>
 noremap / /\v
 noremap ? ?\v
+nnoremap <leader>l :nohlsearch<cr>:diffupdate<cr>:syntax sync fromstart<cr><c-l>
 
 for s:key in ['#', '*', 'n', 'N']
   exec printf('nnoremap %s %szz', s:key, s:key)
