@@ -150,7 +150,7 @@ endfunction
 set ignorecase smartcase
 noremap / /\v
 noremap ? ?\v
-nnoremap <backspace> :nohlsearch<cr>:diffupdate<cr>:syntax sync fromstart<cr><c-l>
+nnoremap <backspace> :nohlsearch<cr>:diffupdate<cr><c-l>
 
 for s:key in ['#', '*', 'n', 'N']
   exec printf('nnoremap %s %szz', s:key, s:key)
