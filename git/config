@@ -15,7 +15,7 @@
   cb = checkout upstream/master -b
   l = log --graph --pretty=grb
   ll = log --graph --pretty=grb --stat
-  ld = log --graph --pretty=grb --stat @{u}..
+  ld = log --graph --pretty=grb @{u}..
   dc = diff --cached
   di = diff
   df = diff @{u}
