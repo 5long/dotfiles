@@ -19,6 +19,7 @@ endif
 " Make Vim Better
 Plug '5long/vim-imtoggle'
 Plug 'itchyny/lightline.vim'
+
 Plug 'mhinz/vim-sayonara'
 Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-unimpaired'
@@ -262,6 +263,11 @@ let g:neomake_place_signs = 0
 let g:neomake_python_enabled_makers = ['pyflakes']
 let g:neomake_javascript_enabled_makers = ['eslint']
 autocmd vimrc BufWritePost * Neomake
+autocmd vimrc User NeomakeCountsChanged call OnNeomakeCountsChanged()
+
+fun! OnNeomakeCountsChanged()
+  call lightline#update()
+endfun
 
 fun! LightLineNeomake()
   return neomake#statusline#LoclistStatus()
