@@ -97,7 +97,6 @@ set cursorcolumn cursorline
 set showmatch
 set list
 set listchars=tab:›\ ,trail:·
-set linebreak
 set textwidth=75
 set formatoptions+=B1
 set cpoptions+=J
