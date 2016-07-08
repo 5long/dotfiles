@@ -98,7 +98,8 @@ set showmatch
 set list
 set listchars=tab:›\ ,trail:·
 set textwidth=75
-set formatoptions+=B1
+set formatoptions+=B1nlm
+set formatoptions-=tc
 set cpoptions+=J
 
 set shiftround
