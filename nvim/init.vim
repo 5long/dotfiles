@@ -5,7 +5,6 @@ Plug 'NLKNguyen/papercolor-theme'
 
 " Editing / Operator / Everyday command
 Plug '5long/ryve'
-Plug 'justinmk/vim-sneak'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-abolish'
 Plug 'tomtom/tcomment_vim'
