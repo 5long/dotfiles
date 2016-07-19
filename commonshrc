@@ -13,6 +13,8 @@ export RLWRAP_EDITOR='vi +%L'
 export FZF_DEFAULT_COMMAND='ag -g ""'
 export FZF_DEFAULT_OPTS='--color=light'
 
+export PYTEST_ADDOPTS='-x -s'
+
 CDPATH=".:$HOME:$HOME/src"
 
 alias l=ls
