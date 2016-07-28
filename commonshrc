@@ -18,7 +18,7 @@ export PYTEST_ADDOPTS='-x -s'
 CDPATH=".:$HOME:$HOME/src"
 
 alias l=ls
-alias ls='ls -F'
+alias ls='ls -F --color=auto'
 alias ll='ls -oh'
 alias la='ls -A'
 
