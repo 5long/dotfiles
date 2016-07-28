@@ -94,7 +94,7 @@ gc() {
 }
 
 dus() {
-  du -sh * .* . | sort -h
+  du -csh * .* . | sort -h
 }
 
 rn() {
