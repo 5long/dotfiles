@@ -4,19 +4,25 @@ CWD = File.dirname __FILE__
 BLACKLIST = %w[README.markdown Rakefile UNLICENSE]
 DOTFILES = FileList['*'] - BLACKLIST
 
-PRESET_TARGET = {
-  "nvim" => "#{HOME}/.config/nvim",
-  "git" => "#{HOME}/.config/git",
-  "termite" => "#{HOME}/.config/termite",
-}
+XDG_DIRS = %w[nvim git termite]
+def xdg_target(name)
+  XDG_DIRS.include?(name) ? "#{HOME}/.config/#{name}" : nil
+end
+
+def regular_dotfile(name)
+  "#{HOME}/.#{name}"
+end
+
 def target_for(source)
-  PRESET_TARGET.fetch source do |name|
-    "#{HOME}/.#{name}"
-  end
+  xdg_target(source) or regular_dotfile(source)
+end
+
+def tildify_path(path)
+  path.sub(HOME, '~')
 end
 
 DOTFILES.each do |f|
-  desc "Install ~/.#{f} by symlinking"
+  desc "Install #{tildify_path(target_for(f))} by symlinking"
   task f do |t|
     source = "#{CWD}/#{t.name}"
     target = target_for(t.name)
