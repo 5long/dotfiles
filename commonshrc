@@ -23,7 +23,7 @@ alias ll='ls -oh'
 alias la='ls -A'
 
 alias grep='grep --color=auto -E'
-alias psg='ps aux | grep'
+alias psg='ps ax | grep'
 alias j='jobs -l'
 alias lstcp='lsof -nPi tcp'
 alias mkdir='mkdir -p'
