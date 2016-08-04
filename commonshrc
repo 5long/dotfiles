@@ -11,7 +11,7 @@ export VISUAL=vim
 export RLWRAP_EDITOR='vi +%L'
 
 export FZF_DEFAULT_COMMAND='ag -g ""'
-export FZF_DEFAULT_OPTS='--color=light'
+export FZF_DEFAULT_OPTS='--color=light --exact'
 
 export PYTEST_ADDOPTS='-x -s'
 
