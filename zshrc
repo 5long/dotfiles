@@ -26,6 +26,7 @@ bindkey -M vicmd L vi-end-of-line
 KEYTIMEOUT=1
 
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
+zstyle ':completion:*:mpv:argument*' tag-order - '! urls'
 
 bindkey -v "^R" history-incremental-search-backward
 bindkey -v "^Y" vi-put-after
