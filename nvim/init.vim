@@ -30,7 +30,7 @@ Plug 'neomake/neomake'
 Plug '5long/ragain'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
-Plug 'mileszs/ack.vim'
+Plug 'mhinz/vim-grepper'
 
 " Filetype-wise
 Plug '5long/pytest-vim-compiler'
@@ -178,8 +178,7 @@ nnoremap <leader>dd :Sayonara!<CR>
 nnoremap <leader>da :silent windo Sayonara!<CR>
 
 nnoremap <leader>cd :cd %:p:h<CR>
-nnoremap <leader>gg :Ack! 
-nnoremap <leader>gf :AckFile 
+nnoremap <leader>gg :Grepper -tool ag -qf -query 
 nmap <leader>r <Plug>RagainRun
 nmap <leader>R <Plug>RagainResetAndRun
 nmap <leader>mr :RagainSetAndRun  <c-r>=expand('%')<CR><s-left><left>
@@ -241,11 +240,6 @@ nnoremap <m-h> <c-w>h
 nnoremap <m-j> <c-w>j
 nnoremap <m-k> <c-w>k
 nnoremap <m-l> <c-w>l
-
-
-if executable('ag')
-  let g:ackprg = 'ag --vimgrep --follow -S'
-endif
 
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*
 set wildignore+=*.jpg,*.gif,*.png,*.pyc,*.pyo,*.ptlc
