@@ -11,6 +11,7 @@ Plug 'tomtom/tcomment_vim'
 Plug 'cohama/lexima.vim'
 
 if isdirectory($HOME . '/.fzf')
+  let $FZF_DEFAULT_OPTS = '--color=light'
   Plug '~/.fzf'
   Plug 'junegunn/fzf.vim'
 endif
