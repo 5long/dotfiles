@@ -22,7 +22,7 @@ alias ls='ls -F --color=auto'
 alias ll='ls -oh'
 alias la='ls -A'
 
-alias grep='grep --color=auto -E'
+alias grep='grep --color=auto -E -i'
 alias psg='ps ax | grep'
 alias j='jobs -l'
 alias lstcp='lsof -nPi tcp'
