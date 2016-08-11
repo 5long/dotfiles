@@ -46,6 +46,10 @@ alias rg="rake -g"
 alias cm=mocp
 alias alert="echo -n '\a'"
 
+dl() {
+  diff -rubd "$@" | dwdiff -c --diff-input | less
+}
+
 wmirr() {
   if [[ "$1" != */ ]]; then
     echo "URL must end with slash"
