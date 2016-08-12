@@ -103,6 +103,8 @@ dus() {
 
 rn() {
   [ -z "$1" ] && return 1
+  [ -e "$1" ] && return 2
+
   fn="$1"
   cache="$(mktemp)"
   echo "$fn" > "$cache"
