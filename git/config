@@ -16,6 +16,7 @@
   l = log --graph --pretty=grb
   ll = log --graph --pretty=grb --stat
   ld = log --graph --pretty=grb @{u}..
+  lds = log --graph --pretty=grb @{u}.. --stat
   dc = diff --cached
   di = diff
   df = diff @{u}
