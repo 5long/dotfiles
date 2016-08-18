@@ -163,8 +163,6 @@ set nobackup
 set nowritebackup
 set hidden
 set undofile
-set undodir=~/.tmp
-set undolevels=1000
 
 autocmd vimrc FocusLost * silent! wall
 set autowrite

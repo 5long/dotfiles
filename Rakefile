@@ -33,9 +33,6 @@ end
 task :bashrc => :commonshrc
 task :zshrc => :commonshrc
 
-TMP_DIR = "#{HOME}/.tmp"
-directory TMP_DIR
-
 VIM_PLUG_FILENAME = 'nvim/autoload/plug.vim'
 task 'vim-plug' do
   if not File.exist? VIM_PLUG_FILENAME
