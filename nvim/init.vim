@@ -169,7 +169,6 @@ set autowrite
 
 nnoremap <leader>w :update<CR>
 nnoremap QQ :qa!<CR>
-nnoremap <leader>md :silent! call mkdir(expand('%:p:h'), 'p')<CR>
 
 let g:BufKillActionWhenBufferDisplayedInAnotherWindow = 'kill'
 let g:BufKillVerbose = 0
