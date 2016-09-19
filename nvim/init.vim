@@ -196,6 +196,7 @@ noremap <leader>du :diffupdate<CR>
 set noesckeys
 
 nnoremap <leader>f :Files<CR>
+nnoremap <leader>bf :Buffers<CR>
 
 nmap <c-s> <Plug>Ysurround
 xmap s <Plug>VSurround
