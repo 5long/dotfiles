@@ -45,6 +45,7 @@ alias tap="tap -Rmin -b"
 alias rg="rake -g"
 alias cm=mocp
 alias alert="echo -n '\a'"
+alias vg=vagrant
 
 dl() {
   diff -rubd "$@" | dwdiff -c --diff-input | less
