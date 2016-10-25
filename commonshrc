@@ -12,6 +12,7 @@ export RLWRAP_EDITOR='vi +%L'
 
 export FZF_DEFAULT_COMMAND='ag -g ""'
 export FZF_DEFAULT_OPTS='--color=light --exact'
+export MTR_OPTIONS='-n -t'
 
 export PYTEST_ADDOPTS='-x -s'
 
