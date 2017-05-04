@@ -10,7 +10,6 @@ set -o csh_null_glob
 set -o no_flow_control
 set -o numeric_glob_sort
 
-set -o share_history
 set -o hist_ignore_all_dups
 set -o hist_reduce_blanks
 SAVEHIST=2000
