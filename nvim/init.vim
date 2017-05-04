@@ -193,8 +193,6 @@ set nobomb
 set diffopt=filler,vertical,iwhite
 noremap <leader>du :diffupdate<CR>
 
-set noesckeys
-
 nnoremap <leader>f :Files<CR>
 nnoremap <leader>bf :Buffers<CR>
 
