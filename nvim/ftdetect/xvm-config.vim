@@ -1,2 +1,2 @@
 " .xc file actually supports comments
-autocmd BufReadPost,BufNewFile *.xc setfiletype javascript
+autocmd BufReadPost,BufNewFile *.xc setfiletype json
