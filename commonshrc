@@ -1,3 +1,5 @@
+# Shell init script, shared by bash / zsh
+
 set -o vi
 set +o notify
 
