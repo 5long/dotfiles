@@ -44,6 +44,7 @@ path=(
 )
 
 alias -g L='| less'
+alias -g LC='--color=always | less'
 alias -g G='| grep -E'
 
 alias rake='noglob rake'
