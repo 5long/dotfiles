@@ -149,6 +149,7 @@ function! CurDir()
 endfunction
 
 set ignorecase smartcase
+set inccommand=nosplit
 noremap / /\v
 noremap ? ?\v
 nnoremap <backspace> :nohlsearch<cr>:diffupdate<cr><c-l>
