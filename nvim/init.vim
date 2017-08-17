@@ -210,6 +210,7 @@ inoreabbrev rt return
 autocmd vimrc QuickFixCmdPost make below cwindow
 
 set pastetoggle=<f5>
+set mouse=a
 
 " Leave <c-h> for backspace
 inoremap <c-j> <c-g>U<down>
