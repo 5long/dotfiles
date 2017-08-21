@@ -176,7 +176,7 @@ let g:BufKillVerbose = 0
 nnoremap <leader>dd :Sayonara!<CR>
 nnoremap <leader>da :silent windo Sayonara!<CR>
 
-nnoremap <leader>tt :terminal<CR>
+nnoremap <leader>tt :new terminal<space>
 nnoremap <leader>cd :cd %:p:h<CR>
 nnoremap <leader>gg :Grepper -tool ag -qf -query 
 nmap <leader>r <Plug>RagainRun
