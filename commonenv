@@ -1,0 +1,17 @@
+# Environment variables, shared by bash, zsh and xsession
+
+export PAGER=less
+export LESS=-FXRi
+export GREP_COLOR='1;32'
+
+export EDITOR=vim
+export VISUAL=vim
+export RLWRAP_EDITOR='vi +%L'
+
+export FZF_DEFAULT_COMMAND='ag -g ""'
+export FZF_DEFAULT_OPTS='--color=light --exact'
+export MTR_OPTIONS='-n -t'
+
+export PYTEST_ADDOPTS='-x -s'
+
+export CDPATH=".:$HOME:$HOME/src"
