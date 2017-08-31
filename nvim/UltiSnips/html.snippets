@@ -13,7 +13,11 @@ snippet html "HTML boilerplate" !b
 </html>
 endsnippet
 
-snippet = "attribute"
+snippet , "inline tag"
+<${1:span}$2>$3</$1>$0
+endsnippet
+
+snippet at "attribute"
 ${1:class}="${2:}"
 endsnippet
 
