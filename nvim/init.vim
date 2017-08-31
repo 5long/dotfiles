@@ -176,7 +176,8 @@ nnoremap <leader>da :silent bufdo Sayonara!<CR>
 
 nnoremap <leader>tt :new +terminal<space>
 nnoremap <leader>cd :cd %:p:h<CR>
-nnoremap <leader>gg :Grepper -tool rg -qf -query 
+nnoremap <leader>gg :Grepper -tool rg<CR>
+
 nmap <leader>r <Plug>RagainRun
 nmap <leader>R <Plug>RagainResetAndRun
 nmap <leader>mr :RagainSetAndRun  <c-r>=expand('%')<CR><s-left><left>
