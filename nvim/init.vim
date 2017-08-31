@@ -176,6 +176,11 @@ nnoremap <leader>da :silent bufdo Sayonara!<CR>
 
 nnoremap <leader>tt :new +terminal<space>
 nnoremap <leader>cd :cd %:p:h<CR>
+
+let g:grepper = {}
+let g:grepper.jump = 1
+runtime plugin/grepper.vim
+let g:grepper.rg.grepprg .= ' --smart-case'
 nnoremap <leader>gg :Grepper -tool rg<CR>
 
 nmap <leader>r <Plug>RagainRun
