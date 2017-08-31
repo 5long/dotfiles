@@ -29,6 +29,7 @@ alias s='sudo -E '
 alias sctl='systemctl'
 alias scu='systemctl --user'
 alias ag='ag -S --follow'
+alias rg='rg --smart-case --follow'
 alias bss="browser-sync start --server --directory --files='*.css, *.html, *.js'"
 alias bsc="browser-sync start --config bs-config.js"
 alias nr="npm run"
