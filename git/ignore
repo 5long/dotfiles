@@ -5,3 +5,5 @@
 
 debian/.ex
 debian/*.EX
+
+/node_modules/
