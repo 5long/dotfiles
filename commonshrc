@@ -17,7 +17,6 @@ alias psg='ps ax | grep'
 alias j='jobs -l'
 alias lstcp='lsof -nPi tcp'
 alias mkdir='mkdir -p'
-alias t='tree -C | less'
 
 alias g=git
 alias gl='git l'
@@ -107,4 +106,8 @@ rn() {
 # "Ditched Job" if that makes sense
 dj() {
   ("$@" &>/dev/null &)
+}
+
+t() {
+    tree -C "$@" | less
 }
