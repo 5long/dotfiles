@@ -1,2 +1,5 @@
-show-bars: no
+dns-resolution: no
+port-display: destination-only
+port-resolution: no
+sort: 2s
 use-bytes: yes
