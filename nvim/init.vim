@@ -23,7 +23,7 @@ Plug 'itchyny/lightline.vim'
 Plug 'mhinz/vim-sayonara'
 Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-unimpaired'
-Plug 'tpope/vim-vinegar'
+Plug 'justinmk/vim-dirvish'
 Plug 'neomake/neomake'
 
 " Make-vim-more-like-IDE
