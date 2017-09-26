@@ -54,7 +54,7 @@ cdrb() {
 }
 
 cdpy() {
-  cd $(dirname $(python -c "import $1; print $1.__file__"))
+  cd $(dirname $(python -c "import $1; print($1.__file__)"))
 }
 
 nocolor() {
