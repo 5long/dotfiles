@@ -43,7 +43,7 @@ end
 
 desc "Install vim plugins via vim-plug"
 task :vim_plugins => [:nvim, 'vim-plug'] do
-  sh 'nvim +PlugInstall'
+  sh 'nvim --headless +PlugInstall +qall'
 end
 
 desc "Take a dotfile from $HOME"
