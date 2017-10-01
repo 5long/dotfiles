@@ -7,3 +7,6 @@ debian/.ex
 debian/*.EX
 
 /node_modules/
+
+*.pyc
+*.pyo
