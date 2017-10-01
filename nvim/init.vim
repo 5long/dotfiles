@@ -95,6 +95,9 @@ nnoremap <leader><leader> <c-^>
 
 set scrolloff=6
 set cursorcolumn cursorline
+set guicursor=n-v-c:block-Cursor/lCursor-blinkon0
+set guicursor+=i-ci:ver25-Cursor/lCursor
+set guicursor+=r-cr:hor20-Cursor/lCursor
 set showmatch
 set list
 set listchars=tab:›\ ,trail:·
