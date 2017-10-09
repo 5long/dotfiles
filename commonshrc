@@ -27,7 +27,8 @@ alias ht="htop -u $USER -s PERCENT_CPU"
 alias s='sudo -E '
 alias sctl='systemctl'
 alias scu='systemctl --user'
-alias rg='rg --smart-case --follow'
+alias rg='rg -LSp'
+alias rgnotes='rg "BUG|COMBAK|FIX|TBD|TODO|WTF|XXX" | less'
 alias bss="browser-sync start --server --directory --files='*.css, *.html, *.js'"
 alias bsc="browser-sync start --config bs-config.js"
 alias nr="npm run"
