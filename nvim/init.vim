@@ -10,11 +10,10 @@ Plug 'tpope/vim-abolish'
 Plug 'tomtom/tcomment_vim'
 Plug 'cohama/lexima.vim'
 
-if isdirectory($HOME . '/.fzf')
-  let $FZF_DEFAULT_OPTS = '--color=light'
-  Plug '~/.fzf'
-  Plug 'junegunn/fzf.vim'
+if ! executable('fzf')
+  Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 endif
+Plug 'junegunn/fzf.vim'
 
 " Make Vim Better
 Plug '5long/vim-imtoggle'
@@ -202,6 +201,7 @@ set nobomb
 set diffopt=filler,vertical,iwhite
 noremap <leader>du :diffupdate<CR>
 
+let $FZF_DEFAULT_OPTS = '--color=light'
 nnoremap <leader>f :Files<CR>
 nnoremap <leader>bf :Buffers<CR>
 
