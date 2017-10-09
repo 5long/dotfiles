@@ -8,7 +8,7 @@ HISTSIZE=2000
 source ~/.commonenv
 
 alias l=ls
-alias ls='ls -F --color=auto'
+alias ls='ls --group-directories-first -F --color=auto'
 alias ll='ls -oh'
 alias la='ls -A'
 
