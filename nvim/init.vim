@@ -84,8 +84,6 @@ hi link SneakStreakTarget Search
 
 colorscheme PaperColor
 
-set nomodeline
-
 set relativenumber
 set lazyredraw
 
