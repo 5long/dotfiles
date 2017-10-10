@@ -14,7 +14,8 @@ export MTR_OPTIONS='-n -t'
 
 export PYTEST_ADDOPTS='-x -s'
 
-export CDPATH=".:$HOME:$HOME/src"
+# CDPATH shouldn't be export-ed
+CDPATH=".:$HOME:$HOME/src"
 
 if [ -r ~/.commonenv.local ]
 then
