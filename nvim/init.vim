@@ -149,7 +149,9 @@ function! CurDir()
 endfunction
 
 set ignorecase smartcase
-set inccommand=nosplit
+if has('nvim')
+  set inccommand=nosplit
+endif
 noremap / /\v
 noremap ? ?\v
 nnoremap <backspace> :nohlsearch<cr>:diffupdate<cr><c-l>
@@ -174,7 +176,9 @@ nnoremap QQ :qa!<CR>
 nnoremap <leader>dd :Sayonara!<CR>
 nnoremap <leader>da :silent bufdo Sayonara!<CR>
 
-nnoremap <leader>tt :new +terminal<space>
+if has('nvim')
+  nnoremap <leader>tt :new +terminal<space>
+endif
 nnoremap <leader>cd :cd %:p:h<CR>
 
 let g:grepper = {}

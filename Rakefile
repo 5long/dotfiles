@@ -46,6 +46,13 @@ task :vim_plugins => [:nvim, 'vim-plug'] do
   sh 'nvim --headless +PlugInstall +qall'
 end
 
+desc "Vimrc for old Vim"
+task :old_vim do
+  source = "#{CWD}/nvim"
+  target = "#{HOME}/.vim"
+  File.symlink source, target unless File.exists? target
+end
+
 desc "Take a dotfile from $HOME"
 task :take, :dotless_name do |t, args|
   dotless = args[:dotless_name]

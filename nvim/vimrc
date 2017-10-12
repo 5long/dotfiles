@@ -1,0 +1,2 @@
+let s:nvim_init = expand('<sfile>:h') . '/init.vim'
+exec 'source ' . fnameescape(s:nvim_init)
