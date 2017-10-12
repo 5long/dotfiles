@@ -1,4 +1,4 @@
-call plug#begin()
+call plug#begin('~/.local/share/nvim/plugged')
 
 " Colorz!
 Plug 'NLKNguyen/papercolor-theme'
