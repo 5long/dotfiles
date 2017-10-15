@@ -35,6 +35,7 @@
   s = status -bs
   st = status -bs
   tip = log --stat -1
+  cln = clean -Xd
 [branch]
   autosetupmerge = always
 [pretty]
