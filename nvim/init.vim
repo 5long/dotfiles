@@ -177,7 +177,7 @@ nnoremap <leader>dd :Sayonara!<CR>
 nnoremap <leader>da :silent bufdo Sayonara!<CR>
 
 if has('nvim')
-  nnoremap <leader>tt :new +terminal<space>
+  nnoremap <leader>tt :new\|terminal<space>
 endif
 nnoremap <leader>cd :cd %:p:h<CR>
 
