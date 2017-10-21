@@ -49,6 +49,11 @@ wmirr() {
   wget -nH -c -np --mirror -R 'index.html' --restrict-file-names=nocontrol "$1"
 }
 
+# curl get
+cget() {
+  curl --retry 5 -LOC - "$@"
+}
+
 cdrb() {
   cd $(dirname $(gem which $1))
 }
