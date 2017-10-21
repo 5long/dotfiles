@@ -63,10 +63,6 @@ nocolor() {
   sed -r "s/\x1B\[([0-9]{1,2}(;[0-9]{1,2})?)?[m|K]//g"
 }
 
-mp() {
-  mpg123 -vC --loop -1 "$@"
-}
-
 edbin() {
   bin="$(/usr/bin/which $1)"
   if [ -n "$bin" ]
