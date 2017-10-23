@@ -115,3 +115,8 @@ t() {
 psg() {
   pgrep -fa "$@" | cut -c -100
 }
+
+# Colored view
+view() {
+  rougify highlight "$@" -t github | less
+}
