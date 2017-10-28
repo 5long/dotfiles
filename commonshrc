@@ -35,6 +35,7 @@ alias tap="tap -Rmin -b"
 alias cm=mocp
 alias alert="echo -n '\a'"
 alias vg=vagrant
+alias be='bundle exec'
 
 dl() {
   diff -rubd "$@" | dwdiff -c --diff-input | less
