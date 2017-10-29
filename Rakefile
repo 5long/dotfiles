@@ -4,7 +4,7 @@ CWD = File.dirname __FILE__
 BLACKLIST = %w[README.markdown Rakefile UNLICENSE]
 DOTFILES = FileList['*'] - BLACKLIST
 
-XDG_DIRS = %w[nvim git alacritty]
+XDG_DIRS = %w[nvim git alacritty termite]
 def xdg_target(name)
   XDG_DIRS.include?(name) ? "#{HOME}/.config/#{name}" : nil
 end
