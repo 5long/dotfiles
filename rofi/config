@@ -1,0 +1,8 @@
+rofi.lines: 10
+rofi.font: mono 16
+rofi.case-sensitive: false
+rofi.sort: true
+rofi.levenshtein-sort: false
+rofi.matching: fuzzy
+rofi.disable-history: true
+rofi.theme: /usr/share/rofi/themes/Paper.rasi
