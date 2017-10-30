@@ -14,6 +14,8 @@ export MTR_OPTIONS='-n -t'
 
 export PYTEST_ADDOPTS='-x -s'
 
+export NVM_NODEJS_ORG_MIRROR=http://mirrors.ustc.edu.cn/node
+
 # CDPATH shouldn't be export-ed
 CDPATH=".:$HOME:$HOME/src"
 
