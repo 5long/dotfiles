@@ -3,6 +3,8 @@
 .vimrc
 .projections.json
 
+.DS_Store/
+
 debian/.ex
 debian/*.EX
 
