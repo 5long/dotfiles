@@ -116,7 +116,7 @@ dj() {
 }
 
 t() {
-    tree -C "$@" | less
+    exa -T --color=always "$@" | less
 }
 
 psg() {
