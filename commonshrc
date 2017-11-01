@@ -38,6 +38,11 @@ alias vg=vagrant
 alias v=vim
 alias be='bundle exec'
 
+mkd() {
+  mkdir -p "$1"
+  cd "$1"
+}
+
 dl() {
   diff -rubd "$@" | dwdiff -c --diff-input | less
 }
