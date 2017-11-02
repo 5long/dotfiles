@@ -23,7 +23,6 @@ Plug 'mhinz/vim-sayonara'
 Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-unimpaired'
 Plug 'justinmk/vim-dirvish'
-Plug 'neomake/neomake'
 
 " Make-vim-more-like-IDE
 
@@ -31,8 +30,9 @@ Plug '5long/ragain'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'mhinz/vim-grepper'
+Plug 'neomake/neomake'
 
-" Filetype-wise
+" Filetype-specific
 Plug '5long/pytest-vim-compiler'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
