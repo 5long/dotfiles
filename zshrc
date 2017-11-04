@@ -41,6 +41,7 @@ REPORTTIME=15
 typeset -U path
 path=(
   $HOME/.local/bin
+  $HOME/.yarn/bin
   $path
 )
 
