@@ -18,7 +18,7 @@ Plug 'junegunn/fzf.vim'
 " Make Vim Better
 Plug '5long/vim-imtoggle'
 Plug 'itchyny/lightline.vim'
-
+Plug 'justinmk/vim-sneak'
 Plug 'mhinz/vim-sayonara'
 Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-unimpaired'
