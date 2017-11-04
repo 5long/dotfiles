@@ -152,6 +152,8 @@ set ignorecase smartcase
 if has('nvim')
   set inccommand=nosplit
 endif
+noremap / /\v
+noremap ? ?\v
 nnoremap <backspace> :nohlsearch<cr>:diffupdate<cr><c-l>
 
 for s:key in ['#', '*', 'n', 'N']
