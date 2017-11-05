@@ -236,6 +236,7 @@ nmap Q <nop>
 inoremap <c-space> <nop>
 inoremap <c-c> <esc>
 nnoremap Y y$
+nnoremap yu "+yiW
 noremap H ^
 noremap L $
 map <tab> %
