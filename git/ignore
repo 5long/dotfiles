@@ -7,6 +7,8 @@ tags
 
 .DS_Store
 
+.vagrant/
+
 debian/.ex
 debian/*.EX
 
