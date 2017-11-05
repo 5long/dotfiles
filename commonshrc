@@ -37,6 +37,7 @@ alias alert="echo -n '\a'"
 alias vg=vagrant
 alias v=vim
 alias be='bundle exec'
+alias iv=sxiv
 
 mkd() {
   mkdir -p "$1"
