@@ -22,7 +22,7 @@ alias gl='git l'
 alias gll='git ll'
 alias o=xdg-open
 alias p=pacaur
-alias ht="htop -u $USER -s PERCENT_CPU"
+alias ht="htop -u \$USER -s PERCENT_CPU"
 alias s='sudo -E '
 alias sctl='systemctl'
 alias scu='systemctl --user'
@@ -62,11 +62,11 @@ cget() {
 }
 
 cdrb() {
-  cd $(dirname $(gem which $1))
+  cd "$(dirname "$(gem which "$1")")"
 }
 
 cdpy() {
-  cd $(dirname $(python -c "import $1; print($1.__file__)"))
+  cd "$(dirname "$(python -c "import $1; print($1.__file__)")")"
 }
 
 nocolor() {
@@ -76,7 +76,7 @@ nocolor() {
 }
 
 edbin() {
-  bin="$(/usr/bin/which $1)"
+  bin="$(/usr/bin/which "$1")"
   if [ -n "$bin" ]
   then
     "$EDITOR" "$bin"
@@ -96,7 +96,7 @@ gc() {
 }
 
 dus() {
-  du -csh * .* . | sort -h
+  du -csh -- * .* . | sort -h
 }
 
 rn() {
@@ -107,7 +107,7 @@ rn() {
   cache="$(mktemp)"
   echo "$fn" > "$cache"
   "$EDITOR" "$cache"
-  mv "$fn" "$(cat $cache)"
+  mv "$fn" "$(cat "$cache")"
 }
 
 # "Ditched Job" if that makes sense
