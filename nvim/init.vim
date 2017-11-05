@@ -291,10 +291,12 @@ let g:UltiSnipsJumpBackwardTrigger='<s-tab>'
 
 " Since I'm a plugin author now
 nnoremap <leader>so :source %<CR>
+let g:nvimrc = expand('<sfile>')
+nnoremap <leader>ev :e <c-r>=g:nvimrc<CR><CR>
 
 command! CN IMEnable
 
-let s:localrc = expand('<sfile>') . '.local'
+let s:localrc = g:nvimrc . '.local'
 if filereadable(s:localrc)
   exec 'source ' . fnameescape(s:localrc)
 endif
