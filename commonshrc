@@ -105,11 +105,6 @@ rn() {
   mv "$fn" "$(cat "$cache")"
 }
 
-# "Ditched Job" if that makes sense
-dj() {
-  ("$@" &>/dev/null &)
-}
-
 t() {
     exa -T --color=always "$@" | less
 }
