@@ -5,7 +5,7 @@
 
 tags
 
-.DS_Store/
+.DS_Store
 
 debian/.ex
 debian/*.EX
