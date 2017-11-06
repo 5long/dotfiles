@@ -70,12 +70,6 @@ cdpy() {
   cd "$(dirname "$(python -c "import $1; print($1.__file__)")")"
 }
 
-nocolor() {
-  # http://www.commandlinefu.com/commands/view/3584/remove-color-codes-special-characters-with-sed
-  # Some stupid program prints totally illegible color, like purple.
-  sed -r "s/\x1B\[([0-9]{1,2}(;[0-9]{1,2})?)?[m|K]//g"
-}
-
 edbin() {
   bin="$(/usr/bin/which "$1")"
   if [ -n "$bin" ]
