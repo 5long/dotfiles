@@ -266,6 +266,7 @@ set suffixes+=.log
 
 let g:neomake_airline = 0
 let g:neomake_place_signs = 0
+let g:neomake_open_list = 1
 let g:neomake_python_enabled_makers = ['pyflakes']
 let g:neomake_javascript_enabled_makers = ['eslint']
 let g:neomake_javascript_eslint_exe = 'npx'
