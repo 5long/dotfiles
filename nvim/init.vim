@@ -270,7 +270,7 @@ let g:neomake_open_list = 1
 let g:neomake_python_enabled_makers = ['pyflakes']
 let g:neomake_javascript_enabled_makers = ['eslint']
 let g:neomake_javascript_eslint_exe = 'npx'
-let g:neomake_javascript_eslint_args = ['eslint', '-f', 'compact']
+let g:neomake_javascript_eslint_args = ['eslint', '-f', 'compact', '-c', s:home . '/.eslintrc.yaml']
 autocmd vimrc BufWritePost * Neomake
 autocmd vimrc User NeomakeCountsChanged call OnNeomakeCountsChanged()
 
