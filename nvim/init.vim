@@ -183,6 +183,21 @@ if has('nvim')
 endif
 
 nnoremap <leader>cd :cd %:p:h<CR>
+nnoremap gF :call <SID>OpenCfile()<CR>
+fun! s:OpenCfile()
+  let cfile = s:ResolveCfile()
+  exec ":e " cfile
+endf
+
+fun! s:ResolveCfile()
+  let dir = expand('%:h') . '/'
+  let ext = expand('%:e')
+  let cfile = expand('<cfile>')
+  let fullPath = dir . cfile . "." . ext
+
+  py3 from os.path import normpath
+  return py3eval(printf("normpath('%s')", fullPath))
+endf
 
 let g:grepper = {}
 let g:grepper.jump = 1
