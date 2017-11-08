@@ -10,6 +10,6 @@ env:
   node: true
 rules:
   semi: 0
-  'no-unused-vars': 0 # Yeah, I just don't wanna use it for now.
+  'comma-dangle': 0
   'react/prefer-stateless-function': 0
   'react/jsx-filename-extension': 0
