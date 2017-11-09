@@ -37,6 +37,7 @@
   st = status -bs
   tip = log --stat -1
   cln = clean -Xd
+  rs = reset
 [branch]
   autosetupmerge = always
 [pretty]
