@@ -11,15 +11,21 @@ env:
   browser: true
 rules:
   semi: 0
-  'comma-dangle': 0
-  'no-multi-spaces': 0
-  'object-curly-spacing': 0
   'arrow-body-style': 0
   'arrow-parens': 0
+  'comma-dangle': 0
   'import/newline-after-import': 0
-  'react/prefer-stateless-function': 0
-  'react/self-closing-comp': 0
+  'no-multi-assign': 0
+  'no-multi-spaces': 0
+  'no-use-before-define':
+    - 2
+    - functions: false
+  'no-param-reassign': 0
+  'object-curly-spacing': 0
+  'quotes': 0
+  'react/jsx-closing-bracket-location': 0
   'react/jsx-filename-extension': 0
   'react/jsx-first-prop-new-line': 0
-  'react/jsx-closing-bracket-location': 0
+  'react/prefer-stateless-function': 0
   'react/prop-types': 0
+  'react/self-closing-comp': 0
