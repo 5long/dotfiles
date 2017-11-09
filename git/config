@@ -2,42 +2,42 @@
   name = Whyme Lyu
   email = callme5long@gmail.com
 [alias]
-  h = help
   aa = add --all .
   amend = commit --amend -C HEAD
-  br = branch
   b = branch -vv
+  br = branch
   ca = commit --all --verbose
-  ci = commit
-  ic = commit -vp
-  co = checkout
   cb = checkout HEAD -b
+  ci = commit
+  cln = clean -Xd
   cob = checkout origin/master -b
+  co = checkout
   cub = checkout upstream/master -b
-  l = log --graph --pretty=grb
-  ll = log --graph --pretty=grb --stat
-  ld = log --graph --pretty=grb @{u}..
-  lds = log --graph --pretty=grb @{u}.. --stat
   dc = diff --cached
-  di = diff
   df = diff @{u}
   dfs = diff @{u} --stat
+  di = diff
   fa = fetch --all
   ff = merge --ff-only
+  h = help
+  ic = commit -vp
+  ld = log --graph --pretty=grb @{u}..
+  lds = log --graph --pretty=grb @{u}.. --stat
+  ll = log --graph --pretty=grb --stat
+  l = log --graph --pretty=grb
   ph = push
   pl = pull
   po = push origin
   rb = rebase
+  rs = reset
   rv = checkout HEAD --force --
+  shs = stash save -u
   sh = stash
   sl = stash list
   sp = stash show
-  shs = stash save -u
   s = status -bs
   st = status -bs
   tip = log --stat -1
-  cln = clean -Xd
-  rs = reset
 [branch]
   autosetupmerge = always
 [pretty]
