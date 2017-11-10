@@ -62,6 +62,15 @@ mkqr_() {
 }
 alias mkqr='noglob mkqr_'
 
+with_proxy() {
+  local p="$1"
+  shift
+
+  http_proxy=$p https_proxy=$p ftp_proxy=$p \
+    HTTPS_PROXY=$p ALL_PROXY=$p \
+    "$@"
+}
+
 if [[ -s ~/.zshrc.local ]] then
   . ~/.zshrc.local
 fi
