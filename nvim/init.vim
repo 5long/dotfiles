@@ -230,6 +230,7 @@ noremap <leader>du :diffupdate<CR>
 let $FZF_DEFAULT_OPTS = '--color=light'
 nnoremap <leader>f :Files<CR>
 nnoremap <leader>bf :Buffers<CR>
+nnoremap <leader>/ :Lines<CR>
 
 nmap <c-s> <Plug>Ysurround
 xmap s <Plug>VSurround
