@@ -215,6 +215,11 @@ nnoremap <leader>ts :<c-u>tab split<CR>
 nnoremap <leader>td :<c-u>tcd %:p:h<CR>
 nnoremap <leader>tc :<c-u>tabclose<CR>
 
+for s:tabi in range(1,9)
+  exec printf("nnoremap <m-%d> %dgt", s:tabi, s:tabi)
+endfor
+nnoremap <m-0> :$tabnext<CR>
+
 set fileformats=unix,dos,mac
 set fileencodings=ucs-bom,utf-8,gb-18030,gbk,gb2312,latin1
 set nobomb
