@@ -212,8 +212,8 @@ nnoremap <leader>mm :RagainSetAndRun make
 
 nnoremap <leader>tn :<c-u>tabe<CR>
 nnoremap <leader>ts :<c-u>tab split<CR>
-nnoremap <leader>tc :<c-u>tcd %:p:h<CR>
-nnoremap <leader>tq :<c-u>tabclose<CR>
+nnoremap <leader>td :<c-u>tcd %:p:h<CR>
+nnoremap <leader>tc :<c-u>tabclose<CR>
 
 set fileformats=unix,dos,mac
 set fileencodings=ucs-bom,utf-8,gb-18030,gbk,gb2312,latin1
