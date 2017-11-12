@@ -58,7 +58,7 @@ test -f "$FZF_BINDING" && . "$FZF_BINDING"
 
 mkqr_() {
   [[ -z "$1" ]] && return 1
-  pqiv =(qrencode -s 10 -o - "$@")
+  iv =(qrencode -s 10 -o - "$@")
 }
 alias mkqr='noglob mkqr_'
 
