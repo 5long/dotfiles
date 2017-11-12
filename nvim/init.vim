@@ -211,6 +211,7 @@ nmap <leader>mr :RagainSetAndRun  <c-r>=expand('%')<CR><s-left><left>
 nnoremap <leader>mm :RagainSetAndRun make
 
 nnoremap <leader>tn :<c-u>tabe<CR>
+nnoremap <leader>ts :<c-u>tab split<CR>
 nnoremap <leader>tc :<c-u>tcd %:p:h<CR>
 nnoremap <leader>tq :<c-u>tabclose<CR>
 
