@@ -39,6 +39,8 @@ alias v=vim
 alias be='bundle exec'
 alias iv=sxiv
 
+alias which='echo Use \`type\` instead!; : '
+
 mkd() {
   mkdir -p "$1"
   cd "$1"
