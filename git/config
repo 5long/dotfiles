@@ -53,10 +53,12 @@
   autoSquash = true
 [merge]
   defaultToUpstream = true
+  tool = vimdiff
 [diff]
   tool = vimdiff
   algorithm = histogram
   mnemonicprefix = true
+  indentHeuristic = true
   compactionHeuristic = true
 [stash]
   showPatch = true
