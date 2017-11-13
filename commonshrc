@@ -38,6 +38,8 @@ alias vg=vagrant
 alias v=vim
 alias be='bundle exec'
 alias iv=sxiv
+alias zathura='zathura --fork &>/dev/null'
+alias irc='weechat-curses'
 
 alias which='echo Use \`type\` instead!; : '
 
@@ -144,4 +146,13 @@ essh() {
   esac
 
   TERM=$term ssh "$@"
+}
+
+with_proxy() {
+  local p="$1"
+  shift
+
+  http_proxy=$p https_proxy=$p ftp_proxy=$p \
+    HTTPS_PROXY=$p ALL_PROXY=$p \
+    "$@"
 }

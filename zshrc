@@ -50,8 +50,6 @@ alias -g LC='--color=always | less'
 alias -g G='| grep -E'
 
 alias rake='noglob rake'
-alias zathura='zathura --fork &>/dev/null'
-alias irc='weechat-curses'
 
 FZF_BINDING=/usr/share/fzf/key-bindings.zsh
 test -f "$FZF_BINDING" && . "$FZF_BINDING"
@@ -61,15 +59,6 @@ mkqr_() {
   iv =(qrencode -s 10 -o - "$@")
 }
 alias mkqr='noglob mkqr_'
-
-with_proxy() {
-  local p="$1"
-  shift
-
-  http_proxy=$p https_proxy=$p ftp_proxy=$p \
-    HTTPS_PROXY=$p ALL_PROXY=$p \
-    "$@"
-}
 
 if [[ -s ~/.zshrc.local ]] then
   . ~/.zshrc.local
