@@ -10,6 +10,7 @@ env:
   node: true
   browser: true
 rules:
+  indent: 0
   semi: 0
   'arrow-body-style': 0
   'arrow-parens': 0
@@ -21,7 +22,9 @@ rules:
   'no-use-before-define':
     - 2
     - functions: false
+  'no-unused-vars': 0
   'no-param-reassign': 0
+  'no-trailing-spaces': 0
   'object-curly-spacing': 0
   'quotes': 0
   'react/jsx-closing-bracket-location': 0
@@ -30,3 +33,4 @@ rules:
   'react/prefer-stateless-function': 0
   'react/prop-types': 0
   'react/self-closing-comp': 0
+  'space-in-parens': 0
