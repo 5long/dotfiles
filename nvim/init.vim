@@ -33,9 +33,8 @@ Plug 'mhinz/vim-grepper'
 Plug 'neomake/neomake'
 
 " Filetype-specific
+Plug 'sheerun/vim-polyglot'
 Plug '5long/pytest-vim-compiler'
-Plug 'pangloss/vim-javascript'
-Plug 'mxw/vim-jsx'
 Plug 'guns/vim-clojure-static'
 Plug 'tpope/vim-fireplace'
 
