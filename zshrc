@@ -55,8 +55,11 @@ FZF_BINDING=/usr/share/fzf/key-bindings.zsh
 test -f "$FZF_BINDING" && . "$FZF_BINDING"
 
 mkqr_() {
-  [[ -z "$1" ]] && return 1
-  iv =(qrencode -s 10 -o - "$@")
+  if [[ -z "$1" ]]; then
+    iv =(qrencode -s 10 -o - "$(xsel -bo)")
+  else
+    iv =(qrencode -s 10 -o - "$@")
+  fi
 }
 alias mkqr='noglob mkqr_'
 
