@@ -115,8 +115,6 @@ augroup end
 
 " Set the damn file type
 nnoremap <LocalLeader><LocalLeader> :setfiletype<space>
-let g:javascript_ignore_javaScriptdoc = 1
-let g:vim_markdown_folding_disabled = 1
 
 " Indentation
 nnoremap <LocalLeader>i2 :setl ts=2 sw=2 sts=2<CR>
