@@ -36,7 +36,6 @@ Plug 'neomake/neomake'
 Plug '5long/pytest-vim-compiler'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
-Plug 'vim-ruby/vim-ruby'
 Plug 'guns/vim-clojure-static'
 Plug 'tpope/vim-fireplace'
 
