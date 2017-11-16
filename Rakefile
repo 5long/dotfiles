@@ -66,6 +66,21 @@ task :take, :dotless_name do |t, args|
   mv full_path, dotless
 end
 
+NODE_PKGS = %w[
+  eslint
+  serve
+  eslint-config-airbnb
+  eslint-plugin-import
+  eslint-plugin-jsx-a11y
+  eslint-plugin-react
+  javascript-typescript-langserver
+]
+desc "Install essential NodeJS packages"
+task :npm do
+  sh(*%w[npm i -g yarn])
+  sh(*(%w[yarn global add eslint ].concat(NODE_PKGS)))
+end
+
 desc "Install everything"
 task :everything => DOTFILES
 task :default => :everything
