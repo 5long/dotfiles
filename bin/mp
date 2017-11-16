@@ -3,7 +3,7 @@
 require "shellwords"
 
 args = ARGV.dup
-opt = ARGV.find {|arg| arg[0] == '-'}
+opt = ARGV.find {|arg| arg.start_with? ?-}
 
 if opt.nil?
   exec 'man', *args
