@@ -95,6 +95,11 @@ task :bin do
   end
 end
 
+desc "Link a ~/.local/bin/<file> to ./bin"
+task :lnbin, :fn do |t, args|
+  ln "#{HOME}/.local/bin/#{args[:fn]}", "./bin/"
+end
+
 desc "Install everything"
 task :everything => DOTFILES + [:bin]
 task :default => :everything
