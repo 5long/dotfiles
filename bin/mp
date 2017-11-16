@@ -1,0 +1,14 @@
+#!/usr/bin/env ruby
+
+require "shellwords"
+
+args = ARGV.dup
+opt = ARGV.find {|arg| arg[0] == '-'}
+
+if opt.nil?
+  exec 'man', *args
+else
+  args.delete opt
+  opt = '^\s+' + opt
+  exec ENV.update('MANPAGER' => "less -p #{opt.shellescape}"), 'man', *args
+end

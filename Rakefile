@@ -1,7 +1,7 @@
 HOME = ENV['HOME']
 CWD = File.dirname __FILE__
 
-BLACKLIST = %w[README.markdown Rakefile UNLICENSE]
+BLACKLIST = %w[README.markdown Rakefile UNLICENSE bin]
 DOTFILES = FileList['*'] - BLACKLIST
 
 XDG_DIRS = %w[nvim git alacritty termite rofi pacman]
@@ -81,6 +81,19 @@ task :npm do
   sh(*(%w[yarn global add eslint ].concat(NODE_PKGS)))
 end
 
+desc "Install every bin/* into ~/.local/bin"
+task :bin do
+  FileList['bin/*'].each do |f|
+    begin
+      ln f, "#{HOME}/.local/bin"
+    rescue => ::Errno::EEXIST
+      puts "#{HOME}/.local/#{f} already exists" if verbose == true
+    else
+      true
+    end
+  end
+end
+
 desc "Install everything"
-task :everything => DOTFILES
+task :everything => DOTFILES + [:bin]
 task :default => :everything
