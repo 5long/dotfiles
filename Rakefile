@@ -32,6 +32,7 @@ end
 
 task :bashrc => :commonshrc
 task :zshrc => :commonshrc
+task :commonshrc => :commonenv
 
 VIM_PLUG_FILENAME = 'nvim/autoload/plug.vim'
 task 'vim-plug' do
