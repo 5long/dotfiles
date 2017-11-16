@@ -87,7 +87,7 @@ task :bin do
   FileList['bin/*'].each do |f|
     begin
       ln f, "#{HOME}/.local/bin"
-    rescue => ::Errno::EEXIST
+    rescue Errno::EEXIST
       puts "#{HOME}/.local/#{f} already exists" if verbose == true
     else
       true
