@@ -230,6 +230,13 @@ let $FZF_DEFAULT_OPTS = '--color=light'
 nnoremap <leader>f :Files<CR>
 nnoremap <leader>bf :Buffers<CR>
 nnoremap <leader>/ :Lines<CR>
+command! -bang -nargs=* Rg
+  \ call fzf#vim#grep(
+  \   'rg --vimgrep --color=always '.shellescape(<q-args>), 1,
+  \   <bang>0 ? fzf#vim#with_preview('up:60%')
+  \           : fzf#vim#with_preview('right:50%:hidden', '?'),
+  \   <bang>0)
+
 
 nmap <c-s> <Plug>Ysurround
 xmap s <Plug>VSurround
