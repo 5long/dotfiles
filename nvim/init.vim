@@ -180,6 +180,7 @@ nnoremap <leader>da :silent bufdo Sayonara!<CR>
 
 if has('nvim')
   nnoremap <leader>tt :new\|terminal<space>
+  autocmd vimrc TermOpen term://* startinsert
   autocmd vimrc BufEnter term://* startinsert
   autocmd vimrc BufLeave term://* stopinsert
 endif
