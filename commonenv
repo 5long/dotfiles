@@ -7,6 +7,7 @@ export GREP_COLOR='1;32'
 export EDITOR=vim
 export VISUAL=vim
 export RLWRAP_EDITOR='vi +%L'
+export BROWSER=browser
 
 export FZF_DEFAULT_COMMAND='rg --files'
 export FZF_DEFAULT_OPTS='--color=light --exact'
