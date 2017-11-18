@@ -179,8 +179,8 @@ nnoremap <leader>da :silent bufdo Sayonara!<CR>
 
 if has('nvim')
   nnoremap <leader>tt :new\|terminal<space>
-  autocmd vimrc BufEnter term:// startinsert
-  autocmd vimrc BufLeave term:// stopinsert
+  autocmd vimrc BufEnter term://* startinsert
+  autocmd vimrc BufLeave term://* stopinsert
 endif
 
 nnoremap <leader>cd :cd %:p:h<CR>
