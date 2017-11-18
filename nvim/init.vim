@@ -31,7 +31,9 @@ Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'mhinz/vim-grepper'
 Plug 'neomake/neomake'
-Plug 'roxma/nvim-completion-manager'
+if has('nvim')
+  Plug 'roxma/nvim-completion-manager'
+endif
 
 " Filetype-specific
 Plug 'sheerun/vim-polyglot'
