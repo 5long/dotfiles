@@ -127,9 +127,10 @@ function! CmdlineKillTillEnd()
   return strpart(getcmdline(), 0, getcmdpos())
 endfunction
 
-cnoremap <C-A> <Home>
-cnoremap <C-N> <Down>
-cnoremap <C-P> <Up>
+cnoremap <c-a> <Home>
+cnoremap <c-n> <Down>
+cnoremap <c-p> <Up>
+cnoremap <a-b> <c-left>
 cnoremap <c-k> <c-\>eCmdlineKillTillEnd()<cr>
 cnoremap %% <c-r>=expand('%:h').'/'<CR>
 cnoremap <c-v>b <c-r>=expand('%:r')<CR>
