@@ -98,7 +98,9 @@ set guicursor+=i-ci:ver25-Cursor/lCursor
 set guicursor+=r-cr:hor20-Cursor/lCursor
 set showmatch
 set list
+" Remember rendar at #vim.
 set listchars=tab:›\ ,trail:·
+" let &listchars = "tab:\u203a ,trail:\xb7"
 set textwidth=75
 set formatoptions+=B1nlm
 set formatoptions-=tc
