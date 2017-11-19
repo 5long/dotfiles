@@ -75,6 +75,7 @@ NODE_PKGS = %w[
   eslint-plugin-jsx-a11y
   eslint-plugin-react
   javascript-typescript-langserver
+  neovim
 ]
 desc "Install essential NodeJS packages"
 task :npm do
