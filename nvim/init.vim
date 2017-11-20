@@ -32,6 +32,7 @@ Plug 'honza/vim-snippets'
 Plug 'mhinz/vim-grepper'
 Plug 'neomake/neomake'
 if has('nvim')
+  Plug 'autozimu/LanguageClient-neovim', {'do': ':UpdateRemotePlugins'}
   Plug 'roxma/nvim-completion-manager'
 endif
 
@@ -321,6 +322,16 @@ autocmd vimrc VimEnter * if empty(expand('%')) | setl buftype=nofile
 
 let g:UltiSnipsJumpForwardTrigger='<tab>'
 let g:UltiSnipsJumpBackwardTrigger='<s-tab>'
+
+if has('nvim')
+  let g:LanguageClient_serverCommands = {
+        \ 'javascript': ['javascript-typescript-stdio'],
+        \ 'javascript.jsx': ['javascript-typescript-stdio'],
+        \ }
+  let g:LanguageClient_autoStart = 1
+  nnoremap <silent> K :call LanguageClient_textDocument_hover()<CR>
+  nnoremap <silent> gd :call LanguageClient_textDocument_definition()<CR>
+endif
 
 " Since I'm a plugin author now
 nnoremap <leader>so :source %<CR>
