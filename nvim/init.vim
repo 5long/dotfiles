@@ -145,7 +145,7 @@ set noshowmode
 
 let s:home = resolve($HOME)
 function! CurDir()
-  return substitute(getcwd(), '^' . s:home, '~', '')
+  return pathshorten(substitute(getcwd(), '^' . s:home, '~', ''))
 endfunction
 
 set ignorecase smartcase
