@@ -10,33 +10,33 @@
   cb = checkout HEAD -b
   ci = commit
   cln = clean -Xd
-  cob = checkout origin/master -b
   co = checkout
+  cob = checkout origin/master -b
   cub = checkout upstream/master -b
   dc = diff --cached
+  di = diff
   du = diff @{u}
   dus = diff @{u} --stat
-  di = diff
   fa = fetch --all
   ff = merge --ff-only
   h = help
   ic = commit -vp
+  l = log --graph --pretty=grb
+  ll = log --graph --pretty=grb --stat
   lu = log --graph --pretty=grb @{u}..
   lus = log --graph --pretty=grb @{u}.. --stat
-  ll = log --graph --pretty=grb --stat
-  l = log --graph --pretty=grb
   ph = push
   pl = pull
   po = push origin
   rb = rebase
   rs = reset
   rv = checkout HEAD --force --
-  sv = stash save -u
+  s = status -bs
   sh = stash
   sl = stash list
   sp = stash show
-  s = status -bs
   st = status -bs
+  sv = stash save -u
   tip = log --stat -1
 [branch]
   autosetupmerge = always
