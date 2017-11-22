@@ -14,15 +14,15 @@
   co = checkout
   cub = checkout upstream/master -b
   dc = diff --cached
-  df = diff @{u}
-  dfs = diff @{u} --stat
+  du = diff @{u}
+  dus = diff @{u} --stat
   di = diff
   fa = fetch --all
   ff = merge --ff-only
   h = help
   ic = commit -vp
-  ld = log --graph --pretty=grb @{u}..
-  lds = log --graph --pretty=grb @{u}.. --stat
+  lu = log --graph --pretty=grb @{u}..
+  lus = log --graph --pretty=grb @{u}.. --stat
   ll = log --graph --pretty=grb --stat
   l = log --graph --pretty=grb
   ph = push
