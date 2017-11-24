@@ -84,6 +84,9 @@ let g:lightline = {
 hi link SneakPluginTarget Search
 hi link SneakStreakTarget Search
 
+if has('nvim')
+  set termguicolors
+endif
 colorscheme PaperColor
 
 set relativenumber
