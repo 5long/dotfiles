@@ -1,7 +1,7 @@
 #!/usr/bin/env zsh
 
 if [[ -z "$1" ]]; then
-  iv =(qrencode -s 10 -o - "$(xsel -bo)")
+  iv =(qrencode -s 10 -o - "$(xsel -o)")
 else
   iv =(qrencode -s 10 -o - "$@")
 fi
