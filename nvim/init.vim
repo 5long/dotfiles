@@ -320,6 +320,7 @@ autocmd vimrc VimEnter * if empty(expand('%')) | setl buftype=nofile
 
 let g:UltiSnipsJumpForwardTrigger='<tab>'
 let g:UltiSnipsJumpBackwardTrigger='<s-tab>'
+let g:LanguageClient_diagnosticsEnable = 0
 
 if has('nvim')
   let g:LanguageClient_serverCommands = {

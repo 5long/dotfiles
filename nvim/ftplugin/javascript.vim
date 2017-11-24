@@ -8,9 +8,3 @@ inoreabbrev import SHAMEONYOUFORNOTUSING_IM_TAB
 command! -buffer EFix !npx eslint --fix %
 " Close tag
 inoremap /. />
-
-augroup vimrc_javascript
-  autocmd!
-  autocmd InsertEnter * set signcolumn=no
-  autocmd InsertLeave * set signcolumn=auto
-augroup end
