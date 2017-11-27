@@ -70,6 +70,8 @@ let g:lightline = {
   \              [ 'lineinfo' ],
   \              [] ],
   \ },
+  \ 'tabline': {
+  \   'right': [ ], },
   \ 'component_function': {
   \   'cwd': 'CurDir',
   \ },
