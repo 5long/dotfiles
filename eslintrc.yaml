@@ -44,6 +44,9 @@ rules:
   'no-trailing-spaces': 0
   'object-curly-spacing': 0
   'one-var': 0
+  # Fuck you prettier. You've done nothing but annoying me in my
+  # precious tight feedback loop.
+  'prettier/prettier': 0
   'quotes': 0
   'react/jsx-closing-bracket-location': 0
   'react/jsx-filename-extension': 0
