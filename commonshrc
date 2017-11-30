@@ -42,6 +42,9 @@ alias zathura='zathura --fork &>/dev/null'
 alias irc='weechat-curses'
 alias j='journalctl -n 20'
 alias jfu='j -fu '
+alias tmx=tmuxinator
+alias alsi='alsi -a'
+alias downspeed='curl -o /dev/null'
 
 alias which='echo Use \`type\` instead!; : '
 
@@ -152,4 +155,8 @@ with_proxy() {
   http_proxy=$p https_proxy=$p ftp_proxy=$p \
     HTTPS_PROXY=$p ALL_PROXY=$p \
     "$@"
+}
+
+source_if_possible() {
+  test -r "$1" && source "$1"
 }

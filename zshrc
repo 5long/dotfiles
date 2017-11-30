@@ -51,9 +51,5 @@ alias -g G='| grep -E'
 
 alias rake='noglob rake'
 
-FZF_BINDING=/usr/share/fzf/key-bindings.zsh
-test -f "$FZF_BINDING" && . "$FZF_BINDING"
-
-if [[ -s ~/.zshrc.local ]] then
-  . ~/.zshrc.local
-fi
+source_if_possible /usr/share/fzf/key-bindings.zsh
+source_if_possible ~/.zshrc.local
