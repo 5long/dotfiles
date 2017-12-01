@@ -14,13 +14,8 @@ snippet af "Arrow function" w
 }
 endsnippet
 
-snippet lf "Lambda Arrow function" w
+snippet lf "Lambda arrow function" w
 (${1:}) => (${2:})$0
-endsnippet
-
-
-snippet c "Function call"
-.${1}(${2})${0}
 endsnippet
 
 snippet fun "Named function" !
@@ -30,17 +25,8 @@ function ${1}(${2}) {
 endsnippet
 
 
-snippet pro
-${1}.prototype.${2} = function(${3}) {
-	${0}
-}
-endsnippet
-
-snippet insp
-console.log(sys.inspect(${1}))
-endsnippet
 snippet log "console.log()"
-console.log(${1:"boooooooooo"})
+console.log(${1:"BOOoooooooo"})
 endsnippet
 
 snippet rq "CommonJS require"
@@ -56,26 +42,6 @@ setTimeout(function(${2:}) {
 	${0}
 }, ${1:10})
 endsnippet
-
-
-snippet clo
-;(function(${1}) {
-	${0}
-}(${2}));
-endsnippet
-
-snippet ,f
-, ${1}: function(${2}) {
-		${4}
-	}
-endsnippet
-
-snippet :f
-${1}: function(${2}) {
-	${0}
-},
-endsnippet
-
 
 snippet ifmain
 if (require.main === module) {
