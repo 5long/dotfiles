@@ -19,6 +19,7 @@ rules:
   'array-bracket-spacing': 0
   'arrow-body-style': 0
   'arrow-parens': 0
+  'arrow-spacing': 0
   'block-spacing': 0
   'brace-style': 0
   'curly': 0
@@ -44,6 +45,7 @@ rules:
   'no-trailing-spaces': 0
   'object-curly-spacing': 0
   'one-var': 0
+  'padded-blocks': 0
   # Fuck you prettier. You've done nothing but annoying me in my
   # precious tight feedback loop.
   'prettier/prettier': 0
@@ -59,5 +61,6 @@ rules:
   'react/prop-types': 0
   'react/jsx-indent-props': 0
   'react/self-closing-comp': 0
+  'space-infix-ops': 0
   'space-in-parens': 0
   'space-before-function-paren': 0
