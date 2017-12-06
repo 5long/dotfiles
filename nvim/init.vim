@@ -24,7 +24,6 @@ Plug 'tpope/vim-unimpaired'
 Plug 'justinmk/vim-dirvish'
 
 " Make-vim-more-like-IDE
-
 Plug '5long/ragain'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
@@ -332,8 +331,12 @@ if has('nvim')
         \ 'javascript.jsx': ['javascript-typescript-stdio'],
         \ }
   let g:LanguageClient_autoStart = 1
-  nnoremap <silent> K :call LanguageClient_textDocument_hover()<CR>
-  nnoremap <silent> gd :call LanguageClient_textDocument_definition()<CR>
+  augroup vimrc
+    autocmd FileType javascript*
+          \ nnoremap <silent> K :call LanguageClient_textDocument_hover()<CR>
+    autocmd FileType javascript*
+          \ nnoremap <silent> gd :call LanguageClient_textDocument_definition()<CR>
+  augroup END
 endif
 
 " Since I'm a plugin author now
