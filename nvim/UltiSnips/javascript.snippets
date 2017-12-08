@@ -48,3 +48,13 @@ if (require.main === module) {
 	${1:main()}
 }
 endsnippet
+
+snippet cs "Constant w/ the same value & name"
+export const ${1:value} = '$1'
+endsnippet
+
+snippet rtypes "A full set of request/success/failure action types"
+export const ${1}_REQUEST = '$1_REQUEST'
+export const $1_SUCCESS = '$1_SUCCESS'
+export const $1_FAILURE = '$1_FAILURE'
+endsnippet
