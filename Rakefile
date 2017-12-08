@@ -71,6 +71,7 @@ NODE_PKGS = %w[
   eslint
   serve
   eslint-config-airbnb
+  eslint-config-prettier
   eslint-plugin-import
   eslint-plugin-jsx-a11y
   eslint-plugin-react

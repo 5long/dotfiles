@@ -1,4 +1,6 @@
-extends: airbnb
+extends:
+  - airbnb
+  - prettier
 settings:
   import/resolver:
     node: {}
