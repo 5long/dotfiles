@@ -3,6 +3,7 @@ follow = keyboard
 indicate_hidden = yes
 browser = /usr/local/bin/browser
 
+format = "%s\n%b"
 geometry = 500x50-15+24
 padding = 8
 horizontal_padding = 8
