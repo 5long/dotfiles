@@ -9,6 +9,7 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-abolish'
 Plug 'tomtom/tcomment_vim'
 Plug 'cohama/lexima.vim'
+Plug 'justinmk/vim-sneak'
 
 if ! executable('fzf')
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -263,6 +264,9 @@ inoremap <c-k> <c-g>U<up>
 inoremap <c-l> <c-g>U<right>
 inoremap <c-e> <c-g>U<c-o>A
 inoremap <c-a> <c-g>U<c-o>I
+
+nmap <space> <Plug>Sneak_s
+nmap <m-space> <Plug>Sneak_S
 
 nmap <F1> <nop>
 nmap Q <nop>
