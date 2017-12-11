@@ -27,7 +27,6 @@ Plug 'justinmk/vim-dirvish'
 Plug '5long/ragain'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
-Plug 'mhinz/vim-grepper'
 Plug 'neomake/neomake'
 if has('nvim')
   Plug 'autozimu/LanguageClient-neovim', {'do': ':UpdateRemotePlugins'}
@@ -206,11 +205,11 @@ fun! s:ResolveCfile()
   return py3eval(printf("normpath('%s')", fullPath))
 endf
 
-let g:grepper = {}
-let g:grepper.jump = 1
-runtime plugin/grepper.vim
-let g:grepper.rg.grepprg .= ' --smart-case'
-nnoremap <leader>gg :Grepper -tool rg<CR>
+set grepprg=rg\ --vimgrep
+set grepformat^=%f:%l:%c:%m
+autocmd vimrc QuickFixCmdPost grep rightbelow cwindow 7
+command! -nargs=+ -complete=file -bar Grep silent grep <args>
+nnoremap <leader>gg :Grep<space>
 
 nmap <leader>r <Plug>RagainRun
 nmap <leader>R <Plug>RagainResetAndRun
@@ -254,8 +253,6 @@ nnoremap <expr> j v:count ? 'j' : 'gj'
 nnoremap <expr> k v:count ? 'k' : 'gk'
 
 inoreabbrev rt return
-
-autocmd vimrc QuickFixCmdPost make below cwindow
 
 set pastetoggle=<f5>
 set mouse=a
