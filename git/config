@@ -11,8 +11,8 @@
   ci = commit
   cln = clean -Xd
   co = checkout
-  cob = checkout origin/master -b
-  cub = checkout upstream/master -b
+  cob = checkout -t origin/master -b
+  cub = checkout -t upstream/master -b
   del = rm --cached
   dc = diff --cached
   di = diff
