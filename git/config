@@ -18,7 +18,7 @@
   di = diff
   du = diff @{u}
   dus = diff @{u} --stat
-  fa = fetch --all
+  fa = fetch --all --prune
   ff = merge --ff-only
   h = help
   ic = commit -vp
