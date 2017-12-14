@@ -265,6 +265,7 @@ inoremap <c-l> <c-g>U<right>
 inoremap <c-e> <c-g>U<c-o>A
 inoremap <c-a> <c-g>U<c-o>I
 
+let g:sneak#use_ic_scs = 1
 nmap <space> <Plug>Sneak_s
 nmap <m-space> <Plug>Sneak_S
 
