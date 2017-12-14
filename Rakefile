@@ -81,7 +81,6 @@ NODE_PKGS = %w[
 ]
 desc "Install essential NodeJS packages"
 task :npm do
-  sh(*%w[npm i -g yarn])
   sh(*(%w[yarn global add].concat(NODE_PKGS)))
 end
 
