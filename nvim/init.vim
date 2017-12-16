@@ -160,6 +160,7 @@ noremap / /\v
 noremap ? ?\v
 nnoremap <backspace> :nohlsearch<cr>:diffupdate<cr><c-l>
 
+noremap <leader>sw :s/<c-r><c-w>/
 nnoremap gs WhvgElc<space><esc>
 nnoremap gS gElvWlc<space><esc>
 
