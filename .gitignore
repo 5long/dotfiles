@@ -7,3 +7,5 @@
 /nvim/init.vim.local
 /nvim/autoload/plug.vim
 /nvim/autoload/plug.vim.old
+
+/git/local-config

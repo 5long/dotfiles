@@ -1,6 +1,3 @@
-[user]
-  name = Whyme Lyu
-  email = callme5long@gmail.com
 [alias]
   aa = add --all .
   amend = commit --amend -C HEAD
@@ -71,3 +68,5 @@
   enabled = true
 [commit]
   verbose = true
+[include]
+  path = local-config
