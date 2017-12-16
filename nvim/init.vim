@@ -39,6 +39,7 @@ Plug 'sheerun/vim-polyglot'
 Plug '5long/pytest-vim-compiler'
 Plug 'guns/vim-clojure-static'
 Plug 'tpope/vim-fireplace'
+Plug 'Galooshi/vim-import-js'
 
 " Not used that much, might be deleted / re-learnt
 Plug 'tpope/vim-projectionist'

@@ -76,6 +76,7 @@ NODE_PKGS = %w[
   eslint-plugin-jsx-a11y
   eslint-plugin-react
   eslint-import-resolver-babel-plugin-root-import
+  import-js
   javascript-typescript-langserver
   neovim
 ]
