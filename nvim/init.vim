@@ -211,7 +211,7 @@ endf
 set grepprg=rg\ --vimgrep
 set grepformat^=%f:%l:%c:%m
 autocmd vimrc QuickFixCmdPost grep rightbelow cwindow 7
-command! -nargs=+ -complete=file -bar Grep silent grep! <args>|redraw
+command! -nargs=+ -complete=file -bar Grep silent grep! -w <args>|redraw!
 nnoremap <leader>gg :Grep<space>
 
 nmap <leader>r <Plug>RagainRun
