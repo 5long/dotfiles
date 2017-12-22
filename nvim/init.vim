@@ -19,7 +19,6 @@ Plug 'junegunn/fzf.vim'
 " Make Vim Better
 Plug '5long/vim-imtoggle'
 Plug 'itchyny/lightline.vim'
-Plug 'mhinz/vim-sayonara'
 Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-unimpaired'
 Plug 'justinmk/vim-dirvish'
@@ -181,8 +180,7 @@ set autowrite
 nnoremap <leader>w :update<CR>
 nnoremap QQ :qa!<CR>
 
-nnoremap <leader>dd :Sayonara!<CR>
-nnoremap <leader>da :silent bufdo Sayonara!<CR>
+nnoremap <leader>da :1,$bd!<CR><c-w><c-v>
 
 if has('nvim')
   nnoremap <leader>tt :new\|terminal<space>
