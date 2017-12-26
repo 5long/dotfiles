@@ -52,4 +52,5 @@ alias -g G='| grep -E'
 alias rake='noglob rake'
 
 source_if_possible /usr/share/fzf/key-bindings.zsh
+source_if_possible ~/.kube/completion.inc.zsh
 source_if_possible ~/.zshrc.local
