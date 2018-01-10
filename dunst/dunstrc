@@ -1,5 +1,5 @@
 [global]
-follow = keyboard
+follow = mouse
 indicate_hidden = yes
 browser = /usr/local/bin/browser
 
