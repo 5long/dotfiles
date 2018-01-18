@@ -1,5 +1,7 @@
 # Environment variables, shared by bash, zsh and xsession
 
+export PATH="$HOME/.local/bin:$HOME/.yarn/bin:$PATH"
+
 export PAGER=less
 export LESS=-FXRi
 export GREP_COLOR='1;32'

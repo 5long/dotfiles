@@ -39,11 +39,6 @@ bindkey -M viins " " magic-space
 PROMPT='%B%(?..[%?] )>%b '
 REPORTTIME=15
 typeset -U path
-path=(
-  $HOME/.local/bin
-  $HOME/.yarn/bin
-  $path
-)
 
 alias -g L='| less'
 alias -g LC='--color=always | less'
