@@ -88,6 +88,9 @@ if has('nvim')
   set termguicolors
 endif
 colorscheme PaperColor
+if $TERM =~ '^linux'
+  set background=dark
+endif
 
 set relativenumber
 set lazyredraw
