@@ -1,4 +1,5 @@
 rofi.lines: 10
+rofi.dpi: 1
 rofi.font: mono 16
 rofi.case-sensitive: false
 rofi.sort: true
