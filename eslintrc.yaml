@@ -53,6 +53,7 @@ rules:
   'prettier/prettier': 0
   'quotes': 0
   'react/jsx-equals-spacing': 0
+  'react/jsx-curly-spacing': 0
   'react/jsx-closing-bracket-location': 0
   'react/jsx-filename-extension': 0
   'react/jsx-first-prop-new-line': 0
