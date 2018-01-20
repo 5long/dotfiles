@@ -43,6 +43,8 @@ Plug 'Galooshi/vim-import-js'
 " Not used that much, might be deleted / re-learnt
 Plug 'tpope/vim-projectionist'
 
+Plug '/usr/share/vim/vimfiles'
+
 call plug#end()
 
 let g:plug_threads = 5
