@@ -1,5 +1,9 @@
 \set QUIET 1
 
+\set ON_ERROR_STOP on
+\set ON_ERROR_ROLLBACK interactive
+
+\set PROMPT1 '%~%x%# '
 \set HISTCONTROL ignoredups
 \set COMP_KEYWORD_CASE upper
 
