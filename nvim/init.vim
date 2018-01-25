@@ -241,6 +241,7 @@ noremap <leader>du :diffupdate<CR>
 
 let $FZF_DEFAULT_OPTS = '--color=light'
 nnoremap <leader>f :Files<CR>
+nnoremap <leader>df :args `git status --porcelain=v1 <bslash><bar> awk '{print $2}'`<cr>
 nnoremap <leader>bf :Buffers<CR>
 nnoremap <leader>/ :Lines<CR>
 command! -bang -nargs=* Rg
