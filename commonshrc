@@ -13,7 +13,6 @@ alias ll='ls -oh'
 alias la='ls -A'
 
 alias grep='grep --color=auto -E -i'
-alias j='jobs -l'
 alias lstcp='lsof -nPi tcp'
 alias mkdir='mkdir -p'
 
@@ -30,8 +29,6 @@ alias rg='rg -LSp'
 alias rgnotes='rg -w "BUG|COMBAK|FIX|TBD|TODO|WTF|XXX" | less'
 alias bss="browser-sync start --server --directory --files='*.css, *.html, *.js'"
 alias bsc="browser-sync start --config bs-config.js"
-alias nr="npm run"
-alias tap="tap -Rmin -b"
 alias cm=mocp
 alias alert="echo -n '\a'"
 alias vg=vagrant
@@ -42,8 +39,6 @@ alias zathura='zathura --fork &>/dev/null'
 alias irc='weechat-curses'
 alias j='journalctl -n 20'
 alias jfu='j -fu '
-alias tmx=tmuxinator
-alias alsi='alsi -a'
 alias downspeed='curl -o /dev/null'
 
 alias which='echo Use \`type\` instead!; : '
