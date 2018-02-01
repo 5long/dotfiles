@@ -216,6 +216,7 @@ set grepformat^=%f:%l:%c:%m
 autocmd vimrc QuickFixCmdPost grep rightbelow cwindow 7
 command! -nargs=+ -complete=file -bar Grep silent grep! -w <args>|redraw!
 nnoremap <leader>gg :Grep<space>
+nnoremap <leader>gw :Grep<space><c-r><c-w>
 
 nmap <leader>r <Plug>RagainRun
 nmap <leader>R <Plug>RagainResetAndRun
