@@ -309,11 +309,63 @@ set wildignore+=*.o,*.so
 set wildignore+=pkg,*.gem
 set suffixes+=.log
 
+fun! s:ParseAndFillResults(context, errors, warnings)
+  for line in a:context['output']
+    let end_of_parsed_text = 0
+    let [fn, _, end_of_parsed_text] = matchstrpos(line, '^.*\ze: ')
+
+    if empty(fn)
+      continue
+    endif
+
+    let [line_number, _, end_of_parsed_text] = matchstrpos(line, 'line \zs\d\+\ze, ', end_of_parsed_text)
+    let [column_number, _, end_of_parsed_text] = matchstrpos(line, 'col \zs\d\+\ze, ', end_of_parsed_text)
+    let [msg_type, _, end_of_parsed_text] = matchstrpos(line, '\(Error\|Warning\) - ', end_of_parsed_text)
+    let msg_type = msg_type[0]
+    let msg_text = line[end_of_parsed_text:]
+
+    let msg = {
+      \ 'maker_name': 'eslint',
+      \ 'filename': fn,
+      \ 'lnum': line_number,
+      \ 'col': column_number,
+      \ 'type': msg_type,
+      \ 'text': msg_text,
+      \ }
+
+    if msg_type == 'W'
+      call add(a:warnings, msg)
+    elseif msg_type == 'E'
+      call add(a:errors, msg)
+    endif
+
+    echom msg_type
+  endfor
+endf
+
+fun! ProcessEslintOutput(context) abort
+  let errors = []
+  let warnings = []
+
+  call s:ParseAndFillResults(a:context, errors, warnings)
+
+  if len(errors)
+    return errors
+  else
+    return warnings
+  endif
+endf
+
+let g:neomake_javascript_eslint_maker = {
+      \ 'exe': 'npx',
+      \ 'args': ['eslint', '-f', 'compact', '-c', s:home . '/.eslintrc.yaml'],
+      \ 'cwd': '%:p:h',
+      \ 'process_output': function('ProcessEslintOutput')
+      \ }
+
 let g:neomake_place_signs = 0
 let g:neomake_python_enabled_makers = ['pyflakes']
 let g:neomake_javascript_enabled_makers = ['eslint']
-let g:neomake_javascript_eslint_exe = 'npx'
-let g:neomake_javascript_eslint_args = ['eslint', '-f', 'compact', '-c', s:home . '/.eslintrc.yaml']
 autocmd vimrc BufWritePost * Neomake
 autocmd vimrc User NeomakeCountsChanged call OnNeomakeCountsChanged()
 
