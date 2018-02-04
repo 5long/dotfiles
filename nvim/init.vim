@@ -28,6 +28,7 @@ Plug '5long/ragain'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'neomake/neomake'
+Plug '5long/sw-makers'
 if has('nvim')
   Plug 'autozimu/LanguageClient-neovim', {'do': ':UpdateRemotePlugins'}
   Plug 'roxma/nvim-completion-manager'
@@ -309,64 +310,9 @@ set wildignore+=*.o,*.so
 set wildignore+=pkg,*.gem
 set suffixes+=.log
 
-fun! s:ParseEslintCompactLine(line)
-  let end_of_parsed_text = 0
-  let [fn, _, end_of_parsed_text] = matchstrpos(a:line, '^.*\ze: ')
-
-  if empty(fn)
-    return {'valid': v:false, 'text': a:line}
-  endif
-
-  let [line_number, _, end_of_parsed_text] = matchstrpos(a:line, 'line \zs\d\+\ze, ', end_of_parsed_text)
-  let [column_number, _, end_of_parsed_text] = matchstrpos(a:line, 'col \zs\d\+\ze, ', end_of_parsed_text)
-  let [msg_type, _, end_of_parsed_text] = matchstrpos(a:line, '\(Error\|Warning\) - ', end_of_parsed_text)
-  let msg_type = msg_type[0]
-  let msg_text = a:line[end_of_parsed_text:]
-
-  return {
-        \ 'maker_name': 'eslint',
-        \ 'filename': fn,
-        \ 'lnum': line_number,
-        \ 'col': column_number,
-        \ 'type': msg_type,
-        \ 'text': msg_text,
-        \ 'valid': v:true,
-        \ }
-endf
-
-fun! s:ParseAndFillResults(context)
-  let results = [[], []]
-  let [ errors, warnings ] = results
-
-  for line in a:context['output']
-    let msg = s:ParseEslintCompactLine(line)
-
-    if !msg.valid
-      continue
-    endif
-
-    call add(msg.type == 'W' ? warnings : errors, msg)
-  endfor
-
-  return results
-endf
-
-fun! ProcessEslintOutput(context) abort
-  let [ errors, warnings ] = s:ParseAndFillResults(a:context)
-
-  return empty(errors) ? warnings : errors
-endf
-
-let g:neomake_javascript_eslint_maker = {
-      \ 'exe': 'npx',
-      \ 'args': ['eslint', '-f', 'compact', '-c', s:home . '/.eslintrc.yaml'],
-      \ 'cwd': '%:p:h',
-      \ 'process_output': function('ProcessEslintOutput')
-      \ }
-
 let g:neomake_place_signs = 0
 let g:neomake_python_enabled_makers = ['pyflakes']
-let g:neomake_javascript_enabled_makers = ['eslint']
+let g:neomake_javascript_enabled_makers = ['eslintsw']
 autocmd vimrc BufWritePost * Neomake
 autocmd vimrc User NeomakeCountsChanged call OnNeomakeCountsChanged()
 
