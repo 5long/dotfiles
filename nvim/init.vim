@@ -309,51 +309,52 @@ set wildignore+=*.o,*.so
 set wildignore+=pkg,*.gem
 set suffixes+=.log
 
-fun! s:ParseAndFillResults(context, errors, warnings)
-  for line in a:context['output']
-    let end_of_parsed_text = 0
-    let [fn, _, end_of_parsed_text] = matchstrpos(line, '^.*\ze: ')
+fun! s:ParseEslintCompactLine(line)
+  let end_of_parsed_text = 0
+  let [fn, _, end_of_parsed_text] = matchstrpos(a:line, '^.*\ze: ')
 
-    if empty(fn)
+  if empty(fn)
+    return {'valid': v:false, 'text': a:line}
+  endif
+
+  let [line_number, _, end_of_parsed_text] = matchstrpos(a:line, 'line \zs\d\+\ze, ', end_of_parsed_text)
+  let [column_number, _, end_of_parsed_text] = matchstrpos(a:line, 'col \zs\d\+\ze, ', end_of_parsed_text)
+  let [msg_type, _, end_of_parsed_text] = matchstrpos(a:line, '\(Error\|Warning\) - ', end_of_parsed_text)
+  let msg_type = msg_type[0]
+  let msg_text = a:line[end_of_parsed_text:]
+
+  return {
+        \ 'maker_name': 'eslint',
+        \ 'filename': fn,
+        \ 'lnum': line_number,
+        \ 'col': column_number,
+        \ 'type': msg_type,
+        \ 'text': msg_text,
+        \ 'valid': v:true,
+        \ }
+endf
+
+fun! s:ParseAndFillResults(context)
+  let results = [[], []]
+  let [ errors, warnings ] = results
+
+  for line in a:context['output']
+    let msg = s:ParseEslintCompactLine(line)
+
+    if !msg.valid
       continue
     endif
 
-    let [line_number, _, end_of_parsed_text] = matchstrpos(line, 'line \zs\d\+\ze, ', end_of_parsed_text)
-    let [column_number, _, end_of_parsed_text] = matchstrpos(line, 'col \zs\d\+\ze, ', end_of_parsed_text)
-    let [msg_type, _, end_of_parsed_text] = matchstrpos(line, '\(Error\|Warning\) - ', end_of_parsed_text)
-    let msg_type = msg_type[0]
-    let msg_text = line[end_of_parsed_text:]
-
-    let msg = {
-      \ 'maker_name': 'eslint',
-      \ 'filename': fn,
-      \ 'lnum': line_number,
-      \ 'col': column_number,
-      \ 'type': msg_type,
-      \ 'text': msg_text,
-      \ }
-
-    if msg_type == 'W'
-      call add(a:warnings, msg)
-    elseif msg_type == 'E'
-      call add(a:errors, msg)
-    endif
-
-    echom msg_type
+    call add(msg.type == 'W' ? warnings : errors, msg)
   endfor
+
+  return results
 endf
 
 fun! ProcessEslintOutput(context) abort
-  let errors = []
-  let warnings = []
+  let [ errors, warnings ] = s:ParseAndFillResults(a:context)
 
-  call s:ParseAndFillResults(a:context, errors, warnings)
-
-  if len(errors)
-    return errors
-  else
-    return warnings
-  endif
+  return empty(errors) ? warnings : errors
 endf
 
 let g:neomake_javascript_eslint_maker = {
