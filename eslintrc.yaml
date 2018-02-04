@@ -34,7 +34,7 @@ rules:
   'jsx-a11y/label-has-for': 0
   'key-spacing': 0
   'no-alert': 0
-  'no-console': 0
+  'no-console': 1
   'no-multi-assign': 0
   'no-multi-spaces': 0
   'no-multiple-empty-lines': 0
