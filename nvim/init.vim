@@ -312,7 +312,12 @@ set suffixes+=.log
 
 let g:neomake_place_signs = 0
 let g:neomake_python_enabled_makers = ['pyflakes']
-let g:neomake_javascript_enabled_makers = ['eslintsw']
+let g:neomake_javascript_eslint_maker = {
+      \ 'exe': 'npx',
+      \ 'args': ['eslint', '-f', 'compact', '-c', s:home . '/.eslintrc.yaml'],
+      \ 'process_output': function('sw_makers#eslint#ProcessOutput')
+      \ }
+let g:neomake_javascript_enabled_makers = ['eslint']
 autocmd vimrc BufWritePost * Neomake
 autocmd vimrc User NeomakeCountsChanged call OnNeomakeCountsChanged()
 
