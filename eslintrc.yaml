@@ -48,6 +48,7 @@ rules:
   'object-curly-spacing': 0
   'one-var': 0
   'padded-blocks': 0
+  'prefer-template': 0
   # Fuck you prettier. You've done nothing but annoying me in my
   # precious tight feedback loop.
   'prettier/prettier': 0
