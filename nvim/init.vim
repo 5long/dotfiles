@@ -108,7 +108,7 @@ set list
 " Remember rendar at #vim.
 set listchars=tab:›\ ,trail:·
 " let &listchars = "tab:\u203a ,trail:\xb7"
-set textwidth=75
+set textwidth=68
 set formatoptions+=B1nlm
 set formatoptions-=tc
 set cpoptions+=J
