@@ -1,0 +1,13 @@
+set font 'Monospace normal 18'
+
+set window-title-basename true
+
+map d scroll half-down
+map u scroll half-up
+
+map e scroll down
+
+map b scroll full-up
+
+map <Button9> scroll half-up
+map <Button8> scroll half-down
