@@ -11,3 +11,5 @@ rofi.levenshtein-sort: false
 rofi.matching: fuzzy
 
 rofi.run-command: /bin/dash -c '{cmd}'
+rofi.display-run:
+rofi.display-window: window:
