@@ -23,6 +23,7 @@
   ll = log --graph --pretty=grb --stat
   lu = log --graph --pretty=grb @{u}..
   lus = log --graph --pretty=grb @{u}.. --stat
+  mt = mergetool
   ph = push
   pl = pull
   po = push origin
