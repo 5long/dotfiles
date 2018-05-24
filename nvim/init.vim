@@ -312,6 +312,7 @@ set suffixes+=.log
 
 let g:neomake_place_signs = 0
 let g:neomake_python_enabled_makers = ['pyflakes']
+let g:neomake_python_pyflakes_maker_exe = 'pyflakes-python2'
 let g:neomake_javascript_eslint_maker = {
       \ 'exe': 'npx',
       \ 'args': ['eslint', '-f', 'compact', '-c', s:home . '/.eslintrc.yaml'],
