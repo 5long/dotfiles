@@ -26,7 +26,6 @@ KEYTIMEOUT=1
 
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 zstyle ':completion:*:mpv:argument*' tag-order - '! urls'
-compdef _pacman pacaur=pacman
 
 bindkey -v "^R" history-incremental-search-backward
 bindkey -v "^Y" vi-put-after

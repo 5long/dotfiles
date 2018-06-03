@@ -20,7 +20,6 @@ alias g=git
 alias gl='git l'
 alias gll='git ll'
 alias o=xdg-open
-alias p=pacaur
 alias ht="htop -u \$USER -s PERCENT_CPU"
 alias s='sudo -E '
 alias sctl='systemctl'
