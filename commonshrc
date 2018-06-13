@@ -16,6 +16,7 @@ alias grep='grep --color=auto -E -i'
 alias lstcp='lsof -nPi tcp'
 alias mkdir='mkdir -p'
 
+alias d=docker
 alias g=git
 alias gl='git l'
 alias gll='git ll'
