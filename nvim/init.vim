@@ -335,8 +335,8 @@ fun! LightLineNeomake()
   return neomake#statusline#LoclistStatus()
 endf
 
-let g:tcommentMapLeader1 = ''
-let g:tcommentMapLeader2 = ''
+let g:tcomment_mapleader1 = ''
+let g:tcomment_mapleader2 = ''
 
 autocmd vimrc VimEnter * if empty(expand('%')) | setl buftype=nofile
 
