@@ -36,7 +36,8 @@ Plug 'neomake/neomake'
 Plug '5long/sw-makers'
 if has('nvim')
   Plug 'autozimu/LanguageClient-neovim', {'do': ':UpdateRemotePlugins'}
-  Plug 'roxma/nvim-completion-manager'
+  Plug 'ncm2/ncm2'
+  Plug 'roxma/nvim-yarp'
 endif
 
 " Filetype-specific
