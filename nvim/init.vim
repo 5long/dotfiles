@@ -34,11 +34,6 @@ Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'neomake/neomake'
 Plug '5long/sw-makers'
-if has('nvim')
-  Plug 'autozimu/LanguageClient-neovim', {'do': ':UpdateRemotePlugins'}
-  Plug 'ncm2/ncm2'
-  Plug 'roxma/nvim-yarp'
-endif
 
 " Filetype-specific
 Plug 'sheerun/vim-polyglot'
@@ -343,22 +338,6 @@ autocmd vimrc VimEnter * if empty(expand('%')) | setl buftype=nofile
 
 let g:UltiSnipsJumpForwardTrigger='<tab>'
 let g:UltiSnipsJumpBackwardTrigger='<s-tab>'
-
-if has('nvim')
-  let g:LanguageClient_diagnosticsEnable = 0
-  let g:LanguageClient_diagnosticsList = 'location'
-  let g:LanguageClient_serverCommands = {
-        \ 'javascript': ['javascript-typescript-stdio'],
-        \ 'javascript.jsx': ['javascript-typescript-stdio'],
-        \ }
-  let g:LanguageClient_autoStart = 1
-  augroup vimrc
-    autocmd FileType javascript*
-          \ nnoremap <silent> K :call LanguageClient_textDocument_hover()<CR>
-    autocmd FileType javascript*
-          \ nnoremap <silent> gd :call LanguageClient_textDocument_definition()<CR>
-  augroup END
-endif
 
 " Since I'm a plugin author now
 nnoremap <leader>so :source %<CR>
