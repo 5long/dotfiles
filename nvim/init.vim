@@ -343,6 +343,7 @@ let g:UltiSnipsJumpBackwardTrigger='<s-tab>'
 
 " vim-lsp
 let g:lsp_diagnostics_echo_cursor = 1
+let g:lsp_async_completion = 1
 if executable('rls')
   au User lsp_setup call lsp#register_server({
     \ 'name': 'rls',
@@ -350,6 +351,7 @@ if executable('rls')
     \ 'root_uri':{server_info->lsp#utils#path_to_uri(lsp#utils#find_nearest_parent_file_directory(lsp#utils#get_buffer_path(), 'Cargo.toml'))},
     \ 'whitelist': ['rust'],
     \ })
+  au vimrc FileType rust setl omnifunc=lsp#complete
 endif
 
 " Since I'm a plugin author now
