@@ -17,6 +17,8 @@
   dus = diff @{u} --stat
   fa = fetch --all --prune
   ff = merge --ff-only
+  # fast-forward to the branch in upstream w/ the same name
+  fu = !git merge --ff-only "upstream/$(git branch --points-at HEAD --format '%(refname:short)')"
   h = help
   ic = commit -vp
   l = log --graph --pretty=grb
