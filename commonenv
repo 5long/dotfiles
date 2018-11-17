@@ -13,7 +13,7 @@ export BROWSER=browser
 
 export FZF_DEFAULT_COMMAND='rg --files'
 export FZF_DEFAULT_OPTS='--color=light --exact'
-export FZF_CTRL_T_OPTS='--preview="rougify highlight -t github {}"'
+export FZF_CTRL_T_OPTS='--preview="bat -p {}"'
 export MTR_OPTIONS='-n -t'
 
 export PYTEST_ADDOPTS='-x -s'
