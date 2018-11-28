@@ -1,2 +1,3 @@
 --theme=GitHub
 --tabs=4
+-m mobileconfig:xml
