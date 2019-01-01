@@ -169,8 +169,6 @@ noremap ? ?\v
 nnoremap <backspace> :nohlsearch<cr>:diffupdate<cr><c-l>
 
 noremap <leader>sw :s/<c-r><c-w>//g<left><left>
-nnoremap gs WhvgElc<space><esc>
-nnoremap gS gElvWlc<space><esc>
 
 for s:key in ['#', '*', 'n', 'N']
   exec printf('nnoremap %s %szz', s:key, s:key)
