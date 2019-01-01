@@ -288,6 +288,7 @@ nnoremap Y y$
 nnoremap yu "+yiW
 noremap H ^
 noremap L $
+nmap <tab> %
 noremap <c-p> <c-i>
 
 nnoremap <leader>ov <c-w>o<c-w>v
