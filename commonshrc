@@ -42,8 +42,6 @@ alias j='journalctl -n 20'
 alias jfu='j -fu '
 alias downspeed='curl -o /dev/null'
 
-alias which='echo Use \`type\` instead!; : '
-
 mkd() {
   mkdir -p "$1"
   cd "$1"
