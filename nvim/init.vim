@@ -93,10 +93,11 @@ hi link SneakStreakTarget Search
 if has('nvim')
   set termguicolors
 endif
-colorscheme PaperColor
+set background=light
 if $TERM =~ '^linux'
   set background=dark
 endif
+colorscheme PaperColor
 
 set relativenumber
 set lazyredraw
