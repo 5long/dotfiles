@@ -21,6 +21,7 @@ alias d=docker
 alias g=git
 alias gl='git l'
 alias gll='git ll'
+alias gs='git s'
 alias o=xdg-open
 alias ht="htop -u \$USER -s PERCENT_CPU"
 alias s='sudo -E '
