@@ -264,6 +264,7 @@ nnoremap <expr> j v:count ? 'j' : 'gj'
 nnoremap <expr> k v:count ? 'k' : 'gk'
 
 inoreabbrev rt return
+nnoremap <cr> r<cr>
 
 set pastetoggle=<f5>
 set mouse=a
