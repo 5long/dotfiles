@@ -313,6 +313,19 @@ set wildignore+=*.o,*.so
 set wildignore+=pkg,*.gem
 set suffixes+=.log
 
+let s:saved_scrolloff = 6
+fun! SwitchTypewriterMode()
+  if &scrolloff != 200
+    let s:saved_scrolloff = &scrolloff
+    set scrolloff=200
+    echo 'Enabled typewriter mode'
+  else
+    let &scrolloff = s:saved_scrolloff
+    echo 'Disabled typewriter mode'
+  endif
+endfun
+nnoremap cow :call<space>SwitchTypewriterMode()<CR>
+
 let g:neomake_place_signs = 0
 let g:neomake_python_enabled_makers = ['pyflakes']
 let g:neomake_python_pyflakes_maker_exe = 'pyflakes-python2'
