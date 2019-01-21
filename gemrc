@@ -4,5 +4,5 @@
 :sources:
 - https://gems.ruby-china.com/
 :update_sources: true
-:verbose: true
+:verbose: false
 gem: "--no-document --user-install"
