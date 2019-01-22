@@ -20,6 +20,7 @@ export PYTEST_ADDOPTS='-x -s'
 
 export NVM_NODEJS_ORG_MIRROR=http://mirrors.ustc.edu.cn/node
 export NODE_BUILD_MIRROR_URL=http://mirrors.ustc.edu.cn/node
+export RUSTUP_DIST_SERVER=https://mirrors.ustc.edu.cn/rust-static
 
 # CDPATH shouldn't be export-ed
 CDPATH=".:$HOME:$HOME/src"
