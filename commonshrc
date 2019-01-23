@@ -3,7 +3,7 @@
 set -o vi
 set +o notify
 
-HISTSIZE=2000
+HISTSIZE=10000
 
 source ~/.commonenv
 
