@@ -124,7 +124,7 @@ t() {
 }
 
 psg() {
-  pgrep -fa "$@" | cut -c -100
+  pgrep -fai "$@" | cut -c -100
 }
 
 # SSH with conservative $TERM value
