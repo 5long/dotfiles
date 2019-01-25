@@ -12,3 +12,8 @@ icon_position = left
 max_icon_size = 48
 
 font = Monospace 48
+
+[ignore-rime-startup]
+body = "Rime is ready."
+format = ""
+history_ignore = yes
