@@ -36,7 +36,6 @@ alias alert="echo -n '\a'"
 alias vg=vagrant
 alias v=vim
 alias be='bundle exec'
-alias iv=sxiv
 alias zathura='zathura --fork &>/dev/null'
 alias irc='weechat-curses'
 alias j='journalctl -n 20'
