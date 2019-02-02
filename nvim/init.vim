@@ -373,8 +373,3 @@ let g:nvimrc = expand('<sfile>')
 nnoremap <leader>ev :e <c-r>=g:nvimrc<CR><CR>
 
 command! CN IMEnable
-
-let s:localrc = g:nvimrc . '.local'
-if filereadable(s:localrc)
-  exec 'source ' . fnameescape(s:localrc)
-endif
