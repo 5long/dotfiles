@@ -186,7 +186,7 @@ autocmd vimrc FocusLost * silent! wall
 set autowrite
 
 nnoremap <leader>w :update<CR>
-nnoremap QQ :qa!<CR>
+nnoremap QQ :cquit<CR>
 
 nnoremap <leader>da :1,$bd!<CR><c-w><c-v>
 
