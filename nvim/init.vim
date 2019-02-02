@@ -240,7 +240,7 @@ set fileformats=unix,dos,mac
 set fileencodings=ucs-bom,utf-8,gb-18030,gbk,gb2312,latin1
 set nobomb
 
-set diffopt=filler,vertical,iwhite
+set diffopt=internal,filler,vertical,iwhite,indent-heuristic,algorithm:histogram
 noremap <leader>du :diffupdate<CR>
 
 let $FZF_DEFAULT_OPTS = '--color=light'
