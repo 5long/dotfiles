@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+mkd="$1"
+out=/tmp/preview.html
+
+kramdown --template document "$@" > "$out"
+open "$out"
