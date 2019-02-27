@@ -44,7 +44,7 @@
 [branch]
   autosetupmerge = always
 [pretty]
-  grb = %C(yellow)%h%Creset %Cgreen(%ai)%Creset %C(bold)<%an>%Creset %C(bold green)%d%Creset %s
+  grb = %C(yellow)%h%Creset %Cgreen(%ad)%Creset %C(bold)<%an>%Creset %C(bold green)%d%Creset %s
 [core]
   pager = less -+FSRX -FRX
 [push]
@@ -65,8 +65,11 @@
   compactionHeuristic = true
 [stash]
   showPatch = true
+[blame]
+  date = auto:human
 [log]
   decorate = true
+  date = auto:human
 [credential]
   helper = cache --timeout=36000
 [rerere]
