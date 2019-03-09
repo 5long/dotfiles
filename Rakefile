@@ -68,6 +68,7 @@ task :take, :dotless_name do |t, args|
 end
 
 NODE_PKGS = %w[
+  browser-sync
   eslint
   serve
   eslint-config-airbnb
