@@ -340,7 +340,7 @@ let g:neomake_javascript_eslint_maker = {
       \ 'process_output': function('sw_makers#eslint#ProcessOutput')
       \ }
 let g:neomake_javascript_enabled_makers = ['eslint']
-autocmd vimrc BufWritePost * Neomake
+call neomake#configure#automake('rw', 1000)
 autocmd vimrc User NeomakeCountsChanged call OnNeomakeCountsChanged()
 
 fun! OnNeomakeCountsChanged()
