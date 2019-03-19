@@ -1,3 +1,5 @@
+set selection-clipboard 'clipboard'
+
 set font 'Monospace normal 18'
 
 set window-title-basename true
