@@ -3,7 +3,7 @@
   amend = commit --amend -C HEAD
   b = branch -vv
   br = branch
-  ca = commit --all --verbose
+  ca = commit --all
   cb = checkout HEAD -b
   ci = commit
   cln = clean -Xd
@@ -20,7 +20,7 @@
   # fast-forward to the branch in upstream w/ the same name
   fu = !git merge --ff-only "upstream/$(git branch --points-at HEAD --format '%(refname:short)')"
   h = help
-  ic = commit -vp
+  ic = commit -p
   l = log --graph --pretty=grb
   ll = log --graph --pretty=grb --stat
   lu = log --graph --pretty=grb @{u}..
