@@ -31,6 +31,7 @@
   po = push origin
   pu = push upstream
   rb = rebase
+  root = rev-parse --show-toplevel
   rs = reset
   rv = checkout HEAD --force --
   s = status -bs
