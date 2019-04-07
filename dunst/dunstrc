@@ -9,6 +9,7 @@ padding = 8
 horizontal_padding = 8
 shrink = yes
 icon_position = left
+corner_radius = 20
 max_icon_size = 48
 
 font = Monospace 48
@@ -17,3 +18,5 @@ font = Monospace 48
 body = "Rime is *"
 format = ""
 history_ignore = yes
+
+# vim: ft=cfg
