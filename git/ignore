@@ -1,3 +1,6 @@
+!.keep
+!.gitkeep
+
 *.sw[a-z]
 .exrc
 .vimrc
