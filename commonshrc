@@ -104,7 +104,7 @@ gc() {
 }
 
 dus() {
-  du -csh -- * .* . | sort -h
+  sudo du -csh -- * .* . | sort -h
 }
 
 rn() {
