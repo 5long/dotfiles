@@ -369,6 +369,15 @@ if executable('rls')
   au vimrc FileType rust setl omnifunc=lsp#complete
 endif
 
+if executable('pyls')
+  au User lsp_setup call lsp#register_server({
+    \ 'name': 'pyls',
+    \ 'cmd': {server_info->['pyls']},
+    \ 'whitelist': ['python'],
+    \ })
+  au vimrc FileType python setl omnifunc=lsp#complete
+endif
+
 " Since I'm a plugin author now
 nnoremap <leader>so :source %<CR>
 let g:nvimrc = expand('<sfile>')
