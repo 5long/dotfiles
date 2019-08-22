@@ -31,16 +31,15 @@
   po = push origin
   pu = push upstream
   rb = rebase
+  rs = restore
   root = rev-parse --show-toplevel
-  rs = reset
-  rv = checkout HEAD --force --
   s = status -bs
   sclone = clone --depth 1
   sh = stash
   sl = stash list
   sp = stash show
-  st = status -bs
   sv = stash save -u
+  sw = switch
   tip = log --stat -1 -p
 [branch]
   autosetupmerge = always
