@@ -10,8 +10,8 @@
   co = checkout
   cob = checkout -t origin/master -b
   cub = checkout -t upstream/master -b
-  del = rm --cached
   dc = diff --cached
+  del = rm --cached
   di = diff
   du = diff @{u}
   dus = diff @{u} --stat
@@ -31,8 +31,8 @@
   po = push origin
   pu = push upstream
   rb = rebase
-  rs = restore
   root = rev-parse --show-toplevel
+  rs = restore
   s = status -bs
   sclone = clone --depth 1
   sh = stash
