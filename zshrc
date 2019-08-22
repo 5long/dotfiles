@@ -12,7 +12,7 @@ set -o numeric_glob_sort
 
 set -o hist_ignore_all_dups
 set -o hist_reduce_blanks
-SAVEHIST=8000
+SAVEHIST=100000
 HISTFILE=~/.zsh_history
 set -o histsavenodups
 
