@@ -361,7 +361,7 @@ let g:lsc_auto_map = {
       \ 'FindReferences': '<leader>gr',
       \ }
 let g:lsc_server_commands = {
-      \ 'python': 'pyls',
+      \ 'python': 'pyls --log-file /tmp/vim-lsc-pyls.errlog',
       \ 'rust': 'rls',
       \ }
 
