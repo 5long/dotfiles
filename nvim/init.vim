@@ -39,8 +39,7 @@ Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'neomake/neomake'
 Plug '5long/sw-makers'
-Plug 'prabirshrestha/async.vim'
-Plug 'prabirshrestha/vim-lsp'
+Plug 'natebosch/vim-lsc'
 
 " Filetype-specific
 Plug 'sheerun/vim-polyglot'
@@ -291,7 +290,7 @@ nnoremap yu "+yiW
 noremap H ^
 noremap L $
 nmap <tab> %
-noremap <c-p> <c-i>
+noremap <c-9> <c-i>
 
 nnoremap <leader>ov <c-w>o<c-w>v
 map <c-h> <c-w>h
@@ -356,27 +355,15 @@ autocmd vimrc VimEnter * if empty(expand('%')) | setl buftype=nofile
 let g:UltiSnipsJumpForwardTrigger='<tab>'
 let g:UltiSnipsJumpBackwardTrigger='<s-tab>'
 
-" vim-lsp
-let g:lsp_diagnostics_echo_cursor = 1
-let g:lsp_async_completion = 1
-if executable('rls')
-  au User lsp_setup call lsp#register_server({
-    \ 'name': 'rls',
-    \ 'cmd': {server_info->['rustup', 'run', 'stable', 'rls']},
-    \ 'root_uri':{server_info->lsp#utils#path_to_uri(lsp#utils#find_nearest_parent_file_directory(lsp#utils#get_buffer_path(), 'Cargo.toml'))},
-    \ 'whitelist': ['rust'],
-    \ })
-  au vimrc FileType rust setl omnifunc=lsp#complete
-endif
-
-if executable('pyls')
-  au User lsp_setup call lsp#register_server({
-    \ 'name': 'pyls',
-    \ 'cmd': {server_info->['pyls']},
-    \ 'whitelist': ['python'],
-    \ })
-  au vimrc FileType python setl omnifunc=lsp#complete
-endif
+" vim-lsc
+let g:lsc_auto_map = {
+      \ 'defaults': v:true,
+      \ 'FindReferences': '<leader>gr',
+      \ }
+let g:lsc_server_commands = {
+      \ 'python': 'pyls',
+      \ 'rust': 'rls',
+      \ }
 
 " Since I'm a plugin author now
 nnoremap <leader>so :source %<CR>
