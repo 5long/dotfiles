@@ -224,9 +224,9 @@ command! -nargs=+ -complete=file -bar Grep silent grep! -w <args>|redraw!
 nnoremap <leader>gg :Grep<space>
 nnoremap <leader>gw :Grep<space><c-r><c-w>
 
-nmap <leader>r <Plug>RagainRun
-nmap <leader>R <Plug>RagainResetAndRun
-nmap <leader>mr :RagainSetAndRun  <c-r>=expand('%')<CR><s-left><left>
+nmap <leader>x <Plug>RagainRun
+nmap <leader>X <Plug>RagainResetAndRun
+nmap <leader>mx :RagainSetAndRun  <c-r>=expand('%')<CR><s-left><left>
 nnoremap <leader>mm :RagainSetAndRun make
 
 nnoremap <leader>tn :<c-u>tabe<CR>
