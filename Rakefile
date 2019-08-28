@@ -4,9 +4,9 @@ CWD = File.dirname __FILE__
 BLACKLIST = %w[README.markdown Rakefile UNLICENSE bin]
 DOTFILES = FileList['*'] - BLACKLIST
 
-XDG_DIRS = %w[nvim git alacritty termite rofi pacman dunst zathura bat pip pylintrc]
+XDG_ENTIRES = %w[nvim git alacritty termite rofi pacman dunst zathura bat pip pylintrc]
 def xdg_target(name)
-  XDG_DIRS.include?(name) ? "#{HOME}/.config/#{name}" : nil
+  XDG_ENTIRES.include?(name) ? "#{HOME}/.config/#{name}" : nil
 end
 
 def regular_dotfile(name)
