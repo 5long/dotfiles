@@ -34,17 +34,17 @@ task :bashrc => :commonshrc
 task :zshrc => :commonshrc
 task :commonshrc => :commonenv
 
-VIM_PLUG_FILENAME = 'nvim/autoload/plug.vim'
-task 'vim-plug' do
-  if not File.exist? VIM_PLUG_FILENAME
-    sh "curl -fkLo #{VIM_PLUG_FILENAME} \
-          https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim"
+VIM_MINPAC_PATH = 'nvim/pack/minpac/opt/minpac'
+task 'vim-minpac' do
+  if not File.exist? "#{VIM_MINPAC_PATH}/.git"
+    mkdir_p VIM_MINPAC_PATH
+    sh "git clone https://github.com/k-takata/minpac #{VIM_MINPAC_PATH}"
   end
 end
 
 desc "Install vim plugins via vim-plug"
-task :vim_plugins => [:nvim, 'vim-plug'] do
-  sh 'nvim --headless +PlugInstall +qall'
+task :vim_plugins => [:nvim, 'vim-minpac'] do
+  sh "nvim --headless \"call minpac#update('', {'do': 'quit'})\""
 end
 
 desc "Vimrc for old Vim"

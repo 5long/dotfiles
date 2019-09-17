@@ -8,51 +8,49 @@ if has('nvim')
   endif
 endif
 
-call plug#begin('~/.local/share/nvim/plugged')
+packadd minpac
+call minpac#init()
+call minpac#add('k-takata/minpac', {'type': 'opt'})
 
 " Colorz!
-Plug 'NLKNguyen/papercolor-theme'
+call minpac#add('NLKNguyen/papercolor-theme', {'type': 'opt'})
 
 " Editing / Operator / Everyday command
-Plug '5long/ryve'
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-abolish'
-Plug 'tomtom/tcomment_vim'
-Plug 'cohama/lexima.vim'
-Plug 'justinmk/vim-sneak'
+call minpac#add('5long/ryve')
+call minpac#add('tpope/vim-surround')
+call minpac#add('tpope/vim-abolish')
+call minpac#add('tomtom/tcomment_vim')
+call minpac#add('cohama/lexima.vim')
+call minpac#add('justinmk/vim-sneak')
 
-Plug 'junegunn/fzf.vim'
+call minpac#add('junegunn/fzf.vim')
 
 " Make Vim Better
-Plug '5long/vim-imtoggle'
-Plug 'itchyny/lightline.vim'
-Plug 'tpope/vim-eunuch'
-Plug 'tpope/vim-unimpaired'
-Plug 'justinmk/vim-dirvish'
+call minpac#add('5long/vim-imtoggle')
+call minpac#add('itchyny/lightline.vim')
+call minpac#add('tpope/vim-eunuch')
+call minpac#add('tpope/vim-unimpaired')
+call minpac#add('justinmk/vim-dirvish')
 
 " Make-vim-more-like-IDE
-Plug '5long/ragain'
-Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
-Plug 'neomake/neomake'
-Plug '5long/sw-makers'
+call minpac#add('5long/ragain')
+call minpac#add('SirVer/ultisnips')
+call minpac#add('honza/vim-snippets')
+call minpac#add('neomake/neomake')
+call minpac#add('5long/sw-makers')
 " Don't trust random shell script from the Internet
-" Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next', 'do': './install.sh' }
-Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next' }
+" call minpac#add('autozimu/LanguageClient-neovim', { 'branch': 'next', 'do': './install.sh' })
+call minpac#add('autozimu/LanguageClient-neovim', { 'branch': 'next' })
 
 " Filetype-specific
-Plug 'sheerun/vim-polyglot'
-Plug '5long/pytest-vim-compiler'
-Plug 'guns/vim-clojure-static'
-Plug 'tpope/vim-fireplace'
-Plug 'Galooshi/vim-import-js'
+call minpac#add('sheerun/vim-polyglot')
+call minpac#add('5long/pytest-vim-compiler')
+call minpac#add('guns/vim-clojure-static')
+call minpac#add('tpope/vim-fireplace')
+call minpac#add('Galooshi/vim-import-js')
 
 " Not used that much, might be deleted / re-learnt
-Plug 'tpope/vim-projectionist'
-
-call plug#end()
-
-let g:plug_threads = 5
+call minpac#add('tpope/vim-projectionist')
 
 runtime macros/matchit.vim
 
@@ -335,7 +333,7 @@ let g:neomake_javascript_eslint_maker = {
       \ 'process_output': function('sw_makers#eslint#ProcessOutput')
       \ }
 let g:neomake_javascript_enabled_makers = ['eslint']
-call neomake#configure#automake('rw', 1000)
+" call neomake#configure#automake('rw', 1000)
 autocmd vimrc User NeomakeCountsChanged call OnNeomakeCountsChanged()
 
 fun! OnNeomakeCountsChanged()
