@@ -39,7 +39,9 @@ Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'neomake/neomake'
 Plug '5long/sw-makers'
-Plug 'natebosch/vim-lsc'
+" Don't trust random shell script from the Internet
+" Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next', 'do': './install.sh' }
+Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next' }
 
 " Filetype-specific
 Plug 'sheerun/vim-polyglot'
@@ -355,15 +357,20 @@ autocmd vimrc VimEnter * if empty(expand('%')) | setl buftype=nofile
 let g:UltiSnipsJumpForwardTrigger='<tab>'
 let g:UltiSnipsJumpBackwardTrigger='<s-tab>'
 
-" vim-lsc
-let g:lsc_auto_map = {
-      \ 'defaults': v:true,
-      \ 'FindReferences': '<leader>gr',
-      \ }
-let g:lsc_server_commands = {
-      \ 'python': 'pyls --log-file /tmp/vim-lsc-pyls.errlog',
-      \ 'rust': 'rls',
-      \ }
+" LanguageClient
+let g:LanguageClient_serverCommands = {
+  \ 'rust': ['rls'],
+  \ 'javascript': ['javascript-typescript-stdio'],
+  \ 'python': ['pyls'],
+  \ }
+let g:LanguageClient_diagnosticsSignsMax = 0
+set completefunc=LanguageClient#complete
+" Steal mappings from natebosch/vim-lsc
+nnoremap ga :call LanguageClient_contextMenu()<CR>
+nnoremap K :call LanguageClient#textDocument_hover()<CR>
+nnoremap gd :call LanguageClient#textDocument_definition()<CR>
+nnoremap <F2> :call LanguageClient#textDocument_rename()<CR>
+nnoremap gR LanguageClient#textDocument_references()
 
 " Since I'm a plugin author now
 nnoremap <leader>so :source %<CR>
