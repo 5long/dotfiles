@@ -9,6 +9,7 @@ if has('nvim')
 endif
 
 packadd minpac
+packadd neomake
 call minpac#init()
 call minpac#add('k-takata/minpac', {'type': 'opt'})
 
@@ -36,7 +37,7 @@ call minpac#add('justinmk/vim-dirvish')
 call minpac#add('5long/ragain')
 call minpac#add('SirVer/ultisnips')
 call minpac#add('honza/vim-snippets')
-call minpac#add('neomake/neomake')
+call minpac#add('neomake/neomake', { 'type': 'opt' })
 call minpac#add('5long/sw-makers')
 " Don't trust random shell script from the Internet
 " call minpac#add('autozimu/LanguageClient-neovim', { 'branch': 'next', 'do': './install.sh' })
@@ -333,7 +334,7 @@ let g:neomake_javascript_eslint_maker = {
       \ 'process_output': function('sw_makers#eslint#ProcessOutput')
       \ }
 let g:neomake_javascript_enabled_makers = ['eslint']
-" call neomake#configure#automake('rw', 1000)
+call neomake#configure#automake('rw', 1000)
 autocmd vimrc User NeomakeCountsChanged call OnNeomakeCountsChanged()
 
 fun! OnNeomakeCountsChanged()
