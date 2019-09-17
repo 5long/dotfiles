@@ -21,9 +21,6 @@ Plug 'tomtom/tcomment_vim'
 Plug 'cohama/lexima.vim'
 Plug 'justinmk/vim-sneak'
 
-if ! executable('fzf')
-  Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-endif
 Plug 'junegunn/fzf.vim'
 
 " Make Vim Better
