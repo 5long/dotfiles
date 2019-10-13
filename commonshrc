@@ -84,7 +84,7 @@ cdvim() {
 }
 
 edbin() {
-  bin="$(/usr/bin/which "$1")"
+  bin="$(command -v "$1")"
   if [ -n "$bin" ]
   then
     "$EDITOR" "$bin"
