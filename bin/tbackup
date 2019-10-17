@@ -1,0 +1,12 @@
+#!/bin/bash
+
+set -eu
+
+fn="$1"
+shift
+
+if [[ "$fn" = *~ ]]; then
+  mv -n "$fn" "${fn:0:-1}"
+else
+  mv -n "$fn" "${fn}~"
+fi
