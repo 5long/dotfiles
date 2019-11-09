@@ -27,6 +27,7 @@ alias ht="htop -u \$USER -s PERCENT_CPU"
 alias s='sudo -E '
 alias sctl='systemctl'
 alias scu='systemctl --user'
+alias sdrun='systemd-run -pd'
 alias rg='rg -LSp'
 alias rgnotes='rg -w "BUG|COMBAK|FIX|TBD|TODO|WTF|XXX" | less'
 alias bss="browser-sync start --server --directory --files='*.css, *.html, *.js'"
