@@ -2,11 +2,16 @@
 
 set -eu
 
-fn="$1"
-shift
+toggle() {
+  fn="$1"
 
-if [[ "$fn" = *~ ]]; then
-  mv -n "$fn" "${fn:0:-1}"
-else
-  mv -n "$fn" "${fn}~"
-fi
+  if [[ "$fn" = *~ ]]; then
+    mv -n "$fn" "${fn:0:-1}"
+  else
+    mv -n "$fn" "${fn}~"
+  fi
+}
+
+for f in "$@"; do
+  toggle "$f"
+done
