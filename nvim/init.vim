@@ -204,6 +204,12 @@ fun! s:OpenCfile()
   exec ":e " cfile
 endf
 
+nnoremap <leader>yf :call <SID>CopyToClipboard(expand('%'))<CR>
+nnoremap <leader>yd :call <SID>CopyToClipboard(expand('%:h'))<CR>
+fun! s:CopyToClipboard(str)
+  let @+ = a:str
+endf
+
 fun! s:ResolveCfile()
   let dir = expand('%:h') . '/'
   let ext = expand('%:e')
