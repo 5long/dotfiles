@@ -32,6 +32,7 @@ alias rg='rg -LSp'
 alias rgnotes='rg -w "BUG|COMBAK|FIX|TBD|TODO|WTF|XXX" | less'
 alias bss="browser-sync start --server --directory --files='*.css, *.html, *.js'"
 alias bsc="browser-sync start --config bs-config.js"
+alias cp='cp --reflink=auto'
 alias cm=mocp
 alias alert="echo -n '\a'"
 alias vg=vagrant
