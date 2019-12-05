@@ -14,7 +14,7 @@ export BROWSER=browser
 export FZF_DEFAULT_COMMAND='rg --files'
 export FZF_DEFAULT_OPTS='--color=light --exact'
 export FZF_CTRL_T_OPTS='--preview="bat -p {}"'
-export MTR_OPTIONS='-n -t'
+export MTR_OPTIONS='-n -t --displaymode 2'
 
 export PYTEST_ADDOPTS='-x -s'
 
