@@ -6,7 +6,7 @@ rofi.theme: /usr/share/rofi/themes/Paper.rasi
 rofi.disable-history: true
 rofi.case-sensitive: false
 rofi.sort: true
-rofi.levenshtein-sort: false
+rofi.sorting-method: fzf
 
 rofi.matching: fuzzy
 
