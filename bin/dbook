@@ -1,0 +1,16 @@
+#!/bin/sh
+
+set -e
+
+cd ~/book/
+
+findbooks() {
+  fd -e epub -e pdf
+}
+
+fn="$( findbooks | rofi -dmenu -i -p book)"
+if [ -r "$fn" ]; then
+  xdg-open "$fn"
+else
+  exit 1
+fi
