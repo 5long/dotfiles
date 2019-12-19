@@ -29,6 +29,7 @@
   ph = push
   pl = pull
   po = push origin
+  pp = !git pull && git push
   pu = push upstream
   rb = rebase
   root = rev-parse --show-toplevel
