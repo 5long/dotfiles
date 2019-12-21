@@ -44,6 +44,7 @@ alias irc='weechat-curses'
 alias j='journalctl -n 20'
 alias jfu='j -fu '
 alias ns='resolvectl query'
+alias rsv=resolvectl
 alias ntw=networkctl
 alias ntwr='networkctl reconfigure'
 alias downspeed='curl -o /dev/null'
