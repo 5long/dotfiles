@@ -28,6 +28,7 @@ alias s='sudo -E '
 alias sctl='systemctl'
 alias scu='systemctl --user'
 alias sdrun="systemd-run -d"
+alias se='sudo -e -E '
 alias rg='rg -LSp'
 alias rgnotes='rg -w "BUG|COMBAK|FIX|TBD|TODO|WTF|XXX" | less'
 alias bss="browser-sync start --server --directory --files='*.css, *.html, *.js'"
@@ -42,6 +43,7 @@ alias zathura='zathura --fork &>/dev/null'
 alias irc='weechat-curses'
 alias j='journalctl -n 20'
 alias jfu='j -fu '
+alias ns='resolvectl query'
 alias downspeed='curl -o /dev/null'
 alias gp=gpaste-client
 
