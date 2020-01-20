@@ -48,6 +48,7 @@ alias rsv=resolvectl
 alias ntw=networkctl
 alias ntwr='networkctl reconfigure'
 alias downspeed='curl -o /dev/null'
+alias ping='ping -n'
 alias gp=gpaste-client
 
 mkd() {
