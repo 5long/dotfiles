@@ -204,6 +204,7 @@ fun! s:OpenCfile()
   exec ":e " cfile
 endf
 
+nnoremap <leader>yc gg"+yG``<CR>
 nnoremap <leader>yf :call <SID>CopyToClipboard(expand('%'))<CR>
 nnoremap <leader>yd :call <SID>CopyToClipboard(expand('%:h'))<CR>
 fun! s:CopyToClipboard(str)
