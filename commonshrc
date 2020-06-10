@@ -30,7 +30,7 @@ alias sctl='systemctl'
 alias scu='systemctl --user'
 alias sdrun="systemd-run -d"
 alias se='sudo -e '
-alias rg='rg -LSp'
+alias rg='rg -LSp -M 80 --max-column-preview'
 alias rgnotes='rg -w "BUG|COMBAK|FIX|TBD|TODO|WTF|XXX" | less'
 alias bss="browser-sync start --server --directory --files='*.css, *.html, *.js'"
 alias bsc="browser-sync start --config bs-config.js"
