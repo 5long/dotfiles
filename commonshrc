@@ -24,6 +24,7 @@ alias gll='git ll'
 alias gs='git s'
 alias o=xdg-open
 alias ht="htop -u \$USER -s PERCENT_CPU"
+alias k=kubectl
 alias s='sudo -E '
 alias sctl='systemctl'
 alias scu='systemctl --user'
