@@ -51,6 +51,7 @@ alias ntwr='networkctl reconfigure'
 alias downspeed='curl -o /dev/null'
 alias ping='ping -n'
 alias gp=gpaste-client
+alias watch='watch '
 
 mkd() {
   mkdir -p "$1"
