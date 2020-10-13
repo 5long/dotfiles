@@ -365,8 +365,11 @@ let g:LanguageClient_serverCommands = {
   \ 'rust': ['rls'],
   \ 'javascript': ['javascript-typescript-stdio'],
   \ 'python': ['pyls'],
+  \ 'yaml': ['yaml-language-server', '--stdio'],
   \ }
 let g:LanguageClient_diagnosticsSignsMax = 0
+" let g:LanguageClient_settingsPath = ['.vim/settings.json', '~/.config/lsp-settings.json']
+
 set completefunc=LanguageClient#complete
 " Steal mappings from natebosch/vim-lsc
 nnoremap ga :call LanguageClient_contextMenu()<CR>
