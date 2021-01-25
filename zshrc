@@ -45,6 +45,7 @@ alias -g LC='--color=always | less'
 alias -g G='| grep -E'
 
 alias rake='noglob rake'
+alias hist='fc -liD'
 
 source_if_possible /usr/share/fzf/key-bindings.zsh
 source_if_possible ~/.kube/completion.inc.zsh
