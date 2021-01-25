@@ -14,6 +14,7 @@ set -o hist_ignore_all_dups
 set -o hist_reduce_blanks
 SAVEHIST=100000
 HISTFILE=~/.zsh_history
+set -o extended_history inc_append_history_time
 set -o histsavenodups
 
 autoload -z edit-command-line
