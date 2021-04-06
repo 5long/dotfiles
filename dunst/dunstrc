@@ -12,7 +12,7 @@ icon_position = left
 corner_radius = 20
 max_icon_size = 48
 
-font = Monospace 48
+font = Monospace 24
 
 [ignore-rime-startup]
 body = "Rime is *"
