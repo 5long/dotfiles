@@ -18,6 +18,7 @@ alias mkdir='mkdir -p'
 
 alias h=http
 alias d=docker
+alias fd='fd --color=never'
 alias g=git
 alias gl='git l'
 alias gll='git ll'
