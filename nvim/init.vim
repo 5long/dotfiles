@@ -45,10 +45,6 @@ call minpac#add('autozimu/LanguageClient-neovim', { 'branch': 'next' })
 
 " Filetype-specific
 call minpac#add('sheerun/vim-polyglot')
-call minpac#add('5long/pytest-vim-compiler')
-call minpac#add('guns/vim-clojure-static')
-call minpac#add('tpope/vim-fireplace')
-call minpac#add('Galooshi/vim-import-js')
 
 " Not used that much, might be deleted / re-learnt
 call minpac#add('tpope/vim-projectionist')
