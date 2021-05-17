@@ -1,0 +1,10 @@
+#!/bin/bash
+
+set -euo pipefail
+
+index="$(efibootmgr | sed -Ene '/^Boot[0-9]+\*? Windows.*$/ !d' \
+  -e 's/Boot([0-9]+).*/\1/p' \
+  -e q)"
+
+sudo efibootmgr -n "$index"
+systemctl reboot
