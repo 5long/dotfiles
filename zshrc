@@ -50,6 +50,10 @@ alias hist='fc -liD'
 source_if_possible /usr/share/fzf/key-bindings.zsh
 source_if_possible ~/.kube/completion.inc.zsh
 source_if_possible /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source_if_possible /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+export VIRTUALENVWRAPPER_WORKON_CD=1
+export VIRTUALENVWRAPPER_SCRIPT=/usr/bin/virtualenvwrapper.sh
 source_if_possible /usr/bin/virtualenvwrapper_lazy.sh
 
 source_if_possible ~/.zshrc.local
