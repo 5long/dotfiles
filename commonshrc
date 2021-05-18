@@ -131,7 +131,7 @@ rn() {
 }
 
 t() {
-    exa -T --color=always --git-ignore "$@" | less
+    exa -T -a --color=always --git-ignore "$@" | less
 }
 
 psg() {
