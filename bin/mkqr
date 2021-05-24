@@ -1,0 +1,7 @@
+#!/usr/bin/env zsh
+
+if [[ -z "$1" ]]; then
+  xdg-open =(xsel -bo | qr)
+else
+  xdg-open =(qr "$@")
+fi
