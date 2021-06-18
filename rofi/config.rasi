@@ -1,0 +1,14 @@
+configuration {
+	lines: 10;
+	font: "mono 16";
+	run-command: "/bin/dash -c '{cmd}'";
+	disable-history: true;
+	sort: true;
+	sorting-method: "fzf";
+	case-sensitive: false;
+	matching: "fuzzy";
+	dpi: 1;
+	theme: "/usr/share/rofi/themes/Paper.rasi";
+	display-window: "window";
+	display-run: "run";
+}
