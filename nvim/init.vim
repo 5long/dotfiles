@@ -198,6 +198,7 @@ fun! s:OpenCfile()
 endf
 
 nnoremap <leader>yc gg"+yG``<CR>
+nnoremap yaf gg"+yG``
 nnoremap <leader>yf :call <SID>CopyToClipboard(expand('%'))<CR>
 nnoremap <leader>yd :call <SID>CopyToClipboard(expand('%:h'))<CR>
 fun! s:CopyToClipboard(str)
