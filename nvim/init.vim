@@ -46,8 +46,6 @@ call minpac#add('sheerun/vim-polyglot')
 " Not used that much, might be deleted / re-learnt
 call minpac#add('tpope/vim-projectionist')
 
-runtime macros/matchit.vim
-
 set exrc
 set secure
 
@@ -142,7 +140,6 @@ cnoremap %% <c-r>=expand('%:h').'/'<CR>
 cnoremap <c-v>b <c-r>=expand('%:r')<CR>
 
 set cmdheight=2
-set showcmd
 set wildmode=longest:full,full
 set wildignorecase
 set completeopt=menu,preview,longest
