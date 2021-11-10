@@ -4,12 +4,17 @@ indicate_hidden = yes
 browser = /usr/local/bin/browser
 
 format = "%s %p\n%b"
-geometry = 1500x150-15+24
+width = (100, 800)
+height = (100, 450)
+offset = 15x24
+
 padding = 8
 horizontal_padding = 8
-shrink = yes
+frame_width = 0
+
 icon_position = left
-corner_radius = 20
+text_icon_padding = 4
+corner_radius = 10
 max_icon_size = 48
 
 font = Monospace 24
