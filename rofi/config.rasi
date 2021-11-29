@@ -8,7 +8,8 @@ configuration {
 	case-sensitive: false;
 	matching: "fuzzy";
 	dpi: 1;
-	theme: "/usr/share/rofi/themes/Paper.rasi";
 	display-window: "window";
 	display-run: "run";
 }
+
+@theme "/usr/share/rofi/themes/Paper.rasi"
