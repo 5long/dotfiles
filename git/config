@@ -87,3 +87,5 @@
   required = true
 [advice]
   detachedHead = false
+[init]
+  defaultBranch = trunk
