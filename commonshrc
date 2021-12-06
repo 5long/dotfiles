@@ -75,7 +75,7 @@ wmirr() {
 
 # curl get
 cget() {
-  curl --retry 5 -LOJC - "$@"
+  curl --retry 5 -LOC - "$@"
 }
 
 cdrb() {
