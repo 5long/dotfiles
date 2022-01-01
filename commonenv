@@ -10,7 +10,6 @@ export WATCH_INTERVAL=0.5
 export EDITOR=vim
 export VISUAL=vim
 export RLWRAP_EDITOR='vi +%L'
-export BROWSER=browser
 
 export MINIKUBE_IN_STYLE=0
 
