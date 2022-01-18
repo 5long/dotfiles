@@ -15,7 +15,7 @@ frame_width = 0
 icon_position = left
 text_icon_padding = 4
 corner_radius = 10
-max_icon_size = 48
+max_icon_size = 64
 
 font = Monospace 24
 
