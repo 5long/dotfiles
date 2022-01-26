@@ -77,6 +77,11 @@ cget() {
   curl --retry 5 -LOC - "$@"
 }
 
+# httpie get
+hget() {
+  http -p= -dcF --check-status "$@"
+}
+
 cdrb() {
   cd "$(dirname "$(gem which "$1")")"
 }
