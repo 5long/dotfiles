@@ -148,9 +148,6 @@ essh() {
   local term="$TERM"
 
   case "$TERM" in
-    tmux-256color )
-      term=screen-256color
-      ;;
     alacritty-256color )
       term=xterm-256color
       ;;
