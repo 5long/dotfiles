@@ -2,8 +2,8 @@
 :backtrace: false
 :bulk_threshold: 1000
 :sources:
-- https://mirror.azure.cn/rubygems/
+- https://gems.ruby-china.com/
 :update_sources: true
 :verbose: false
 :concurrent_downloads: 8
-gem: "--no-document --user-install"
+gem: "--no-document --no-user-install"
