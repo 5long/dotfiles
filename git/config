@@ -1,91 +1,91 @@
 [alias]
-  aa = add --all .
-  amend = commit --amend -C HEAD
-  b = branch -vv
-  br = branch
-  ca = commit --all
-  cb = checkout HEAD -b
-  ci = commit
-  cln = clean -Xd
-  co = checkout
-  cob = checkout -t origin/master -b
-  cub = checkout -t upstream/master -b
-  dc = diff --cached
-  del = rm --cached
-  di = diff
-  du = diff @{u}
-  dus = diff @{u} --stat
-  fa = fetch --all --prune
-  ff = merge --ff-only
-  # fast-forward to the branch in upstream w/ the same name
-  fu = !git merge --ff-only "upstream/$(git branch --points-at HEAD --format '%(refname:short)')"
-  h = help
-  ic = commit -p
-  l = log --graph --pretty=grb
-  ll = log --graph --pretty=grb --stat
-  lu = log --graph --pretty=grb @{u}..
-  lus = log --graph --pretty=grb @{u}.. --stat
-  mt = mergetool
-  ph = push
-  pl = pull
-  po = push origin
-  pp = !git pull && git push
-  pu = push upstream
-  rb = rebase
-  root = rev-parse --show-toplevel
-  rs = restore
-  s = status -bs
-  sclone = clone --depth 1
-  sh = stash
-  sl = stash list
-  sp = stash show
-  sv = stash save -u
-  sw = switch
-  tip = log --stat -1 -p
+	aa = add --all .
+	amend = commit --amend -C HEAD
+	b = branch -vv
+	br = branch
+	ca = commit --all
+	cb = checkout HEAD -b
+	ci = commit
+	cln = clean -Xd
+	co = checkout
+	cob = checkout -t origin/master -b
+	cub = checkout -t upstream/master -b
+	dc = diff --cached
+	del = rm --cached
+	di = diff
+	du = diff @{u}
+	dus = diff @{u} --stat
+	fa = fetch --all --prune
+	ff = merge --ff-only
+	# fast-forward to the branch in upstream w/ the same name
+	fu = !git merge --ff-only "upstream/$(git branch --points-at HEAD --format '%(refname:short)')"
+	h = help
+	ic = commit -p
+	l = log --graph --pretty=grb
+	ll = log --graph --pretty=grb --stat
+	lu = log --graph --pretty=grb @{u}..
+	lus = log --graph --pretty=grb @{u}.. --stat
+	mt = mergetool
+	ph = push
+	pl = pull
+	po = push origin
+	pp = !git pull && git push
+	pu = push upstream
+	rb = rebase
+	root = rev-parse --show-toplevel
+	rs = restore
+	s = status -bs
+	sclone = clone --depth 1
+	sh = stash
+	sl = stash list
+	sp = stash show
+	sv = stash save -u
+	sw = switch
+	tip = log --stat -1 -p
 [branch]
-  autosetupmerge = always
+	autosetupmerge = always
 [pretty]
-  grb = %C(yellow)%h%Creset %Cgreen(%ad)%Creset %C(bold)<%an>%Creset %C(bold green)%d%Creset %s
+	grb = %C(yellow)%h%Creset %Cgreen(%ad)%Creset %C(bold)<%an>%Creset %C(bold green)%d%Creset %s
 [core]
-  pager = less -+FSRX -FRX
+	pager = less -+FSRX -FRX
 [push]
-  default = current
+	default = current
 [pull]
-  rebase = true
+	rebase = true
 [rebase]
-  autoStash = true
-  autoSquash = true
+	autoStash = true
+	autoSquash = true
 [merge]
-  autoStash = true
-  defaultToUpstream = true
-  tool = vimdiff
+	autoStash = true
+	defaultToUpstream = true
+	tool = vimdiff
 [diff]
-  tool = vimdiff
-  algorithm = histogram
-  mnemonicprefix = true
-  indentHeuristic = true
-  compactionHeuristic = true
+	tool = vimdiff
+	algorithm = histogram
+	mnemonicprefix = true
+	indentHeuristic = true
+	compactionHeuristic = true
 [stash]
-  showPatch = true
+	showPatch = true
 [blame]
-  date = auto:human
+	date = auto:human
 [log]
-  decorate = true
-  date = auto:human
+	decorate = true
+	date = auto:human
 [credential]
-  helper = cache --timeout=36000
+	helper = cache --timeout=36000
 [rerere]
-  enabled = true
+	enabled = true
 [commit]
-  verbose = true
+	verbose = true
 [include]
-  path = local-config
+	path = local-config
 [filter "lfs"]
-  clean = git-lfs clean -- %f
-  smudge = git-lfs smudge -- %f
-  process = git-lfs filter-process
-  required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
 [advice]
-  detachedHead = false
+	detachedHead = false
 [init]
-  defaultBranch = trunk
+	defaultBranch = trunk
