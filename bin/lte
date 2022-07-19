@@ -7,6 +7,7 @@
 #     - networkd service running & able to manage WWAN NICs
 #     - networkctl
 
+require 'fileutils'
 require 'optparse'
 require 'ostruct'
 require 'json'
@@ -45,7 +46,7 @@ class Wwan
   end
 
   def remove_unit_file
-    File.unlink args['unit-file']
+    FileUtils.rm_f args['unit-file']
   end
 
   def unit_file_content
