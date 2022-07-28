@@ -45,7 +45,7 @@
 [branch]
 	autosetupmerge = always
 [pretty]
-	grb = %C(yellow)%h%Creset %Cgreen(%ad)%Creset %C(bold)<%an>%Creset %C(bold green)%d%Creset %s
+	grb = %C(yellow)%h%Creset %Cgreen(%ai)%Creset %C(bold)<%an>%Creset %C(bold green)%d%Creset %s
 [core]
 	pager = less -+FSRX -FRX
 [push]
