@@ -8,44 +8,8 @@ if has('nvim')
   endif
 endif
 
-packadd minpac
-packadd neomake
-call minpac#init()
-call minpac#add('k-takata/minpac', {'type': 'opt'})
-
-" Colorz!
-call minpac#add('NLKNguyen/papercolor-theme', {'type': 'opt'})
-
-" Editing / Operator / Everyday command
-call minpac#add('5long/ryve')
-call minpac#add('tpope/vim-surround')
-call minpac#add('tpope/vim-abolish')
-call minpac#add('tomtom/tcomment_vim')
-call minpac#add('cohama/lexima.vim')
-call minpac#add('justinmk/vim-sneak')
-
-call minpac#add('junegunn/fzf.vim')
-
-" Make Vim Better
-call minpac#add('5long/vim-imtoggle')
-call minpac#add('itchyny/lightline.vim')
-call minpac#add('tpope/vim-eunuch')
-call minpac#add('tpope/vim-unimpaired')
-call minpac#add('justinmk/vim-dirvish')
-
-" Make-vim-more-like-IDE
-call minpac#add('5long/ragain')
-call minpac#add('SirVer/ultisnips')
-call minpac#add('honza/vim-snippets')
-call minpac#add('neomake/neomake', { 'type': 'opt' })
-call minpac#add('5long/sw-makers')
-
-" Filetype-specific
-call minpac#add('sheerun/vim-polyglot')
-
-" Not used that much, might be deleted / re-learnt
-call minpac#add('tpope/vim-projectionist')
-
+lua require('plugins')
+" call minpac#add('tpope/vim-unimpaired')
 set exrc
 set secure
 
@@ -332,7 +296,6 @@ let g:neomake_javascript_eslint_maker = {
       \ 'process_output': function('sw_makers#eslint#ProcessOutput')
       \ }
 let g:neomake_javascript_enabled_makers = ['eslint']
-call neomake#configure#automake('rw', 1000)
 autocmd vimrc User NeomakeCountsChanged call OnNeomakeCountsChanged()
 
 fun! OnNeomakeCountsChanged()
@@ -342,9 +305,6 @@ endfun
 fun! LightLineNeomake()
   return neomake#statusline#LoclistStatus()
 endf
-
-let g:tcomment_mapleader1 = ''
-let g:tcomment_mapleader2 = ''
 
 autocmd vimrc VimEnter * if empty(expand('%')) | setl buftype=nofile
 

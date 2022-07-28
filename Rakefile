@@ -34,17 +34,17 @@ task :bashrc => :commonshrc
 task :zshrc => :commonshrc
 task :commonshrc => :commonenv
 
-VIM_MINPAC_PATH = 'nvim/pack/minpac/opt/minpac'
-task 'vim-minpac' do
-  if not File.exist? "#{VIM_MINPAC_PATH}/.git"
-    mkdir_p VIM_MINPAC_PATH
-    sh "git clone https://github.com/k-takata/minpac #{VIM_MINPAC_PATH}"
+NVIM_PACKER_PATH = File.expand_path "~/.local/share/nvim/site/pack/packer/start"
+desc "Install packer.nvim"
+task 'nvim-packer' do
+  if not File.exist? "#{NVIM_PACKER_PATH}/packer.nvim/.git"
+    mkdir_p NVIM_PACKER_PATH
+    sh %[
+      git clone --depth 1 \
+      https://github.com/wbthomason/packer.nvim \
+      ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+    ]
   end
-end
-
-desc "Install vim plugins via vim-plug"
-task :vim_plugins => [:nvim, 'vim-minpac'] do
-  sh "nvim --headless \"call minpac#update('', {'do': 'quit'})\""
 end
 
 desc "Vimrc for old Vim"
