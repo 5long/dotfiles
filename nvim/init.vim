@@ -1,15 +1,12 @@
 if has('nvim')
   if has('mac')
     let g:python3_host_prog = '/usr/local/bin/python3'
-    let g:python_host_prog = '/usr/local/bin/python2'
   else
     let g:python3_host_prog = '/usr/bin/python3'
-    let g:python_host_prog = '/usr/bin/python2'
   endif
 endif
 
 lua require('plugins')
-" call minpac#add('tpope/vim-unimpaired')
 set exrc
 set secure
 
