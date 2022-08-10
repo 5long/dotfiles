@@ -1,4 +1,3 @@
-compiler pytest
 fun! s:run()
   return "!PYTHONPATH=. python " . expand("%")
 endfun
