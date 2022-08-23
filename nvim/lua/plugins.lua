@@ -7,6 +7,7 @@ return require('packer').startup(function(use)
 
   use '5long/ryve'
   use 'tpope/vim-abolish'
+  use 'tpope/vim-unimpaired'
 
   use {'numToStr/Comment.nvim', config = function()
     require('Comment').setup()
