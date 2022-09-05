@@ -2,7 +2,7 @@
 :backtrace: false
 :bulk_threshold: 1000
 :sources:
-- https://gems.ruby-china.com/
+- https://mirrors.cloud.tencent.com/rubygems/
 :update_sources: true
 :verbose: false
 :concurrent_downloads: 8
