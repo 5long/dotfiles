@@ -151,6 +151,9 @@ essh() {
     alacritty-256color )
       term=xterm-256color
       ;;
+    tmux-256color )
+      term=screen-256color
+      ;;
     * )
       : # do nothing
       ;;
