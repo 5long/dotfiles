@@ -4,7 +4,7 @@ export PATH="$HOME/.local/bin:$HOME/.yarn/bin:$PATH"
 
 export PAGER=less
 export LESS=-FXRi
-export GREP_COLOR='1;32'
+export GREP_COLOR='mt=1;32'
 export WATCH_INTERVAL=0.5
 
 export EDITOR=vim
