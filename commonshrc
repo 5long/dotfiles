@@ -37,6 +37,7 @@ alias bss="browser-sync start --server --directory --files='*.css, *.html, *.js'
 alias bsc="browser-sync start --config bs-config.js"
 alias cp='cp --reflink=auto'
 alias cm=mocp
+alias cal='cal -mw'
 alias alert="echo -n '\a'"
 alias vg=vagrant
 alias v=vim
