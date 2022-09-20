@@ -37,10 +37,6 @@ return require('packer').startup(function(use)
   use '5long/ragain'
   use 'SirVer/ultisnips'
   use 'honza/vim-snippets'
-  use {'neomake/neomake', opt = true, config = function()
-    vim.cmd "call neomake#configure#automake('rw', 1000)"
-  end}
-  use '5long/sw-makers'
 
   use 'sheerun/vim-polyglot'
 
