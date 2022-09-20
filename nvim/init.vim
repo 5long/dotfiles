@@ -4,10 +4,10 @@ if has('nvim')
   else
     let g:python3_host_prog = '/usr/bin/python3'
   endif
+
+  lua require('plugins')
 endif
 
-lua require('plugins')
-" lua require('lsp-dump')
 set exrc
 set secure
 
