@@ -7,6 +7,7 @@ if has('nvim')
 endif
 
 lua require('plugins')
+" lua require('lsp-dump')
 set exrc
 set secure
 
@@ -38,9 +39,6 @@ let g:lightline = {
   \   'neomake': 'error',
   \ },
   \ }
-
-hi link SneakPluginTarget Search
-hi link SneakStreakTarget Search
 
 if has('nvim')
   set termguicolors
@@ -233,10 +231,6 @@ inoremap <c-k> <c-g>U<up>
 inoremap <c-l> <c-g>U<right>
 inoremap <c-e> <c-g>U<c-o>A
 inoremap <c-a> <c-g>U<c-o>I
-
-let g:sneak#use_ic_scs = 1
-nmap <space> <Plug>Sneak_s
-nmap <m-space> <Plug>Sneak_S
 
 nmap <F1> <nop>
 nmap Q <nop>
