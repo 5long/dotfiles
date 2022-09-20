@@ -73,6 +73,19 @@ return require('packer').startup(function(use)
 
   require('lspconfig')['pyright'].setup{
     on_attach = on_attach,
+    settings = {
+      pyright = {
+        venvPath = '~/.virtualenvs',
+        analysis = {
+          diagnosticSeverityOverrides = {
+            reportUnusedImport = 'warning',
+            reportUnusedClass = 'warning',
+            reportUnusedFunction = 'warning',
+            reportUnusedVariable = 'warning',
+          },
+        }
+      },
+    }
   }
 
 end}
