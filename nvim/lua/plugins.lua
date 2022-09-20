@@ -12,7 +12,7 @@ return require('packer').startup(function(use)
   -- Colorz!
   use {'NLKNguyen/papercolor-theme', opt = true}
 
-  use '5long/ryve'
+  use 'vim-scripts/ReplaceWithRegister'
   use 'tpope/vim-abolish'
   use 'tpope/vim-unimpaired'
 
