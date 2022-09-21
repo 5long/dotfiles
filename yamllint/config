@@ -1,3 +1,4 @@
 ---
+# vim: ft=yaml
 rules:
   line-length: disable
