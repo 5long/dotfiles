@@ -180,3 +180,5 @@ source_if_possible() {
 copy-git-tip() {
   git log -1 --pretty=format:%h | xsel -bi
 }
+
+which fnm >/dev/null && eval "$(fnm env --use-on-cd)"
