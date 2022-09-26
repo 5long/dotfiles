@@ -17,7 +17,7 @@ alias lstcp='lsof -nPi tcp'
 alias mkdir='mkdir -p'
 
 alias h=http
-alias ip='ip -brief -color=auto'
+alias ip='ip -h -br -c=auto'
 alias d=docker
 alias fd='fd --color=never'
 alias g=git
