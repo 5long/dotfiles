@@ -1,6 +1,8 @@
 ---
 # vim: ft=yaml
-extends: default
+extends: relaxed
 
 rules:
   line-length: disable
+  truthy:
+    level: warning
