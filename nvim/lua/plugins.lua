@@ -64,7 +64,9 @@ return require('packer').startup(function(use)
     vim.keymap.set('n', '<space>rn', vim.lsp.buf.rename, bufopts)
     vim.keymap.set('n', '<space>ca', vim.lsp.buf.code_action, bufopts)
     vim.keymap.set('n', '<space>lr', vim.lsp.buf.references, bufopts)
-    vim.keymap.set('n', '<space>f', vim.lsp.buf.formatting, bufopts)
+    vim.keymap.set('n', '<space>f', function()
+        vim.lsp.buf.format { async = true }
+      end, bufopts)
   end
 
   require('lspconfig')['pyright'].setup{
@@ -109,8 +111,7 @@ end}
               group = augroup,
               buffer = bufnr,
               callback = function()
-                  -- on 0.8, you should use vim.lsp.buf.format({ bufnr = bufnr }) instead
-                  vim.lsp.buf.formatting_sync()
+                  vim.lsp.buf.format({ bufnr = bufnr })
               end,
           })
       end,
