@@ -98,7 +98,11 @@ cnoremap <c-k> <c-\>eCmdlineKillTillEnd()<cr>
 cnoremap %% <c-r>=expand('%:h').'/'<CR>
 cnoremap <c-v>b <c-r>=expand('%:r')<CR>
 
-set cmdheight=2
+if has('nvim')
+  set cmdheight=0
+else
+  set cmdheight=2
+endif
 set wildmode=longest:full,full
 set wildignorecase
 set completeopt=menu,preview,longest
