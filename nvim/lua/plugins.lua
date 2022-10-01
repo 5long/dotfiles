@@ -38,7 +38,21 @@ return require('packer').startup(function(use)
   use 'SirVer/ultisnips'
   use 'honza/vim-snippets'
 
-  use 'sheerun/vim-polyglot'
+  use {
+    'nvim-treesitter/nvim-treesitter',
+    run = function()
+      require('nvim-treesitter.install').update({ with_sync = true })
+    end,
+    config = function()
+      require('nvim-treesitter.configs').setup({
+        sync_install = false,
+        auto_install = true,
+        highlight = { enable = true },
+        textobjects = { enable = true },
+        indent = { enable = true },
+      })
+    end,
+  }
 
   use {'neovim/nvim-lspconfig', tag = 'v0.1.3', config = function()
     -- Use an on_attach function to only map the following keys
