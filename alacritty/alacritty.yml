@@ -738,7 +738,7 @@ working_directory: None
 #
 # If the same trigger is assigned to multiple actions, all of them are executed
 # in the order they were defined in.
-key_bindings:
+# key_bindings:
   #- { key: Paste,                                action: Paste          }
   #- { key: Copy,                                 action: Copy           }
   #- { key: L,         mods: Control,             action: ClearLogNotice }
@@ -812,9 +812,9 @@ key_bindings:
 
   # (Windows, Linux, and BSD only)
   #- { key: V,              mods: Control|Shift, mode: ~Vi,        action: Paste            }
-  - { key: V,        mods: Super, action: Paste            }
+  # - { key: V,        mods: Super, action: Paste            }
   #- { key: C,        mods: Control|Shift, action: Copy             }
-  - { key: C,        mods: Super, action: Copy             }
+  # - { key: C,        mods: Super, action: Copy             }
   #- { key: F,              mods: Control|Shift, mode: ~Search,    action: SearchForward    }
   #- { key: B,              mods: Control|Shift, mode: ~Search,    action: SearchBackward   }
   #- { key: C,              mods: Control|Shift, mode: Vi|~Search, action: ClearSelection   }
