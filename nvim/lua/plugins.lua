@@ -30,7 +30,22 @@ return require('packer').startup(function(use)
 
   use 'junegunn/fzf.vim'
   use '5long/vim-imtoggle'
-  use 'itchyny/lightline.vim'
+  use {'nvim-lualine/lualine.nvim', config = function()
+    require('lualine').setup {
+      options ={
+        component_separators = { left = '', right = ''},
+        section_separators = { left = '', right = ''},
+      },
+      sections = {
+        lualine_a = {'mode'},
+        lualine_b = {'filename'},
+        lualine_c = {},
+        lualine_x = {},
+        lualine_y = {'location'},
+        lualine_z = {'filetype'}
+      },
+    }
+  end}
   use 'tpope/vim-eunuch'
   use 'justinmk/vim-dirvish'
 

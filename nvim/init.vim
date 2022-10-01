@@ -14,32 +14,6 @@ set secure
 let g:mapleader=','
 let g:maplocalleader=' '
 
-let g:lightline = {
-  \ 'colorscheme': 'PaperColor',
-  \ 'active': {
-  \   'left': [ [ 'mode', 'paste' ], [], [ 'readonly', 'cwd', 'filename', 'modified' ] ],
-  \   'right': [ [ 'neomake' ],
-  \              [ 'lineinfo' ],
-  \              [ 'filetype' ] ],
-  \ },
-  \ 'inactive': {
-  \   'right': [ [],
-  \              [ 'lineinfo' ],
-  \              [] ],
-  \ },
-  \ 'tabline': {
-  \   'right': [ ], },
-  \ 'component_function': {
-  \   'cwd': 'CurDir',
-  \ },
-  \ 'component_expand': {
-  \   'neomake': 'LightLineNeomake',
-  \ },
-  \ 'component_type': {
-  \   'neomake': 'error',
-  \ },
-  \ }
-
 if has('nvim')
   set termguicolors
 endif
@@ -281,10 +255,6 @@ fun! SwitchTypewriterMode()
   endif
 endfun
 nnoremap cow :call<space>SwitchTypewriterMode()<CR>
-
-fun! LightLineNeomake()
-  return neomake#statusline#LoclistStatus()
-endf
 
 autocmd vimrc VimEnter * if empty(expand('%')) | setl buftype=nofile
 
