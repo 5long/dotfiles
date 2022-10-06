@@ -50,7 +50,14 @@ return require('packer').startup(function(use)
   use 'justinmk/vim-dirvish'
 
   use '5long/ragain'
-  use 'SirVer/ultisnips'
+  use { 'L3MON4D3/LuaSnip',
+    tag = 'v1.*',
+    requires = 'honza/vim-snippets',
+    config = function()
+      require("luasnip").setup({})
+      require("luasnip.loaders.from_snipmate").lazy_load()
+    end,
+  }
   use 'honza/vim-snippets'
 
   use {
@@ -126,6 +133,7 @@ return require('packer').startup(function(use)
 
   null_ls.setup({
     sources = {
+      null_ls.builtins.completion.luasnip,
       null_ls.builtins.diagnostics.shellcheck,
       null_ls.builtins.diagnostics.yamllint,
       null_ls.builtins.formatting.black,
