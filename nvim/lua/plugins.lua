@@ -89,32 +89,32 @@ return require('packer').startup(function(use)
       vim.keymap.set('n', '<space>wl', function()
         print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
       end, bufopts)
-    vim.keymap.set('n', '<space>D', vim.lsp.buf.type_definition, bufopts)
-    vim.keymap.set('n', '<space>rn', vim.lsp.buf.rename, bufopts)
-    vim.keymap.set('n', '<space>ca', vim.lsp.buf.code_action, bufopts)
-    vim.keymap.set('n', '<space>lr', vim.lsp.buf.references, bufopts)
-    vim.keymap.set('n', '<space>f', function()
+      vim.keymap.set('n', '<space>D', vim.lsp.buf.type_definition, bufopts)
+      vim.keymap.set('n', '<space>rn', vim.lsp.buf.rename, bufopts)
+      vim.keymap.set('n', '<space>ca', vim.lsp.buf.code_action, bufopts)
+      vim.keymap.set('n', '<space>lr', vim.lsp.buf.references, bufopts)
+      vim.keymap.set('n', '<space>f', function()
         vim.lsp.buf.format { async = true }
       end, bufopts)
-  end
+    end
 
-  require('lspconfig')['pyright'].setup{
-    on_attach = on_attach,
-    settings = {
-      pyright = {
-        venvPath = '~/.virtualenvs',
-        analysis = {
-          diagnosticSeverityOverrides = {
-            reportUnusedImport = 'warning',
-            reportUnusedClass = 'warning',
-            reportUnusedFunction = 'warning',
-            reportUnusedVariable = 'warning',
-          },
-        }
-      },
+    require('lspconfig')['pyright'].setup{
+      on_attach = on_attach,
+      settings = {
+        pyright = {
+          venvPath = '~/.virtualenvs',
+          analysis = {
+            diagnosticSeverityOverrides = {
+              reportUnusedImport = 'warning',
+              reportUnusedClass = 'warning',
+              reportUnusedFunction = 'warning',
+              reportUnusedVariable = 'warning',
+            },
+          }
+        },
+      }
     }
-  }
-end}
+  end}
 
   use({ "jose-elias-alvarez/null-ls.nvim",
     requires = { "nvim-lua/plenary.nvim" },
@@ -125,24 +125,24 @@ end}
   local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 
   null_ls.setup({
-      sources = {
-        null_ls.builtins.diagnostics.shellcheck,
-        null_ls.builtins.diagnostics.yamllint,
-        null_ls.builtins.formatting.black,
-      },
-      on_attach = function(client, bufnr)
-          if not client.supports_method("textDocument/formatting") then
-            return
-          end
+    sources = {
+      null_ls.builtins.diagnostics.shellcheck,
+      null_ls.builtins.diagnostics.yamllint,
+      null_ls.builtins.formatting.black,
+    },
+    on_attach = function(client, bufnr)
+      if not client.supports_method("textDocument/formatting") then
+        return
+      end
 
-          vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
-          vim.api.nvim_create_autocmd("BufWritePre", {
-              group = augroup,
-              buffer = bufnr,
-              callback = function()
-                  vim.lsp.buf.format({ bufnr = bufnr })
-              end,
-          })
-      end,
-    })
+      vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
+      vim.api.nvim_create_autocmd("BufWritePre", {
+        group = augroup,
+        buffer = bufnr,
+        callback = function()
+          vim.lsp.buf.format({ bufnr = bufnr })
+        end,
+      })
+    end,
+  })
 end)
