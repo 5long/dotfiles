@@ -118,7 +118,8 @@ return require('packer').startup(function(use)
       end, bufopts)
     end
 
-    require('lspconfig')['pyright'].setup{
+    local lsp = require('lspconfig')
+    lsp['pyright'].setup{
       on_attach = on_attach,
       settings = {
         pyright = {
@@ -133,6 +134,10 @@ return require('packer').startup(function(use)
           }
         },
       }
+    }
+
+    lsp['solargraph'].setup{
+      on_attach = on_attach,
     }
   end}
 
