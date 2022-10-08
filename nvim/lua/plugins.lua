@@ -10,7 +10,7 @@ vim.keymap.set('n', '<space>q', vim.diagnostic.setloclist, opts)
 return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
   -- Colorz!
-  use {'NLKNguyen/papercolor-theme', opt = true}
+  use 'sainnhe/edge'
 
   use 'vim-scripts/ReplaceWithRegister'
   use 'tpope/vim-abolish'
@@ -32,6 +32,7 @@ return require('packer').startup(function(use)
   use '5long/vim-imtoggle'
   use {'nvim-lualine/lualine.nvim', config = function()
     require('lualine').setup {
+      theme = 'edge',
       options ={
         component_separators = { left = '', right = ''},
         section_separators = { left = '', right = ''},
