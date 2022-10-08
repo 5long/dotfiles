@@ -21,7 +21,6 @@ debian/*.EX
 
 *.pyc
 *.pyo
+pyrightconfig.json
 
 .env
-
-pyrightconfig.json
