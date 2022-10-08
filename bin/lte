@@ -104,12 +104,11 @@ def main
   op.banner = "Usage: #{op.program_name} <#{COMMANDS.join('|')}>\n\n"
   define_argv_parsing(op)
 
+  args = Wwan.create_default_args
   # OptionParser#load doesn't accept (into: {}), which makes it
-  # useless.
+  # less useful.
   #
-  # op.load
-
-  args = Wwan.create_default_args()
+  # op.load(into: args)
   op.parse!(into: args)
 
   cmd = ARGV.first
@@ -126,9 +125,11 @@ def main
 end
 
 def define_argv_parsing(op)
+  op.on('--simple-connect', String, "Simple connect APN string")
+
+  # Optional options
   op.on('-m', '--modem', Integer, "Modem index for mmcli -m. Defaults to 0")
   op.on('-b', '--bearer', Integer, "Bearer index for mmcli -b. Defaults to 0")
-  op.on('--simple-connect', String, "Simple connect APN string")
   op.on('--unit-file', String, "Path of temporary systemd.network unit file. Defaults to #{Wwan::UNIT_FILE_PATH}")
 end
 
