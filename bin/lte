@@ -16,7 +16,7 @@ class Wwan
   attr_reader :args
 
   UNIT_FILE_PATH = '/run/systemd/network/wwan.network'
-  SIMPLE_CONNECT='apn=3gnet'
+  SIMPLE_CONNECT='apn=3gnet'  # TODO: move this out to config file
 
   def self.create_default_args
     OpenStruct.new(
