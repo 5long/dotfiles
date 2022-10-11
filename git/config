@@ -32,6 +32,7 @@
 	pp = !git pull && git push
 	pu = push upstream
 	rb = rebase
+	rhu = reset --hard HEAD@{u}
 	root = rev-parse --show-toplevel
 	rs = restore
 	s = status -bs
