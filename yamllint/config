@@ -6,3 +6,8 @@ rules:
   line-length: disable
   truthy:
     level: warning
+    allowed-values:
+      - 'yes'
+      - 'no'
+      - 'true'
+      - 'false'
