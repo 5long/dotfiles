@@ -40,6 +40,10 @@ return require('packer').startup(function(use)
     vim.cmd [[runtime macros/sandwich/keymap/surround.vim]]
   end}
 
+  use {'ggandor/leap.nvim', config = function()
+    require('leap').add_default_mappings()
+  end}
+
   use 'junegunn/fzf.vim'
   use '5long/vim-imtoggle'
   use {'nvim-lualine/lualine.nvim', config = function()
