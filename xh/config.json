@@ -1,0 +1,8 @@
+{
+  "default_options": [
+    "--stream",
+    "--max-redirects=5",
+    "--timeout=5",
+    "--ssl=tls1.3"
+  ]
+}
