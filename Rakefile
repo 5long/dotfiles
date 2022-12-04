@@ -26,7 +26,7 @@ DOTFILES.each do |f|
   task f do |t|
     source = "#{CWD}/#{t.name}"
     target = target_for(t.name)
-    File.symlink source, target unless File.exists? target
+    File.symlink source, target unless File.exist? target
   end
 end
 
@@ -51,15 +51,15 @@ desc "Vimrc for old Vim"
 task :old_vim do
   source = "#{CWD}/nvim"
   target = "#{HOME}/.vim"
-  File.symlink source, target unless File.exists? target
+  File.symlink source, target unless File.exist? target
 end
 
 desc "Take a dotfile from $HOME"
-task :take, :dotless_name do |t, args|
+task :take, :dotless_name do |_, args|
   dotless = args[:dotless_name]
   filename = ".#{dotless}"
   full_path = "#{HOME}/#{filename}"
-  next unless File.exists? full_path
+  next unless File.exist? full_path
   if File.symlink? full_path
     puts "#{full_path} is a symlink, not taken."
     next
@@ -101,7 +101,7 @@ task :bin do
 end
 
 desc "Link a ~/.local/bin/<file> to ./bin"
-task :lnbin, :fn do |t, args|
+task :lnbin, :fn do |_, args|
   ln "#{HOME}/.local/bin/#{args[:fn]}", "./bin/"
 end
 
