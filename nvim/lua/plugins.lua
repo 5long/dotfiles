@@ -36,8 +36,8 @@ return require('packer').startup(function(use)
     require("nvim-autopairs").setup {}
   end}
 
-  use {'machakann/vim-sandwich', config = function()
-    vim.cmd [[runtime macros/sandwich/keymap/surround.vim]]
+  use {'kylechui/nvim-surround', tag = "*", config = function()
+    require('nvim-surround').setup({})
   end}
 
   use {'ggandor/leap.nvim', config = function()
