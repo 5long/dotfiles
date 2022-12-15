@@ -144,26 +144,6 @@ psg() {
   pgrep -fai "$@" | cut -c -100
 }
 
-# SSH with conservative $TERM value
-# The server may not have a modern terminfo database installed
-essh() {
-  local term="$TERM"
-
-  case "$TERM" in
-    alacritty-256color )
-      term=xterm-256color
-      ;;
-    tmux-256color )
-      term=screen-256color
-      ;;
-    * )
-      : # do nothing
-      ;;
-  esac
-
-  TERM=$term ssh -A "$@"
-}
-
 with_proxy() {
   local p="$1"
   shift
