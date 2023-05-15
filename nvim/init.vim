@@ -196,7 +196,6 @@ nnoremap <expr> k v:count ? 'k' : 'gk'
 
 inoreabbrev rt return
 
-set pastetoggle=<f5>
 set mouse=a
 
 " Leave <c-h> for backspace
