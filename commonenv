@@ -20,7 +20,8 @@ export MTR_OPTIONS='-n -t'
 
 export PYTEST_ADDOPTS='-x -s'
 
-export RUSTUP_DIST_SERVER=https://mirrors.ustc.edu.cn/rust-static
+export RUSTUP_DIST_SERVER=https://mirror.sjtu.edu.cn/rust-static
+export RUSTUP_UPDATE_ROOT=https://mirror.sjtu.edu.cn/rust-static/rustup
 
 # CDPATH shouldn't be export-ed
 CDPATH=".:$HOME:$HOME/src"
