@@ -143,6 +143,9 @@ return require('packer').startup(function(use)
     lsp['solargraph'].setup{
       on_attach = on_attach,
     }
+    lsp.rust_analyzer.setup{
+      on_attach = on_attach,
+    }
   end}
 
   use({ "jose-elias-alvarez/null-ls.nvim",
