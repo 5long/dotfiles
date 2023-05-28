@@ -230,7 +230,7 @@ nnoremap <m-k> <c-w>k
 nnoremap <m-l> <c-w>l
 
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*
-set wildignore+=*.jpg,*.gif,*.png,*.pyc,*.pyo,*.ptlc
+set wildignore+=*.pyc,*.pyo,*.ptlc
 set wildignore+=*.class,*.dex,*.apk,*.jar,*.idx,*.bin,*/build/*
 set wildignore+=*.tgz,*.tar.gz,*.tar.xz,*.tar.bz2,*.zip
 set wildignore+=node_modules
