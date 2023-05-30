@@ -48,7 +48,6 @@ alias rake='noglob rake'
 alias hist='fc -liD'
 
 source_if_possible /usr/share/skim/key-bindings.zsh
-source_if_possible /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source_if_possible /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 export VIRTUALENVWRAPPER_WORKON_CD=1
