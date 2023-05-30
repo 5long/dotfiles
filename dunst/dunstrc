@@ -4,7 +4,7 @@ indicate_hidden = yes
 browser = /usr/local/bin/browser
 
 format = "%s %p\n%b"
-width = (100, 800)
+width = (100, 1200)
 height = (100, 450)
 offset = 15x24
 
