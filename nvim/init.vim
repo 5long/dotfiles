@@ -146,7 +146,7 @@ fun! s:ResolveCfile()
   return py3eval(printf("normpath('%s')", fullPath))
 endf
 
-set grepprg=rg\ --vimgrep
+set grepprg=rg\ --vimgrep\ --no-require-git
 set grepformat^=%f:%l:%c:%m
 autocmd vimrc QuickFixCmdPost grep rightbelow cwindow 7
 command! -nargs=+ -complete=file -bar Grep silent grep! -w <args>|redraw!
@@ -182,7 +182,7 @@ nnoremap <leader>bf :Buffers<CR>
 nnoremap <leader>/ :Lines<CR>
 command! -bang -nargs=* Rg
   \ call fzf#vim#grep(
-  \   'rg --vimgrep --color=always '.shellescape(<q-args>), 1,
+  \   'rg --vimgrep --color=always --no-require-git '.shellescape(<q-args>), 1,
   \   <bang>0 ? fzf#vim#with_preview('up:60%')
   \           : fzf#vim#with_preview('right:50%:hidden', '?'),
   \   <bang>0)

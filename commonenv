@@ -13,7 +13,7 @@ export RLWRAP_EDITOR='vi +%L'
 
 export MINIKUBE_IN_STYLE=0
 
-export FZF_DEFAULT_COMMAND='rg --files'
+export FZF_DEFAULT_COMMAND='rg --files --no-require-git'
 export FZF_DEFAULT_OPTS='--color=light --exact'
 export FZF_CTRL_T_OPTS='--preview="bat -p {}"'
 export MTR_OPTIONS='-n -t'
