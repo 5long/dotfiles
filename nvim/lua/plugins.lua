@@ -145,6 +145,7 @@ return require('packer').startup(function(use)
 
     lsp['solargraph'].setup({})
     lsp.rust_analyzer.setup({})
+    lsp.bashls.setup({})
   end}
 
   use({ "jose-elias-alvarez/null-ls.nvim",
