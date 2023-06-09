@@ -1,5 +1,5 @@
-if ! exists('g:GuiLoaded')
-  finish
-endif
+set background=light
 
-GuiFont Monospace:h16
+if exists(':GuiFont')
+  GuiFont Monospace:h16
+endif
