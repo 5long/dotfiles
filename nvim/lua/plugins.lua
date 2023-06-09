@@ -127,7 +127,7 @@ return require('packer').startup(function(use)
 
     local lsp = require('lspconfig')
 
-    lsp['pyright'].setup{
+    lsp.pyright.setup{
       settings = {
         pyright = {
           venvPath = '~/.virtualenvs',
@@ -143,7 +143,7 @@ return require('packer').startup(function(use)
       }
     }
 
-    lsp['solargraph'].setup({})
+    lsp.solargraph.setup({})
     lsp.rust_analyzer.setup({})
     lsp.bashls.setup({})
   end}
