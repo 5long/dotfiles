@@ -146,6 +146,21 @@ return require('packer').startup(function(use)
     lsp.solargraph.setup({})
     lsp.rust_analyzer.setup({})
     lsp.bashls.setup({})
+    lsp.lua_ls.setup {
+      settings = {
+        Lua = {
+          runtime = {
+            version = 'LuaJIT',
+          },
+          diagnostics = {
+            globals = {'vim'},
+          },
+          workspace = {
+            library = vim.api.nvim_get_runtime_file("", true),
+          },
+        }
+      }
+    }
   end}
 
   use({ "jose-elias-alvarez/null-ls.nvim",
