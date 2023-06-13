@@ -208,9 +208,9 @@ local function silent_map(mode, lhs, rhs, opt)
   )
 end
 
-silent_map('i', '<Tab>', "luasnip#expand_or_jumpable() ? '<Plug>luasnip-expand-or-jump' : '<Tab>'", {
-  expr = true
-})
+-- This is stupid
+cmd([[ imap <silent><expr> <Tab> luasnip#expand_or_jumpable() ? '<Plug>luasnip-expand-or-jump' : '<Tab>' ]])
+
 silent_map('s', '<Tab>', function()
   require('luasnip').jump(1)
 end)
