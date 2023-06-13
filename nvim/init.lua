@@ -45,6 +45,7 @@ end
 opt.listchars = { tab = '› ', trail = '·'}
 opt.textwidth = 68
 opt.formatoptions:append('rowaB1nlmqj]') -- what a mouthful
+opt.formatoptions:remove('t') -- Only manually format w/ gq
 opt.cpoptions:append('J')
 
 opt.shiftround = true
