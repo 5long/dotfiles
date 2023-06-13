@@ -73,7 +73,7 @@ return require('packer').startup(function(use)
   end}
 
   use 'junegunn/fzf.vim'
-  use '5long/vim-imtoggle'
+  use { "5long/imdi.nvim", rocks = 'dbus_proxy' }
   use {'nvim-lualine/lualine.nvim', config = function()
     require('lualine').setup {
       theme = 'edge',
