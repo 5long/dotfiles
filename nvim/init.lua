@@ -118,11 +118,11 @@ keymap.set('n', '<leader>da', ':1,$bd!<CR><c-w><c-v>')
 keymap.set('n', '<leader>cd', ':cd %:p:h<CR>')
 
 keymap.set('n', 'yaf', 'gg"+yG``')
-keymap.set('n', '<leader>yf', function() 
-  vim.fn.setreg('+', vim.fn.expand('%')) 
+keymap.set('n', '<leader>yf', function()
+  vim.fn.setreg('+', vim.fn.expand('%'))
 end)
-keymap.set('n', '<leader>yd', function() 
-  vim.fn.setreg('+', vim.fn.expand('%:h')) 
+keymap.set('n', '<leader>yd', function()
+  vim.fn.setreg('+', vim.fn.expand('%:h'))
 end)
 
 opt.grepprg = 'rg --vimgrep --no-require-git'
