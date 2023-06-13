@@ -135,9 +135,9 @@ cmd("command! -nargs=+ -complete=file -bar Grep silent grep! -w <args>|redraw!")
 keymap.set('n', '<leader>gg', ':Grep<space>')
 keymap.set('n', '<leader>gw', ':Grep<space><c-r><c-w>')
 
-keymap.set('n', '<leader>x', '<Plug>RagainRun', remap)
-keymap.set('n', '<leader>X', '<Plug>RagainResetAndRun', remap)
-keymap.set('n', '<leader>mx', ":RagainSetAndRun  <c-r>=expand('%')<CR><s-left><left>", remap)
+keymap.set('n', '<leader>x', '<Plug>RagainRun')
+keymap.set('n', '<leader>X', '<Plug>RagainResetAndRun')
+keymap.set('n', '<leader>mx', ":RagainSetAndRun  <c-r>=expand('%')<CR><s-left><left>")
 
 keymap.set('n', '<leader>tn', cmd.tabedit)
 keymap.set('n', '<leader>ts', function () cmd('tab split') end)
@@ -159,7 +159,7 @@ keymap.set('n', '<leader>df', ":args `git status --porcelain=v1 <bslash><bar> aw
 keymap.set('n', '<leader>bf', cmd.Buffers)
 keymap.set('n', '<leader>/', cmd.Lines)
 
-keymap.set('x', 's', '<Plug>(nvim-surround-visual)', remap)
+keymap.set('x', 's', '<Plug>(nvim-surround-visual)')
 
 keymap.set('n', 'j', "v:count ? 'j' : 'gj'", {expr = true})
 keymap.set('n', 'k', "v:count ? 'k' : 'gk'", {expr = true})
