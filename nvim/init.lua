@@ -4,6 +4,7 @@ vim.g.mapleader = ','
 
 local opt, keymap, cmd = vim.opt, vim.keymap, vim.cmd
 
+remap = {remap = true}
 local function noremap(mode, lhs, rhs, opts)
   keymap.set(mode, lhs, rhs, vim.tbl_extend('force', {noremap = true}, opts or {}))
 end
@@ -137,9 +138,9 @@ cmd("command! -nargs=+ -complete=file -bar Grep silent grep! -w <args>|redraw!")
 noremap('n', '<leader>gg', ':Grep<space>')
 noremap('n', '<leader>gw', ':Grep<space><c-r><c-w>')
 
-keymap.set('n', '<leader>x', '<Plug>RagainRun')
-keymap.set('n', '<leader>X', '<Plug>RagainResetAndRun')
-keymap.set('n', '<leader>mx', ":RagainSetAndRun  <c-r>=expand('%')<CR><s-left><left>")
+keymap.set('n', '<leader>x', '<Plug>RagainRun', remap)
+keymap.set('n', '<leader>X', '<Plug>RagainResetAndRun', remap)
+keymap.set('n', '<leader>mx', ":RagainSetAndRun  <c-r>=expand('%')<CR><s-left><left>", remap)
 
 noremap('n', '<leader>tn', cmd.tabedit)
 noremap('n', '<leader>ts', function () cmd('tab split') end)
@@ -161,7 +162,7 @@ noremap('n', '<leader>df', ":args `git status --porcelain=v1 <bslash><bar> awk '
 noremap('n', '<leader>bf', cmd.Buffers)
 noremap('n', '<leader>/', cmd.Lines)
 
-keymap.set('x', 's', '<Plug>(nvim-surround-visual)')
+keymap.set('x', 's', '<Plug>(nvim-surround-visual)', remap)
 
 noremap('n', 'j', "v:count ? 'j' : 'gj'", {expr = true})
 noremap('n', 'k', "v:count ? 'k' : 'gk'", {expr = true})
@@ -179,7 +180,7 @@ keymap.set('n', 'Q', '<nop>')
 noremap('n', 'yu', '"+yiW')
 noremap('', 'H', '^')
 noremap('', 'L', '$')
-keymap.set('n', '<tab>', '%')
+keymap.set('n', '<tab>', '%', remap)
 noremap('', '<c-9>', '<c-i>')
 
 noremap('n', '<c-h>', '<c-w>h')
