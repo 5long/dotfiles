@@ -142,8 +142,8 @@ keymap.set('n', '<leader>X', '<Plug>RagainResetAndRun')
 keymap.set('n', '<leader>mx', ":RagainSetAndRun  <c-r>=expand('%')<CR><s-left><left>")
 
 noremap('n', '<leader>tn', cmd.tabedit)
-noremap('n', '<leader>ts', partial(cmd.tab, 'split'))
-noremap('n', '<leader>td', partial(cmd.tcd, '%:p:h'))
+noremap('n', '<leader>ts', function () cmd('tab split') end)
+noremap('n', '<leader>td', function () cmd.tcd('%:p:h') end)
 noremap('n', '<leader>tc', cmd.tabclose)
 
 for i=1,9 do
