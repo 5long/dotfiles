@@ -55,6 +55,7 @@ return require('packer').startup(function(use)
   use 'vim-scripts/ReplaceWithRegister'
   use 'tpope/vim-abolish'
   use 'tpope/vim-unimpaired'
+  use 'famiu/bufdelete.nvim'
 
   use {'numToStr/Comment.nvim', config = function()
     require('Comment').setup()
