@@ -5,9 +5,6 @@ vim.g.mapleader = ','
 local opt, keymap, cmd = vim.opt, vim.keymap, vim.cmd
 
 remap = {remap = true}
-local function noremap(mode, lhs, rhs, opts)
-  keymap.set(mode, lhs, rhs, vim.tbl_extend('force', {noremap = true}, opts or {}))
-end
 
 local function partial(f, arg)
   return function(...)
@@ -35,7 +32,7 @@ vim.g.edge_disable_italic_comment = true
 cmd.colorscheme("edge")
 
 opt.switchbuf = 'useopen,usetab'
-noremap('n', '<leader><leader>', '<c-^>')
+keymap.set('n', '<leader><leader>', '<c-^>')
 
 opt.scrolloff = 6
 
@@ -67,21 +64,21 @@ local function autocmd(events, opts)
   )
 end
 
-noremap('n', '<leader>i2', function()
+keymap.set('n', '<leader>i2', function()
   set_indent(2, vim.opt_local)
 end)
 
-noremap('n', '<leader>i4', function()
+keymap.set('n', '<leader>i4', function()
   set_indent(4, vim.opt_local)
 end)
 
-noremap('c', '<c-a>', '<Home>')
-noremap('c', '<c-n>', '<Down>')
-noremap('c', '<c-p>', '<Up>')
-noremap('c', '<a-b>', '<c-left>')
-noremap('c', '%%', "<c-r>=expand('%:h').'/'<CR>")
-noremap('c', '<c-v>b', "<c-r>=expand('%:r')<CR>")
-noremap('c', '<c-k>', "<C-\\>e getcmdpos() == 1 ? '' : getcmdline()[:getcmdpos()-2]<CR>")
+keymap.set('c', '<c-a>', '<Home>')
+keymap.set('c', '<c-n>', '<Down>')
+keymap.set('c', '<c-p>', '<Up>')
+keymap.set('c', '<a-b>', '<c-left>')
+keymap.set('c', '%%', "<c-r>=expand('%:h').'/'<CR>")
+keymap.set('c', '<c-v>b', "<c-r>=expand('%:r')<CR>")
+keymap.set('c', '<c-k>', "<C-\\>e getcmdpos() == 1 ? '' : getcmdline()[:getcmdpos()-2]<CR>")
 
 opt.wildmode = 'longest:full,full'
 opt.wildignorecase = true
@@ -93,18 +90,18 @@ opt.ignorecase = true
 opt.smartcase = true
 opt.inccommand = 'nosplit'
 
-noremap('', '/', '/\\v')
-noremap('', '?', '?\\v')
-noremap('n', '<backspace>', function ()
+keymap.set('', '/', '/\\v')
+keymap.set('', '?', '?\\v')
+keymap.set('n', '<backspace>', function ()
   cmd.nohlsearch()
   cmd.diffupdate()
   cmd('normal! <C-L>')
 end)
 
-noremap('n', '<leader>sw', ':s/<c-r><c-w>//g<left><left>')
+keymap.set('n', '<leader>sw', ':s/<c-r><c-w>//g<left><left>')
 
 for _,k in ipairs{'#', '*', 'n', 'N'} do
-  noremap('n', k, k .. 'zz')
+  keymap.set('n', k, k .. 'zz')
 end
 
 opt.swapfile = false
@@ -115,16 +112,16 @@ autocmd('FocusLost', {
 })
 opt.autowrite = true
 
-noremap('n', '<leader>w', vim.cmd.update)
-noremap('n', 'QQ', vim.cmd.cquit)
-noremap('n', '<leader>da', ':1,$bd!<CR><c-w><c-v>')
-noremap('n', '<leader>cd', ':cd %:p:h<CR>')
+keymap.set('n', '<leader>w', vim.cmd.update)
+keymap.set('n', 'QQ', vim.cmd.cquit)
+keymap.set('n', '<leader>da', ':1,$bd!<CR><c-w><c-v>')
+keymap.set('n', '<leader>cd', ':cd %:p:h<CR>')
 
-noremap('n', 'yaf', 'gg"+yG``')
-noremap('n', '<leader>yf', function() 
+keymap.set('n', 'yaf', 'gg"+yG``')
+keymap.set('n', '<leader>yf', function() 
   vim.fn.setreg('+', vim.fn.expand('%')) 
 end)
-noremap('n', '<leader>yd', function() 
+keymap.set('n', '<leader>yd', function() 
   vim.fn.setreg('+', vim.fn.expand('%:h')) 
 end)
 
@@ -135,58 +132,58 @@ autocmd('QuickFixCmdPost', {
   command = 'rightbelow cwindow 7',
 })
 cmd("command! -nargs=+ -complete=file -bar Grep silent grep! -w <args>|redraw!")
-noremap('n', '<leader>gg', ':Grep<space>')
-noremap('n', '<leader>gw', ':Grep<space><c-r><c-w>')
+keymap.set('n', '<leader>gg', ':Grep<space>')
+keymap.set('n', '<leader>gw', ':Grep<space><c-r><c-w>')
 
 keymap.set('n', '<leader>x', '<Plug>RagainRun', remap)
 keymap.set('n', '<leader>X', '<Plug>RagainResetAndRun', remap)
 keymap.set('n', '<leader>mx', ":RagainSetAndRun  <c-r>=expand('%')<CR><s-left><left>", remap)
 
-noremap('n', '<leader>tn', cmd.tabedit)
-noremap('n', '<leader>ts', function () cmd('tab split') end)
-noremap('n', '<leader>td', function () cmd.tcd('%:p:h') end)
-noremap('n', '<leader>tc', cmd.tabclose)
+keymap.set('n', '<leader>tn', cmd.tabedit)
+keymap.set('n', '<leader>ts', function () cmd('tab split') end)
+keymap.set('n', '<leader>td', function () cmd.tcd('%:p:h') end)
+keymap.set('n', '<leader>tc', cmd.tabclose)
 
 for i=1,9 do
-  noremap('n', '<m-'..i..'>', i..'gt')
+  keymap.set('n', '<m-'..i..'>', i..'gt')
 end
-noremap('n', '<m-0>', ':$tabnext<CR>')
+keymap.set('n', '<m-0>', ':$tabnext<CR>')
 
 opt.fileformats = 'unix,dos,mac'
 opt.fileencodings = 'ucs-bom,utf-8,gb-18030,gbk,gb2312,latin1'
 opt.diffopt = 'internal,filler,vertical,iwhite,indent-heuristic,algorithm:histogram'
-noremap('n', '<leader>du', cmd.diffupdate)
+keymap.set('n', '<leader>du', cmd.diffupdate)
 
-noremap('n', '<leader>f', cmd.Files)
-noremap('n', '<leader>df', ":args `git status --porcelain=v1 <bslash><bar> awk '{print $2}'`<cr>")
-noremap('n', '<leader>bf', cmd.Buffers)
-noremap('n', '<leader>/', cmd.Lines)
+keymap.set('n', '<leader>f', cmd.Files)
+keymap.set('n', '<leader>df', ":args `git status --porcelain=v1 <bslash><bar> awk '{print $2}'`<cr>")
+keymap.set('n', '<leader>bf', cmd.Buffers)
+keymap.set('n', '<leader>/', cmd.Lines)
 
 keymap.set('x', 's', '<Plug>(nvim-surround-visual)', remap)
 
-noremap('n', 'j', "v:count ? 'j' : 'gj'", {expr = true})
-noremap('n', 'k', "v:count ? 'k' : 'gk'", {expr = true})
+keymap.set('n', 'j', "v:count ? 'j' : 'gj'", {expr = true})
+keymap.set('n', 'k', "v:count ? 'k' : 'gk'", {expr = true})
 
 cmd.inoreabbrev('rt', 'return')
 
-noremap('i', '<c-j>', '<c-g>U<down>')
-noremap('i', '<c-k>', '<c-g>U<up>')
-noremap('i', '<c-l>', '<c-g>U<right>')
-noremap('i', '<c-e>', '<c-g>U<c-o>A')
-noremap('i', '<c-a>', '<c-g>U<c-o>I')
+keymap.set('i', '<c-j>', '<c-g>U<down>')
+keymap.set('i', '<c-k>', '<c-g>U<up>')
+keymap.set('i', '<c-l>', '<c-g>U<right>')
+keymap.set('i', '<c-e>', '<c-g>U<c-o>A')
+keymap.set('i', '<c-a>', '<c-g>U<c-o>I')
 
 keymap.set('n', '<F1>', '<nop>')
 keymap.set('n', 'Q', '<nop>')
-noremap('n', 'yu', '"+yiW')
-noremap('', 'H', '^')
-noremap('', 'L', '$')
+keymap.set('n', 'yu', '"+yiW')
+keymap.set('', 'H', '^')
+keymap.set('', 'L', '$')
 keymap.set('n', '<tab>', '%', remap)
-noremap('', '<c-9>', '<c-i>')
+keymap.set('', '<c-9>', '<c-i>')
 
-noremap('n', '<c-h>', '<c-w>h')
-noremap('n', '<c-j>', '<c-w>j')
-noremap('n', '<c-k>', '<c-w>k')
-noremap('n', '<c-l>', '<c-w>l')
+keymap.set('n', '<c-h>', '<c-w>h')
+keymap.set('n', '<c-j>', '<c-w>j')
+keymap.set('n', '<c-k>', '<c-w>k')
+keymap.set('n', '<c-l>', '<c-w>l')
 
 local wig = opt.wildignore
 wig:append('*/.git/*,*/.hg/*')
