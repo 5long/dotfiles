@@ -203,7 +203,7 @@ autocmd('VimEnter', {
 })
 
 local function silent_map(mode, lhs, rhs, opt)
-	vim.keymap.set(mode, lhs, rhs,
+	keymap.set(mode, lhs, rhs,
     vim.tbl_extend('error', { silent = true }, opt or {})
   )
 end
