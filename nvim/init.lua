@@ -10,7 +10,7 @@ end
 
 local function partial(f, arg)
   return function(...)
-    return fn(arg, ...)
+    return f(arg, ...)
   end
 end
 
