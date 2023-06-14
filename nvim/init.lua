@@ -21,7 +21,7 @@ opt.lazyredraw = true
 if vim.fn.has('gui_running') or os.getenv('TERM') ~= "linux" then
   opt.termguicolors = true
   opt.background = 'light'
-  vim.env.FZF_DEFAULT_OPTS = '--color=light'
+  vim.env.SKIM_DEFAULT_OPTIONS = '--color=light'
 else
   opt.background = 'dark'
 end
