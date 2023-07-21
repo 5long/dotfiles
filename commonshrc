@@ -19,7 +19,7 @@ alias mkdir='mkdir -p'
 alias h=http
 alias ip='ip -h -br -c=auto'
 alias d='nerdctl '
-alias dg='doggo '
+alias dg='doggo --time --timeout 3 '
 alias fd='fd --color=never'
 alias g=git
 alias gl='git l'
