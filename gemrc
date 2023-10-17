@@ -6,4 +6,4 @@
 :update_sources: true
 :verbose: false
 :concurrent_downloads: 8
-gem: "--no-document --no-user-install"
+gem: "--no-document --user-install"
