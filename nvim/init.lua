@@ -49,11 +49,12 @@ opt.shiftround = true
 opt.expandtab = true
 
 local function set_indent(n, target)
-  for _,v in ipairs{'tabstop', 'shiftwidth', 'softtabstop'} do
+  for _,v in ipairs{'tabstop', 'shiftwidth'} do
     target[v] = n
   end
 end
 set_indent(2, opt)
+opt.softtabstop = -1
 
 local augroup = vim.api.nvim_create_augroup('vimrc', { clear = true })
 local function autocmd(events, opts)
