@@ -17,7 +17,7 @@ text_icon_padding = 4
 corner_radius = 10
 max_icon_size = 64
 
-font = Monospace 24
+font = BreezeSans Medium Condensed 24
 
 [ignore-rime-startup]
 body = "Rime is *"
