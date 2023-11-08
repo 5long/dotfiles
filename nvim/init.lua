@@ -20,8 +20,17 @@ opt.lazyredraw = true
 -- neovim-qt sets TERM=linux
 if vim.fn.has('gui_running') or os.getenv('TERM') ~= "linux" then
   opt.termguicolors = true
-  opt.background = 'light'
-  vim.env.SKIM_DEFAULT_OPTIONS = '--color=light'
+
+  if vim.fn.system([[gsettings get org.gnome.desktop.interface color-scheme]]) == "'prefer-dark'\n" then
+    vim.g.cs = 'dark'
+    opt.background = 'dark'
+    vim.env.SKIM_DEFAULT_OPTIONS = '--color=dark'
+  else
+    vim.g.cs = 'light'
+    opt.background = 'light'
+    vim.env.SKIM_DEFAULT_OPTIONS = '--color=light'
+  end
+
 else
   opt.background = 'dark'
 end
