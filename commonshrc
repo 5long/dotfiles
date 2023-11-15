@@ -16,7 +16,6 @@ alias grep='grep --color=auto -E -i'
 alias lstcp='lsof -nPi tcp'
 alias mkdir='mkdir -p'
 
-alias h=http
 alias ip='ip -h -br -c=auto'
 alias d='nerdctl '
 alias dg='doggo --time --timeout 3 '
@@ -78,11 +77,6 @@ wmirr() {
 # curl get
 cget() {
   curl --retry 5 -LOC - "$@"
-}
-
-# httpie get
-hget() {
-  http -p= -dcF --check-status "$@"
 }
 
 cdrb() {
