@@ -20,6 +20,7 @@ alias h=http
 alias ip='ip -h -br -c=auto'
 alias d='nerdctl '
 alias dg='doggo --time --timeout 3 '
+alias e=nvim
 alias fd='fd --color=never'
 alias g=git
 alias gl='git l'
@@ -41,7 +42,7 @@ alias cm=mocp
 alias cal='cal -mw'
 alias alert="echo -n '\a'"
 alias vg=vagrant
-alias v=vim
+alias v=less
 alias be='bundle exec'
 alias zathura='zathura --fork &>/dev/null'
 alias irc='weechat-curses'
