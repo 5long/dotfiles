@@ -73,8 +73,8 @@ return require('packer').startup(function(use)
     require('leap').add_default_mappings()
   end}
 
+  use { "5long/imdi.nvim", rocks = 'dbus_proxy' }
   use 'lotabout/skim.vim'
-  use { "~/src/imdi.nvim", rocks = 'dbus_proxy' }
   use {'nvim-lualine/lualine.nvim', config = function()
     require('lualine').setup {
       theme = 'edge',
