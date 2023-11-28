@@ -61,24 +61,6 @@ mkd() {
   cd "$1"
 }
 
-dl() {
-  diff -rubd "$@" | dwdiff -c --diff-input | less
-}
-
-wmirr() {
-  if [[ "$1" != */ ]]; then
-    echo "URL must end with slash"
-    return 1
-  fi
-
-  wget -nH -c -np --mirror -R 'index.html' --restrict-file-names=nocontrol "$1"
-}
-
-# curl get
-cget() {
-  curl --retry 5 -LOC - "$@"
-}
-
 cdrb() {
   cd "$(dirname "$(gem which "$1")")"
 }
@@ -106,18 +88,9 @@ edbin() {
   fi
 }
 
-vman() {
-  [ -z "$1" ] && return 1
-  vim "+Man $*"
-}
-
 gc() {
   git add --all .
   git commit -m "$*"
-}
-
-dus() {
-  sudo du -csh -- * .* . | sort -h
 }
 
 rn() {
@@ -151,9 +124,3 @@ with_proxy() {
 source_if_possible() {
   test -r "$1" && source "$1"
 }
-
-copy-git-tip() {
-  git log -1 --pretty=format:%h | xsel -bi
-}
-
-which fnm >/dev/null && eval "$(fnm env --use-on-cd)"
