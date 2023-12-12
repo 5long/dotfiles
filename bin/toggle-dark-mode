@@ -17,7 +17,7 @@ function light_mode() {
   gsettings set org.gnome.desktop.interface gtk-theme Arc
   sed -i -e 's/^\(include =.*-\)dark$/\1light/' ~/.config/foot/foot.ini
   systemctl --user restart foot-server.service
-  notify-send -t 1000 "Light mode"
+  notify-send -a DarkMode -t 1000 "Light mode"
   # ~/.config/qt6ct/qt6ct.conf color_scheme_path=/usr/share/qt6ct/colors/simple.conf
   # ~/.config/qt5ct/qt5ct.conf color_scheme_path=/usr/share/qt5ct/colors/simple.conf
 }
@@ -28,7 +28,7 @@ function dark_mode() {
   gsettings set org.gnome.desktop.interface gtk-theme Arc-Dark
   sed -i -e 's/^\(include =.*-\)light$/\1dark/' ~/.config/foot/foot.ini
   systemctl --user restart foot-server.service
-  notify-send -t 1000 "Dark mode"
+  notify-send -a DarkMode -t 1000 "Dark mode"
   # ~/.config/qt5ct/qt6ct.conf color_scheme_path=/usr/share/qt6ct/colors/darker.conf
   # ~/.config/qt5ct/qt5ct.conf color_scheme_path=/usr/share/qt5ct/colors/darker.conf
 }
