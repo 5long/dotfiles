@@ -1,7 +1,10 @@
-#!/usr/bin/env zsh
+#!/usr/bin/dash
 
-if [[ -z "$1" ]]; then
-  xdg-open =(xsel -bo | qr)
+qr="qrencode -o - -t ANSI256UTF8"
+
+if [ -z "$1" ]
+then
+  pbpaste | $qr
 else
-  xdg-open =(qr "$@")
+  $qr "$1"
 fi
