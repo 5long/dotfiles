@@ -1,0 +1,32 @@
+#!/bin/bash
+set -euo pipefail
+
+# Enable
+enable_testing() {
+  ruby -i.bak -pe '$_.sub! /^#\s*/, "" if /^#.*-testing\]$/ .. /^#\s*Include =/' /etc/pacman.conf
+}
+
+# Disable
+disable_testing() {
+  ruby -i.bak -pe '$_.sub! /^/, "#" if /^\s*\[.*-testing\]$/ .. /^\s*Include =/' /etc/pacman.conf
+}
+
+main() {
+  case "$1" in
+    yes)
+      enable_testing
+      exit
+      ;;
+    no)
+      disable_testing
+      exit
+      ;;
+    *)
+      exit 1
+      ;;
+  esac
+}
+
+if [[ "$0" = "$BASH_SOURCE" ]]; then
+  main "$@"
+fi
