@@ -23,7 +23,7 @@ function light_mode() {
 }
 
 function dark_mode() {
-  light -S 5
+  light -S 3
   gsettings set org.gnome.desktop.interface color-scheme prefer-dark
   gsettings set org.gnome.desktop.interface gtk-theme Arc-Dark
   sed -i -e 's/^\(include =.*-\)light$/\1dark/' ~/.config/foot/foot.ini
