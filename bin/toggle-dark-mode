@@ -12,7 +12,7 @@ function main() {
 }
 
 function light_mode() {
-  light -S 10
+  brightness s 10%
   gsettings set org.gnome.desktop.interface color-scheme prefer-light
   gsettings set org.gnome.desktop.interface gtk-theme Arc
   sed -i -e 's/^\(include =.*-\)dark$/\1light/' ~/.config/foot/foot.ini
@@ -23,7 +23,7 @@ function light_mode() {
 }
 
 function dark_mode() {
-  light -S 3
+  brightness s 3%
   gsettings set org.gnome.desktop.interface color-scheme prefer-dark
   gsettings set org.gnome.desktop.interface gtk-theme Arc-Dark
   sed -i -e 's/^\(include =.*-\)light$/\1dark/' ~/.config/foot/foot.ini
