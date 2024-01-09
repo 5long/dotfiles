@@ -48,7 +48,12 @@
 [pretty]
 	grb = %C(yellow)%h%Creset %Cgreen(%ai)%Creset %C(bold)<%an>%Creset %C(bold green)%d%Creset %s
 [core]
-	pager = less -+FSRX -FRX
+	pager = delta
+[interactive]
+	diffFilter = delta --color-only
+[delta]
+	navigate = true
+	light = true
 [push]
 	default = current
 [pull]
@@ -61,6 +66,7 @@
 	defaultToUpstream = true
 	tool = vimdiff
 [diff]
+	colorMoved = default
 	tool = vimdiff
 	algorithm = histogram
 	mnemonicprefix = true
