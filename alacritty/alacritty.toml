@@ -1,0 +1,53 @@
+live_config_reload = true
+working_directory = "None"
+
+[colors]
+transparent_background_colors = true
+
+[colors.bright]
+black = "#969694"
+blue = "#4271ae"
+cyan = "#3e999f"
+green = "#718c00"
+magenta = "#8959a8"
+red = "#d7005f"
+white = "#f5f5f5"
+yellow = "#d7005f"
+
+[colors.normal]
+black = "#ededed"
+blue = "#4271ae"
+cyan = "#3e999f"
+green = "#008700"
+magenta = "#8959a8"
+red = "#af005f"
+white = "#4d4d4c"
+yellow = "#d75f00"
+
+[colors.primary]
+background = "#eeeeee"
+foreground = "#4d4d4c"
+
+[font]
+size = 16
+
+[hints]
+alphabet = "jfkdls;ahgurieowpq"
+
+[[hints.enabled]]
+command = "xdg-open"
+post_processing = true
+regex = "(ipfs:|ipns:|magnet:|mailto:|gemini:|gopher:|https:|http:|news:|file:|git:|ssh:|ftp:)[^\u0000-\u001F\u007F-<>\"\\s{-}\\^⟨⟩`]+"
+
+[hints.enabled.binding]
+key = "O"
+mods = "Control|Shift"
+
+[hints.enabled.mouse]
+enabled = true
+mods = "None"
+
+[window]
+dynamic_padding = true
+opacity = 0.85
+startup_mode = "Maximized"
