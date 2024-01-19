@@ -55,6 +55,7 @@ alias downspeed='curl -o /dev/null'
 alias ping='ping -n'
 alias gp=gpaste-client
 alias wn=workon
+alias z=bsdtar
 
 mkd() {
   mkdir -p "$1"
