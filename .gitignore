@@ -4,7 +4,6 @@
 *.sw[op]
 *~
 
-/nvim/pack/
-/nvim/plugin/packer_compiled.lua
+/nvim/lazy-lock.json
 
 /git/local-config

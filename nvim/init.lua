@@ -1,6 +1,7 @@
-require('plugins')
-
 vim.g.mapleader = ','
+vim.g.maplocalleader = '\\' -- not used for now
+
+require('config.lazy')
 
 local opt, keymap, cmd = vim.opt, vim.keymap, vim.cmd
 
@@ -34,11 +35,6 @@ if vim.fn.has('gui_running') or os.getenv('TERM') ~= "linux" then
 else
   opt.background = 'dark'
 end
-
-vim.g.edge_transparent_background = true
-vim.g.edge_better_performance = true
-vim.g.edge_disable_italic_comment = true
-cmd.colorscheme("edge")
 
 opt.switchbuf = 'useopen,usetab'
 keymap.set('n', '<leader><leader>', '<c-^>')
