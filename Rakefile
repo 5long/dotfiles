@@ -36,19 +36,6 @@ task bashrc: :commonshrc
 task zshrc: :commonshrc
 task commonshrc: :commonenv
 
-NVIM_PACKER_PATH = File.expand_path '~/.local/share/nvim/site/pack/packer/start'
-desc 'Install packer.nvim'
-task 'nvim-packer' do
-  unless File.exist? "#{NVIM_PACKER_PATH}/packer.nvim/.git"
-    mkdir_p NVIM_PACKER_PATH
-    sh %(
-      git clone --depth 1 \
-      https://github.com/wbthomason/packer.nvim \
-      ~/.local/share/nvim/site/pack/packer/start/packer.nvim
-    )
-  end
-end
-
 desc 'Vimrc for old Vim'
 task :old_vim do
   source = "#{CWD}/nvim"
