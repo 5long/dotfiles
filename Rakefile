@@ -1,10 +1,12 @@
+# frozen_string_literal: true
+
 HOME = ENV['HOME']
 CWD = File.dirname __FILE__
 
-BLACKLIST = %w[README.markdown Rakefile UNLICENSE bin]
+BLACKLIST = %w[README.markdown Rakefile UNLICENSE bin].freeze
 DOTFILES = FileList['*'] - BLACKLIST
 
-XDG_ENTIRES = %w[fuzzel fontconfig cnvim git alacritty termite rofi pacman zathura bat pip pylintrc xh yamllint]
+XDG_ENTIRES = %w[fuzzel fontconfig cnvim git alacritty termite rofi pacman zathura bat pip pylintrc xh yamllint].freeze
 def xdg_target(name)
   XDG_ENTIRES.include?(name) ? "#{HOME}/.config/#{name}" : nil
 end
@@ -30,36 +32,37 @@ DOTFILES.each do |f|
   end
 end
 
-task :bashrc => :commonshrc
-task :zshrc => :commonshrc
-task :commonshrc => :commonenv
+task bashrc: :commonshrc
+task zshrc: :commonshrc
+task commonshrc: :commonenv
 
-NVIM_PACKER_PATH = File.expand_path "~/.local/share/nvim/site/pack/packer/start"
-desc "Install packer.nvim"
+NVIM_PACKER_PATH = File.expand_path '~/.local/share/nvim/site/pack/packer/start'
+desc 'Install packer.nvim'
 task 'nvim-packer' do
-  if not File.exist? "#{NVIM_PACKER_PATH}/packer.nvim/.git"
+  unless File.exist? "#{NVIM_PACKER_PATH}/packer.nvim/.git"
     mkdir_p NVIM_PACKER_PATH
-    sh %[
+    sh %(
       git clone --depth 1 \
       https://github.com/wbthomason/packer.nvim \
       ~/.local/share/nvim/site/pack/packer/start/packer.nvim
-    ]
+    )
   end
 end
 
-desc "Vimrc for old Vim"
+desc 'Vimrc for old Vim'
 task :old_vim do
   source = "#{CWD}/nvim"
   target = "#{HOME}/.vim"
   File.symlink source, target unless File.exist? target
 end
 
-desc "Take a dotfile from $HOME"
+desc 'Take a dotfile from $HOME'
 task :take, :dotless_name do |_, args|
   dotless = args[:dotless_name]
   filename = ".#{dotless}"
   full_path = "#{HOME}/#{filename}"
   next unless File.exist? full_path
+
   if File.symlink? full_path
     puts "#{full_path} is a symlink, not taken."
     next
@@ -80,31 +83,29 @@ NODE_PKGS = %w[
   import-js
   javascript-typescript-langserver
   neovim
-]
-desc "Install essential NodeJS packages"
+].freeze
+
+desc 'Install essential NodeJS packages'
 task :npm do
-  sh(*%w[npm i -g yarn])
-  sh(*(%w[yarn global add].concat(NODE_PKGS)))
+  sh(*%w[npm i -g wrangler])
 end
 
-desc "Install every bin/* into ~/.local/bin"
+desc 'Install every bin/* into ~/.local/bin'
 task :bin do
   FileList['bin/*'].each do |f|
-    begin
-      ln f, "#{HOME}/.local/bin"
-    rescue Errno::EEXIST
-      puts "#{HOME}/.local/#{f} already exists" if verbose == true
-    else
-      true
-    end
+    ln f, "#{HOME}/.local/bin"
+  rescue Errno::EEXIST
+    puts "#{HOME}/.local/#{f} already exists" if verbose == true
+  else
+    true
   end
 end
 
-desc "Link a ~/.local/bin/<file> to ./bin"
+desc 'Link a ~/.local/bin/<file> to ./bin'
 task :lnbin, :fn do |_, args|
-  ln "#{HOME}/.local/bin/#{args[:fn]}", "./bin/"
+  ln "#{HOME}/.local/bin/#{args[:fn]}", './bin/'
 end
 
-desc "Install everything"
-task :everything => DOTFILES + [:bin]
-task :default => :everything
+desc 'Install everything'
+task everything: DOTFILES + [:bin]
+task default: :everything
