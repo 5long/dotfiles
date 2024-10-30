@@ -1,0 +1,5 @@
+#!/bin/bash
+
+set -euo pipefail
+
+exec tar --to-stdout -xf "$1" data.tar.gz | tar -zt
