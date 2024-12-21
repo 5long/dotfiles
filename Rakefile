@@ -6,7 +6,22 @@ CWD = File.dirname __FILE__
 BLACKLIST = %w[README.markdown Rakefile UNLICENSE bin].freeze
 DOTFILES = FileList['*'] - BLACKLIST
 
-XDG_ENTIRES = %w[fuzzel fontconfig nvim git alacritty termite rofi pacman zathura bat pip pylintrc xh yamllint].freeze
+XDG_ENTIRES = %w[
+  fuzzel
+  fontconfig
+  nvim
+  git
+  alacritty
+  termite
+  rofi
+  pacman
+  zathura
+  bat
+  pip
+  pylintrc
+  xh
+  yamllint
+].freeze
 def xdg_target(name)
   XDG_ENTIRES.include?(name) ? "#{HOME}/.config/#{name}" : nil
 end
