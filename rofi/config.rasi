@@ -1,0 +1,10 @@
+configuration {
+  combi-modes: [drun,run];
+  matching: "fuzzy";
+
+  font: "Monospace 20";
+  combi-display-format: "{text}";
+  show-icons: true;
+}
+
+@theme "/usr/share/rofi/themes/Arc-Dark.rasi"
