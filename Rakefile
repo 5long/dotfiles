@@ -9,6 +9,7 @@ DOTFILES = FileList['*'] - BLACKLIST
 XDG_ENTIRES = %w[
   fuzzel
   fontconfig
+  foot
   nvim
   git
   alacritty
