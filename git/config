@@ -53,7 +53,7 @@
 	diffFilter = delta --color-only
 [delta]
 	navigate = true
-	light = true
+	syntax-theme = 1337
 [push]
 	default = current
 [pull]
