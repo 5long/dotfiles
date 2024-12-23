@@ -1,6 +1,8 @@
 configuration {
   combi-modes: [drun,run];
   matching: "fuzzy";
+  sorting-method: "fzf";
+  drun-show-actions: true;
 
   font: "Monospace 20";
   combi-display-format: "{text}";
