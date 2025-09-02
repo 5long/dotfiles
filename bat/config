@@ -1,4 +1,4 @@
---theme=GitHub
+--theme=Coldark-Dark
 --style=header,grid
 --tabs=4
 -m mobileconfig:xml
