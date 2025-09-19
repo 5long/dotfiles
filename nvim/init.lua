@@ -31,9 +31,6 @@ if vim.fn.has('gui_running') or os.getenv('TERM') ~= "linux" then
     opt.background = 'light'
     vim.env.SKIM_DEFAULT_OPTIONS = '--color=light'
   end
-
-else
-  opt.background = 'dark'
 end
 
 opt.switchbuf = 'useopen,usetab'
