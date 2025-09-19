@@ -12,7 +12,6 @@ function main() {
 }
 
 function light_mode() {
-  brightness s 10%
   gsettings set org.gnome.desktop.interface color-scheme prefer-light
   gsettings set org.gnome.desktop.interface gtk-theme Arc
   systemctl --user kill --kill-whom=main --signal=USR2 foot-server.service
@@ -22,7 +21,6 @@ function light_mode() {
 }
 
 function dark_mode() {
-  brightness s 3%
   gsettings set org.gnome.desktop.interface color-scheme prefer-dark
   gsettings set org.gnome.desktop.interface gtk-theme Arc-Dark
   systemctl --user kill --kill-whom=main --signal=USR1 foot-server.service
