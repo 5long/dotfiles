@@ -4,3 +4,4 @@ python-install-mirror = "https://python-standalone.org/mirror/astral-sh/python-b
 name = "cn-mirror"
 url = "https://mirrors.cloud.tencent.com/pypi/simple"
 default = true
+authenticate = "never"
