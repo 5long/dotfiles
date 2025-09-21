@@ -1,0 +1,5 @@
+python-install-mirror = "https://python-standalone.org/mirror/astral-sh/python-build-standalone/"
+
+[[index]]
+name = "cn-mirror"
+url = "https://mirrors.cloud.tencent.com/pypi/simple"

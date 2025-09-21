@@ -20,6 +20,7 @@ XDG_ENTIRES = %w[
   bat
   pip
   pylintrc
+  uv
   xh
   yamllint
 ].freeze
