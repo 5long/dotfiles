@@ -15,24 +15,26 @@ return {
   'tpope/vim-unimpaired',
   'famiu/bufdelete.nvim',
 
-  {'numToStr/Comment.nvim', opts = {}},
-  {'windwp/nvim-autopairs', opts = {}},
-  {'kylechui/nvim-surround', version = "*", opts = {}},
-  {'ggandor/leap.nvim'},
-  {'lotabout/skim.vim', lazy = false},
-  {'nvim-lualine/lualine.nvim', opts = {
+  { 'numToStr/Comment.nvim',  opts = {} },
+  { 'windwp/nvim-autopairs',  opts = {} },
+  { 'kylechui/nvim-surround', version = "*", opts = {} },
+  { 'ggandor/leap.nvim' },
+  { 'lotabout/skim.vim',      lazy = false },
+  {
+    'nvim-lualine/lualine.nvim',
+    opts = {
       theme = 'edge',
       options = {
-        component_separators = { left = '', right = ''},
-        section_separators = { left = '', right = ''},
+        component_separators = { left = '', right = '' },
+        section_separators = { left = '', right = '' },
       },
       sections = {
-        lualine_a = {'mode'},
-        lualine_b = {'filename'},
+        lualine_a = { 'mode' },
+        lualine_b = { 'filename' },
         lualine_c = {},
         lualine_x = {},
-        lualine_y = {'location'},
-        lualine_z = {'filetype'}
+        lualine_y = { 'location' },
+        lualine_z = { 'filetype' }
       },
     },
   },
@@ -41,7 +43,7 @@ return {
   '5long/ragain',
   {
     'L3MON4D3/LuaSnip',
-    version = "v1.*", 
+    version = "v1.*",
     dependencies = 'honza/vim-snippets',
     config = function()
       require("luasnip").setup({})
