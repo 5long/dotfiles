@@ -11,7 +11,6 @@ return {
     end,
   },
 
-  'inkarkat/vim-ReplaceWithRegister',
   'tpope/vim-abolish',
   'tpope/vim-unimpaired',
   'famiu/bufdelete.nvim',
