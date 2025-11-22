@@ -14,6 +14,7 @@ return {
     -- after the language server attaches to the current buffer
 
     vim.lsp.enable('bashls')
+    vim.lsp.enable('just')
     vim.lsp.enable('lua_ls')
     vim.lsp.enable('zls')
 end}
