@@ -4,12 +4,8 @@
 	b = branch -vv
 	br = branch
 	ca = commit --all
-	cb = checkout HEAD -b
 	ci = commit
 	cln = clean -Xd
-	co = checkout
-	cob = checkout -t origin/master -b
-	cub = checkout -t upstream/master -b
 	dc = diff --cached
 	del = rm --cached
 	di = diff
