@@ -13,7 +13,7 @@ return {
     -- Use an on_attach function to only map the following keys
     -- after the language server attaches to the current buffer
 
-    vim.lsp.enable('zls')
-    vim.lsp.enable('lua_ls')
     vim.lsp.enable('bashls')
+    vim.lsp.enable('lua_ls')
+    vim.lsp.enable('zls')
 end}
