@@ -19,10 +19,7 @@ return {
   {'numToStr/Comment.nvim', opts = {}},
   {'windwp/nvim-autopairs', opts = {}},
   {'kylechui/nvim-surround', version = "*", opts = {}},
-  {'ggandor/leap.nvim', config = function()
-      require('leap').add_default_mappings()
-    end,
-  },
+  {'ggandor/leap.nvim'},
   {'lotabout/skim.vim', lazy = false},
   {'nvim-lualine/lualine.nvim', opts = {
       theme = 'edge',
