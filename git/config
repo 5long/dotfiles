@@ -53,7 +53,7 @@
 	diffFilter = delta --color-only
 [delta]
 	navigate = true
-	syntax-theme = 1337
+	syntax-theme = Coldark-Dark
 [push]
 	default = current
 [pull]

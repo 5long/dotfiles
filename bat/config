@@ -1,4 +1,5 @@
---theme=Coldark-Dark
+--theme-dark=Coldark-Dark
+--theme-light=Coldark-Cold
 --style=header,grid
 --tabs=4
 -m mobileconfig:xml
