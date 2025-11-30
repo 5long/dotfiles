@@ -15,6 +15,16 @@ return {
   'tpope/vim-unimpaired',
   'famiu/bufdelete.nvim',
 
+  {
+    "pianocomposer321/officer.nvim",
+    dependencies = "stevearc/overseer.nvim",
+    config = function()
+      require("officer").setup {
+        create_mappings = true,
+      }
+    end,
+  },
+
   { 'numToStr/Comment.nvim',  opts = {} },
   { 'windwp/nvim-autopairs',  opts = {} },
   { 'kylechui/nvim-surround', version = "*", opts = {} },
