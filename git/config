@@ -6,6 +6,7 @@
 	ca = commit --all
 	ci = commit
 	cln = clean -Xd
+	copytip = !git log -1 --format=%h | wl-copy -n
 	dc = diff --cached
 	del = rm --cached
 	di = diff
