@@ -1,3 +1,5 @@
+set recolor true
+
 set selection-clipboard 'clipboard'
 
 set font 'Monospace normal 18'
