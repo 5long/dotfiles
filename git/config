@@ -51,6 +51,10 @@
 [delta]
 	navigate = true
 	syntax-theme = Coldark-Dark
+	minus-emph-style = normal auto strike
+	minus-style = syntax normal strike
+	plus-emph-style = syntax normal italic ul
+	plus-style = syntax normal italic
 [push]
 	default = current
 [pull]
