@@ -15,3 +15,12 @@ movelocals = ["rebase", "-r", "description(glob:':local:*')", "-B", "@"]
 
 [git]
 private-commits = "description(glob:':local:*')"
+
+[templates]
+draft_commit_description = '''
+concat(
+  builtin_draft_commit_description,
+  "\nJJ: ignore-rest\n",
+  diff.git(),
+)
+'''
