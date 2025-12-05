@@ -12,6 +12,7 @@ diff-formatter = ":git"
 di = ["diff"]
 ic = ["commit", "-i"]
 movelocals = ["rebase", "-r", "description(glob:':local:*')", "-B", "@"]
+ph = ["git", "push"]
 
 [git]
 private-commits = "description(glob:':local:*')"
