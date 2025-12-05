@@ -9,4 +9,6 @@ pager = "delta"
 diff-formatter = ":git"
 
 [aliases]
+di = ["diff"]
+ic = ["commit", "-i"]
 movelocals = ["rebase", "-r", "description(glob:\":local:*\")", "-B", "@"]
