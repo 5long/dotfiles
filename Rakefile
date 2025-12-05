@@ -23,6 +23,7 @@ XDG_ENTIRES = %w[
   uv
   xh
   yamllint
+  jj
 ].freeze
 def xdg_target(name)
   XDG_ENTIRES.include?(name) ? "#{HOME}/.config/#{name}" : nil
