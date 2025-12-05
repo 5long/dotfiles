@@ -7,3 +7,6 @@ email = "callme5long@gmail.com"
 [ui]
 pager = "delta"
 diff-formatter = ":git"
+
+[aliases]
+movelocals = ["rebase", "-r", "description(glob:\":local:*\")", "-B", "@"]
