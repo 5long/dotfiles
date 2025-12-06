@@ -4,7 +4,7 @@ qr="qrencode -o - -t ANSI256UTF8"
 
 if [ -z "$1" ]
 then
-  pbpaste | $qr
+  wl-paste | $qr
 else
   $qr "$1"
 fi
