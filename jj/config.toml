@@ -18,6 +18,12 @@ ic = ["commit", "-i"]
 movelocals = ["rebase", "-r", "locals()", "-B", "@"]
 ph = ["git", "push"]
 tug = ["bookmark", "move", "-f", "heads(::@- & bookmarks())", "-t", "@-"]
+up = ["util", "exec", "--", "bash", "-c", """
+  set -eu
+  jj tug
+  jj movelocals
+  jj ph
+""", ""]
 
 [git]
 private-commits = "locals()"
