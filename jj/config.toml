@@ -7,7 +7,7 @@ email = "callme5long@gmail.com"
 [ui]
 pager = "delta"
 diff-formatter = ":git"
-default-command = "log"
+default-command = ["log", "--stat"]
 
 [revset-aliases]
 'locals()' = "subject(glob:':local:*')"
