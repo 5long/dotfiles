@@ -10,7 +10,7 @@ diff-formatter = ":git"
 default-command = "log"
 
 [revset-aliases]
-'locals()' = "description(glob:':local:*')"
+'locals()' = "subject(glob:':local:*')"
 
 [aliases]
 di = ["diff"]
