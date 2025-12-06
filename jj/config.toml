@@ -17,6 +17,7 @@ di = ["diff"]
 ic = ["commit", "-i"]
 movelocals = ["rebase", "-r", "locals()", "-B", "@"]
 ph = ["git", "push"]
+tug = ["bookmark", "move", "-f", "heads(::@- & bookmarks())", "-t", "@-"]
 
 [git]
 private-commits = "locals()"
