@@ -8,10 +8,13 @@ email = "callme5long@gmail.com"
 pager = "delta"
 diff-formatter = ":git"
 
+[revset-aliases]
+'locals()' = "description(glob:':local:*')"
+
 [aliases]
 di = ["diff"]
 ic = ["commit", "-i"]
-movelocals = ["rebase", "-r", "description(glob:':local:*')", "-B", "@"]
+movelocals = ["rebase", "-r", "locals()", "-B", "@"]
 ph = ["git", "push"]
 
 [git]
