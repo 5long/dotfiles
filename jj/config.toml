@@ -8,6 +8,7 @@ email = "callme5long@gmail.com"
 pager = "delta"
 diff-formatter = ":git"
 default-command = ["log", "--stat"]
+merge-editor = "vimdiff"
 
 [revset-aliases]
 'locals()' = "subject(glob:':local:*')"
