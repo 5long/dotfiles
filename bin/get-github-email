@@ -1,0 +1,9 @@
+#!/bin/bash
+
+set -euo pipefail
+
+# `read` returns 1 when the input is 3 words but only 2 variables
+read id name < <(xh "https://api.github.com/users/$1" |
+  jq -j '.id, " ", .name // .login') ||:
+
+echo "$name <$id+$1@users.noreply.github.com>"
