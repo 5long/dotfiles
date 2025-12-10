@@ -25,6 +25,8 @@ up = ["util", "exec", "--", "bash", "-c", """
   jj movelocals
   jj ph
 """, ""]
+# dn is short for down
+dn = ["git", "fetch"]
 
 [git]
 private-commits = "locals()"
