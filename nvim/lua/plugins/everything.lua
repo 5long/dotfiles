@@ -28,7 +28,7 @@ return {
   { 'numToStr/Comment.nvim',  opts = {} },
   { 'windwp/nvim-autopairs',  opts = {} },
   { 'kylechui/nvim-surround', version = "*", opts = {} },
-  { 'ggandor/leap.nvim' },
+  { 'https://codeberg.org/andyg/leap.nvim.git' },
   { 'lotabout/skim.vim',      lazy = false },
   {
     'nvim-lualine/lualine.nvim',
