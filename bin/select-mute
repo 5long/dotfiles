@@ -1,0 +1,13 @@
+#!/bin/bash
+
+set -euo pipefail
+
+selected="$(pw-dump | jq -jr '.[] | select(
+    (.info.props["media.class"] // "" | test("^Stream/.*/Audio$")) )
+    | .id, " ", .info.props["node.name"], " ", .info.props["media.name"], "\n"' \
+  | sk)"
+
+if [[ -n "$selected" ]]; then
+  # Remove longest suffix of " *"
+  wpctl set-mute "${selected%% *}" toggle
+fi
