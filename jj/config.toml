@@ -12,13 +12,15 @@ merge-editor = "vimdiff"
 
 [revset-aliases]
 'locals()' = "subject(glob:':local:*')"
+'tug_target()' = "heads(::@- ~ locals())"
 
 [aliases]
 di = ["diff"]
 ic = ["commit", "-i"]
 tuglocals = ["rebase", "-r", "locals()", "-B", "@"]
 ph = ["git", "push"]
-tug = ["bookmark", "move", "-f", "heads(::@- & bookmarks())", "-t", "@-"]
+tug = ["bookmark", "move", "-f", "heads(::@- & bookmarks())", "-t", "tug_target()"]
+showtug = ["log", "-r", "tug_target()"]
 up = ["util", "exec", "--", "bash", "-c", """
   set -eu
   jj tug
