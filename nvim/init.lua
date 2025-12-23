@@ -24,12 +24,8 @@ if vim.fn.has('gui_running') or os.getenv('TERM') ~= "linux" then
 
   if vim.fn.system([[gsettings get org.gnome.desktop.interface color-scheme]]) == "'prefer-dark'\n" then
     vim.g.cs = 'dark'
-    opt.background = 'dark'
-    vim.env.SKIM_DEFAULT_OPTIONS = '--color=dark'
   else
     vim.g.cs = 'light'
-    opt.background = 'light'
-    vim.env.SKIM_DEFAULT_OPTIONS = '--color=light'
   end
 end
 
