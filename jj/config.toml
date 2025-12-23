@@ -16,13 +16,13 @@ merge-editor = "vimdiff"
 [aliases]
 di = ["diff"]
 ic = ["commit", "-i"]
-movelocals = ["rebase", "-r", "locals()", "-B", "@"]
+tuglocals = ["rebase", "-r", "locals()", "-B", "@"]
 ph = ["git", "push"]
 tug = ["bookmark", "move", "-f", "heads(::@- & bookmarks())", "-t", "@-"]
 up = ["util", "exec", "--", "bash", "-c", """
   set -eu
   jj tug
-  jj movelocals
+  jj tuglocals
   jj ph
 """, ""]
 # dn is short for down
