@@ -15,6 +15,7 @@ return {
 
     vim.lsp.enable('bashls')
     vim.lsp.enable('clangd')
+    vim.lsp.enable('denols')
     vim.lsp.enable('just')
     vim.lsp.enable('lua_ls')
     vim.lsp.enable('taplo')
