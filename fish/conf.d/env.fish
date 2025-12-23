@@ -7,7 +7,6 @@ set -gx EDITOR nvim
 set -gx VISUAL nvim
 
 set -gx SKIM_DEFAULT_COMMAND 'rg --files --no-require-git'
-set -gx SKIM_DEFAULT_OPTIONS '--color=light'
 set -gx SKIM_CTRL_T_OPTS '--preview="bat -p {}"'
 set -gx MTR_OPTIONS '-n -t'
 
