@@ -23,8 +23,8 @@ tug = ["bookmark", "move", "-f", "heads(::@- & bookmarks())", "-t", "tug_target(
 showtug = ["log", "-r", "tug_target()"]
 up = ["util", "exec", "--", "bash", "-c", """
   set -eu
-  jj tug
   jj tuglocals
+  jj tug
   jj ph
 """, ""]
 # dn is short for down
