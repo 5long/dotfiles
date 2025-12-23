@@ -14,19 +14,17 @@ function main() {
 function light_mode() {
   gsettings set org.gnome.desktop.interface color-scheme prefer-light
   gsettings set org.gnome.desktop.interface gtk-theme Arc
+  lookandfeeltool -a 'Whyme Light'
   systemctl --user kill --kill-whom=main --signal=USR2 foot-server.service
   notify-send -a DarkMode -t 1000 "Light mode"
-  # ~/.config/qt6ct/qt6ct.conf color_scheme_path=/usr/share/qt6ct/colors/simple.conf
-  # ~/.config/qt5ct/qt5ct.conf color_scheme_path=/usr/share/qt5ct/colors/simple.conf
 }
 
 function dark_mode() {
   gsettings set org.gnome.desktop.interface color-scheme prefer-dark
   gsettings set org.gnome.desktop.interface gtk-theme Arc-Dark
+  lookandfeeltool -a 'Whyme Dark'
   systemctl --user kill --kill-whom=main --signal=USR1 foot-server.service
   notify-send -a DarkMode -t 1000 "Dark mode"
-  # ~/.config/qt5ct/qt6ct.conf color_scheme_path=/usr/share/qt6ct/colors/darker.conf
-  # ~/.config/qt5ct/qt5ct.conf color_scheme_path=/usr/share/qt5ct/colors/darker.conf
 }
 
 if [[ "$0" = "$BASH_SOURCE" ]]; then
