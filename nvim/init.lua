@@ -112,7 +112,7 @@ opt.autowrite = true
 
 keymap.set('n', '<leader>w', vim.cmd.update)
 keymap.set('n', 'QQ', vim.cmd.cquit)
-keymap.set('n', '<leader>da', ':1,$bd!<CR><c-w><c-v>')
+keymap.set('n', '<leader>da', ':1,$Bdelete<CR>')
 keymap.set('n', '<leader>cd', ':cd %:p:h<CR>')
 
 keymap.set('n', 'yaf', 'gg"+yG``')
