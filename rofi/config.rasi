@@ -3,6 +3,8 @@ configuration {
   matching: "fuzzy";
   sorting-method: "fzf";
   drun-show-actions: true;
+  drun-match-fields: [title,generic,exec];
+  disable-history: true;
 
   font: "Monospace 20";
   combi-display-format: "{text}";
