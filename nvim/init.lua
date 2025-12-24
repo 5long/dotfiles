@@ -183,6 +183,9 @@ keymap.set('n', '<c-j>', '<c-w>j')
 keymap.set('n', '<c-k>', '<c-w>k')
 keymap.set('n', '<c-l>', '<c-w>l')
 
+-- Same file, vertical split.
+keymap.set('n', '<leader>ov', '<c-w><c-o><c-w><c-v>')
+
 local wig = opt.wildignore
 wig:append('*/.git/*,*/.hg/*')
 wig:append('*.pyc,*.pyo,*.ptlc')
