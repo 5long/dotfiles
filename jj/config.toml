@@ -1,14 +1,14 @@
 #:schema https://docs.jj-vcs.dev/latest/config-schema.json
 
 [user]
-name = "Whyme Lyu"
 email = "callme5long@gmail.com"
+name = "Whyme Lyu"
 
 [ui]
-pager = "delta"
-diff-formatter = ":git"
 default-command = ["log", "--stat"]
+diff-formatter = ":git"
 merge-editor = "vimdiff"
+pager = "delta"
 
 [revset-aliases]
 'locals()' = "subject(glob:':local:*')"
@@ -16,20 +16,21 @@ merge-editor = "vimdiff"
 
 [aliases]
 di = ["diff"]
+# dn is short for down
+dn = ["git", "fetch"]
 ic = ["commit", "-i"]
-tuglocals = ["rebase", "-r", "locals()", "-B", "@"]
 ph = ["git", "push"]
 rb = ["rebase", "-o", "trunk()"]
-tug = ["bookmark", "move", "-f", "heads(::@- & bookmarks())", "-t", "tug_target()"]
 showtug = ["log", "-r", "tug_target()"]
+tug = ["bookmark", "move", "-f", "heads(::@- & bookmarks())", "-t", "tug_target()"]
+tuglocals = ["rebase", "-r", "locals()", "-B", "@"]
+
 up = ["util", "exec", "--", "bash", "-c", """
   set -eu
   jj tuglocals
   jj tug
   jj ph
 """, ""]
-# dn is short for down
-dn = ["git", "fetch"]
 
 [git]
 private-commits = "locals()"
