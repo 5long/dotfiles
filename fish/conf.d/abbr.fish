@@ -32,5 +32,6 @@ abbr scu systemctl --user
 abbr v less
 abbr z bsdtar
 
+abbr -a CL --position anywhere --set-cursor=% -- "--color=always % | less"
 abbr -a L --position anywhere --set-cursor "% | less"
 abbr -a G --position anywhere "| rg"
