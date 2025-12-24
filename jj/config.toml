@@ -19,6 +19,7 @@ di = ["diff"]
 ic = ["commit", "-i"]
 tuglocals = ["rebase", "-r", "locals()", "-B", "@"]
 ph = ["git", "push"]
+rb = ["rebase", "-o", "trunk()"]
 tug = ["bookmark", "move", "-f", "heads(::@- & bookmarks())", "-t", "tug_target()"]
 showtug = ["log", "-r", "tug_target()"]
 up = ["util", "exec", "--", "bash", "-c", """
