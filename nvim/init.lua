@@ -207,16 +207,6 @@ local function silent_map(mode, lhs, rhs, opt)
   )
 end
 
--- This is stupid
-cmd([[ imap <silent><expr> <Tab> luasnip#expand_or_jumpable() ? '<Plug>luasnip-expand-or-jump' : '<Tab>' ]])
-
-silent_map('s', '<Tab>', function()
-  require('luasnip').jump(1)
-end)
-silent_map({'i', 's'}, '<S-Tab>', function()
-  require('luasnip').jump(-1)
-end)
-
 vim.keymap.set({'n', 'x', 'o'}, 's', '<Plug>(leap)')
 vim.keymap.set('n',             'S', '<Plug>(leap-from-window)')
 vim.keymap.set('n', '<leader>E', ':RagainSetAndRun<space>')
