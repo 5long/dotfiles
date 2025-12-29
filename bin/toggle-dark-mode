@@ -16,7 +16,6 @@ function light_mode() {
   gsettings set org.gnome.desktop.interface gtk-theme Arc
   command lookandfeeltool && lookandfeeltool -a 'Whyme Light' || true
   systemctl --user kill --kill-whom=main --signal=USR2 foot-server.service
-  notify-send -a DarkMode -t 1000 "Light mode"
 }
 
 function dark_mode() {
@@ -24,7 +23,6 @@ function dark_mode() {
   gsettings set org.gnome.desktop.interface gtk-theme Arc-Dark
   command lookandfeeltool && lookandfeeltool -a 'Whyme Dark' || true
   systemctl --user kill --kill-whom=main --signal=USR1 foot-server.service
-  notify-send -a DarkMode -t 1000 "Dark mode"
 }
 
 if [[ "$0" = "$BASH_SOURCE" ]]; then
