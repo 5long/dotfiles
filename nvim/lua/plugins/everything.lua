@@ -41,16 +41,6 @@ return {
   'tpope/vim-eunuch',
   'justinmk/vim-dirvish',
   '5long/ragain',
-  {
-    'L3MON4D3/LuaSnip',
-    version = "v1.*",
-    dependencies = 'honza/vim-snippets',
-    config = function()
-      require("luasnip").setup({})
-      require("luasnip.loaders.from_snipmate").lazy_load()
-    end,
-  },
-  'honza/vim-snippets',
   -- '5long/imdi.nvim',
   {
     dir = "~/src/imdi.nvim",
