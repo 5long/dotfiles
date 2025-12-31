@@ -210,7 +210,7 @@ end
 
 vim.keymap.set({'n', 'x', 'o'}, 's', '<Plug>(leap)')
 vim.keymap.set('n',             'S', '<Plug>(leap-from-window)')
-vim.keymap.set('n', '<leader>E', ':RagainSetAndRun<space>term<space>')
+vim.keymap.set('n', '<leader>E', ':RagainSetAndRun<space>wall|term<space>')
 vim.keymap.set('n', '<leader>e', ':RagainRun<cr>')
 autocmd('TermClose', {
   callback = function(ev)
