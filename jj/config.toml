@@ -9,6 +9,7 @@ default-command = ["log", "--stat"]
 diff-formatter = ":git"
 merge-editor = "vimdiff"
 pager = "delta"
+diff-editor = ":builtin"
 
 [revset-aliases]
 'locals()' = "subject(glob:':local:*')"
