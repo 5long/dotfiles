@@ -214,6 +214,6 @@ vim.keymap.set('n', '<leader>E', ':RagainSetAndRun<space>term<space>')
 vim.keymap.set('n', '<leader>e', ':RagainRun<cr>')
 autocmd('TermClose', {
   callback = function(ev)
-    pcall(vim.keymap.set, 'n', '<esc>', ':Bdelete<cr>', { buffer = ev.buf })
+    pcall(vim.keymap.set, 'n', 'q', ':Bdelete<cr>', { nowait = true,  buffer = ev.buf })
   end
 })
