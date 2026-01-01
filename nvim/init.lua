@@ -83,6 +83,10 @@ opt.wildignorecase = true
 opt.completeopt = 'menu,preview,longest'
 opt.shortmess:append('aI')
 opt.showmode = false
+autocmd('CmdlineChanged', {
+  pattern = {":", "/", "?"},
+  callback = function() vim.fn.wildtrigger() end,
+})
 
 opt.ignorecase = true
 opt.smartcase = true
