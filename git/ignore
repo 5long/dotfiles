@@ -24,3 +24,6 @@ debian/*.EX
 pyrightconfig.json
 
 .env
+
+/zig-out/
+/.zig-cache/
