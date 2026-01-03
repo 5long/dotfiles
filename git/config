@@ -50,6 +50,7 @@
 	diffFilter = delta --color-only
 [delta]
 	navigate = true
+	; syntax-theme = Coldark-Cold
 	syntax-theme = Coldark-Dark
 	minus-emph-style = normal auto strike
 	minus-style = syntax normal strike
