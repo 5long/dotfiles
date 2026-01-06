@@ -1,3 +1,3 @@
 function lt
-  eza -T --color=always --git-ignore $argv | less
+  eza -T --color=always $argv | less
 end
