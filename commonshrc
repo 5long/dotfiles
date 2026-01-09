@@ -17,7 +17,6 @@ alias lstcp='lsof -nPi tcp'
 alias mkdir='mkdir -p'
 
 alias ip='ip -h -br -c=auto'
-alias d='nerdctl '
 alias dg='doggo --time --timeout 3s '
 alias e=nvim
 alias fd='fd --color=never'

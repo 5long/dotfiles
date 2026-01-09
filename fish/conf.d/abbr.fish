@@ -6,7 +6,6 @@ function hpxy
   https_proxy=$PXY http_proxy=$PXY $argv
 end
 
-abbr d sudo nerdctl
 abbr dg doggo --time --timeout 3s
 abbr e nvim
 abbr fw firewall-cmd
