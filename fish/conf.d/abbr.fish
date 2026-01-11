@@ -24,7 +24,7 @@ abbr o xdg-open
 abbr p sudo pacman
 abbr pa paru
 abbr pu sudo pacman -Syu
-alias rg='rg -LS -M 80 --max-columns-preview --no-require-git'
+alias rg='rg -LS --no-require-git'
 abbr rsv resolvectl
 abbr s systemctl
 abbr scu systemctl --user
