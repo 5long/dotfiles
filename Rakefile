@@ -55,13 +55,6 @@ task bashrc: :commonshrc
 task zshrc: :commonshrc
 task commonshrc: :commonenv
 
-desc 'Vimrc for old Vim'
-task :old_vim do
-  source = "#{CWD}/nvim"
-  target = "#{HOME}/.vim"
-  File.symlink source, target unless File.exist? target
-end
-
 desc 'Take a dotfile from $HOME'
 task :take, :dotless_name do |_, args|
   dotless = args[:dotless_name]
