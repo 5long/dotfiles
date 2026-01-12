@@ -20,6 +20,6 @@ return {
     vim.lsp.enable('just')
     vim.lsp.enable('lua_ls')
     vim.lsp.enable('taplo')
+    vim.lsp.enable('ty')
     vim.lsp.enable('zls')
-    vim.lsp.enable('zuban')
 end}
