@@ -1,0 +1,11 @@
+#!/bin/bash
+
+set -euo pipefail
+
+url="$(exec expac -S -1 "%u" "$1")"
+
+if [ -n "$url" ]; then
+  xdg-open "$url"
+else
+  exit 1
+fi
