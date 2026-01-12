@@ -9,3 +9,5 @@
 /git/local-config
 
 /fish/fish_variables
+
+*.log
