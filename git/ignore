@@ -1,6 +1,7 @@
 !.keep
 !.gitkeep
 
+*.log
 *~
 *.sw[a-z]
 .exrc
@@ -15,8 +16,6 @@ debian/.ex
 debian/*.EX
 
 /node_modules/
-.npm-debug.log
-.yarn-error.log
 .node-version
 
 *.pyc
