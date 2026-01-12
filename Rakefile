@@ -102,7 +102,12 @@ end
 
 desc 'Link a ~/.local/bin/<file> to ./bin'
 task :lnbin, :fn do |_, args|
-  ln "#{HOME}/.local/bin/#{args[:fn]}", './bin/'
+  fn = args[:fn]
+  begin
+    ln "#{CWD}/bin/#{fn}", "#{HOME}/.local/bin/"
+  rescue Errno::EEXIST
+    puts "#{HOME}/.local/#{fn} already exists" if verbose == true
+  end
 end
 
 desc 'Install everything'
