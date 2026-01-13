@@ -110,6 +110,11 @@ task :lnbin, :fn do |_, args|
   end
 end
 
+desc 'Update Neovim Plugins (probably needs https_proxy)'
+task :update_nvim do
+  sh 'nvim', '--headless', '+TSUpdate', '+Lazy! sync', '+qa'
+end
+
 desc 'Install everything'
 task everything: DOTFILES + [:bin]
 task default: :everything
