@@ -1,6 +1,0 @@
-# Ignore files that commited into git
-Gemfile.lock
-gems.locked
-
-package-lock.json
-yarn.lock
