@@ -20,7 +20,7 @@ return {
     vim.lsp.enable('just')
     vim.lsp.enable('lua_ls')
     vim.lsp.enable('ocamllsp')
-    vim.lsp.enable('ruby_lsp')
+    vim.lsp.enable('solargraph')
     vim.lsp.enable('taplo')
     vim.lsp.enable('ty')
     vim.lsp.enable('zls')
