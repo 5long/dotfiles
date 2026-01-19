@@ -19,6 +19,7 @@ return {
     vim.lsp.enable('gopls')
     vim.lsp.enable('just')
     vim.lsp.enable('lua_ls')
+    vim.lsp.enable('ruby_lsp')
     vim.lsp.enable('taplo')
     vim.lsp.enable('ty')
     vim.lsp.enable('zls')
