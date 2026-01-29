@@ -15,5 +15,5 @@ set -gx XCURSOR_THEME Bibata-Original-Classic
 set -gx WPROFILE YES
 
 function launch_sway
-  exec uwsm start sway.desktop
+  exec uwsm start -g -1 sway.desktop
 end
