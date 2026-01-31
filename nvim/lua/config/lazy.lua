@@ -27,4 +27,7 @@ require("lazy").setup({
       paths = { '/usr/share/vim/vimfiles', '/usr/share/vim/vimfiles/after', },
     }
   },
+  change_detection = {
+    enabled = false,
+  },
 })
