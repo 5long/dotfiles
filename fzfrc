@@ -2,3 +2,6 @@
 --border=none
 --no-scrollbar
 --preview-window=border-left
+--info=inline-right
+--no-separator
+--walker-skip=.git,.node_modules,.jj
