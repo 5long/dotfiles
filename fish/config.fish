@@ -4,8 +4,8 @@ if status is-interactive
   set -U fish_features qmark-noglob
   set -g fish_key_bindings fish_hybrid_key_bindings
 
-  if functions -q skim_key_bindings
-    skim_key_bindings
+  if functions -q fzf_key_bindings
+    fzf_key_bindings
   end
 end
 

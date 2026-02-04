@@ -23,13 +23,12 @@ return {
     config = function()
       local fzfLua = require('fzf-lua')
       fzfLua.setup({
-          {"max-perf", "fzf-vim", "skim",},
-          fzf_bin = "sk",
+          {"max-perf", "fzf-vim",},
           fzf_opts = {
             ["--ansi"] = true,
             ["--height"] = "100%",
             ["--preview"] = "bat",
-            ["--algo"] = "frizbee",
+            ["--border"] = "line",
           },
           winopts = { preview = { hidden = false}},
       })
