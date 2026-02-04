@@ -6,8 +6,9 @@ set -gx WATCH_INTERVAL 0.5
 set -gx EDITOR nvim
 set -gx VISUAL nvim
 
+set -gx FZF_DEFAULT_COMMAND "rg --files --no-require-git"
 set -gx FZF_CTRL_T_OPTS "--preview='bat --plain {}'"
-set -gx FZF_DEFAULT_OPTS "--reverse --border line"
+set -gx FZF_DEFAULT_OPTS_FILE "$HOME/.config/fzfrc"
 set -gx MTR_OPTIONS '-n -t'
 
 set CDPATH . $HOME $HOME/src

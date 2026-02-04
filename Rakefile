@@ -11,6 +11,7 @@ XDG_ENTIRES = %w[
   fuzzel
   fontconfig
   foot
+  fzfrc
   nvim
   git
   alacritty

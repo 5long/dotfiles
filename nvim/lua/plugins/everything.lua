@@ -19,21 +19,7 @@ return {
   { 'windwp/nvim-autopairs',  opts = {} },
   { 'kylechui/nvim-surround', version = "*", opts = {} },
   { 'https://codeberg.org/andyg/leap.nvim.git' },
-  { 'ibhagwan/fzf-lua', lazy = false,
-    config = function()
-      local fzfLua = require('fzf-lua')
-      fzfLua.setup({
-          {"max-perf", "fzf-vim",},
-          fzf_opts = {
-            ["--ansi"] = true,
-            ["--height"] = "100%",
-            ["--preview"] = "bat",
-            ["--border"] = "line",
-          },
-          winopts = { preview = { hidden = false}},
-      })
-    end
-  },
+  { 'junegunn/fzf.vim', lazy = false },
   {
     'nvim-lualine/lualine.nvim',
     opts = {
