@@ -9,6 +9,7 @@ return {
 
       ts.install({
         'bash',
+        'bpftrace',
         'c',
         'css',
         'html',
