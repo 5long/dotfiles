@@ -44,9 +44,6 @@ return {
 
           -- Enable treesitter indentation
           vim.bo[buf].indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
-
-          -- Install missing parsers (async, no-op if already installed)
-          ts.install({ lang })
         end,
       })
     end,
