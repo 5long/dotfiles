@@ -10,8 +10,13 @@ vim.diagnostic.config {
 return {
   'neovim/nvim-lspconfig',
   config = function()
-    -- Use an on_attach function to only map the following keys
-    -- after the language server attaches to the current buffer
+    -- On Arch Linux I don't have latest clang installed.
+    -- Instead it's a dependency of zig which is clang20 for now.
+    vim.lsp.config('clangd', {
+      cmd = {
+        '/usr/lib/llvm20/bin/clangd'
+      },
+    })
 
     vim.lsp.enable('bashls')
     vim.lsp.enable('clangd')
