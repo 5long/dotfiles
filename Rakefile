@@ -22,6 +22,7 @@ XDG_ENTIRES = %w[
   bat
   pip
   pylintrc
+  sequoia
   uv
   xh
   yamllint
