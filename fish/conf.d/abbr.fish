@@ -13,7 +13,7 @@ abbr g git
 abbr ge gnome-text-editor
 abbr ht htop -u \$USER -s PERCENT_CPU
 abbr ip ip -h -br -c=auto
-abbr j journalctl 
+abbr j journalctl -o short-iso
 abbr jfu journalctl -f --unit
 abbr l ls
 abbr la ls -A
