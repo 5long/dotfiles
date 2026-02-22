@@ -17,7 +17,6 @@ return {
   'tpope/vim-unimpaired',
   'famiu/bufdelete.nvim',
 
-  { 'numToStr/Comment.nvim',  opts = {} },
   { 'windwp/nvim-autopairs',  opts = {} },
   { 'kylechui/nvim-surround', version = "*", opts = {} },
   { 'https://codeberg.org/andyg/leap.nvim.git' },
