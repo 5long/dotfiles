@@ -11,11 +11,16 @@ merge-editor = "vimdiff"
 pager = "delta"
 diff-editor = ":builtin"
 
+[revsets]
+bookmark-advance-to = "tug_target()"
+
 [revset-aliases]
 'locals()' = "subject(glob:':local:*')"
 'tug_target()' = "heads(::@- ~ locals())"
 
 [aliases]
+# New official replacement of tug
+ba = ["bookmark", "advance"]
 di = ["diff"]
 # dn is short for down
 dn = ["git", "fetch"]
