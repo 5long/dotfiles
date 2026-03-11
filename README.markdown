@@ -29,6 +29,6 @@ Well, you can't `rake README.markdown` anyway.
 
 ## License
 
-Public domain. See UNLICENSE
+0BSD. See [LICENSE](./LICENSE) file for full license text.
 
 [Neovim]: http://neovim.io/
