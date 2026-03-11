@@ -11,4 +11,6 @@ set -gx FZF_CTRL_T_OPTS "--preview='bat --plain {}'"
 set -gx FZF_DEFAULT_OPTS_FILE "$HOME/.config/fzfrc"
 set -gx MTR_OPTIONS '-n -t'
 
+set -gx RUBYOPT "--enable=frozen-string-literal"
+
 set CDPATH . $HOME $HOME/src
