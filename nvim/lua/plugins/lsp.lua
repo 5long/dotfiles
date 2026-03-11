@@ -26,6 +26,7 @@ return {
     vim.lsp.enable('lua_ls')
     vim.lsp.enable('ocamllsp')
     vim.lsp.enable('solargraph')
+    vim.lsp.enable('systemd_lsp')
     vim.lsp.enable('taplo')
     vim.lsp.enable('ty')
     vim.lsp.enable('zls')
