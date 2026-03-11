@@ -3,7 +3,7 @@
 HOME = ENV['HOME']
 CWD = File.dirname __FILE__
 
-BLACKLIST = %w[README.markdown Rakefile UNLICENSE bin].freeze
+BLACKLIST = %w[README.markdown Rakefile LICENSE bin].freeze
 DOTFILES = FileList['*'] - BLACKLIST
 
 XDG_ENTIRES = %w[
