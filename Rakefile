@@ -17,6 +17,7 @@ XDG_ENTIRES = %w[
   alacritty
   termite
   rofi
+  rubocop
   pacman
   zathura
   bat
