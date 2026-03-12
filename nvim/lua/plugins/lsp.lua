@@ -18,6 +18,15 @@ return {
       },
     })
 
+    vim.lsp.config('ruby_lsp', {
+      init_options = {
+        linters = {'rubocop', 'standard'},
+        formatter = 'standard',
+        experimentalFeaturesEnabled = true,
+      }
+    })
+
+    vim.lsp.enable('ansiblels')
     vim.lsp.enable('bashls')
     vim.lsp.enable('clangd')
     vim.lsp.enable('denols')
@@ -25,7 +34,7 @@ return {
     vim.lsp.enable('just')
     vim.lsp.enable('lua_ls')
     vim.lsp.enable('ocamllsp')
-    vim.lsp.enable('solargraph')
+    vim.lsp.enable('ruby_lsp')
     vim.lsp.enable('systemd_lsp')
     vim.lsp.enable('taplo')
     vim.lsp.enable('ty')

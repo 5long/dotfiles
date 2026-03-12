@@ -39,6 +39,7 @@ return {
       },
     },
   },
+  'tpope/vim-endwise',
   'tpope/vim-eunuch',
   'justinmk/vim-dirvish',
   '5long/ragain',
