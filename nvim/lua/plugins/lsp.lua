@@ -19,11 +19,12 @@ return {
     })
 
     vim.lsp.config('ruby_lsp', {
+      cmd_env = { RUBYOPT = '--jit --enable=frozen-string-literal' },
       init_options = {
         linters = {'rubocop', 'standard'},
         formatter = 'standard',
         experimentalFeaturesEnabled = true,
-      }
+      },
     })
 
     vim.lsp.enable('ansiblels')
