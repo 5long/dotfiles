@@ -3,3 +3,7 @@ AllCops:
 
 Style/StringLiterals:
   EnforcedStyle: double_quotes
+
+# I'm in --enable=frozen-string-literal globally
+Style/FrozenStringLiteralComment:
+  Enabled: false
