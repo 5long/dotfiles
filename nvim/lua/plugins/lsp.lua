@@ -34,7 +34,6 @@ return {
     vim.lsp.enable('gopls')
     vim.lsp.enable('just')
     vim.lsp.enable('lua_ls')
-    vim.lsp.enable('ocamllsp')
     vim.lsp.enable('ruby_lsp')
     vim.lsp.enable('systemd_lsp')
     vim.lsp.enable('taplo')
