@@ -22,6 +22,8 @@ debian/*.EX
 *.pyo
 pyrightconfig.json
 
+/.ruby-lsp/
+
 .env
 
 /zig-out/
