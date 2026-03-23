@@ -1,3 +1,4 @@
+# vi: ft=gitconfig
 [alias]
 	aa = add --all .
 	amend = commit --amend -C HEAD
@@ -65,8 +66,12 @@
 	autoSquash = true
 [merge]
 	autoStash = true
+	conflictStyle = "diff3"
 	defaultToUpstream = true
 	tool = vimdiff
+[merge "mergiraf"]
+	name = mergiraf
+	driver = mergiraf merge --git %O %A %B -s %S -x %X -y %Y -p %P -l %L
 [diff]
 	colorMoved = default
 	tool = vimdiff
