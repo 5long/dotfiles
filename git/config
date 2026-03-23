@@ -49,6 +49,8 @@
 	pager = delta
 [interactive]
 	diffFilter = delta --color-only
+[diff]
+	external = difft
 [delta]
 	navigate = true
 	; syntax-theme = Coldark-Cold
