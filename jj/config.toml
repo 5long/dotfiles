@@ -6,7 +6,7 @@ name = "Whyme Lyu"
 
 [ui]
 default-command = ["log", "--stat"]
-diff-formatter = ":git"
+diff-formatter = ["difft", "--color=always", "$left", "$right"]
 merge-editor = "vimdiff"
 pager = "delta"
 diff-editor = ":builtin"
