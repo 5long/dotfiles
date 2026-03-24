@@ -26,6 +26,7 @@ return {
         'markdown_inline',
         'python',
         'ruby',
+        'terraform',
         'toml',
         'vim',
         'zig',
