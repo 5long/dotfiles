@@ -36,7 +36,7 @@ return {
     vim.lsp.enable('ruby_lsp')
     vim.lsp.enable('systemd_lsp')
     vim.lsp.enable('taplo')
-    vim.lsp.enable('terraformls')
+    vim.lsp.enable('tofu_ls')
     vim.lsp.enable('typos_lsp')
     vim.lsp.enable('ty')
     vim.lsp.enable('zls')
