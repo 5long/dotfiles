@@ -2,7 +2,6 @@ local min_severity = { severity = { min = vim.diagnostic.severity.WARN } }
 
 vim.diagnostic.config {
   virtual_text = min_severity,
-  underline = min_severity,
   signs = min_severity,
   float = min_severity,
 }
