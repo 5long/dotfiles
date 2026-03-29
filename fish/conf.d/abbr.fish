@@ -6,6 +6,7 @@ function hpxy
   https_proxy=$PXY http_proxy=$PXY $argv
 end
 
+abbr 0 run0
 abbr dg doggo --time --timeout 3s
 abbr e nvim
 abbr fw firewall-cmd
@@ -21,9 +22,9 @@ abbr ll ls -oh
 alias ls='ls -F --group-directories-first --color --hyperlink --time-style=iso'
 abbr ntw networkctl
 abbr o xdg-open
-abbr p sudo pacman
+abbr p run0 pacman
 abbr pa paru
-abbr pu sudo pacman -Syu
+abbr pu run0 pacman -Syu
 alias rg='rg -LS --no-require-git'
 abbr rsv resolvectl
 abbr s systemctl
