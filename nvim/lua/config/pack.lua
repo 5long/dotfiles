@@ -1,6 +1,7 @@
 -- Neovim's native plugin manager since 0.12
 
 vim.cmd.packadd('nvim.undotree')
+vim.cmd.packadd('nohlsearch')
 
 vim.pack.add({
   'https://codeberg.org/andyg/leap.nvim.git',
