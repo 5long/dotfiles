@@ -115,7 +115,10 @@ end
 
 desc 'Update Neovim Plugins (probably needs https_proxy)'
 task :update_nvim do
-  sh 'nvim', '--headless', '+TSUpdate', '+Lazy! sync', '+qa'
+  sh 'nvim', '--headless', \
+    "+lua vim.pack.update(nil, { target = 'lockfile', force = true })", \
+    "+lua require('nvim-treesitter').update():wait(600000)", \
+    '+qa'
 end
 
 desc 'Install everything'

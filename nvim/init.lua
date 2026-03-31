@@ -1,7 +1,7 @@
 vim.g.mapleader = ','
 vim.g.maplocalleader = '\\' -- not used for now
 
-require('config.lazy')
+require('config.pack')
 
 local opt, keymap, cmd = vim.opt, vim.keymap, vim.cmd
 
