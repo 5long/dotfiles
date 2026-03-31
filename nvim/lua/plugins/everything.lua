@@ -14,7 +14,6 @@ return {
   },
 
   'tpope/vim-abolish',
-  'tpope/vim-unimpaired',
   'famiu/bufdelete.nvim',
 
   { 'windwp/nvim-autopairs',  opts = {} },
