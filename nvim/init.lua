@@ -178,6 +178,7 @@ keymap.set('', 'H', '^')
 keymap.set('', 'L', '$')
 keymap.set('n', '<tab>', '%', remap)
 keymap.set('', '<c-9>', '<c-i>')
+keymap.set('n', 'gb', "'^")
 
 keymap.set('n', '<c-h>', '<c-w>h')
 keymap.set('n', '<c-j>', '<c-w>j')
