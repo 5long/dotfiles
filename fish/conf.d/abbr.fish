@@ -22,7 +22,7 @@ abbr ll ls -oh
 alias ls='ls -F --group-directories-first --color --hyperlink --time-style=iso'
 abbr ntw networkctl
 abbr o xdg-open
-abbr p run0 pacman
+abbr p pacman
 abbr pa paru
 abbr pu run0 pacman -Syu
 alias rg='rg -LS --no-require-git'
