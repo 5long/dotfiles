@@ -9,13 +9,7 @@ require('config.pack')
 
 local opt, keymap, cmd = vim.opt, vim.keymap, vim.cmd
 
-remap = {remap = true}
-
-local function partial(f, arg)
-  return function(...)
-    return f(arg, ...)
-  end
-end
+local remap = {remap = true}
 
 opt.mouse='a'
 opt.exrc = true
@@ -206,12 +200,6 @@ wig:append('.log')
 autocmd('VimEnter', {
   command = "if empty(expand('%')) | setl buftype=nofile"
 })
-
-local function silent_map(mode, lhs, rhs, opt)
-	keymap.set(mode, lhs, rhs,
-    vim.tbl_extend('error', { silent = true }, opt or {})
-  )
-end
 
 keymap.set({'n', 'x', 'o'}, 's', '<Plug>(leap)')
 keymap.set('n',             'S', '<Plug>(leap-from-window)')
