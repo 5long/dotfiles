@@ -1,6 +1,10 @@
 vim.g.mapleader = ','
 vim.g.maplocalleader = '\\' -- not used for now
 
+vim.g.loaded_perl_provider = 0
+vim.g.loaded_ruby_provider = 0
+vim.g.loaded_node_provider = 0
+
 require('config.pack')
 
 local opt, keymap, cmd = vim.opt, vim.keymap, vim.cmd
