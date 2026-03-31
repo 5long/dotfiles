@@ -208,10 +208,10 @@ local function silent_map(mode, lhs, rhs, opt)
   )
 end
 
-vim.keymap.set({'n', 'x', 'o'}, 's', '<Plug>(leap)')
-vim.keymap.set('n',             'S', '<Plug>(leap-from-window)')
-vim.keymap.set('n', '<leader>E', ':RagainSetAndRun<space>wall|term<space>')
-vim.keymap.set('n', '<leader>e', ':RagainRun<cr>')
+keymap.set({'n', 'x', 'o'}, 's', '<Plug>(leap)')
+keymap.set('n',             'S', '<Plug>(leap-from-window)')
+keymap.set('n', '<leader>E', ':RagainSetAndRun<space>wall|term<space>')
+keymap.set('n', '<leader>e', ':RagainRun<cr>')
 autocmd('TermClose', {
   callback = function(ev)
     pcall(vim.keymap.set, 'n', 'q', ':Bdelete<cr>', { nowait = true,  buffer = ev.buf })
