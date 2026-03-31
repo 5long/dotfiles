@@ -6,7 +6,7 @@ CWD = File.dirname __FILE__
 BLACKLIST = %w[README.markdown Rakefile LICENSE bin].freeze
 DOTFILES = FileList['*'] - BLACKLIST
 
-XDG_ENTIRES = %w[
+XDG_ENTRIES = %w[
   fish
   fuzzel
   fontconfig
@@ -30,7 +30,7 @@ XDG_ENTIRES = %w[
   jj
 ].freeze
 def xdg_target(name)
-  XDG_ENTIRES.include?(name) ? "#{HOME}/.config/#{name}" : nil
+  XDG_ENTRIES.include?(name) ? "#{HOME}/.config/#{name}" : nil
 end
 
 def regular_dotfile(name)
