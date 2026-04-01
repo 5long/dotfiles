@@ -35,9 +35,12 @@ require('lualine').setup({
   sections = {
     lualine_a = { 'mode' },
     lualine_b = { 'filename' },
-    lualine_c = { {'diagnostics', symbols = {
-      error = 'E', warn = 'W', info = 'I', hint = 'H'
-    }, } },
+    lualine_c = {
+      {'diagnostics',
+        symbols = { error = 'E', warn = 'W', info = 'I', hint = 'H' },
+      },
+      { vim.ui.progress_status },
+    },
     lualine_x = { {'lsp_status', icon = '', } },
     lualine_y = { 'location' },
     lualine_z = { 'filetype' }
