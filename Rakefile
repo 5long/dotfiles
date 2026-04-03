@@ -15,8 +15,6 @@ XDG_ENTRIES = %w[
   nvim
   git
   alacritty
-  termite
-  rofi
   rubocop
   pacman
   zathura
