@@ -53,7 +53,6 @@ DOTFILES.each do |f|
 end
 
 task bashrc: :commonshrc
-task zshrc: :commonshrc
 task commonshrc: :commonenv
 
 desc 'Take a dotfile from $HOME'
