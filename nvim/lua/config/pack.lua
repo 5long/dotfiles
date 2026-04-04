@@ -49,3 +49,5 @@ require('lualine').setup({
 
 require('config.lsp')
 require('config.treeshitter')
+
+require('vim._core.ui2').enable({})
