@@ -64,5 +64,3 @@ map('x', '<Tab>', '<Plug>(snippy-cut-text)')
 -- big plugins with their own file
 require('config.lsp')
 require('config.treeshitter')
-
-require('vim._core.ui2').enable({})
