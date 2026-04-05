@@ -80,6 +80,7 @@ keymap.set('c', '<c-k>', "<C-\\>e getcmdpos() == 1 ? '' : getcmdline()[:getcmdpo
 opt.wildmode = 'longest:full,full'
 opt.wildignorecase = true
 opt.completeopt = 'menu,preview,longest'
+opt.autocomplete = true
 opt.shortmess:append('aI')
 opt.showmode = false
 
