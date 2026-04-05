@@ -5,8 +5,8 @@ vim.cmd.packadd('nohlsearch')
 
 vim.pack.add({
   'https://codeberg.org/andyg/leap.nvim.git',
-  'https://github.com/5long/ragain',
   'https://github.com/5long/imdi.nvim',
+  'https://github.com/5long/ragain',
   'https://github.com/famiu/bufdelete.nvim',
   'https://github.com/junegunn/fzf.vim',
   'https://github.com/justinmk/vim-dirvish',
