@@ -12,6 +12,10 @@
       "rev": "34a564c81f36047f50e593c1656f4580ff75ccca",
       "src": "https://github.com/junegunn/fzf.vim"
     },
+    "imdi.nvim": {
+      "rev": "f02616800c775c10bd7167acc1887d4da313bcd9",
+      "src": "https://github.com/5long/imdi.nvim"
+    },
     "leap.nvim": {
       "rev": "b960d5038c5c505c52e56a54490f9bbb1f0e6ef6",
       "src": "https://codeberg.org/andyg/leap.nvim.git"
