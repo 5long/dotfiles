@@ -32,6 +32,10 @@
       "rev": "16812abf0e8d8175155f26143a8504e8253e92b0",
       "src": "https://github.com/neovim/nvim-lspconfig"
     },
+    "nvim-snippy": {
+      "rev": "7e500286eb880032391107f6d0ee28211ba3eb3c",
+      "src": "https://github.com/dcampos/nvim-snippy"
+    },
     "nvim-surround": {
       "rev": "61319d4bd1c5e336e197defa15bd104c51f0fb29",
       "src": "https://github.com/kylechui/nvim-surround"

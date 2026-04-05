@@ -7,6 +7,7 @@ vim.pack.add({
   'https://codeberg.org/andyg/leap.nvim.git',
   'https://github.com/5long/imdi.nvim',
   'https://github.com/5long/ragain',
+  'https://github.com/dcampos/nvim-snippy',
   'https://github.com/famiu/bufdelete.nvim',
   'https://github.com/junegunn/fzf.vim',
   'https://github.com/justinmk/vim-dirvish',
@@ -48,6 +49,19 @@ require('lualine').setup({
   },
 })
 
+-- nvim-snippy
+local map = vim.keymap.set
+local snippy = require "snippy"
+
+map({ 'i', 's' }, '<Tab>', function()
+    return snippy.can_expand_or_advance() and '<Plug>(snippy-expand-or-advance)' or '<Tab>'
+end, { expr = true })
+map({ 'i', 's' }, '<S-Tab>', function()
+    return snippy.can_jump(-1) and '<Plug>(snippy-previous)' or '<S-Tab>'
+end, { expr = true })
+map('x', '<Tab>', '<Plug>(snippy-cut-text)')
+
+-- big plugins with their own file
 require('config.lsp')
 require('config.treeshitter')
 
