@@ -1,3 +1,5 @@
+local opt, keymap, cmd = vim.opt, vim.keymap, vim.cmd
+
 vim.g.mapleader = ','
 vim.g.maplocalleader = '\\' -- not used for now
 
@@ -6,8 +8,6 @@ vim.g.loaded_ruby_provider = 0
 vim.g.loaded_node_provider = 0
 
 require('config.pack')
-
-local opt, keymap, cmd = vim.opt, vim.keymap, vim.cmd
 
 local remap = {remap = true}
 
