@@ -43,7 +43,7 @@ require('lualine').setup({
       },
       { vim.ui.progress_status },
     },
-    lualine_x = { {'lsp_status', icon = '', done = '' } },
+    lualine_x = {},
     lualine_y = { 'location' },
     lualine_z = { 'filetype' }
   },
