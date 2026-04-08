@@ -203,8 +203,6 @@ autocmd('VimEnter', {
   command = "if empty(expand('%')) | setl buftype=nofile"
 })
 
-keymap.set({'n', 'x', 'o'}, 's', '<Plug>(leap)')
-keymap.set('n',             'S', '<Plug>(leap-from-window)')
 keymap.set('n', '<leader>E', ':RagainSetAndRun<space>wall|term<space>')
 keymap.set('n', '<leader>e', ':RagainRun<cr>')
 autocmd('TermClose', {

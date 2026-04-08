@@ -4,7 +4,6 @@ vim.cmd.packadd('nvim.undotree')
 vim.cmd.packadd('nohlsearch')
 
 vim.pack.add({
-  'https://codeberg.org/andyg/leap.nvim.git',
   'https://github.com/5long/imdi.nvim',
   'https://github.com/5long/ragain',
   'https://github.com/dcampos/nvim-snippy',
@@ -19,6 +18,7 @@ vim.pack.add({
   'https://github.com/tpope/vim-eunuch',
   'https://github.com/tpope/vim-unimpaired',
   'https://github.com/windwp/nvim-autopairs',
+  'https://github.com/yorickpeterse/nvim-jump',
 })
 
 -- edge color scheme
@@ -26,6 +26,9 @@ vim.g.edge_transparent_background = true
 vim.g.edge_better_performance = true
 vim.g.edge_disable_italic_comment = true
 vim.cmd.colorscheme 'edge'
+
+-- jump
+vim.keymap.set({ 'n', 'x', 'o' }, 's', require('jump').start, {})
 
 -- lualine
 require('lualine').setup({

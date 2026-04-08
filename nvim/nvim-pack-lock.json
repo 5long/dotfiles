@@ -28,6 +28,10 @@
       "rev": "59bce2eef357189c3305e25bc6dd2d138c1683f5",
       "src": "https://github.com/windwp/nvim-autopairs"
     },
+    "nvim-jump": {
+      "rev": "41261ddebbb595decd0302cb9e5eec7ce230e382",
+      "src": "https://github.com/yorickpeterse/nvim-jump"
+    },
     "nvim-lspconfig": {
       "rev": "a776085e04f7b15d0b59fae2244df07d98360ab4",
       "src": "https://github.com/neovim/nvim-lspconfig"
