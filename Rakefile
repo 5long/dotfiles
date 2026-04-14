@@ -7,6 +7,7 @@ BLACKLIST = %w[README.markdown Rakefile LICENSE bin].freeze
 DOTFILES = FileList['*'] - BLACKLIST
 
 XDG_ENTRIES = %w[
+  codebook
   fish
   fuzzel
   fontconfig
