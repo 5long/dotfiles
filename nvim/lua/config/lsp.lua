@@ -30,6 +30,7 @@ vim.lsp.enable({
   'ansiblels',
   'bashls',
   'clangd',
+  'codebook',
   'denols',
   'gopls',
   'just',
@@ -39,6 +40,5 @@ vim.lsp.enable({
   'taplo',
   'tofu_ls',
   'ty',
-  'typos_lsp',
   'zls',
 })

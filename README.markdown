@@ -10,7 +10,7 @@ My dotfiles.
 
 ## Installation
 
-Prerequesistes:
+Prerequisites:
 
 * Git
 * Rake
@@ -18,7 +18,7 @@ Prerequesistes:
 ### Install Individual Files
 
 `rake zshrc` creates symlink `~/.zshrc -> zshrc`
-thanks to Ruby's expressivness.
+thanks to Ruby's expressiveness.
 
 Well, you can't `rake README.markdown` anyway.
 
@@ -31,7 +31,7 @@ You might need to run it with envvar `https_proxy=...`.
 
 ### Install individual scripts in bin/
 
-`rake lnbin[toggle-dark-mode]`. If the command fails due to globbing,
+`rake lnbin[toggle-dark-mode]`. If the command fails due to globing,
 switch to fish from bash / zsh or wrap the argument with quotes.
 
 ## License
