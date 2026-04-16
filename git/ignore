@@ -27,4 +27,5 @@ pyrightconfig.json
 .env
 
 /zig-out/
+/zig-pkg/
 /.zig-cache/
