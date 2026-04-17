@@ -41,4 +41,5 @@ vim.lsp.enable({
   'tofu_ls',
   'ty',
   'zls',
+  'zuban',
 })
