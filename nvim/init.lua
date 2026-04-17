@@ -8,6 +8,7 @@ vim.g.loaded_ruby_provider = 0
 vim.g.loaded_node_provider = 0
 
 require('config.pack')
+require('config.prioritized_diagnostic').setup({})
 require('vim._core.ui2').enable({})
 
 local remap = {remap = true}
