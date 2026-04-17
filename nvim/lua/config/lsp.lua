@@ -9,11 +9,11 @@ vim.pack.add({
   'https://github.com/neovim/nvim-lspconfig',
 })
 
--- On Arch Linux I don't have latest clang installed.
--- Instead it's a dependency of zig which is clang20 for now.
+-- On Arch Linux I don't have the latest clang installed.
+-- Instead it's a dependency of zig which is clang21 for now.
 vim.lsp.config('clangd', {
   cmd = {
-    '/usr/lib/llvm20/bin/clangd'
+    '/usr/lib/llvm21/bin/clangd'
   },
 })
 
