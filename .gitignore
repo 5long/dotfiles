@@ -4,6 +4,8 @@
 *.sw[op]
 *~
 
+/bundle/*
+
 /nvim/lazy-lock.json
 
 /git/local-config
