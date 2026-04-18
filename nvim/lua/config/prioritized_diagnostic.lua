@@ -7,6 +7,8 @@ local severity_order = {
 }
 
 local function get_highest_severity(count)
+  count = count or d.count()
+
   for _, s in ipairs(severity_order) do
     if count[s] and count[s] > 0 then
       return s
@@ -19,14 +21,12 @@ end
 local M = {order = severity_order, get_highest_severity = get_highest_severity}
 
 function M.jump_next()
-  local count = d.count()
-  local severity = get_highest_severity(count)
+  local severity = get_highest_severity()
   d.jump({ count = vim.v.count1, severity = severity })
 end
 
 function M.jump_prev()
-  local count = d.count()
-  local severity = get_highest_severity(count)
+  local severity = get_highest_severity()
   d.jump({ count = -vim.v.count1, severity = severity })
 end
 
