@@ -1,1 +1,13 @@
-words = ["neovim"]
+words = [
+    "adoc",
+    "asciidoctor",
+    "cloudflare",
+    "lyu",
+    "neovim",
+    "nvchecker",
+    "nvim",
+    "pacnew",
+    "rubocop",
+    "whyme",
+    "xdg",
+]
