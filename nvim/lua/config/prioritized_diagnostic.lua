@@ -31,8 +31,6 @@ function M.jump_prev()
 end
 
 function M.setup()
-  vim.print(severity_order)
-
   vim.keymap.set('n', ']d', M.jump_next, {
     desc = 'Jump to the next diagnostic (prioritized)',
   })
