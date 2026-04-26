@@ -15,6 +15,7 @@ function light_mode() {
   gsettings set org.gnome.desktop.interface color-scheme prefer-light
   gsettings set org.gnome.desktop.interface gtk-theme Arc
   command lookandfeeltool && lookandfeeltool -a 'Whyme Light' || true
+  git config set --global delta.syntax-theme Coldark-Cold
   systemctl --user kill --kill-whom=main --signal=USR2 foot-server.service
 }
 
@@ -22,6 +23,7 @@ function dark_mode() {
   gsettings set org.gnome.desktop.interface color-scheme prefer-dark
   gsettings set org.gnome.desktop.interface gtk-theme Arc-Dark
   command lookandfeeltool && lookandfeeltool -a 'Whyme Dark' || true
+  git config set --global delta.syntax-theme Coldark-Dark
   systemctl --user kill --kill-whom=main --signal=USR1 foot-server.service
 }
 
