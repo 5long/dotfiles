@@ -15,6 +15,8 @@ ts.install({
   'go',
   'html',
   'javascript',
+  'jinja',
+  'jinja_inline',
   'json',
   'just',
   'lua',
